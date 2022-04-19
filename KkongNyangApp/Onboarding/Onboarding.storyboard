@@ -8,6 +8,11 @@
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="GmarketSansMedium.otf">
+            <string>GmarketSansMedium</string>
+        </array>
+    </customFonts>
     <scenes>
         <!--Onboarding First Page View Controller-->
         <scene sceneID="s0d-6b-0kx">
@@ -18,8 +23,8 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="함께 키우는 우리 냥이" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h9t-Rk-EdC">
-                                <rect key="frame" x="30" y="569.5" width="354" height="29"/>
-                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="24"/>
+                                <rect key="frame" x="30" y="569.5" width="354" height="22"/>
+                                <fontDescription key="fontDescription" name="GmarketSansMedium" family="Gmarket Sans" pointSize="22"/>
                                 <color key="textColor" name="gray-700"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -30,9 +35,9 @@
                                 </constraints>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cIE-2U-YfH">
-                                <rect key="frame" x="30" y="793" width="354" height="45"/>
+                                <rect key="frame" x="30" y="788" width="354" height="50"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="45" id="ZBc-f0-DBm"/>
+                                    <constraint firstAttribute="height" constant="50" id="ZBc-f0-DBm"/>
                                 </constraints>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="다음으로">
@@ -47,7 +52,7 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hcQ-91-NlV">
-                                <rect key="frame" x="30" y="620.5" width="354" height="38.5"/>
+                                <rect key="frame" x="30" y="613.5" width="354" height="38.5"/>
                                 <string key="text">함께 살고 있는 가족, 또는 
 메이트와 함께 효율적인 육묘가 가능합니다.</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
@@ -92,10 +97,9 @@
                                 </constraints>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9F8-6p-6fZ">
-                                <rect key="frame" x="30" y="793" width="354" height="45"/>
+                                <rect key="frame" x="30" y="788" width="354" height="50"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="45" id="WFG-nt-v2u"/>
-                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="45" id="taS-MO-pLH"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="50" id="taS-MO-pLH"/>
                                 </constraints>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="다음으로">
@@ -110,13 +114,13 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="할 일을 요청해보세요" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pah-hZ-BTg">
-                                <rect key="frame" x="30" y="569.5" width="354" height="29"/>
-                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="24"/>
+                                <rect key="frame" x="30" y="569.5" width="354" height="22"/>
+                                <fontDescription key="fontDescription" name="GmarketSansMedium" family="Gmarket Sans" pointSize="22"/>
                                 <color key="textColor" name="gray-700"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="llA-qr-3FM">
-                                <rect key="frame" x="30" y="620.5" width="354" height="57.5"/>
+                                <rect key="frame" x="30" y="613.5" width="354" height="57.5"/>
                                 <string key="text">오늘 깜박한 일이 있으신가요? 
 다른 가족에게 요청하여
 우리 고양이를 더 잘 케어할 수 있어요.</string>
@@ -159,10 +163,9 @@
                                 <rect key="frame" x="30" y="92" width="354" height="441.5"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1ja-XZ-1eo">
-                                <rect key="frame" x="30" y="793" width="354" height="45"/>
+                                <rect key="frame" x="30" y="788" width="354" height="50"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="45" id="GHJ-dt-Hht"/>
-                                    <constraint firstAttribute="height" constant="45" id="yIC-w8-hqd"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="50" id="GHJ-dt-Hht"/>
                                 </constraints>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="다음으로">
@@ -177,13 +180,13 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="기호를 기록하기" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EFD-uZ-rnD">
-                                <rect key="frame" x="30" y="569.5" width="354" height="29"/>
-                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="24"/>
+                                <rect key="frame" x="30" y="569.5" width="354" height="22"/>
+                                <fontDescription key="fontDescription" name="GmarketSansMedium" family="Gmarket Sans" pointSize="22"/>
                                 <color key="textColor" name="gray-700"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="N3r-i8-Tox">
-                                <rect key="frame" x="30" y="620.5" width="384" height="38.5"/>
+                                <rect key="frame" x="30" y="613.5" width="384" height="38.5"/>
                                 <string key="text">우리 고양이의 기호를
 손쉽게 공유하고 모아볼 수 있어요.</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
