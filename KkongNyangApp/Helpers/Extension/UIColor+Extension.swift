@@ -8,7 +8,7 @@
 import Foundation
 import UIKit
 
-
+// 커스텀 컬러
 extension UIColor {
     // --> White
     static let white = UIColor(named: "white")
@@ -35,3 +35,17 @@ extension UIColor {
     // --> Primary Color
     static let yellow500 = UIColor(named: "yellow-500")
 }
+
+// Selected Tab Bar Item Background
+//extension UIImage {
+//    class func imageWithColor(color: UIColor) -> UIImage {
+//        let size = CGSize(width: CGFloat(50), height: CGFloat(50))
+//        let rect: CGRect = CGRect(x: 0, y: 0, width: size.width, height: size.height)
+//        UIGraphicsBeginImageContextWithOptions(size, false, 0)
+//        color.setFill()
+//        UIRectFill(rect)
+//        let image: UIImage = UIGraphicsGetImageFromCurrentImageContext()!
+//        UIGraphicsEndImageContext()
+//        return image
+//    }
+//}
