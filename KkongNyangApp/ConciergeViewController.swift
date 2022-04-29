@@ -19,7 +19,10 @@ class ConciergeViewController: UIViewController {
             performSegue(withIdentifier: "toOnboarding", sender: nil)
             LandscapeManager.shared.isFirstLaunch = true
         } else {
-            performSegue(withIdentifier: "toMain", sender: nil)
+            // 온보딩 계속 보고 싶으므로 임시로 똑같이 바꿈
+            performSegue(withIdentifier: "toOnboarding", sender: nil)
+            LandscapeManager.shared.isFirstLaunch = true
+            //performSegue(withIdentifier: "toMain", sender: nil)
         }
     }
 }
