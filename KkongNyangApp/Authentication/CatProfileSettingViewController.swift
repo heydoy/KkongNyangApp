@@ -11,12 +11,13 @@ class CatProfileSettingViewController: UIViewController {
     // MARK: - Properties
     var catName: String = ""
     var catMemo: String = ""
+    var indexOfButtonArray: Int? = nil
     
     var catInfo:  ((CatsInfo) -> Void)?
     
     let imagePickerViewController = UIImagePickerController()
 
-    // 텍스트필드 아울렛
+    // 이미지뷰, 텍스트필드 아울렛
     @IBOutlet weak var catPhotoImageView: UIImageView!
     @IBOutlet weak var catNameTextField: UITextField!
     @IBOutlet weak var catBirthdayTextField: UITextField!
@@ -41,11 +42,27 @@ class CatProfileSettingViewController: UIViewController {
 
     
     @IBAction func didButtonTapped(_ sender: UIButton) {
-        sender.isSelected = !sender.isSelected
+        if indexOfButtonArray != nil {
+            if !sender.isSelected {
+                for index in genderRadioButtons.indices {
+                    genderRadioButtons[index].isSelected = false
+                }
+                sender.isSelected = true
+                indexOfButtonArray = genderRadioButtons.firstIndex(of: sender)
+            } else {
+                sender.isSelected = false
+                indexOfButtonArray = nil
+            }
+        } else {
+            sender.isSelected = true
+            indexOfButtonArray = genderRadioButtons.firstIndex(of: sender)
+        }
+        
+        
     }
     
     
-    @IBAction func buttonGoAlbum(_ sender: Any) {
+    @IBAction func buttonGoImagePicker(_ sender: Any) {
         let alert =  UIAlertController(title: "고양이 사진", message: "고양이 사진을 찍거나 선택해주세요.", preferredStyle: .actionSheet)
 
 
