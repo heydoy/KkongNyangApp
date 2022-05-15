@@ -99,15 +99,24 @@ class RegisterViewController: UIViewController {
     }
     
     
-    @IBAction func backButtonDidTapped(_ sender: UIBarButtonItem) {
-        
-        // 뒤로가기는 popViewController
-        self.navigationController?.popViewController(animated: true)
-    }
+//    @IBAction func backButtonDidTapped(_ sender: UIBarButtonItem) {
+//
+//        // 뒤로가기는 popViewController
+//        self.navigationController?.popViewController(animated: true)
+//    }
     
     @IBAction func registerButtonDidTapped(_ sender: UIButton) {
         
-        self.navigationController?.popViewController(animated: true)
+        // 화면전환
+        // 1. 스토리보드 생성
+        let storyboard = UIStoryboard(name: "SignupAndLogin", bundle: nil)
+        // 2. 뷰컨트롤러를 생성
+        let catProfileSettingViewController = storyboard.instantiateViewController(withIdentifier: "CatProfileSettingVC") as! CatProfileSettingViewController
+        // 3. 화면전환 메소드를 이용해서 화면을 전환
+        self.navigationController?.pushViewController(catProfileSettingViewController, animated: true)
+            
+        
+        // 사용자 정보
         
         let userInfo = UserInfo(
             name: self.name,

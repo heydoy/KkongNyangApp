@@ -215,6 +215,9 @@
                                 <buttonConfiguration key="configuration" style="plain" title="계정이 없으신가요? 가입하기">
                                     <fontDescription key="titleFontDescription" type="system" weight="medium" pointSize="14"/>
                                 </buttonConfiguration>
+                                <connections>
+                                    <action selector="didRegisterButtonTapped:" destination="bV3-jh-V5q" eventType="touchUpInside" id="22O-mq-WrQ"/>
+                                </connections>
                             </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GRD-Ef-23e">
                                 <rect key="frame" x="20" y="696" width="335" height="1"/>
@@ -468,7 +471,6 @@
                                 </state>
                                 <connections>
                                     <action selector="registerButtonDidTapped:" destination="yHw-kU-C1W" eventType="touchUpInside" id="m5G-oJ-iX7"/>
-                                    <segue destination="q0u-Zg-epK" kind="presentation" modalPresentationStyle="fullScreen" id="yXJ-cn-B9a"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -553,15 +555,15 @@
                                 <color key="textColor" name="black"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Dvq-35-6I2">
-                                <rect key="frame" x="16" y="169.33333333333334" width="100" height="110.00000000000003"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="photoframe" translatesAutoresizingMaskIntoConstraints="NO" id="Dvq-35-6I2">
+                                <rect key="frame" x="16" y="169.33333333333334" width="110" height="110.00000000000003"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="110" id="GAc-yI-wEZ"/>
-                                    <constraint firstAttribute="width" constant="100" id="VQ8-CB-LXP"/>
+                                    <constraint firstAttribute="width" constant="110" id="VQ8-CB-LXP"/>
                                 </constraints>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lcW-9a-4Ba">
-                                <rect key="frame" x="26" y="184.33333333333334" width="80" height="80.000000000000028"/>
+                                <rect key="frame" x="31" y="184.33333333333334" width="80" height="80.000000000000028"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="80" id="3MM-Gr-6zV"/>
                                     <constraint firstAttribute="height" constant="80" id="Scc-Z7-imr"/>
@@ -572,15 +574,18 @@
                                     <color key="titleColor" name="gray-500"/>
                                     <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="32"/>
                                 </state>
+                                <connections>
+                                    <action selector="buttonGoAlbum:" destination="q0u-Zg-epK" eventType="touchUpInside" id="t5E-M7-Sol"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="성별" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="05s-CK-4SC">
-                                <rect key="frame" x="16" y="383.33333333333331" width="31" height="16"/>
+                                <rect key="frame" x="16" y="389.33333333333331" width="31" height="16"/>
                                 <fontDescription key="fontDescription" name="GmarketSansMedium" family="Gmarket Sans" pointSize="16"/>
                                 <color key="textColor" name="black"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="vE4-ob-AI4">
-                                <rect key="frame" x="16" y="547.33333333333337" width="339" height="108"/>
+                                <rect key="frame" x="16" y="571.33333333333337" width="339" height="108"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="메모" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="w0D-qW-f9m">
                                         <rect key="frame" x="0.0" y="0.0" width="31" height="16"/>
@@ -604,13 +609,13 @@
                                 </constraints>
                             </stackView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="생일" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="th0-qh-Igy">
-                                <rect key="frame" x="16" y="461.33333333333331" width="31" height="16"/>
+                                <rect key="frame" x="16" y="473.33333333333331" width="31" height="16"/>
                                 <fontDescription key="fontDescription" name="GmarketSansMedium" family="Gmarket Sans" pointSize="16"/>
                                 <color key="textColor" name="black"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="생일을 선택하세요" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Bh3-Sd-qci">
-                                <rect key="frame" x="16" y="489.33333333333326" width="339" height="46"/>
+                                <rect key="frame" x="16" y="507.33333333333326" width="339" height="46"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="46" id="nBw-dE-GIc"/>
                                 </constraints>
@@ -633,48 +638,48 @@
                                 </state>
                                 <connections>
                                     <action selector="registerButtonDidTapped:" destination="yHw-kU-C1W" eventType="touchUpInside" id="lsw-Vc-kBs"/>
-                                    <segue destination="vNw-Vc-UE4" kind="presentation" modalPresentationStyle="fullScreen" id="KED-WL-mvO"/>
                                 </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="17" translatesAutoresizingMaskIntoConstraints="NO" id="4M5-5j-ci0">
-                                <rect key="frame" x="20" y="411.33333333333331" width="335" height="38"/>
+                                <rect key="frame" x="20" y="417.33333333333331" width="335" height="38"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YOj-72-bq8">
+                                    <button opaque="NO" contentMode="scaleAspectFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YOj-72-bq8">
                                         <rect key="frame" x="0.0" y="0.0" width="159" height="38"/>
-                                        <color key="backgroundColor" name="yellow-500"/>
                                         <fontDescription key="fontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="14"/>
-                                        <color key="tintColor" name="gray-700"/>
+                                        <color key="tintColor" name="white"/>
                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                        <state key="normal" title="♀ 여아">
+                                        <state key="normal" title="♀ 여아" backgroundImage="genderbutton-defaults">
                                             <color key="titleColor" name="gray-500"/>
                                         </state>
-                                        <state key="selected">
-                                            <color key="titleColor" name="gray-700"/>
+                                        <state key="selected" backgroundImage="genderbutton-selected">
+                                            <color key="titleColor" name="greengray-900"/>
                                         </state>
+                                        <connections>
+                                            <action selector="didButtonTapped:" destination="q0u-Zg-epK" eventType="touchUpInside" id="Hae-1e-hbJ"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="U1v-F1-Jxu">
                                         <rect key="frame" x="176" y="0.0" width="159" height="38"/>
-                                        <color key="backgroundColor" name="gray-80"/>
                                         <fontDescription key="fontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="14"/>
-                                        <color key="tintColor" name="gray-500"/>
+                                        <color key="tintColor" name="white"/>
                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                        <state key="normal" title="♂ 남아">
+                                        <state key="normal" title="♂ 남아" backgroundImage="genderbutton-defaults">
                                             <color key="titleColor" name="gray-500"/>
                                         </state>
-                                        <state key="selected">
-                                            <color key="titleColor" name="gray-700"/>
+                                        <state key="selected" backgroundImage="genderbutton-selected">
+                                            <color key="titleColor" name="greengray-900"/>
                                         </state>
+                                        <connections>
+                                            <action selector="didButtonTapped:" destination="q0u-Zg-epK" eventType="touchUpInside" id="22l-zo-hd5"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="38" id="oYo-Z8-WIi"/>
                                 </constraints>
                             </stackView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="F2Q-LQ-jzB">
-                                <rect key="frame" x="309" y="489.33333333333326" width="46" height="46"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" secondItem="F2Q-LQ-jzB" secondAttribute="height" multiplier="1:1" id="oht-Ge-60G"/>
-                                </constraints>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="trailing" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="F2Q-LQ-jzB">
+                                <rect key="frame" x="25" y="507.33333333333326" width="322" height="46"/>
                                 <color key="tintColor" name="gray-300"/>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                 <state key="normal" image="calendar" catalog="system">
@@ -690,13 +695,13 @@
                             <constraint firstItem="4M5-5j-ci0" firstAttribute="top" secondItem="05s-CK-4SC" secondAttribute="bottom" constant="12" id="7J4-yH-QqS"/>
                             <constraint firstItem="sMK-VE-r6c" firstAttribute="trailing" secondItem="LI7-qE-Apn" secondAttribute="trailing" constant="20" id="7cc-xu-apL"/>
                             <constraint firstItem="sMK-VE-r6c" firstAttribute="trailing" secondItem="aRo-bA-mmH" secondAttribute="trailing" constant="20" id="8xg-bZ-pkY"/>
-                            <constraint firstItem="th0-qh-Igy" firstAttribute="top" secondItem="4M5-5j-ci0" secondAttribute="bottom" constant="11.999999999999943" id="Bra-R8-sBV"/>
+                            <constraint firstItem="th0-qh-Igy" firstAttribute="top" secondItem="4M5-5j-ci0" secondAttribute="bottom" constant="18" id="Bra-R8-sBV"/>
                             <constraint firstItem="LkV-zS-ewC" firstAttribute="top" secondItem="F2T-y4-vb8" secondAttribute="bottom" constant="10" id="By3-KD-8Iu"/>
                             <constraint firstItem="Dvq-35-6I2" firstAttribute="top" secondItem="DBd-dg-2Fl" secondAttribute="bottom" constant="12" id="E8k-di-fLN"/>
                             <constraint firstItem="F2T-y4-vb8" firstAttribute="leading" secondItem="sMK-VE-r6c" secondAttribute="leading" constant="16" id="HJ2-jB-pnc"/>
-                            <constraint firstItem="F2Q-LQ-jzB" firstAttribute="leading" secondItem="Bh3-Sd-qci" secondAttribute="trailing" constant="-46" id="Il3-z7-t6u"/>
+                            <constraint firstItem="F2Q-LQ-jzB" firstAttribute="leading" secondItem="Bh3-Sd-qci" secondAttribute="trailing" constant="-330" id="Il3-z7-t6u"/>
                             <constraint firstItem="lcW-9a-4Ba" firstAttribute="centerX" secondItem="Dvq-35-6I2" secondAttribute="centerX" id="JbO-7o-5fG"/>
-                            <constraint firstItem="vE4-ob-AI4" firstAttribute="top" secondItem="Bh3-Sd-qci" secondAttribute="bottom" constant="12" id="JtV-Xo-YKW"/>
+                            <constraint firstItem="vE4-ob-AI4" firstAttribute="top" secondItem="Bh3-Sd-qci" secondAttribute="bottom" constant="18" id="JtV-Xo-YKW"/>
                             <constraint firstItem="sMK-VE-r6c" firstAttribute="bottom" secondItem="LI7-qE-Apn" secondAttribute="bottom" constant="12" id="Ldo-0c-D8J"/>
                             <constraint firstItem="LkV-zS-ewC" firstAttribute="leading" secondItem="F2T-y4-vb8" secondAttribute="leading" id="NdF-NL-9RC"/>
                             <constraint firstItem="aRo-bA-mmH" firstAttribute="leading" secondItem="F2T-y4-vb8" secondAttribute="leading" id="NjB-WA-wCB"/>
@@ -705,28 +710,29 @@
                             <constraint firstItem="F2T-y4-vb8" firstAttribute="top" secondItem="sMK-VE-r6c" secondAttribute="top" constant="24" id="RUa-zN-PRS"/>
                             <constraint firstItem="sMK-VE-r6c" firstAttribute="trailing" secondItem="4M5-5j-ci0" secondAttribute="trailing" constant="20" id="ScN-ag-CsM"/>
                             <constraint firstItem="F2Q-LQ-jzB" firstAttribute="centerY" secondItem="Bh3-Sd-qci" secondAttribute="centerY" id="Sli-sb-UVd"/>
+                            <constraint firstItem="F2Q-LQ-jzB" firstAttribute="width" secondItem="Bh3-Sd-qci" secondAttribute="width" multiplier="0.95" id="Thg-Cy-4Rc"/>
                             <constraint firstItem="LI7-qE-Apn" firstAttribute="leading" secondItem="sMK-VE-r6c" secondAttribute="leading" constant="20" id="TzP-gL-Wrv"/>
                             <constraint firstItem="Bh3-Sd-qci" firstAttribute="leading" secondItem="th0-qh-Igy" secondAttribute="leading" id="Z96-P0-QFb"/>
                             <constraint firstItem="aRo-bA-mmH" firstAttribute="top" secondItem="Dvq-35-6I2" secondAttribute="bottom" constant="18" id="c0S-W4-euk"/>
-                            <constraint firstItem="05s-CK-4SC" firstAttribute="top" secondItem="J3z-T0-W6P" secondAttribute="bottom" constant="12" id="cGp-Lg-qFg"/>
+                            <constraint firstItem="05s-CK-4SC" firstAttribute="top" secondItem="J3z-T0-W6P" secondAttribute="bottom" constant="18" id="cGp-Lg-qFg"/>
                             <constraint firstItem="sMK-VE-r6c" firstAttribute="trailing" secondItem="Bh3-Sd-qci" secondAttribute="trailing" constant="20" id="ckz-0w-Rzq"/>
                             <constraint firstItem="DBd-dg-2Fl" firstAttribute="top" secondItem="LkV-zS-ewC" secondAttribute="bottom" constant="20" id="hR6-QZ-fBe"/>
                             <constraint firstItem="4M5-5j-ci0" firstAttribute="leading" secondItem="sMK-VE-r6c" secondAttribute="leading" constant="20" id="rtd-p1-Aoq"/>
                             <constraint firstItem="th0-qh-Igy" firstAttribute="leading" secondItem="F2T-y4-vb8" secondAttribute="leading" id="sDY-nt-0Cn"/>
                             <constraint firstItem="DBd-dg-2Fl" firstAttribute="leading" secondItem="LkV-zS-ewC" secondAttribute="leading" id="syO-hB-Yg9"/>
-                            <constraint firstItem="Bh3-Sd-qci" firstAttribute="top" secondItem="th0-qh-Igy" secondAttribute="bottom" constant="12" id="wn3-Bv-FZY"/>
+                            <constraint firstItem="Bh3-Sd-qci" firstAttribute="top" secondItem="th0-qh-Igy" secondAttribute="bottom" constant="18" id="wn3-Bv-FZY"/>
                             <constraint firstItem="Dvq-35-6I2" firstAttribute="leading" secondItem="DBd-dg-2Fl" secondAttribute="leading" id="xKa-ah-NiG"/>
                             <constraint firstItem="sMK-VE-r6c" firstAttribute="trailing" secondItem="vE4-ob-AI4" secondAttribute="trailing" constant="20" id="yLW-pZ-Kiw"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="catBirthdayTextField" destination="Bh3-Sd-qci" id="kok-uD-BBd"/>
-                        <outlet property="catGenderFemaleButton" destination="YOj-72-bq8" id="kZm-CN-msO"/>
-                        <outlet property="catGenderMaleButton" destination="U1v-F1-Jxu" id="unh-Bp-meu"/>
                         <outlet property="catMemoTextField" destination="Gdb-F3-H1V" id="X8b-jC-CEv"/>
                         <outlet property="catNameTextField" destination="J3z-T0-W6P" id="v9h-Bc-Sax"/>
                         <outlet property="catPhotoImageView" destination="Dvq-35-6I2" id="zhg-mC-d1h"/>
                         <outlet property="finishButton" destination="LI7-qE-Apn" id="obq-1u-a8P"/>
+                        <outletCollection property="genderRadioButtons" destination="YOj-72-bq8" collectionClass="NSMutableArray" id="7L9-Ul-fng"/>
+                        <outletCollection property="genderRadioButtons" destination="U1v-F1-Jxu" collectionClass="NSMutableArray" id="XL7-SD-LOb"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uRx-2K-KEa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -832,16 +838,19 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="yCt-np-Mar"/>
+        <segue reference="NAm-kv-ELc"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="calendar" catalog="system" width="128" height="106"/>
+        <image name="genderbutton-defaults" width="158" height="46"/>
+        <image name="genderbutton-selected" width="158" height="46"/>
         <image name="icon-apple" width="24.333333969116211" height="24"/>
         <image name="icon-kakao" width="24" height="24"/>
         <image name="icon-mail" width="24.333333969116211" height="24"/>
         <image name="icon-naver" width="24.333333969116211" height="24"/>
         <image name="logo-signup" width="158.33332824707031" height="158"/>
         <image name="photo.circle.fill" catalog="system" width="128" height="121"/>
+        <image name="photoframe" width="119" height="119"/>
         <image name="questionmark.circle.fill" catalog="system" width="128" height="121"/>
         <namedColor name="black">
             <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -861,9 +870,6 @@
         <namedColor name="gray-700">
             <color red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
-        <namedColor name="gray-80">
-            <color red="0.97299998998641968" green="0.97299998998641968" blue="0.9649999737739563" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </namedColor>
         <namedColor name="greengray-100">
             <color red="0.9137254901960784" green="0.90980392156862744" blue="0.8666666666666667" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
@@ -875,9 +881,6 @@
         </namedColor>
         <namedColor name="yellow-150">
             <color red="1" green="0.94901960784313721" blue="0.85098039215686272" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </namedColor>
-        <namedColor name="yellow-500">
-            <color red="1" green="0.82352941176470584" blue="0.4823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

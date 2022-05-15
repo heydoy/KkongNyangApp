@@ -14,6 +14,8 @@ class CatProfileSettingViewController: UIViewController {
     
     var catInfo:  ((CatsInfo) -> Void)?
     
+    let imagePickerViewController = UIImagePickerController()
+
     // 텍스트필드 아울렛
     @IBOutlet weak var catPhotoImageView: UIImageView!
     @IBOutlet weak var catNameTextField: UITextField!
@@ -21,22 +23,77 @@ class CatProfileSettingViewController: UIViewController {
     @IBOutlet weak var catMemoTextField: UITextField!
     
     // 버튼 아울렛
-    @IBOutlet weak var catGenderFemaleButton: UIButton!
-    @IBOutlet weak var catGenderMaleButton: UIButton!
+    
+    @IBOutlet var genderRadioButtons: [UIButton]!
+    
+
+    
     @IBOutlet weak var finishButton: UIButton!
+    
     
     // MARK: - Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        imagePickerViewController.delegate = self
     }
     
     // MARK: - Actions
+
+    
+    @IBAction func didButtonTapped(_ sender: UIButton) {
+        sender.isSelected = !sender.isSelected
+    }
+    
+    
+    @IBAction func buttonGoAlbum(_ sender: Any) {
+        let alert =  UIAlertController(title: "고양이 사진", message: "고양이 사진을 찍거나 선택해주세요.", preferredStyle: .actionSheet)
+
+
+        let library =  UIAlertAction(title: "사진앨범", style: .default) { (action) in self.openLibrary()
+        }
+
+
+        let camera =  UIAlertAction(title: "카메라", style: .default) { (action) in
+            self.openCamera()
+        }
+        let cancel = UIAlertAction(title: "취소", style: .cancel, handler: nil)
+
+
+        alert.addAction(library)
+        alert.addAction(camera)
+        alert.addAction(cancel)
+
+        present(alert, animated: true, completion: nil)
+
+//        self.present(imagePickerViewController, animated: true, completion: nil)
+    }
+    
     
     
     
     // MARK: - Helpers
-    
+    func openLibrary(){
 
+    imagePickerViewController.sourceType = .photoLibrary
+      present(imagePickerViewController, animated: false, completion: nil)
 
+    }
+
+    func openCamera(){
+
+    imagePickerViewController.sourceType = .camera
+      present(imagePickerViewController, animated: false, completion: nil)
+    }
+
+}
+
+extension CatProfileSettingViewController : UIImagePickerControllerDelegate,  UINavigationControllerDelegate {
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+        // print(info)
+        if let image = info[UIImagePickerController.InfoKey.originalImage] as? UIImage {
+            catPhotoImageView.image = image
+            
+        }
+        dismiss(animated: true, completion: nil)
+    }
 }
