@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		38021759A8D98144BA77914F /* Pods_KkongNyangApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 69ED1361684068BDF78592AD /* Pods_KkongNyangApp.framework */; };
 		A206BB332812BABA00F2768A /* SignupAndLogin.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A206BB322812BABA00F2768A /* SignupAndLogin.storyboard */; };
 		A224D4B0280D1D720040E945 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A224D4AF280D1D720040E945 /* AppDelegate.swift */; };
 		A224D4B2280D1D720040E945 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A224D4B1280D1D720040E945 /* SceneDelegate.swift */; };
@@ -42,9 +43,13 @@
 		A2DFA401280EEBF100AFE1BF /* GmarketSansLight.otf in Resources */ = {isa = PBXBuildFile; fileRef = A2DFA3FE280EEBF100AFE1BF /* GmarketSansLight.otf */; };
 		A2DFA402280EEBF100AFE1BF /* GmarketSansBold.otf in Resources */ = {isa = PBXBuildFile; fileRef = A2DFA3FF280EEBF100AFE1BF /* GmarketSansBold.otf */; };
 		A2DFA403280EEBF100AFE1BF /* GmarketSansMedium.otf in Resources */ = {isa = PBXBuildFile; fileRef = A2DFA400280EEBF100AFE1BF /* GmarketSansMedium.otf */; };
+		A2E818162830F61A00B64664 /* CatProfileSettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2E818152830F61A00B64664 /* CatProfileSettingViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		69ED1361684068BDF78592AD /* Pods_KkongNyangApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_KkongNyangApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6AAAD11D319B92D9083FBCBC /* Pods-KkongNyangApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KkongNyangApp.debug.xcconfig"; path = "Target Support Files/Pods-KkongNyangApp/Pods-KkongNyangApp.debug.xcconfig"; sourceTree = "<group>"; };
+		6E6C39B42C5BB79F280B92E7 /* Pods-KkongNyangApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KkongNyangApp.release.xcconfig"; path = "Target Support Files/Pods-KkongNyangApp/Pods-KkongNyangApp.release.xcconfig"; sourceTree = "<group>"; };
 		A206BB322812BABA00F2768A /* SignupAndLogin.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SignupAndLogin.storyboard; sourceTree = "<group>"; };
 		A224D4AC280D1D720040E945 /* KkongNyangApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KkongNyangApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A224D4AF280D1D720040E945 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -82,6 +87,7 @@
 		A2DFA3FE280EEBF100AFE1BF /* GmarketSansLight.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = GmarketSansLight.otf; sourceTree = "<group>"; };
 		A2DFA3FF280EEBF100AFE1BF /* GmarketSansBold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = GmarketSansBold.otf; sourceTree = "<group>"; };
 		A2DFA400280EEBF100AFE1BF /* GmarketSansMedium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = GmarketSansMedium.otf; sourceTree = "<group>"; };
+		A2E818152830F61A00B64664 /* CatProfileSettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatProfileSettingViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -89,17 +95,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				38021759A8D98144BA77914F /* Pods_KkongNyangApp.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		18F99F84E39DE13A8E287676 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				6AAAD11D319B92D9083FBCBC /* Pods-KkongNyangApp.debug.xcconfig */,
+				6E6C39B42C5BB79F280B92E7 /* Pods-KkongNyangApp.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		9D8EE1A8D346C50515E0E910 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				69ED1361684068BDF78592AD /* Pods_KkongNyangApp.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		A224D4A3280D1D710040E945 = {
 			isa = PBXGroup;
 			children = (
 				A224D4AE280D1D720040E945 /* KkongNyangApp */,
 				A224D4AD280D1D720040E945 /* Products */,
+				18F99F84E39DE13A8E287676 /* Pods */,
+				9D8EE1A8D346C50515E0E910 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -135,9 +161,10 @@
 			isa = PBXGroup;
 			children = (
 				A206BB322812BABA00F2768A /* SignupAndLogin.storyboard */,
-				A2B2BC0B28279F1E00659836 /* RegisterViewController.swift */,
 				A2B2BC0D2827A8DC00659836 /* LoginViewController.swift */,
 				A2B2BC0F2827AADE00659836 /* EmailLoginViewController.swift */,
+				A2B2BC0B28279F1E00659836 /* RegisterViewController.swift */,
+				A2E818152830F61A00B64664 /* CatProfileSettingViewController.swift */,
 			);
 			path = Authentication;
 			sourceTree = "<group>";
@@ -235,9 +262,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = A224D4C0280D1D730040E945 /* Build configuration list for PBXNativeTarget "KkongNyangApp" */;
 			buildPhases = (
+				8533E5F74D6A4E16201C2D74 /* [CP] Check Pods Manifest.lock */,
 				A224D4A8280D1D720040E945 /* Sources */,
 				A224D4A9280D1D720040E945 /* Frameworks */,
 				A224D4AA280D1D720040E945 /* Resources */,
+				43EBB30557138D9CF6BD48DE /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -305,6 +334,48 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		43EBB30557138D9CF6BD48DE /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-KkongNyangApp/Pods-KkongNyangApp-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-KkongNyangApp/Pods-KkongNyangApp-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-KkongNyangApp/Pods-KkongNyangApp-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8533E5F74D6A4E16201C2D74 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-KkongNyangApp-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		A224D4A8280D1D720040E945 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -330,6 +401,7 @@
 				A2B2BC152827BC6500659836 /* TodoCollectionViewCell.swift in Sources */,
 				A2DFA392280E7DC400AFE1BF /* LandscapeManager.swift in Sources */,
 				A2B2BC082827560500659836 /* UserInfo.swift in Sources */,
+				A2E818162830F61A00B64664 /* CatProfileSettingViewController.swift in Sources */,
 				A2DFA394280E8D9700AFE1BF /* ConciergeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -474,6 +546,7 @@
 		};
 		A224D4C1280D1D730040E945 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6AAAD11D319B92D9083FBCBC /* Pods-KkongNyangApp.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -503,6 +576,7 @@
 		};
 		A224D4C2280D1D730040E945 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6E6C39B42C5BB79F280B92E7 /* Pods-KkongNyangApp.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
