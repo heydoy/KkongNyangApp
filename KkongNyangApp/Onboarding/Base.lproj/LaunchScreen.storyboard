@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
-    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <device id="retina5_9" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
@@ -19,17 +19,17 @@
             <objects>
                 <viewController id="01J-lp-oVM" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Ze5-6b-2t3">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo-splash" translatesAutoresizingMaskIntoConstraints="NO" id="tsU-YE-Vu7">
-                                <rect key="frame" x="123" y="305.5" width="168" height="168"/>
+                                <rect key="frame" x="123" y="289" width="129" height="129"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="tsU-YE-Vu7" secondAttribute="height" multiplier="1:1" id="wDf-cm-I3i"/>
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="고양이 공동육묘 앱" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vM8-MC-JCM">
-                                <rect key="frame" x="40" y="481" width="334" height="17"/>
+                                <rect key="frame" x="40" y="425.33333333333331" width="295" height="17"/>
                                 <fontDescription key="fontDescription" name="GmarketSansMedium" family="Gmarket Sans" pointSize="17"/>
                                 <color key="textColor" name="greengray-900"/>
                                 <nil key="highlightedColor"/>
@@ -53,7 +53,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="logo-splash" width="158.5" height="158"/>
+        <image name="logo-splash" width="158.33332824707031" height="158"/>
         <namedColor name="greengray-900">
             <color red="0.12549019607843137" green="0.15686274509803921" blue="0.043137254901960784" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
