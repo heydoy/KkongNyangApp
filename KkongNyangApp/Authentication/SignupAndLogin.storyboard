@@ -193,7 +193,7 @@
                                         </constraints>
                                         <color key="textColor" name="gray-700"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                        <textInputTraits key="textInputTraits"/>
+                                        <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                                     </textField>
                                 </subviews>
                             </stackView>
@@ -240,17 +240,28 @@
                                     <segue destination="9Hk-fw-XzW" kind="presentation" modalPresentationStyle="fullScreen" id="NAm-kv-ELc"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="꽁냥에서 우리 고양이들을 함께 돌보고 기록해요." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fV5-1g-Vvj">
+                                <rect key="frame" x="104.00000000000001" y="290" width="167.33333333333337" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="rmL-w9-IAS"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="GmarketSansMedium" family="Gmarket Sans" pointSize="15"/>
+                                <color key="textColor" name="greengray-900"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="tT0-96-273"/>
                         <color key="backgroundColor" name="greengray-100"/>
                         <constraints>
+                            <constraint firstItem="r7s-xa-bTc" firstAttribute="top" secondItem="fV5-1g-Vvj" secondAttribute="bottom" constant="33.333333333333314" id="5T0-b8-jbp"/>
                             <constraint firstItem="tT0-96-273" firstAttribute="trailing" secondItem="wky-NM-Yea" secondAttribute="trailing" constant="20" id="7gu-Lr-o1U"/>
                             <constraint firstItem="QyY-Je-12J" firstAttribute="top" secondItem="r7s-xa-bTc" secondAttribute="bottom" constant="8" symbolic="YES" id="8EQ-tP-cut"/>
-                            <constraint firstItem="r7s-xa-bTc" firstAttribute="top" secondItem="HtQ-Nd-FhJ" secondAttribute="bottom" constant="89.5" id="BmI-kD-ofi"/>
                             <constraint firstItem="tT0-96-273" firstAttribute="trailing" secondItem="5gg-Gt-P8v" secondAttribute="trailing" constant="20" id="EkQ-Mr-vYo"/>
                             <constraint firstItem="HtQ-Nd-FhJ" firstAttribute="height" secondItem="5JK-v2-fL7" secondAttribute="height" multiplier="0.16" id="GOd-NB-nWm"/>
+                            <constraint firstItem="fV5-1g-Vvj" firstAttribute="centerX" secondItem="HtQ-Nd-FhJ" secondAttribute="centerX" id="Ild-m5-0M4"/>
                             <constraint firstItem="5gg-Gt-P8v" firstAttribute="top" secondItem="QyY-Je-12J" secondAttribute="bottom" constant="16" id="QHR-lv-ML5"/>
                             <constraint firstItem="tT0-96-273" firstAttribute="bottom" secondItem="wky-NM-Yea" secondAttribute="bottom" constant="30" id="R16-2h-RK7"/>
+                            <constraint firstItem="fV5-1g-Vvj" firstAttribute="top" secondItem="HtQ-Nd-FhJ" secondAttribute="bottom" constant="-4" id="RNt-iK-2oU"/>
                             <constraint firstItem="tT0-96-273" firstAttribute="trailing" secondItem="r7s-xa-bTc" secondAttribute="trailing" constant="20" id="RyQ-DG-K1b"/>
                             <constraint firstItem="HtQ-Nd-FhJ" firstAttribute="width" secondItem="5JK-v2-fL7" secondAttribute="width" multiplier="0.36" id="Vrs-xu-XEh"/>
                             <constraint firstItem="wky-NM-Yea" firstAttribute="leading" secondItem="tT0-96-273" secondAttribute="leading" constant="20" id="Xkg-9b-teJ"/>
@@ -364,7 +375,7 @@
                                                 </constraints>
                                                 <color key="textColor" name="gray-700"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                <textInputTraits key="textInputTraits"/>
+                                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                                             </textField>
                                         </subviews>
                                         <constraints>
@@ -388,7 +399,7 @@
                                                 </constraints>
                                                 <color key="textColor" name="gray-700"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                <textInputTraits key="textInputTraits"/>
+                                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                                             </textField>
                                         </subviews>
                                         <constraints>
