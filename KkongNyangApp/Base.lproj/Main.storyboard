@@ -86,8 +86,20 @@
                     <view key="view" contentMode="scaleToFill" id="ViW-cQ-hqg">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="알림" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bl2-Xq-yJa">
+                                <rect key="frame" x="20" y="68" width="59" height="41"/>
+                                <fontDescription key="fontDescription" name="AppleSDGothicNeo-Bold" family="Apple SD Gothic Neo" pointSize="34"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="Y4u-z5-g9O"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="bl2-Xq-yJa" firstAttribute="top" secondItem="Y4u-z5-g9O" secondAttribute="top" constant="24" id="3dn-yj-dB2"/>
+                            <constraint firstItem="bl2-Xq-yJa" firstAttribute="leading" secondItem="Y4u-z5-g9O" secondAttribute="leading" constant="20" id="oIb-S0-QQc"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="알림" image="icon-alert" id="oAB-L3-xce"/>
                 </viewController>
@@ -105,7 +117,7 @@
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="할 일" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jCA-IG-nOV">
                                 <rect key="frame" x="20" y="68" width="183" height="41"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="34"/>
+                                <fontDescription key="fontDescription" name="AppleSDGothicNeo-Bold" family="Apple SD Gothic Neo" pointSize="34"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -160,8 +172,8 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="기호기록" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uZl-fw-Y2x">
-                                <rect key="frame" x="20" y="68" width="118" height="41"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="34"/>
+                                <rect key="frame" x="20.000000000000007" y="68" width="117.66666666666669" height="41"/>
+                                <fontDescription key="fontDescription" name="AppleSDGothicNeo-Bold" family="Apple SD Gothic Neo" pointSize="34"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -291,8 +303,20 @@
                     <view key="view" contentMode="scaleToFill" id="6cL-Uh-aMR">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="마이페이지" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZLn-e8-kEE">
+                                <rect key="frame" x="20" y="68" width="148" height="41"/>
+                                <fontDescription key="fontDescription" name="AppleSDGothicNeo-Bold" family="Apple SD Gothic Neo" pointSize="34"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="Eui-ev-NdP"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="ZLn-e8-kEE" firstAttribute="leading" secondItem="Eui-ev-NdP" secondAttribute="leading" constant="20" id="qph-dH-AAb"/>
+                            <constraint firstItem="ZLn-e8-kEE" firstAttribute="top" secondItem="Eui-ev-NdP" secondAttribute="top" constant="24" id="wwg-8k-7Xz"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="마이페이지" image="icon-mypage" id="4w5-Um-3Uk"/>
                 </viewController>
@@ -309,13 +333,13 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="홈" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PkH-jp-urJ">
-                                <rect key="frame" x="20" y="68" width="30" height="41"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="34"/>
+                                <rect key="frame" x="20" y="68" width="29.666666666666671" height="41"/>
+                                <fontDescription key="fontDescription" name="AppleSDGothicNeo-Bold" family="Apple SD Gothic Neo" pointSize="34"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" indicatorStyle="white" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="1hy-d9-Q1H">
-                                <rect key="frame" x="0.0" y="133" width="375" height="320"/>
+                                <rect key="frame" x="0.0" y="121" width="375" height="320"/>
                                 <color key="backgroundColor" systemColor="systemGray6Color"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="320" id="lzJ-h5-eZ5"/>
@@ -407,11 +431,9 @@
                         <constraints>
                             <constraint firstItem="1hy-d9-Q1H" firstAttribute="trailing" secondItem="ctT-kU-CSp" secondAttribute="trailing" id="Bs6-rQ-UEZ"/>
                             <constraint firstItem="PkH-jp-urJ" firstAttribute="top" secondItem="ctT-kU-CSp" secondAttribute="top" constant="24" id="KZl-la-Irc"/>
-                            <constraint firstItem="1hy-d9-Q1H" firstAttribute="top" secondItem="PkH-jp-urJ" secondAttribute="bottom" constant="24" id="dOM-Om-bga"/>
+                            <constraint firstItem="1hy-d9-Q1H" firstAttribute="top" secondItem="PkH-jp-urJ" secondAttribute="bottom" constant="12" id="dOM-Om-bga"/>
                             <constraint firstItem="1hy-d9-Q1H" firstAttribute="leading" secondItem="ctT-kU-CSp" secondAttribute="leading" id="eOy-RH-oe0"/>
                             <constraint firstItem="PkH-jp-urJ" firstAttribute="leading" secondItem="ctT-kU-CSp" secondAttribute="leading" constant="20" id="g9A-Bl-w36"/>
-                            <constraint firstItem="1hy-d9-Q1H" firstAttribute="leading" secondItem="ctT-kU-CSp" secondAttribute="leading" id="iGA-Og-CBC"/>
-                            <constraint firstItem="ctT-kU-CSp" firstAttribute="trailing" secondItem="1hy-d9-Q1H" secondAttribute="trailing" id="nTH-Xs-HOZ"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="홈" image="icon-home" id="Xne-f8-0Pe"/>
