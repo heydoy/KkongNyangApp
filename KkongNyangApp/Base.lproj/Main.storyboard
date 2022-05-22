@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="q5d-9j-qhg">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="pUQ-gC-qAW">
     <device id="retina5_9" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
@@ -299,7 +299,7 @@
         <!--My Page View Controller-->
         <scene sceneID="McT-cS-4Mo">
             <objects>
-                <viewController storyboardIdentifier="MyPageVC" modalPresentationStyle="fullScreen" id="HW5-gc-Zm7" customClass="MyPageViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="MyPageVC" modalPresentationStyle="fullScreen" useStoryboardIdentifierAsRestorationIdentifier="YES" id="HW5-gc-Zm7" customClass="MyPageViewController" customModule="KkongNyangApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="6cL-Uh-aMR">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -333,6 +333,9 @@
                                                         </constraints>
                                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                                         <state key="normal" image="arrow-right"/>
+                                                        <connections>
+                                                            <action selector="didMyProfileButtonTapped:" destination="HW5-gc-Zm7" eventType="touchUpInside" id="geN-kf-B1m"/>
+                                                        </connections>
                                                     </button>
                                                 </subviews>
                                                 <constraints>
@@ -373,6 +376,9 @@
                                                         </constraints>
                                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                                         <state key="normal" image="arrow-right"/>
+                                                        <connections>
+                                                            <action selector="didCatProfileButtonTapped:" destination="HW5-gc-Zm7" eventType="touchUpInside" id="7yw-JS-Kab"/>
+                                                        </connections>
                                                     </button>
                                                 </subviews>
                                                 <constraints>
@@ -413,6 +419,9 @@
                                                         </constraints>
                                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                                         <state key="normal" image="arrow-right"/>
+                                                        <connections>
+                                                            <action selector="didAlertSettingButtonTapped:" destination="HW5-gc-Zm7" eventType="touchUpInside" id="4AO-ZY-1Qn"/>
+                                                        </connections>
                                                     </button>
                                                 </subviews>
                                                 <constraints>
@@ -453,6 +462,9 @@
                                                         </constraints>
                                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                                         <state key="normal" image="arrow-right"/>
+                                                        <connections>
+                                                            <action selector="didAppInfoButtonTapped:" destination="HW5-gc-Zm7" eventType="touchUpInside" id="pGR-Go-KL1"/>
+                                                        </connections>
                                                     </button>
                                                 </subviews>
                                                 <constraints>
@@ -493,10 +505,10 @@
             </objects>
             <point key="canvasLocation" x="5972" y="912.5615763546798"/>
         </scene>
-        <!--View Controller-->
+        <!--Alert Setting View Controller-->
         <scene sceneID="Tc2-Gj-gaC">
             <objects>
-                <viewController id="hS5-1D-m9d" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="AlertSettingVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="hS5-1D-m9d" customClass="AlertSettingViewController" customModule="KkongNyangApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="HQd-RG-1xE">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -509,6 +521,9 @@
                                 </constraints>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                 <state key="normal" image="tab-arrow-left"/>
+                                <connections>
+                                    <action selector="didBackButtonTapped:" destination="hS5-1D-m9d" eventType="touchUpInside" id="Hpi-Fz-C55"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="알림 설정" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="23c-ey-fha">
                                 <rect key="frame" x="49" y="66.666666666666671" width="82" height="26.666666666666671"/>
@@ -517,22 +532,22 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="C8o-qt-JQP">
-                                <rect key="frame" x="20" y="117.33333333333331" width="342.33333333333331" height="114.66666666666669"/>
+                                <rect key="frame" x="20" y="117.33333333333331" width="335" height="114.66666666666669"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="7" translatesAutoresizingMaskIntoConstraints="NO" id="CFm-dL-3E6">
-                                        <rect key="frame" x="0.0" y="0.0" width="342.33333333333331" height="43"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="335" height="43"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="Rzs-xw-apj">
-                                                <rect key="frame" x="0.0" y="0.0" width="342.33333333333331" height="35"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="335" height="35"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="알림" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0eh-Ux-TF7">
-                                                        <rect key="frame" x="0.0" y="0.0" width="280.33333333333331" height="35"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="273" height="35"/>
                                                         <fontDescription key="fontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="16"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aoA-Ub-ykH">
-                                                        <rect key="frame" x="292.33333333333331" y="0.0" width="50" height="35"/>
+                                                        <rect key="frame" x="285" y="0.0" width="50" height="35"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="35" id="HJI-P2-4yw"/>
                                                             <constraint firstAttribute="width" constant="50" id="Nqc-Ei-yVa"/>
@@ -540,6 +555,9 @@
                                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                                         <state key="normal" image="button-toggle-off"/>
                                                         <state key="selected" image="button-toggle-on"/>
+                                                        <connections>
+                                                            <action selector="didAlertButtonTapped:" destination="hS5-1D-m9d" eventType="touchUpInside" id="4t1-yV-Mai"/>
+                                                        </connections>
                                                     </button>
                                                 </subviews>
                                                 <constraints>
@@ -549,7 +567,7 @@
                                                 </constraints>
                                             </stackView>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qoH-x9-loJ">
-                                                <rect key="frame" x="0.0" y="42.000000000000014" width="342.33333333333331" height="1"/>
+                                                <rect key="frame" x="0.0" y="42.000000000000014" width="335" height="1"/>
                                                 <color key="backgroundColor" name="gray-100"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="1" id="nNB-jQ-z3t"/>
@@ -561,19 +579,19 @@
                                         </constraints>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="AmZ-O0-3qH">
-                                        <rect key="frame" x="0.0" y="55.000000000000014" width="342.33333333333331" height="59.666666666666671"/>
+                                        <rect key="frame" x="0.0" y="55.000000000000014" width="335" height="59.666666666666671"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="4hi-57-X0A">
-                                                <rect key="frame" x="0.0" y="0.0" width="342.33333333333331" height="35"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="335" height="35"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="취침시간 제외하기" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hcv-4y-fmA">
-                                                        <rect key="frame" x="0.0" y="0.0" width="280.33333333333331" height="35"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="273" height="35"/>
                                                         <fontDescription key="fontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="16"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="owm-Ex-lk0">
-                                                        <rect key="frame" x="292.33333333333331" y="0.0" width="50" height="35"/>
+                                                        <rect key="frame" x="285" y="0.0" width="50" height="35"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="35" id="nNw-a0-e3X"/>
                                                             <constraint firstAttribute="width" constant="50" id="nQt-6l-nih"/>
@@ -581,20 +599,25 @@
                                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                                         <state key="normal" image="button-toggle-off"/>
                                                         <state key="selected" image="button-toggle-on"/>
+                                                        <connections>
+                                                            <action selector="didSleepingButtonTapped:" destination="hS5-1D-m9d" eventType="touchUpInside" id="NCX-95-75N"/>
+                                                        </connections>
                                                     </button>
                                                 </subviews>
                                                 <constraints>
+                                                    <constraint firstItem="Hcv-4y-fmA" firstAttribute="leading" secondItem="4hi-57-X0A" secondAttribute="leading" id="eDC-9V-J0b"/>
+                                                    <constraint firstAttribute="trailing" secondItem="owm-Ex-lk0" secondAttribute="trailing" id="gZq-c9-Y1g"/>
                                                     <constraint firstItem="owm-Ex-lk0" firstAttribute="centerY" secondItem="Hcv-4y-fmA" secondAttribute="centerY" id="v6y-e7-J3M"/>
                                                 </constraints>
                                             </stackView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="밤 12시부터 오전  8시까지 알림을 보내지 않습니다." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vj3-Sm-Pm8">
-                                                <rect key="frame" x="0.0" y="39" width="342.33333333333331" height="15.666666666666664"/>
+                                                <rect key="frame" x="0.0" y="39" width="335" height="15.666666666666664"/>
                                                 <fontDescription key="fontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="13"/>
                                                 <color key="textColor" name="gray-300"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="psj-QB-7Lh">
-                                                <rect key="frame" x="0.0" y="58.666666666666657" width="342.33333333333331" height="1"/>
+                                                <rect key="frame" x="0.0" y="58.666666666666657" width="335" height="1"/>
                                                 <color key="backgroundColor" name="gray-100"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="1" id="Bp6-au-8sP"/>
@@ -614,22 +637,27 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="23c-ey-fha" firstAttribute="centerY" secondItem="xBT-nc-RhL" secondAttribute="centerY" id="7hV-8k-gDK"/>
+                            <constraint firstItem="C8o-qt-JQP" firstAttribute="leading" secondItem="2fX-rV-7XB" secondAttribute="leading" constant="20" id="EqD-fB-aZU"/>
                             <constraint firstItem="xBT-nc-RhL" firstAttribute="leading" secondItem="2fX-rV-7XB" secondAttribute="leading" constant="20" id="LAV-vU-Prj"/>
                             <constraint firstItem="23c-ey-fha" firstAttribute="leading" secondItem="xBT-nc-RhL" secondAttribute="trailing" constant="5" id="bDV-kI-T8R"/>
                             <constraint firstItem="C8o-qt-JQP" firstAttribute="top" secondItem="23c-ey-fha" secondAttribute="bottom" constant="24" id="cpR-iV-Klk"/>
                             <constraint firstItem="xBT-nc-RhL" firstAttribute="top" secondItem="2fX-rV-7XB" secondAttribute="top" constant="24" id="eIz-Jn-EuQ"/>
-                            <constraint firstItem="C8o-qt-JQP" firstAttribute="leading" secondItem="2fX-rV-7XB" secondAttribute="leading" constant="20" id="f1p-Ym-WHh"/>
+                            <constraint firstItem="2fX-rV-7XB" firstAttribute="trailing" secondItem="C8o-qt-JQP" secondAttribute="trailing" constant="20" id="sCD-JP-KCu"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="buttonAlert" destination="aoA-Ub-ykH" id="llB-Ca-t0Z"/>
+                        <outlet property="buttonSleepingMode" destination="owm-Ex-lk0" id="VHb-t4-FqK"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qbo-jq-oJC" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="7466.3999999999996" y="895.56650246305423"/>
         </scene>
-        <!--View Controller-->
+        <!--App Info View Controller-->
         <scene sceneID="TuB-xb-pnU">
             <objects>
-                <viewController id="H0j-6g-ybC" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="AppInfoVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="H0j-6g-ybC" customClass="AppInfoViewController" customModule="KkongNyangApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="yN5-Zt-wp6">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -642,6 +670,9 @@
                                 </constraints>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                 <state key="normal" image="tab-arrow-left"/>
+                                <connections>
+                                    <action selector="didBackButtonTapped:" destination="H0j-6g-ybC" eventType="touchUpInside" id="fYP-s8-AbV"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="앱 정보" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="X4p-wy-ZKj">
                                 <rect key="frame" x="49" y="66.666666666666671" width="63" height="26.666666666666671"/>
@@ -649,7 +680,7 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" axis="vertical" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="H5t-DI-nve">
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="H5t-DI-nve">
                                 <rect key="frame" x="20" y="112" width="335" height="288"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="7" translatesAutoresizingMaskIntoConstraints="NO" id="6qz-os-P0U">
@@ -898,7 +929,10 @@
                         <viewLayoutGuide key="safeArea" id="y6V-ch-CiU"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="H5t-DI-nve" firstAttribute="leading" secondItem="y6V-ch-CiU" secondAttribute="leading" constant="20" id="1Je-rU-uO0"/>
+                            <constraint firstItem="y6V-ch-CiU" firstAttribute="trailing" secondItem="H5t-DI-nve" secondAttribute="trailing" constant="20" id="BtT-o7-DmT"/>
                             <constraint firstItem="X4p-wy-ZKj" firstAttribute="leading" secondItem="RwF-ez-E80" secondAttribute="trailing" constant="5" id="EzX-xQ-2Fl"/>
+                            <constraint firstItem="H5t-DI-nve" firstAttribute="top" secondItem="RwF-ez-E80" secondAttribute="bottom" constant="20" id="OQv-tz-6d8"/>
                             <constraint firstItem="X4p-wy-ZKj" firstAttribute="centerY" secondItem="RwF-ez-E80" secondAttribute="centerY" id="ht8-3x-pwA"/>
                             <constraint firstItem="RwF-ez-E80" firstAttribute="leading" secondItem="y6V-ch-CiU" secondAttribute="leading" constant="20" id="kqi-Ba-AmO"/>
                             <constraint firstItem="RwF-ez-E80" firstAttribute="top" secondItem="y6V-ch-CiU" secondAttribute="top" constant="24" id="mmL-WP-5JN"/>
@@ -1033,7 +1067,7 @@
         <!--마이페이지-->
         <scene sceneID="S5E-YF-0RH">
             <objects>
-                <navigationController wantsFullScreenLayout="YES" automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="eAM-jT-y5T" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="MyPageNavigationVC" wantsFullScreenLayout="YES" automaticallyAdjustsScrollViewInsets="NO" useStoryboardIdentifierAsRestorationIdentifier="YES" navigationBarHidden="YES" id="eAM-jT-y5T" sceneMemberID="viewController">
                     <extendedEdge key="edgesForExtendedLayout" bottom="YES"/>
                     <tabBarItem key="tabBarItem" title="마이페이지" image="icon-mypage" id="4w5-Um-3Uk"/>
                     <toolbarItems/>
