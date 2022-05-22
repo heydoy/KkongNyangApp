@@ -143,10 +143,11 @@
 				A25C338128307C7B006DF34C /* App */,
 				A2DFA388280E77A000AFE1BF /* Onboarding */,
 				A25C338028307C65006DF34C /* Authentication */,
-				A224D4B5280D1D720040E945 /* Main.storyboard */,
 				A2B2BC112827BC1F00659836 /* Todo */,
 				A2BE71B7281B6D8100FB8548 /* PalateViewController.swift */,
 				A2BE71B5281B63BE00FB8548 /* HomeViewController.swift */,
+				A226D2C7283A381000C080CF /* MyPage */,
+				A224D4B5280D1D720040E945 /* Main.storyboard */,
 				A224D4B8280D1D730040E945 /* Assets.xcassets */,
 				A2DFA3FD280EEBF100AFE1BF /* Fonts */,
 				A2DFA38F280E7D9500AFE1BF /* Helpers */,
@@ -155,6 +156,13 @@
 				A2B2BC092827568D00659836 /* CatsInfo.swift */,
 			);
 			path = KkongNyangApp;
+			sourceTree = "<group>";
+		};
+		A226D2C7283A381000C080CF /* MyPage */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = MyPage;
 			sourceTree = "<group>";
 		};
 		A25C338028307C65006DF34C /* Authentication */ = {
