@@ -19,6 +19,7 @@ class CatProfileSettingViewController: UIViewController {
 
     // 이미지뷰, 텍스트필드 아울렛
     @IBOutlet weak var catPhotoImageView: UIImageView!
+    
     @IBOutlet weak var catNameTextField: UITextField!
     @IBOutlet weak var catBirthdayTextField: UITextField!
     @IBOutlet weak var catMemoTextField: UITextField!
@@ -26,8 +27,6 @@ class CatProfileSettingViewController: UIViewController {
     // 버튼 아울렛
     
     @IBOutlet var genderRadioButtons: [UIButton]!
-    
-
     
     @IBOutlet weak var finishButton: UIButton!
     
@@ -39,8 +38,6 @@ class CatProfileSettingViewController: UIViewController {
     }
     
     // MARK: - Actions
-
-    
     @IBAction func didButtonTapped(_ sender: UIButton) {
         if indexOfButtonArray != nil {
             if !sender.isSelected {
@@ -57,8 +54,6 @@ class CatProfileSettingViewController: UIViewController {
             sender.isSelected = true
             indexOfButtonArray = genderRadioButtons.firstIndex(of: sender)
         }
-        
-        
     }
     
     
@@ -75,7 +70,6 @@ class CatProfileSettingViewController: UIViewController {
         }
         let cancel = UIAlertAction(title: "취소", style: .cancel, handler: nil)
 
-
         alert.addAction(library)
         alert.addAction(camera)
         alert.addAction(cancel)
@@ -84,9 +78,6 @@ class CatProfileSettingViewController: UIViewController {
 
 //        self.present(imagePickerViewController, animated: true, completion: nil)
     }
-    
-    
-    
     
     // MARK: - Helpers
     func openLibrary(){
@@ -109,7 +100,6 @@ extension CatProfileSettingViewController : UIImagePickerControllerDelegate,  UI
         // print(info)
         if let image = info[UIImagePickerController.InfoKey.originalImage] as? UIImage {
             catPhotoImageView.image = image
-            
         }
         dismiss(animated: true, completion: nil)
     }
