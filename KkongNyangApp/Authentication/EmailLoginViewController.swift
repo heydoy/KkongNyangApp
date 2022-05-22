@@ -25,10 +25,7 @@ class EmailLoginViewController: UIViewController {
         // 3. 화면전환 메소드를 이용해서 화면을 전환
 //        self.present(registerViewController, animated: true, completion: nil)
         self.navigationController?.pushViewController(registerViewController, animated: true)
-            
-        
-    
-    
+
     }
     
 }

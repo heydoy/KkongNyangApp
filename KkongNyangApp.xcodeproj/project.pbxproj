@@ -15,6 +15,8 @@
 		A224D4B9280D1D730040E945 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A224D4B8280D1D730040E945 /* Assets.xcassets */; };
 		A224D4BC280D1D730040E945 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A224D4BA280D1D730040E945 /* LaunchScreen.storyboard */; };
 		A224D4C4280D2D750040E945 /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A224D4C3280D2D750040E945 /* UIColor+Extension.swift */; };
+		A2320424283A619700706DB4 /* Pods-KkongNyangApp-acknowledgements.plist in Resources */ = {isa = PBXBuildFile; fileRef = A2320423283A619700706DB4 /* Pods-KkongNyangApp-acknowledgements.plist */; };
+		A2320426283A643A00706DB4 /* MyPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2320425283A643A00706DB4 /* MyPageViewController.swift */; };
 		A247D393280E721E00A3DF31 /* Onboarding.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A247D392280E721E00A3DF31 /* Onboarding.storyboard */; };
 		A2B2BC082827560500659836 /* UserInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2B2BC072827560500659836 /* UserInfo.swift */; };
 		A2B2BC0A2827568D00659836 /* CatsInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2B2BC092827568D00659836 /* CatsInfo.swift */; };
@@ -59,6 +61,8 @@
 		A224D4BB280D1D730040E945 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A224D4BD280D1D730040E945 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A224D4C3280D2D750040E945 /* UIColor+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
+		A2320423283A619700706DB4 /* Pods-KkongNyangApp-acknowledgements.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "Pods-KkongNyangApp-acknowledgements.plist"; path = "Pods/Target Support Files/Pods-KkongNyangApp/Pods-KkongNyangApp-acknowledgements.plist"; sourceTree = "<group>"; };
+		A2320425283A643A00706DB4 /* MyPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPageViewController.swift; sourceTree = "<group>"; };
 		A247D392280E721E00A3DF31 /* Onboarding.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Onboarding.storyboard; sourceTree = "<group>"; };
 		A2B2BC072827560500659836 /* UserInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfo.swift; sourceTree = "<group>"; };
 		A2B2BC092827568D00659836 /* CatsInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatsInfo.swift; sourceTree = "<group>"; };
@@ -122,6 +126,7 @@
 		A224D4A3280D1D710040E945 = {
 			isa = PBXGroup;
 			children = (
+				A2320423283A619700706DB4 /* Pods-KkongNyangApp-acknowledgements.plist */,
 				A224D4AE280D1D720040E945 /* KkongNyangApp */,
 				A224D4AD280D1D720040E945 /* Products */,
 				18F99F84E39DE13A8E287676 /* Pods */,
@@ -161,6 +166,7 @@
 		A226D2C7283A381000C080CF /* MyPage */ = {
 			isa = PBXGroup;
 			children = (
+				A2320425283A643A00706DB4 /* MyPageViewController.swift */,
 			);
 			path = MyPage;
 			sourceTree = "<group>";
@@ -332,6 +338,7 @@
 				A224D4B7280D1D720040E945 /* Main.storyboard in Resources */,
 				A2DFA3FA280EEBBE00AFE1BF /* GmarketSansLight.otf in Resources */,
 				A206BB332812BABA00F2768A /* SignupAndLogin.storyboard in Resources */,
+				A2320424283A619700706DB4 /* Pods-KkongNyangApp-acknowledgements.plist in Resources */,
 				A2B2BC162827BC6500659836 /* TodoCollectionViewCell.xib in Resources */,
 				A2DFA3FB280EEBBE00AFE1BF /* GmarketSansBold.otf in Resources */,
 				A2B2BC262827CACE00659836 /* FinishedListCollectionViewCell.xib in Resources */,
@@ -402,6 +409,7 @@
 				A2BE71B8281B6D8100FB8548 /* PalateViewController.swift in Sources */,
 				A2B2BC0A2827568D00659836 /* CatsInfo.swift in Sources */,
 				A2BE71B6281B63BE00FB8548 /* HomeViewController.swift in Sources */,
+				A2320426283A643A00706DB4 /* MyPageViewController.swift in Sources */,
 				A2B2BC192827BFDE00659836 /* FinishedCollectionViewCell.swift in Sources */,
 				A2B2BC0C28279F1E00659836 /* RegisterViewController.swift in Sources */,
 				A224D4C4280D2D750040E945 /* UIColor+Extension.swift in Sources */,
