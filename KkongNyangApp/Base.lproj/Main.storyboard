@@ -655,13 +655,19 @@
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="7" translatesAutoresizingMaskIntoConstraints="NO" id="6qz-os-P0U">
                                         <rect key="frame" x="0.0" y="0.0" width="335" height="38"/>
                                         <subviews>
-                                            <stackView opaque="NO" contentMode="scaleToFill" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="jIw-em-8oR">
+                                            <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jIw-em-8oR">
                                                 <rect key="frame" x="0.0" y="0.0" width="335" height="30"/>
                                                 <subviews>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="버전정보" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KgY-in-0j7">
-                                                        <rect key="frame" x="0.0" y="0.0" width="293" height="30"/>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="버전정보" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KgY-in-0j7">
+                                                        <rect key="frame" x="0.0" y="0.0" width="235.33333333333334" height="30"/>
                                                         <fontDescription key="fontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="16"/>
                                                         <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="최신버전 사용중" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rTH-JU-Ijw">
+                                                        <rect key="frame" x="235.33333333333334" y="0.0" width="69.666666666666657" height="30"/>
+                                                        <fontDescription key="fontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="11"/>
+                                                        <color key="textColor" name="gray-300"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dUT-nk-bEc">
@@ -675,6 +681,7 @@
                                                     </button>
                                                 </subviews>
                                                 <constraints>
+                                                    <constraint firstItem="rTH-JU-Ijw" firstAttribute="centerY" secondItem="dUT-nk-bEc" secondAttribute="centerY" id="0HY-lQ-B5K"/>
                                                     <constraint firstItem="dUT-nk-bEc" firstAttribute="centerY" secondItem="KgY-in-0j7" secondAttribute="centerY" id="IN6-7B-jk2"/>
                                                     <constraint firstAttribute="trailing" secondItem="dUT-nk-bEc" secondAttribute="trailing" id="J9C-OK-CmM"/>
                                                     <constraint firstItem="KgY-in-0j7" firstAttribute="leading" secondItem="jIw-em-8oR" secondAttribute="leading" id="noU-dM-enM"/>
@@ -738,7 +745,7 @@
                                             <stackView opaque="NO" contentMode="scaleToFill" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="7LB-Gi-6Vs">
                                                 <rect key="frame" x="0.0" y="0.0" width="335" height="30"/>
                                                 <subviews>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="앱 문의" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fCN-xF-AbR">
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="앱 문의 및 피드백" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fCN-xF-AbR">
                                                         <rect key="frame" x="0.0" y="0.0" width="293" height="30"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                         <nil key="textColor"/>
@@ -752,6 +759,9 @@
                                                         </constraints>
                                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                                         <state key="normal" image="arrow-right"/>
+                                                        <connections>
+                                                            <action selector="didAppFeedbackButtonTapped:" destination="H0j-6g-ybC" eventType="touchUpInside" id="faE-eA-BCS"/>
+                                                        </connections>
                                                     </button>
                                                 </subviews>
                                                 <constraints>

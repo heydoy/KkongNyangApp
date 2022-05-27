@@ -19,6 +19,7 @@
 		A2320426283A643A00706DB4 /* MyPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2320425283A643A00706DB4 /* MyPageViewController.swift */; };
 		A2320428283A65F700706DB4 /* AppInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2320427283A65F700706DB4 /* AppInfoViewController.swift */; };
 		A232042A283A662200706DB4 /* AlertSettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2320429283A662200706DB4 /* AlertSettingViewController.swift */; };
+		A2370C252840B8CE00D64871 /* UIDevice+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2370C242840B8CE00D64871 /* UIDevice+Extension.swift */; };
 		A247D393280E721E00A3DF31 /* Onboarding.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A247D392280E721E00A3DF31 /* Onboarding.storyboard */; };
 		A2B2BC082827560500659836 /* UserInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2B2BC072827560500659836 /* UserInfo.swift */; };
 		A2B2BC0A2827568D00659836 /* CatsInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2B2BC092827568D00659836 /* CatsInfo.swift */; };
@@ -61,6 +62,7 @@
 		A2320425283A643A00706DB4 /* MyPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPageViewController.swift; sourceTree = "<group>"; };
 		A2320427283A65F700706DB4 /* AppInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppInfoViewController.swift; sourceTree = "<group>"; };
 		A2320429283A662200706DB4 /* AlertSettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertSettingViewController.swift; sourceTree = "<group>"; };
+		A2370C242840B8CE00D64871 /* UIDevice+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIDevice+Extension.swift"; sourceTree = "<group>"; };
 		A247D392280E721E00A3DF31 /* Onboarding.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Onboarding.storyboard; sourceTree = "<group>"; };
 		A2B2BC072827560500659836 /* UserInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfo.swift; sourceTree = "<group>"; };
 		A2B2BC092827568D00659836 /* CatsInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatsInfo.swift; sourceTree = "<group>"; };
@@ -223,6 +225,7 @@
 			children = (
 				A224D4C3280D2D750040E945 /* UIColor+Extension.swift */,
 				A2DFA395280E8E6000AFE1BF /* UIStoryboard+Extension.swift */,
+				A2370C242840B8CE00D64871 /* UIDevice+Extension.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -379,6 +382,7 @@
 				A2DFA38E280E7A3500AFE1BF /* OnboardingThirdPageViewController.swift in Sources */,
 				A2DFA396280E8E6000AFE1BF /* UIStoryboard+Extension.swift in Sources */,
 				A2DFA387280E779800AFE1BF /* OnboardingPageViewController.swift in Sources */,
+				A2370C252840B8CE00D64871 /* UIDevice+Extension.swift in Sources */,
 				A2BE71C0281B79AC00FB8548 /* TodoViewController.swift in Sources */,
 				A2B2BC102827AADE00659836 /* EmailLoginViewController.swift in Sources */,
 				A224D4B2280D1D720040E945 /* SceneDelegate.swift in Sources */,
