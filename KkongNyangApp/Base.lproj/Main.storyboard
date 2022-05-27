@@ -110,7 +110,7 @@
         <!--할 일-->
         <scene sceneID="jwu-OZ-rXe">
             <objects>
-                <viewController id="zaf-YG-eFV" customClass="TodoViewController" customModule="KkongNyangApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="zaf-YG-eFV" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Cnr-Uj-nn6">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -155,9 +155,6 @@
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="할 일" image="icon-todo" id="QjX-YT-ZTv"/>
-                    <connections>
-                        <outlet property="collectionView" destination="pdc-xp-tvT" id="jug-Xz-z1c"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6iw-ij-fnl" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -177,22 +174,12 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" selected="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" changesSelectionAsPrimaryAction="YES" translatesAutoresizingMaskIntoConstraints="NO" id="c1s-KL-s1i">
-                                <rect key="frame" x="20" y="126" width="80" height="35"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="35" id="bKP-Z5-MaK"/>
-                                </constraints>
-                                <color key="tintColor" name="yellow-500"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="filled" title="산이냥이">
-                                    <fontDescription key="titleFontDescription" type="system" weight="medium" pointSize="16"/>
-                                    <color key="baseForegroundColor" name="greengray-900"/>
-                                    <color key="baseBackgroundColor" name="yellow-500"/>
-                                </buttonConfiguration>
-                            </button>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="TJP-0m-GTO">
-                                <rect key="frame" x="0.0" y="172" width="375" height="557"/>
+                                <rect key="frame" x="0.0" y="174" width="375" height="555"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="555" id="bKg-Zv-8qG"/>
+                                </constraints>
                                 <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="TMp-xu-n4M">
                                     <size key="itemSize" width="414" height="186"/>
                                     <size key="headerReferenceSize" width="50" height="50"/>
@@ -258,32 +245,14 @@
                                     </subviews>
                                 </collectionReusableView>
                             </collectionView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="A4H-di-Thy">
-                                <rect key="frame" x="108" y="126" width="66" height="35"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="35" id="aJn-mK-BCL"/>
-                                </constraints>
-                                <color key="tintColor" name="gray-100"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="filled" title="고냥이" cornerStyle="medium">
-                                    <fontDescription key="titleFontDescription" type="system" pointSize="16"/>
-                                    <color key="baseForegroundColor" name="white"/>
-                                    <color key="baseBackgroundColor" name="gray-200"/>
-                                </buttonConfiguration>
-                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="OmY-VF-B3r"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="OmY-VF-B3r" firstAttribute="bottom" secondItem="TJP-0m-GTO" secondAttribute="bottom" id="GUR-fe-i0W"/>
-                            <constraint firstItem="c1s-KL-s1i" firstAttribute="top" secondItem="uZl-fw-Y2x" secondAttribute="bottom" constant="17" id="S7Z-Ij-Wfx"/>
                             <constraint firstItem="uZl-fw-Y2x" firstAttribute="top" secondItem="OmY-VF-B3r" secondAttribute="top" constant="24" id="gc0-Ai-V31"/>
-                            <constraint firstItem="A4H-di-Thy" firstAttribute="centerY" secondItem="c1s-KL-s1i" secondAttribute="centerY" id="gdV-J5-Yms"/>
-                            <constraint firstItem="c1s-KL-s1i" firstAttribute="leading" secondItem="OmY-VF-B3r" secondAttribute="leading" constant="20" id="iyV-TC-m83"/>
                             <constraint firstItem="OmY-VF-B3r" firstAttribute="trailing" secondItem="TJP-0m-GTO" secondAttribute="trailing" id="izQ-1D-a2T"/>
-                            <constraint firstItem="A4H-di-Thy" firstAttribute="leading" secondItem="c1s-KL-s1i" secondAttribute="trailing" constant="8" symbolic="YES" id="kmb-iU-1VY"/>
                             <constraint firstItem="TJP-0m-GTO" firstAttribute="leading" secondItem="OmY-VF-B3r" secondAttribute="leading" id="n6C-g6-ofh"/>
-                            <constraint firstItem="TJP-0m-GTO" firstAttribute="top" secondItem="c1s-KL-s1i" secondAttribute="bottom" constant="11" id="odq-we-usL"/>
                             <constraint firstItem="uZl-fw-Y2x" firstAttribute="leading" secondItem="OmY-VF-B3r" secondAttribute="leading" constant="20" id="rkE-T6-bQM"/>
                         </constraints>
                     </view>
@@ -1110,9 +1079,6 @@
         <namedColor name="gray-100">
             <color red="0.82400000095367432" green="0.82400000095367432" blue="0.82400000095367432" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
-        <namedColor name="gray-200">
-            <color red="0.52549019607843139" green="0.52549019607843139" blue="0.52549019607843139" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </namedColor>
         <namedColor name="gray-300">
             <color red="0.42745098039215684" green="0.42745098039215684" blue="0.42745098039215684" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
@@ -1127,9 +1093,6 @@
         </namedColor>
         <namedColor name="yellow-100">
             <color red="1" green="0.96862745098039216" blue="0.9137254901960784" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </namedColor>
-        <namedColor name="yellow-500">
-            <color red="1" green="0.82352941176470584" blue="0.4823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
