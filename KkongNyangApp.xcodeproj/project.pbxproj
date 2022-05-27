@@ -25,12 +25,6 @@
 		A2B2BC0C28279F1E00659836 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2B2BC0B28279F1E00659836 /* RegisterViewController.swift */; };
 		A2B2BC0E2827A8DC00659836 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2B2BC0D2827A8DC00659836 /* LoginViewController.swift */; };
 		A2B2BC102827AADE00659836 /* EmailLoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2B2BC0F2827AADE00659836 /* EmailLoginViewController.swift */; };
-		A2B2BC152827BC6500659836 /* TodoCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2B2BC132827BC6500659836 /* TodoCollectionViewCell.swift */; };
-		A2B2BC162827BC6500659836 /* TodoCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A2B2BC142827BC6500659836 /* TodoCollectionViewCell.xib */; };
-		A2B2BC192827BFDE00659836 /* FinishedCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2B2BC172827BFDE00659836 /* FinishedCollectionViewCell.swift */; };
-		A2B2BC1A2827BFDE00659836 /* FinishedCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A2B2BC182827BFDE00659836 /* FinishedCollectionViewCell.xib */; };
-		A2B2BC252827CACE00659836 /* FinishedListCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2B2BC232827CACE00659836 /* FinishedListCollectionViewCell.swift */; };
-		A2B2BC262827CACE00659836 /* FinishedListCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A2B2BC242827CACE00659836 /* FinishedListCollectionViewCell.xib */; };
 		A2BE71B6281B63BE00FB8548 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2BE71B5281B63BE00FB8548 /* HomeViewController.swift */; };
 		A2BE71B8281B6D8100FB8548 /* PalateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2BE71B7281B6D8100FB8548 /* PalateViewController.swift */; };
 		A2BE71C0281B79AC00FB8548 /* TodoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2BE71BF281B79AC00FB8548 /* TodoViewController.swift */; };
@@ -73,12 +67,6 @@
 		A2B2BC0B28279F1E00659836 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		A2B2BC0D2827A8DC00659836 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		A2B2BC0F2827AADE00659836 /* EmailLoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailLoginViewController.swift; sourceTree = "<group>"; };
-		A2B2BC132827BC6500659836 /* TodoCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoCollectionViewCell.swift; sourceTree = "<group>"; };
-		A2B2BC142827BC6500659836 /* TodoCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TodoCollectionViewCell.xib; sourceTree = "<group>"; };
-		A2B2BC172827BFDE00659836 /* FinishedCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinishedCollectionViewCell.swift; sourceTree = "<group>"; };
-		A2B2BC182827BFDE00659836 /* FinishedCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FinishedCollectionViewCell.xib; sourceTree = "<group>"; };
-		A2B2BC232827CACE00659836 /* FinishedListCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinishedListCollectionViewCell.swift; sourceTree = "<group>"; };
-		A2B2BC242827CACE00659836 /* FinishedListCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FinishedListCollectionViewCell.xib; sourceTree = "<group>"; };
 		A2BE71B5281B63BE00FB8548 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		A2BE71B7281B6D8100FB8548 /* PalateViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PalateViewController.swift; sourceTree = "<group>"; };
 		A2BE71BF281B79AC00FB8548 /* TodoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoViewController.swift; sourceTree = "<group>"; };
@@ -201,23 +189,9 @@
 		A2B2BC112827BC1F00659836 /* Todo */ = {
 			isa = PBXGroup;
 			children = (
-				A2B2BC122827BC3200659836 /* Cell */,
 				A2BE71BF281B79AC00FB8548 /* TodoViewController.swift */,
 			);
 			path = Todo;
-			sourceTree = "<group>";
-		};
-		A2B2BC122827BC3200659836 /* Cell */ = {
-			isa = PBXGroup;
-			children = (
-				A2B2BC132827BC6500659836 /* TodoCollectionViewCell.swift */,
-				A2B2BC142827BC6500659836 /* TodoCollectionViewCell.xib */,
-				A2B2BC172827BFDE00659836 /* FinishedCollectionViewCell.swift */,
-				A2B2BC182827BFDE00659836 /* FinishedCollectionViewCell.xib */,
-				A2B2BC232827CACE00659836 /* FinishedListCollectionViewCell.swift */,
-				A2B2BC242827CACE00659836 /* FinishedListCollectionViewCell.xib */,
-			);
-			path = Cell;
 			sourceTree = "<group>";
 		};
 		A2DFA388280E77A000AFE1BF /* Onboarding */ = {
@@ -335,7 +309,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A2B2BC1A2827BFDE00659836 /* FinishedCollectionViewCell.xib in Resources */,
 				A2DFA401280EEBF100AFE1BF /* GmarketSansLight.otf in Resources */,
 				A2DFA3FC280EEBBE00AFE1BF /* GmarketSansMedium.otf in Resources */,
 				A224D4BC280D1D730040E945 /* LaunchScreen.storyboard in Resources */,
@@ -345,9 +318,7 @@
 				A2DFA3FA280EEBBE00AFE1BF /* GmarketSansLight.otf in Resources */,
 				A206BB332812BABA00F2768A /* SignupAndLogin.storyboard in Resources */,
 				A2320424283A619700706DB4 /* Pods-KkongNyangApp-acknowledgements.plist in Resources */,
-				A2B2BC162827BC6500659836 /* TodoCollectionViewCell.xib in Resources */,
 				A2DFA3FB280EEBBE00AFE1BF /* GmarketSansBold.otf in Resources */,
-				A2B2BC262827CACE00659836 /* FinishedListCollectionViewCell.xib in Resources */,
 				A2DFA403280EEBF100AFE1BF /* GmarketSansMedium.otf in Resources */,
 				A247D393280E721E00A3DF31 /* Onboarding.storyboard in Resources */,
 			);
@@ -402,7 +373,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A2B2BC252827CACE00659836 /* FinishedListCollectionViewCell.swift in Sources */,
 				A2DFA38A280E795100AFE1BF /* OnboardingFirstPageViewController.swift in Sources */,
 				A2DFA38C280E7A2800AFE1BF /* OnboardingSecondPageViewController.swift in Sources */,
 				A224D4B0280D1D720040E945 /* AppDelegate.swift in Sources */,
@@ -418,11 +388,9 @@
 				A2BE71B6281B63BE00FB8548 /* HomeViewController.swift in Sources */,
 				A2320426283A643A00706DB4 /* MyPageViewController.swift in Sources */,
 				A232042A283A662200706DB4 /* AlertSettingViewController.swift in Sources */,
-				A2B2BC192827BFDE00659836 /* FinishedCollectionViewCell.swift in Sources */,
 				A2B2BC0C28279F1E00659836 /* RegisterViewController.swift in Sources */,
 				A224D4C4280D2D750040E945 /* UIColor+Extension.swift in Sources */,
 				A2B2BC0E2827A8DC00659836 /* LoginViewController.swift in Sources */,
-				A2B2BC152827BC6500659836 /* TodoCollectionViewCell.swift in Sources */,
 				A2DFA392280E7DC400AFE1BF /* LandscapeManager.swift in Sources */,
 				A2B2BC082827560500659836 /* UserInfo.swift in Sources */,
 				A2E818162830F61A00B64664 /* CatProfileSettingViewController.swift in Sources */,
