@@ -292,7 +292,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="집사 프로필" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QoA-3t-XjB">
-                                <rect key="frame" x="19.999999999999993" y="68" width="122.33333333333331" height="24"/>
+                                <rect key="frame" x="46.999999999999993" y="68" width="122.33333333333331" height="24"/>
                                 <fontDescription key="fontDescription" name="GmarketSansMedium" family="Gmarket Sans" pointSize="24"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -442,12 +442,6 @@
                                     </stackView>
                                 </subviews>
                             </stackView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="가입하는 집사 분의 프로필을 입력해주세요." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SdF-Zk-Zne">
-                                <rect key="frame" x="20" y="102" width="270.33333333333331" height="19.333333333333329"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                <color key="textColor" name="gray-500"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9Q2-ME-8VX">
                                 <rect key="frame" x="20" y="662.66666666666663" width="335" height="31.333333333333371"/>
                                 <string key="text">가입을 완료하실 경우 꽁냥의 이용약관 및 개인정보처리방침에 
@@ -473,13 +467,30 @@
                                     <action selector="registerButtonDidTapped:" destination="yHw-kU-C1W" eventType="touchUpInside" id="m5G-oJ-iX7"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VMc-85-NQp">
+                                <rect key="frame" x="20" y="68" width="24" height="24"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="24" id="u7C-QD-cKY"/>
+                                    <constraint firstAttribute="height" constant="24" id="vSG-i6-Xgx"/>
+                                </constraints>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" image="tab-arrow-left"/>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="가입하는 집사 분의 프로필을 입력해주세요." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SdF-Zk-Zne">
+                                <rect key="frame" x="20" y="102" width="270.33333333333331" height="19.333333333333329"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <color key="textColor" name="gray-500"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Tkt-1c-05p"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="SdF-Zk-Zne" firstAttribute="leading" secondItem="QoA-3t-XjB" secondAttribute="leading" id="DVU-wn-zKj"/>
+                            <constraint firstItem="VMc-85-NQp" firstAttribute="top" secondItem="Tkt-1c-05p" secondAttribute="top" constant="24" id="5xR-TM-HNK"/>
+                            <constraint firstItem="SdF-Zk-Zne" firstAttribute="leading" secondItem="Tkt-1c-05p" secondAttribute="leading" constant="20" id="FLd-7F-Oh1"/>
                             <constraint firstItem="mh8-kl-WA0" firstAttribute="top" secondItem="9Q2-ME-8VX" secondAttribute="bottom" constant="20" id="HHq-JH-KOU"/>
                             <constraint firstItem="Tkt-1c-05p" firstAttribute="trailing" secondItem="nHN-aX-wG3" secondAttribute="trailing" constant="20" id="Ppw-fY-EzX"/>
+                            <constraint firstItem="QoA-3t-XjB" firstAttribute="leading" secondItem="VMc-85-NQp" secondAttribute="trailing" constant="3" id="Q23-IQ-R8o"/>
                             <constraint firstItem="Tkt-1c-05p" firstAttribute="bottom" secondItem="mh8-kl-WA0" secondAttribute="bottom" constant="12" id="T1w-FN-Lee"/>
                             <constraint firstItem="9Q2-ME-8VX" firstAttribute="leading" secondItem="Tkt-1c-05p" secondAttribute="leading" constant="20" id="XxV-hD-sWT"/>
                             <constraint firstItem="Tkt-1c-05p" firstAttribute="trailing" secondItem="9Q2-ME-8VX" secondAttribute="trailing" constant="20" id="YZA-VG-xdJ"/>
@@ -487,9 +498,9 @@
                             <constraint firstItem="SdF-Zk-Zne" firstAttribute="top" secondItem="QoA-3t-XjB" secondAttribute="bottom" constant="10" id="f0k-lL-foF"/>
                             <constraint firstItem="nHN-aX-wG3" firstAttribute="top" secondItem="SdF-Zk-Zne" secondAttribute="bottom" constant="36" id="hjl-du-1sz"/>
                             <constraint firstItem="QoA-3t-XjB" firstAttribute="top" secondItem="Tkt-1c-05p" secondAttribute="top" constant="24" id="mF4-Fx-mqR"/>
-                            <constraint firstItem="QoA-3t-XjB" firstAttribute="leading" secondItem="Tkt-1c-05p" secondAttribute="leading" constant="20" id="nkx-2E-h4o"/>
                             <constraint firstItem="nHN-aX-wG3" firstAttribute="leading" secondItem="Tkt-1c-05p" secondAttribute="leading" constant="20" id="vX8-bC-oo5"/>
                             <constraint firstItem="mh8-kl-WA0" firstAttribute="leading" secondItem="Tkt-1c-05p" secondAttribute="leading" constant="20" id="wUR-7e-b9H"/>
+                            <constraint firstItem="VMc-85-NQp" firstAttribute="leading" secondItem="Tkt-1c-05p" secondAttribute="leading" constant="20" id="yIo-te-kES"/>
                         </constraints>
                     </view>
                     <connections>
@@ -503,7 +514,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HqA-u4-2AE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2180" y="-263"/>
+            <point key="canvasLocation" x="2180" y="-263.05418719211826"/>
         </scene>
         <!--Cat Profile Setting View Controller-->
         <scene sceneID="8do-px-m1S">
@@ -861,6 +872,7 @@
         <image name="photo.circle.fill" catalog="system" width="128" height="121"/>
         <image name="photoframe" width="119" height="119"/>
         <image name="questionmark.circle.fill" catalog="system" width="128" height="121"/>
+        <image name="tab-arrow-left" width="24" height="24"/>
         <namedColor name="black">
             <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
