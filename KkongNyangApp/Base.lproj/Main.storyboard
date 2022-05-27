@@ -174,96 +174,28 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="TJP-0m-GTO">
-                                <rect key="frame" x="0.0" y="174" width="375" height="555"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="555" id="bKg-Zv-8qG"/>
-                                </constraints>
-                                <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="TMp-xu-n4M">
-                                    <size key="itemSize" width="414" height="186"/>
-                                    <size key="headerReferenceSize" width="50" height="50"/>
-                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
-                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
-                                </collectionViewFlowLayout>
-                                <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="rH0-qO-Hf7">
-                                        <rect key="frame" x="-19.666666666666668" y="50" width="414" height="186"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="nwT-ji-ybJ">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="186"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="I8Q-MX-2dn">
-                                                    <rect key="frame" x="22" y="29" width="118" height="127"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                </imageView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="😍" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="W56-YI-sEI">
-                                                    <rect key="frame" x="158" y="29" width="26" height="27"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="22"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="동생 님이 4월 7일 기록" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="W2J-Eo-RXk">
-                                                    <rect key="frame" x="158" y="135" width="120" height="16"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
-                                                    <color key="textColor" name="gray-300"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="로얄캐닌 센서리필 젤리파우치" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="V83-Sw-Zdw">
-                                                    <rect key="frame" x="158" y="62" width="188" height="20"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="둘다 좋아하지만 특히 산이가 안 남기고 전부 먹으면서 냥냥대고 좋아함" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="D5y-Ip-qoe">
-                                                    <rect key="frame" x="158" y="84" width="237" height="40"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                            </subviews>
-                                        </collectionViewCellContentView>
-                                        <size key="customSize" width="414" height="186"/>
-                                    </collectionViewCell>
-                                </cells>
-                                <collectionReusableView key="sectionHeaderView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="Moo-Mv-gSg">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="50"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                    <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="식사" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ynT-jp-9PN">
-                                            <rect key="frame" x="28" y="9" width="45" height="32"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="26"/>
-                                            <nil key="textColor"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
-                                    </subviews>
-                                </collectionReusableView>
-                            </collectionView>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="t69-j9-JS3">
+                                <rect key="frame" x="20" y="117" width="131" height="32"/>
+                                <segments>
+                                    <segment title="First"/>
+                                    <segment title="Second"/>
+                                </segments>
+                            </segmentedControl>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="OmY-VF-B3r"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="OmY-VF-B3r" firstAttribute="bottom" secondItem="TJP-0m-GTO" secondAttribute="bottom" id="GUR-fe-i0W"/>
+                            <constraint firstItem="t69-j9-JS3" firstAttribute="top" secondItem="uZl-fw-Y2x" secondAttribute="bottom" constant="8" symbolic="YES" id="c1d-33-vPp"/>
                             <constraint firstItem="uZl-fw-Y2x" firstAttribute="top" secondItem="OmY-VF-B3r" secondAttribute="top" constant="24" id="gc0-Ai-V31"/>
-                            <constraint firstItem="OmY-VF-B3r" firstAttribute="trailing" secondItem="TJP-0m-GTO" secondAttribute="trailing" id="izQ-1D-a2T"/>
-                            <constraint firstItem="TJP-0m-GTO" firstAttribute="leading" secondItem="OmY-VF-B3r" secondAttribute="leading" id="n6C-g6-ofh"/>
                             <constraint firstItem="uZl-fw-Y2x" firstAttribute="leading" secondItem="OmY-VF-B3r" secondAttribute="leading" constant="20" id="rkE-T6-bQM"/>
+                            <constraint firstItem="t69-j9-JS3" firstAttribute="leading" secondItem="OmY-VF-B3r" secondAttribute="leading" constant="20" id="tam-8I-Mtu"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="기호" image="icon-palate" id="yvU-A0-Pf9"/>
-                    <connections>
-                        <outlet property="collectionView" destination="TJP-0m-GTO" id="cFP-ij-fwV"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jBL-3n-VXy" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3649" y="913"/>
+            <point key="canvasLocation" x="3978" y="913"/>
         </scene>
         <!--My Page View Controller-->
         <scene sceneID="McT-cS-4Mo">
@@ -472,7 +404,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uLp-LG-4id" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5972" y="912.5615763546798"/>
+            <point key="canvasLocation" x="6702" y="913"/>
         </scene>
         <!--Alert Setting View Controller-->
         <scene sceneID="Tc2-Gj-gaC">
@@ -621,7 +553,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qbo-jq-oJC" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="6794" y="913"/>
+            <point key="canvasLocation" x="6702" y="1604"/>
         </scene>
         <!--App Info View Controller-->
         <scene sceneID="TuB-xb-pnU">
@@ -929,7 +861,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="edE-l3-Mfl" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="7604" y="913"/>
+            <point key="canvasLocation" x="7511" y="1604"/>
         </scene>
         <!--홈-->
         <scene sceneID="PgY-Od-WKv">
@@ -1069,7 +1001,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OWX-Vt-QV3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5029.6000000000004" y="912.5615763546798"/>
+            <point key="canvasLocation" x="5887" y="913"/>
         </scene>
     </scenes>
     <resources>
