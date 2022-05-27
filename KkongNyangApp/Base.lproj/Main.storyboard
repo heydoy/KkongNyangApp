@@ -652,7 +652,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qbo-jq-oJC" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="7466.3999999999996" y="895.56650246305423"/>
+            <point key="canvasLocation" x="6794" y="913"/>
         </scene>
         <!--App Info View Controller-->
         <scene sceneID="TuB-xb-pnU">
@@ -823,6 +823,9 @@
                                                         </constraints>
                                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                                         <state key="normal" image="arrow-right"/>
+                                                        <connections>
+                                                            <action selector="didOpenSourceLicenseButtonTapped:" destination="H0j-6g-ybC" eventType="touchUpInside" id="uwb-vc-haQ"/>
+                                                        </connections>
                                                     </button>
                                                 </subviews>
                                                 <constraints>
@@ -863,6 +866,9 @@
                                                         </constraints>
                                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                                         <state key="normal" image="arrow-right"/>
+                                                        <connections>
+                                                            <action selector="didTermsOfServiceButtonTapped:" destination="H0j-6g-ybC" eventType="touchUpInside" id="BJj-xN-vbf"/>
+                                                        </connections>
                                                     </button>
                                                 </subviews>
                                                 <constraints>
@@ -903,6 +909,9 @@
                                                         </constraints>
                                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                                         <state key="normal" image="arrow-right"/>
+                                                        <connections>
+                                                            <action selector="didPrivacyPolicyButtonTapped:" destination="H0j-6g-ybC" eventType="touchUpInside" id="u26-ns-7rG"/>
+                                                        </connections>
                                                     </button>
                                                 </subviews>
                                                 <constraints>
@@ -941,7 +950,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="edE-l3-Mfl" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="8276" y="895.56650246305423"/>
+            <point key="canvasLocation" x="7604" y="913"/>
         </scene>
         <!--홈-->
         <scene sceneID="PgY-Od-WKv">
