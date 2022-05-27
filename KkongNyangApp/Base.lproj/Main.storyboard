@@ -510,16 +510,16 @@
                                                 <rect key="frame" x="0.0" y="0.0" width="335" height="35"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="알림" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0eh-Ux-TF7">
-                                                        <rect key="frame" x="0.0" y="0.0" width="273" height="35"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="268" height="35"/>
                                                         <fontDescription key="fontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="16"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aoA-Ub-ykH">
-                                                        <rect key="frame" x="285" y="0.0" width="50" height="35"/>
+                                                        <rect key="frame" x="280" y="0.0" width="55" height="35"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="35" id="HJI-P2-4yw"/>
-                                                            <constraint firstAttribute="width" constant="50" id="Nqc-Ei-yVa"/>
+                                                            <constraint firstAttribute="width" constant="55" id="Nqc-Ei-yVa"/>
                                                         </constraints>
                                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                                         <state key="normal" image="button-toggle-off"/>
@@ -554,16 +554,16 @@
                                                 <rect key="frame" x="0.0" y="0.0" width="335" height="35"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="취침시간 제외하기" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hcv-4y-fmA">
-                                                        <rect key="frame" x="0.0" y="0.0" width="273" height="35"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="268" height="35"/>
                                                         <fontDescription key="fontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="16"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="owm-Ex-lk0">
-                                                        <rect key="frame" x="285" y="0.0" width="50" height="35"/>
+                                                        <rect key="frame" x="280" y="0.0" width="55" height="35"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="35" id="nNw-a0-e3X"/>
-                                                            <constraint firstAttribute="width" constant="50" id="nQt-6l-nih"/>
+                                                            <constraint firstAttribute="width" constant="55" id="nQt-6l-nih"/>
                                                         </constraints>
                                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                                         <state key="normal" image="button-toggle-off"/>
@@ -705,7 +705,7 @@
                                             <stackView opaque="NO" contentMode="scaleToFill" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="9Qe-16-FPO">
                                                 <rect key="frame" x="0.0" y="0.0" width="335" height="30"/>
                                                 <subviews>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="앱스토어 후기쓰기" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hl4-yG-fTH">
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="앱스토어 후기 쓰기" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hl4-yG-fTH">
                                                         <rect key="frame" x="0.0" y="0.0" width="293" height="30"/>
                                                         <fontDescription key="fontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="16"/>
                                                         <nil key="textColor"/>
@@ -1074,8 +1074,8 @@
     </scenes>
     <resources>
         <image name="arrow-right" width="30" height="30"/>
-        <image name="button-toggle-off" width="57" height="43"/>
-        <image name="button-toggle-on" width="57" height="43"/>
+        <image name="button-toggle-off" width="55" height="35"/>
+        <image name="button-toggle-on" width="55" height="35"/>
         <image name="icon-alert" width="24" height="24"/>
         <image name="icon-home" width="24" height="24"/>
         <image name="icon-mypage" width="24" height="24"/>

@@ -1,17 +1,17 @@
 {
   "images" : [
     {
-      "filename" : "Switch@1x.png",
+      "filename" : "switch=off@1x.png",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
-      "filename" : "Switch@2x.png",
+      "filename" : "switch=off@2x.png",
       "idiom" : "universal",
       "scale" : "2x"
     },
     {
-      "filename" : "Switch@3x.png",
+      "filename" : "switch=off@3x.png",
       "idiom" : "universal",
       "scale" : "3x"
     }
