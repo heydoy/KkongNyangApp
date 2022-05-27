@@ -121,17 +121,6 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="pdc-xp-tvT">
-                                <rect key="frame" x="0.0" y="121" width="375" height="608"/>
-                                <color key="backgroundColor" name="yellow-100"/>
-                                <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="eLb-Tn-Cr4">
-                                    <size key="itemSize" width="414" height="87"/>
-                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
-                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
-                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
-                                </collectionViewFlowLayout>
-                                <cells/>
-                            </collectionView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="trailing" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bZD-vL-iM9">
                                 <rect key="frame" x="265.33333333333331" y="74.333333333333329" width="89.666666666666686" height="28.666666666666671"/>
                                 <color key="tintColor" name="black"/>
@@ -148,10 +137,6 @@
                             <constraint firstItem="jCA-IG-nOV" firstAttribute="top" secondItem="r8a-kY-XtF" secondAttribute="top" constant="24" id="9WL-D3-0KJ"/>
                             <constraint firstItem="bZD-vL-iM9" firstAttribute="centerY" secondItem="jCA-IG-nOV" secondAttribute="centerY" id="LGV-yF-UAY"/>
                             <constraint firstAttribute="trailing" secondItem="bZD-vL-iM9" secondAttribute="trailing" constant="20" id="P8A-FU-zpg"/>
-                            <constraint firstItem="r8a-kY-XtF" firstAttribute="trailing" secondItem="pdc-xp-tvT" secondAttribute="trailing" id="Q8v-iW-prA"/>
-                            <constraint firstItem="pdc-xp-tvT" firstAttribute="top" secondItem="jCA-IG-nOV" secondAttribute="bottom" constant="12" id="c3O-vZ-KVC"/>
-                            <constraint firstItem="pdc-xp-tvT" firstAttribute="leading" secondItem="r8a-kY-XtF" secondAttribute="leading" id="j6k-5C-4D8"/>
-                            <constraint firstItem="r8a-kY-XtF" firstAttribute="bottom" secondItem="pdc-xp-tvT" secondAttribute="bottom" id="jja-FI-qCn"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="할 일" image="icon-todo" id="QjX-YT-ZTv"/>
@@ -1038,6 +1023,7 @@
                     <view key="view" contentMode="scaleToFill" id="2pw-Cp-EhN">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="561"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="FSq-pY-uP9"/>
                         <color key="backgroundColor" systemColor="systemGreenColor"/>
                     </view>
                 </viewController>
@@ -1052,6 +1038,7 @@
                     <view key="view" contentMode="scaleToFill" id="BGa-ee-fzH">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="561"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="ba8-0L-PE7"/>
                         <color key="backgroundColor" systemColor="systemIndigoColor"/>
                     </view>
                 </viewController>
@@ -1088,9 +1075,6 @@
         </namedColor>
         <namedColor name="white">
             <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </namedColor>
-        <namedColor name="yellow-100">
-            <color red="1" green="0.96862745098039216" blue="0.9137254901960784" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
