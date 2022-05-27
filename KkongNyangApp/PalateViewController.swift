@@ -9,28 +9,30 @@ import UIKit
 
 class PalateViewController: UIViewController {
 
-    @IBOutlet weak var collectionView: UICollectionView!
+    // MARK: - Propertiess
+    
+    @IBOutlet weak var firstCatView: UIView!
+    @IBOutlet weak var secondCatView: UIView!
+    
+    // MARK: - Lifecycle
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
     }
     
+    @IBAction func switchViews(_ sender: UISegmentedControl) {
+        if sender.selectedSegmentIndex == 0 {
+            firstCatView.alpha = 1
+            secondCatView.alpha = 0
+        } else {
+            firstCatView.alpha = 0
+            secondCatView.alpha = 1
+        }
+    }
+    
 
 
 
 }
 
-extension PalateViewController: UICollectionViewDataSource {
-    func numberOfSections(in collectionView: UICollectionView) -> Int {
-        return 2
-    }
-    
-    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 3
-    }
-    
-    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        return UICollectionViewCell()
-    }
-    
-}
