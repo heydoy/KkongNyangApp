@@ -160,6 +160,15 @@
                                     <segue destination="egT-jE-7Lc" kind="embed" id="tQK-B6-eMG"/>
                                 </connections>
                             </containerView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HJ5-fN-MIX">
+                                <rect key="frame" x="300" y="651" width="60" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="KRz-JI-h75"/>
+                                    <constraint firstAttribute="width" constant="60" id="LME-0M-A0Y"/>
+                                </constraints>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" image="floatingAddButton"/>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="r8a-kY-XtF"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -174,9 +183,11 @@
                             <constraint firstItem="dyJ-Il-XaR" firstAttribute="leading" secondItem="r8a-kY-XtF" secondAttribute="leading" id="Av2-dr-h8u"/>
                             <constraint firstItem="r8a-kY-XtF" firstAttribute="bottom" secondItem="YGP-We-c87" secondAttribute="bottom" id="FnZ-r9-Num"/>
                             <constraint firstItem="r8a-kY-XtF" firstAttribute="bottom" secondItem="dyJ-Il-XaR" secondAttribute="bottom" id="GNL-eO-RVD"/>
+                            <constraint firstItem="r8a-kY-XtF" firstAttribute="trailing" secondItem="HJ5-fN-MIX" secondAttribute="trailing" constant="15" id="KOv-sq-48q"/>
                             <constraint firstItem="bZD-vL-iM9" firstAttribute="centerY" secondItem="jCA-IG-nOV" secondAttribute="centerY" id="LGV-yF-UAY"/>
                             <constraint firstItem="YGP-We-c87" firstAttribute="leading" secondItem="r8a-kY-XtF" secondAttribute="leading" id="Mlf-Bu-F8U"/>
                             <constraint firstAttribute="trailing" secondItem="bZD-vL-iM9" secondAttribute="trailing" constant="20" id="P8A-FU-zpg"/>
+                            <constraint firstItem="r8a-kY-XtF" firstAttribute="bottom" secondItem="HJ5-fN-MIX" secondAttribute="bottom" constant="18" id="UjH-JJ-GZ2"/>
                             <constraint firstItem="XY3-kU-A05" firstAttribute="top" secondItem="2Ei-Fr-2i7" secondAttribute="bottom" constant="20" id="gZH-2d-jyi"/>
                             <constraint firstItem="YGP-We-c87" firstAttribute="top" secondItem="2Ei-Fr-2i7" secondAttribute="bottom" constant="20" id="jz0-mE-Qip"/>
                             <constraint firstItem="XY3-kU-A05" firstAttribute="leading" secondItem="r8a-kY-XtF" secondAttribute="leading" id="kh4-cv-uhD"/>
@@ -232,12 +243,22 @@
                                     <segue destination="az3-aJ-L4Y" kind="embed" id="J9I-Ag-CcA"/>
                                 </connections>
                             </containerView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mq2-d6-Lu0">
+                                <rect key="frame" x="300" y="651" width="60" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="60" id="6ir-Yw-Mfi"/>
+                                    <constraint firstAttribute="height" constant="60" id="bk6-DL-hsW"/>
+                                </constraints>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" image="floatingAddButton"/>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="OmY-VF-B3r"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="Sak-te-ZxO" firstAttribute="leading" secondItem="OmY-VF-B3r" secondAttribute="leading" id="1xn-SG-wNh"/>
                             <constraint firstItem="Sak-te-ZxO" firstAttribute="top" secondItem="t69-j9-JS3" secondAttribute="bottom" constant="20" id="AuL-xX-EeM"/>
+                            <constraint firstItem="OmY-VF-B3r" firstAttribute="trailing" secondItem="mq2-d6-Lu0" secondAttribute="trailing" constant="15" id="BbI-Qo-D60"/>
                             <constraint firstItem="OmY-VF-B3r" firstAttribute="trailing" secondItem="Sak-te-ZxO" secondAttribute="trailing" id="GyN-D3-vcO"/>
                             <constraint firstItem="owZ-Up-qj4" firstAttribute="leading" secondItem="OmY-VF-B3r" secondAttribute="leading" id="Jit-u8-838"/>
                             <constraint firstItem="OmY-VF-B3r" firstAttribute="trailing" secondItem="owZ-Up-qj4" secondAttribute="trailing" id="RAA-Jo-Ymm"/>
@@ -248,6 +269,7 @@
                             <constraint firstItem="uZl-fw-Y2x" firstAttribute="leading" secondItem="OmY-VF-B3r" secondAttribute="leading" constant="20" id="rkE-T6-bQM"/>
                             <constraint firstItem="t69-j9-JS3" firstAttribute="leading" secondItem="OmY-VF-B3r" secondAttribute="leading" constant="20" id="tam-8I-Mtu"/>
                             <constraint firstItem="OmY-VF-B3r" firstAttribute="bottom" secondItem="owZ-Up-qj4" secondAttribute="bottom" id="v0Y-9x-svR"/>
+                            <constraint firstItem="OmY-VF-B3r" firstAttribute="bottom" secondItem="mq2-d6-Lu0" secondAttribute="bottom" constant="18" id="v6J-pb-m5S"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="기호" image="icon-palate" id="yvU-A0-Pf9"/>
@@ -1103,6 +1125,7 @@
                     <view key="view" contentMode="scaleToFill" id="oq9-ju-QtD">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="561"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="vJK-mz-eJ6"/>
                         <color key="backgroundColor" name="yellow-100"/>
                     </view>
                 </viewController>
@@ -1117,6 +1140,7 @@
                     <view key="view" contentMode="scaleToFill" id="vNo-AX-S7U">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="561"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="nPM-ab-uuA"/>
                         <color key="backgroundColor" name="yellow-150"/>
                     </view>
                 </viewController>
@@ -1131,6 +1155,7 @@
                     <view key="view" contentMode="scaleToFill" id="gK1-0k-Mix">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="561"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="rlq-zL-ITA"/>
                         <color key="backgroundColor" name="yellow-500"/>
                     </view>
                 </viewController>
@@ -1143,6 +1168,7 @@
         <image name="arrow-right" width="30" height="30"/>
         <image name="button-toggle-off" width="55" height="35"/>
         <image name="button-toggle-on" width="55" height="35"/>
+        <image name="floatingAddButton" width="60" height="60"/>
         <image name="icon-alert" width="24" height="24"/>
         <image name="icon-home" width="24" height="24"/>
         <image name="icon-mypage" width="24" height="24"/>
