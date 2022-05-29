@@ -22,7 +22,7 @@
 		A2370C252840B8CE00D64871 /* UIDevice+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2370C242840B8CE00D64871 /* UIDevice+Extension.swift */; };
 		A247D393280E721E00A3DF31 /* Onboarding.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A247D392280E721E00A3DF31 /* Onboarding.storyboard */; };
 		A2B2BC082827560500659836 /* UserInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2B2BC072827560500659836 /* UserInfo.swift */; };
-		A2B2BC0A2827568D00659836 /* CatsInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2B2BC092827568D00659836 /* CatsInfo.swift */; };
+		A2B2BC0A2827568D00659836 /* CatInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2B2BC092827568D00659836 /* CatInfo.swift */; };
 		A2B2BC0C28279F1E00659836 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2B2BC0B28279F1E00659836 /* RegisterViewController.swift */; };
 		A2B2BC0E2827A8DC00659836 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2B2BC0D2827A8DC00659836 /* LoginViewController.swift */; };
 		A2B2BC102827AADE00659836 /* EmailLoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2B2BC0F2827AADE00659836 /* EmailLoginViewController.swift */; };
@@ -66,7 +66,7 @@
 		A2370C242840B8CE00D64871 /* UIDevice+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIDevice+Extension.swift"; sourceTree = "<group>"; };
 		A247D392280E721E00A3DF31 /* Onboarding.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Onboarding.storyboard; sourceTree = "<group>"; };
 		A2B2BC072827560500659836 /* UserInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfo.swift; sourceTree = "<group>"; };
-		A2B2BC092827568D00659836 /* CatsInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatsInfo.swift; sourceTree = "<group>"; };
+		A2B2BC092827568D00659836 /* CatInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatInfo.swift; sourceTree = "<group>"; };
 		A2B2BC0B28279F1E00659836 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		A2B2BC0D2827A8DC00659836 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		A2B2BC0F2827AADE00659836 /* EmailLoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailLoginViewController.swift; sourceTree = "<group>"; };
@@ -154,7 +154,7 @@
 				A2DFA38F280E7D9500AFE1BF /* Helpers */,
 				A224D4BD280D1D730040E945 /* Info.plist */,
 				A2B2BC072827560500659836 /* UserInfo.swift */,
-				A2B2BC092827568D00659836 /* CatsInfo.swift */,
+				A2B2BC092827568D00659836 /* CatInfo.swift */,
 				A2FDE17228433384002163BB /* CatPalate.swift */,
 			);
 			path = KkongNyangApp;
@@ -392,7 +392,7 @@
 				A224D4B2280D1D720040E945 /* SceneDelegate.swift in Sources */,
 				A2320428283A65F700706DB4 /* AppInfoViewController.swift in Sources */,
 				A2BE71B8281B6D8100FB8548 /* PalateViewController.swift in Sources */,
-				A2B2BC0A2827568D00659836 /* CatsInfo.swift in Sources */,
+				A2B2BC0A2827568D00659836 /* CatInfo.swift in Sources */,
 				A2BE71B6281B63BE00FB8548 /* HomeViewController.swift in Sources */,
 				A2320426283A643A00706DB4 /* MyPageViewController.swift in Sources */,
 				A232042A283A662200706DB4 /* AlertSettingViewController.swift in Sources */,

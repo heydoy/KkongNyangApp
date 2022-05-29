@@ -9,14 +9,21 @@ import Foundation
 import UIKit
 
 struct CatPalate {
+    var catItem: CatItem
+    var preferenceLevel: Float // 0.0 ~ 1.0 hate, don't like, average, like, like very much
+}
+
+
+struct CatItem {
     var itemKind: [CatItem]
     var itemImage: UIImage
     var itemName: String
-    var preferenceLevel: Float // 0.0 ~ 1.0 hate, don't like, average, like, like very much
     
 }
 
-enum CatItem {
+
+
+enum CatItemKind {
     case food
     case snack
     case toy
