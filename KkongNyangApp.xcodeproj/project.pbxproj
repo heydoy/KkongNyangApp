@@ -43,6 +43,7 @@
 		A2DFA402280EEBF100AFE1BF /* GmarketSansBold.otf in Resources */ = {isa = PBXBuildFile; fileRef = A2DFA3FF280EEBF100AFE1BF /* GmarketSansBold.otf */; };
 		A2DFA403280EEBF100AFE1BF /* GmarketSansMedium.otf in Resources */ = {isa = PBXBuildFile; fileRef = A2DFA400280EEBF100AFE1BF /* GmarketSansMedium.otf */; };
 		A2E818162830F61A00B64664 /* CatProfileSettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2E818152830F61A00B64664 /* CatProfileSettingViewController.swift */; };
+		A2FDE17328433384002163BB /* CatPalate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2FDE17228433384002163BB /* CatPalate.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -86,6 +87,7 @@
 		A2DFA3FF280EEBF100AFE1BF /* GmarketSansBold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = GmarketSansBold.otf; sourceTree = "<group>"; };
 		A2DFA400280EEBF100AFE1BF /* GmarketSansMedium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = GmarketSansMedium.otf; sourceTree = "<group>"; };
 		A2E818152830F61A00B64664 /* CatProfileSettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatProfileSettingViewController.swift; sourceTree = "<group>"; };
+		A2FDE17228433384002163BB /* CatPalate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatPalate.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -153,6 +155,7 @@
 				A224D4BD280D1D730040E945 /* Info.plist */,
 				A2B2BC072827560500659836 /* UserInfo.swift */,
 				A2B2BC092827568D00659836 /* CatsInfo.swift */,
+				A2FDE17228433384002163BB /* CatPalate.swift */,
 			);
 			path = KkongNyangApp;
 			sourceTree = "<group>";
@@ -377,6 +380,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A2DFA38A280E795100AFE1BF /* OnboardingFirstPageViewController.swift in Sources */,
+				A2FDE17328433384002163BB /* CatPalate.swift in Sources */,
 				A2DFA38C280E7A2800AFE1BF /* OnboardingSecondPageViewController.swift in Sources */,
 				A224D4B0280D1D720040E945 /* AppDelegate.swift in Sources */,
 				A2DFA38E280E7A3500AFE1BF /* OnboardingThirdPageViewController.swift in Sources */,

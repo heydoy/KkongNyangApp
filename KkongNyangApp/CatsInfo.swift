@@ -16,12 +16,14 @@ struct CatsFamilyInfo {
 
 // 고양이 각자
 struct CatsInfo {
+    let catNumber: Int // 고유번호
     var catPhoto: UIImage //프로필 이미지를 바꿀 수 있으니까
     var catName: String
     var catGender: Gender // 성별. 열거형으로
     var catNeutered: Bool = false// 중성화여부
     var catBirthday: Date // 생년월일
     var catMemo: String
+    var catPalate: [CatPalate]
 }
 
 enum Gender {
