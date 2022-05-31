@@ -13,7 +13,7 @@ class CatProfileSettingViewController: UIViewController {
     var catMemo: String = ""
     var indexOfButtonArray: Int? = nil
     
-    var catInfo:  ((CatsInfo) -> Void)?
+    var catInfo:  ((CatInfo) -> Void)?
     
     let imagePickerViewController = UIImagePickerController()
 
