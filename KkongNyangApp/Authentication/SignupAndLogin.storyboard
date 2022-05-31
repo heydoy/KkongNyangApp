@@ -821,10 +821,10 @@
                                     </button>
                                 </subviews>
                             </stackView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="G0k-OJ-7Z7">
-                                <rect key="frame" x="20" y="151.33333333333337" width="335" height="335"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="familyInvitation" translatesAutoresizingMaskIntoConstraints="NO" id="G0k-OJ-7Z7">
+                                <rect key="frame" x="0.0" y="151.33333333333337" width="375" height="410"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" secondItem="G0k-OJ-7Z7" secondAttribute="height" multiplier="1:1" id="dre-vM-Ogg"/>
+                                    <constraint firstAttribute="height" constant="410" id="gD5-8B-upI"/>
                                 </constraints>
                             </imageView>
                         </subviews>
@@ -838,8 +838,8 @@
                             <constraint firstItem="qFb-ss-o5t" firstAttribute="trailing" secondItem="zxn-dO-VAw" secondAttribute="trailing" constant="20" id="lhc-F1-7qt"/>
                             <constraint firstItem="zxn-dO-VAw" firstAttribute="leading" secondItem="qFb-ss-o5t" secondAttribute="leading" constant="20" id="m0z-Zv-Pj0"/>
                             <constraint firstItem="G0k-OJ-7Z7" firstAttribute="top" secondItem="Zwd-F8-WUz" secondAttribute="bottom" constant="30" id="qZO-GY-yMW"/>
-                            <constraint firstItem="qFb-ss-o5t" firstAttribute="trailing" secondItem="G0k-OJ-7Z7" secondAttribute="trailing" constant="20" id="wH1-fE-SPx"/>
-                            <constraint firstItem="G0k-OJ-7Z7" firstAttribute="leading" secondItem="qFb-ss-o5t" secondAttribute="leading" constant="20" id="z40-ky-Gzv"/>
+                            <constraint firstItem="qFb-ss-o5t" firstAttribute="trailing" secondItem="G0k-OJ-7Z7" secondAttribute="trailing" id="wH1-fE-SPx"/>
+                            <constraint firstItem="G0k-OJ-7Z7" firstAttribute="leading" secondItem="qFb-ss-o5t" secondAttribute="leading" id="z40-ky-Gzv"/>
                             <constraint firstItem="Zwd-F8-WUz" firstAttribute="leading" secondItem="1Hn-dK-Qfr" secondAttribute="leading" id="zuR-JU-Tpk"/>
                         </constraints>
                     </view>
@@ -858,10 +858,11 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="NAm-kv-ELc"/>
+        <segue reference="yCt-np-Mar"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="calendar" catalog="system" width="128" height="106"/>
+        <image name="familyInvitation" width="375" height="410"/>
         <image name="genderbutton-defaults" width="158" height="46"/>
         <image name="genderbutton-selected" width="158" height="46"/>
         <image name="icon-apple" width="24.333333969116211" height="24"/>
