@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		38021759A8D98144BA77914F /* Pods_KkongNyangApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 69ED1361684068BDF78592AD /* Pods_KkongNyangApp.framework */; };
 		A206BB332812BABA00F2768A /* SignupAndLogin.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A206BB322812BABA00F2768A /* SignupAndLogin.storyboard */; };
+		A22448C928490395008C9E72 /* TodoListCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A22448C828490395008C9E72 /* TodoListCollectionViewCell.swift */; };
 		A224D4B0280D1D720040E945 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A224D4AF280D1D720040E945 /* AppDelegate.swift */; };
 		A224D4B2280D1D720040E945 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A224D4B1280D1D720040E945 /* SceneDelegate.swift */; };
 		A224D4B7280D1D720040E945 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A224D4B5280D1D720040E945 /* Main.storyboard */; };
@@ -51,6 +52,7 @@
 		6AAAD11D319B92D9083FBCBC /* Pods-KkongNyangApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KkongNyangApp.debug.xcconfig"; path = "Target Support Files/Pods-KkongNyangApp/Pods-KkongNyangApp.debug.xcconfig"; sourceTree = "<group>"; };
 		6E6C39B42C5BB79F280B92E7 /* Pods-KkongNyangApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KkongNyangApp.release.xcconfig"; path = "Target Support Files/Pods-KkongNyangApp/Pods-KkongNyangApp.release.xcconfig"; sourceTree = "<group>"; };
 		A206BB322812BABA00F2768A /* SignupAndLogin.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SignupAndLogin.storyboard; sourceTree = "<group>"; };
+		A22448C828490395008C9E72 /* TodoListCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoListCollectionViewCell.swift; sourceTree = "<group>"; };
 		A224D4AC280D1D720040E945 /* KkongNyangApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KkongNyangApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A224D4AF280D1D720040E945 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A224D4B1280D1D720040E945 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -117,6 +119,14 @@
 				69ED1361684068BDF78592AD /* Pods_KkongNyangApp.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		A22448C728490356008C9E72 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				A22448C828490395008C9E72 /* TodoListCollectionViewCell.swift */,
+			);
+			path = Cell;
 			sourceTree = "<group>";
 		};
 		A224D4A3280D1D710040E945 = {
@@ -194,6 +204,7 @@
 		A2B2BC112827BC1F00659836 /* Todo */ = {
 			isa = PBXGroup;
 			children = (
+				A22448C728490356008C9E72 /* Cell */,
 				A2BE71BF281B79AC00FB8548 /* TodoViewController.swift */,
 			);
 			path = Todo;
@@ -396,6 +407,7 @@
 				A2BE71B6281B63BE00FB8548 /* HomeViewController.swift in Sources */,
 				A2320426283A643A00706DB4 /* MyPageViewController.swift in Sources */,
 				A232042A283A662200706DB4 /* AlertSettingViewController.swift in Sources */,
+				A22448C928490395008C9E72 /* TodoListCollectionViewCell.swift in Sources */,
 				A2B2BC0C28279F1E00659836 /* RegisterViewController.swift in Sources */,
 				A224D4C4280D2D750040E945 /* UIColor+Extension.swift in Sources */,
 				A2B2BC0E2827A8DC00659836 /* LoginViewController.swift in Sources */,
