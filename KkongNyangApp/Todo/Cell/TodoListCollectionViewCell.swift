@@ -17,6 +17,9 @@ class TodoListCollectionViewCell: UICollectionViewCell {
     
     // MARK: - Actions
     
+    func configure() {
+        // 데이터를 불러와서 셀을 구성 (FC 프로젝트채팅리스트 2 영상 참조) 
+    }
     
     // MARK: - Helpers
 }
