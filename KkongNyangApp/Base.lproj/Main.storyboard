@@ -167,13 +167,6 @@
                                                         <constraint firstAttribute="width" constant="24" id="mww-SA-AnH"/>
                                                     </constraints>
                                                 </imageView>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="check-do" translatesAutoresizingMaskIntoConstraints="NO" id="c1b-cI-2v0">
-                                                    <rect key="frame" x="297" y="27" width="18" height="18"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="height" constant="18" id="5UP-2O-Ran"/>
-                                                        <constraint firstAttribute="width" constant="18" id="KcU-jD-Jqo"/>
-                                                    </constraints>
-                                                </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="아침 식사 챙겨주기" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xz4-tJ-xEV">
                                                     <rect key="frame" x="65" y="18" width="124" height="15"/>
                                                     <fontDescription key="fontDescription" name="GmarketSansMedium" family="Gmarket Sans" pointSize="15"/>
@@ -186,20 +179,36 @@
                                                     <color key="textColor" name="gray-300"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="r7Q-Ij-9pN">
+                                                    <rect key="frame" x="295" y="27" width="18" height="18"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="18" id="dlH-qB-RBg"/>
+                                                        <constraint firstAttribute="width" constant="18" id="fMj-zf-HnN"/>
+                                                    </constraints>
+                                                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                    <state key="normal" image="check-do"/>
+                                                    <state key="selected" image="check-done"/>
+                                                </button>
                                             </subviews>
                                             <constraints>
                                                 <constraint firstItem="Xz4-tJ-xEV" firstAttribute="leading" secondItem="cz7-T4-vIB" secondAttribute="trailing" constant="21" id="0kE-op-zzV"/>
-                                                <constraint firstItem="c1b-cI-2v0" firstAttribute="centerY" secondItem="7S4-hr-BSG" secondAttribute="centerY" id="C7z-PG-dqi"/>
                                                 <constraint firstItem="cz7-T4-vIB" firstAttribute="centerY" secondItem="7S4-hr-BSG" secondAttribute="centerY" id="Enj-ZH-ehH"/>
-                                                <constraint firstAttribute="trailing" secondItem="c1b-cI-2v0" secondAttribute="trailing" constant="20" id="RHL-rH-whD"/>
+                                                <constraint firstItem="r7Q-Ij-9pN" firstAttribute="centerY" secondItem="7S4-hr-BSG" secondAttribute="centerY" id="NcX-5c-rdl"/>
                                                 <constraint firstItem="Xz4-tJ-xEV" firstAttribute="top" secondItem="7S4-hr-BSG" secondAttribute="top" constant="18" id="SRv-dr-hv2"/>
                                                 <constraint firstItem="oAD-LF-QKC" firstAttribute="top" secondItem="Xz4-tJ-xEV" secondAttribute="bottom" constant="7" id="YRT-bA-QoU"/>
                                                 <constraint firstItem="oAD-LF-QKC" firstAttribute="leading" secondItem="Xz4-tJ-xEV" secondAttribute="leading" id="eXa-ck-FgF"/>
+                                                <constraint firstAttribute="trailing" secondItem="r7Q-Ij-9pN" secondAttribute="trailing" constant="22" id="sv4-Km-bIU"/>
                                                 <constraint firstItem="cz7-T4-vIB" firstAttribute="leading" secondItem="7S4-hr-BSG" secondAttribute="leading" constant="20" id="zqI-ka-Mcn"/>
                                             </constraints>
                                         </collectionViewCellContentView>
                                         <color key="backgroundColor" name="gray-80"/>
                                         <size key="customSize" width="335" height="72"/>
+                                        <connections>
+                                            <outlet property="checkButton" destination="r7Q-Ij-9pN" id="GBi-UM-E1W"/>
+                                            <outlet property="iconImage" destination="cz7-T4-vIB" id="EOH-Zt-sXY"/>
+                                            <outlet property="timeLabel" destination="oAD-LF-QKC" id="gsD-xM-n6X"/>
+                                            <outlet property="todoTitleLabel" destination="Xz4-tJ-xEV" id="tnr-S9-KQJ"/>
+                                        </connections>
                                     </collectionViewCell>
                                 </cells>
                             </collectionView>
@@ -1325,6 +1334,7 @@
         <image name="button-toggle-on" width="55" height="35"/>
         <image name="catfood" width="24" height="24"/>
         <image name="check-do" width="18" height="18"/>
+        <image name="check-done" width="18" height="18"/>
         <image name="emojiHate" width="32" height="32"/>
         <image name="emojiLove" width="32" height="32"/>
         <image name="floatingAddButton" width="60" height="60"/>
