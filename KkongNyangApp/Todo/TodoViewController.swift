@@ -10,9 +10,8 @@ import UIKit
 class TodoViewController: UIViewController {
 
     // MARK: - Properties
-    @IBOutlet weak var firstView: UIView!
-    @IBOutlet weak var secondView: UIView!
-    @IBOutlet weak var thirdView: UIView!
+    @IBOutlet weak var addTodoButton: UIButton!
+    
     
     
     // MARK: - Lifecycle
@@ -25,17 +24,11 @@ class TodoViewController: UIViewController {
     
     @IBAction func switchViews(_ sender: UISegmentedControl) {
         if sender.selectedSegmentIndex == 0 {
-            firstView.alpha = 1
-            secondView.alpha = 0
-            thirdView.alpha = 0
+            
         } else if sender.selectedSegmentIndex == 1 {
-            firstView.alpha = 0
-            secondView.alpha = 1
-            thirdView.alpha = 0
+           
         } else {
-            firstView.alpha = 0
-            secondView.alpha = 0
-            thirdView.alpha = 1
+          
         }
     }
     
