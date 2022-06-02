@@ -151,6 +151,10 @@
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                 <state key="normal" image="floatingAddButton"/>
                             </button>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="PhX-ww-erQ">
+                                <rect key="frame" x="0.0" y="172" width="375" height="557"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="r8a-kY-XtF"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -160,9 +164,13 @@
                             <constraint firstItem="2Ei-Fr-2i7" firstAttribute="top" secondItem="jCA-IG-nOV" secondAttribute="bottom" constant="8" symbolic="YES" id="AVE-pp-cCe"/>
                             <constraint firstItem="r8a-kY-XtF" firstAttribute="trailing" secondItem="HJ5-fN-MIX" secondAttribute="trailing" constant="15" id="KOv-sq-48q"/>
                             <constraint firstItem="bZD-vL-iM9" firstAttribute="centerY" secondItem="jCA-IG-nOV" secondAttribute="centerY" id="LGV-yF-UAY"/>
+                            <constraint firstItem="PhX-ww-erQ" firstAttribute="trailing" secondItem="r8a-kY-XtF" secondAttribute="trailing" id="OTj-I0-vYP"/>
                             <constraint firstAttribute="trailing" secondItem="bZD-vL-iM9" secondAttribute="trailing" constant="20" id="P8A-FU-zpg"/>
                             <constraint firstItem="r8a-kY-XtF" firstAttribute="bottom" secondItem="HJ5-fN-MIX" secondAttribute="bottom" constant="18" id="UjH-JJ-GZ2"/>
+                            <constraint firstItem="PhX-ww-erQ" firstAttribute="top" secondItem="2Ei-Fr-2i7" secondAttribute="bottom" constant="24" id="dZk-Zx-aIO"/>
                             <constraint firstItem="2Ei-Fr-2i7" firstAttribute="leading" secondItem="r8a-kY-XtF" secondAttribute="leading" constant="20" id="leD-q4-tJs"/>
+                            <constraint firstItem="PhX-ww-erQ" firstAttribute="bottom" secondItem="r8a-kY-XtF" secondAttribute="bottom" id="mIG-eK-aEH"/>
+                            <constraint firstItem="PhX-ww-erQ" firstAttribute="leading" secondItem="r8a-kY-XtF" secondAttribute="leading" id="tPR-d0-urw"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="할 일" image="icon-todo" id="QjX-YT-ZTv"/>
@@ -172,7 +180,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6iw-ij-fnl" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1884" y="913"/>
+            <point key="canvasLocation" x="1884" y="912.5615763546798"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="jHj-Cu-ujs">
