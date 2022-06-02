@@ -110,7 +110,7 @@
         <!--할 일-->
         <scene sceneID="jwu-OZ-rXe">
             <objects>
-                <viewController id="zaf-YG-eFV" customClass="TodoViewController" customModule="KkongNyangApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="TodoVC" id="zaf-YG-eFV" customClass="TodoViewController" customModule="KkongNyangApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Cnr-Uj-nn6">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -142,6 +142,26 @@
                                     <action selector="switchViews:" destination="zaf-YG-eFV" eventType="valueChanged" id="HO2-sA-FB9"/>
                                 </connections>
                             </segmentedControl>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Xnm-D0-wQo">
+                                <rect key="frame" x="0.0" y="172" width="375" height="557"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="b2k-wr-0O2">
+                                    <size key="itemSize" width="128" height="128"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="UdU-db-pps">
+                                        <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="7S4-hr-BSG">
+                                            <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </collectionViewCellContentView>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HJ5-fN-MIX">
                                 <rect key="frame" x="300" y="651" width="60" height="60"/>
                                 <constraints>
@@ -151,36 +171,22 @@
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                 <state key="normal" image="floatingAddButton"/>
                             </button>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="PhX-ww-erQ">
-                                <rect key="frame" x="0.0" y="172" width="375" height="557"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="l0U-k2-YzO">
-                                        <rect key="frame" x="0.0" y="44.666666030883789" width="375" height="43.666667938232422"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="l0U-k2-YzO" id="0RO-oU-UDt">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.666667938232422"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                        </tableViewCellContentView>
-                                    </tableViewCell>
-                                </prototypes>
-                            </tableView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="r8a-kY-XtF"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="jCA-IG-nOV" firstAttribute="leading" secondItem="r8a-kY-XtF" secondAttribute="leading" constant="20" id="3fJ-CY-5lr"/>
                             <constraint firstItem="jCA-IG-nOV" firstAttribute="top" secondItem="r8a-kY-XtF" secondAttribute="top" constant="24" id="9WL-D3-0KJ"/>
+                            <constraint firstItem="Xnm-D0-wQo" firstAttribute="trailing" secondItem="r8a-kY-XtF" secondAttribute="trailing" id="API-C2-J5u"/>
+                            <constraint firstItem="r8a-kY-XtF" firstAttribute="bottom" secondItem="Xnm-D0-wQo" secondAttribute="bottom" id="AT5-Bi-nT5"/>
                             <constraint firstItem="2Ei-Fr-2i7" firstAttribute="top" secondItem="jCA-IG-nOV" secondAttribute="bottom" constant="8" symbolic="YES" id="AVE-pp-cCe"/>
                             <constraint firstItem="r8a-kY-XtF" firstAttribute="trailing" secondItem="HJ5-fN-MIX" secondAttribute="trailing" constant="15" id="KOv-sq-48q"/>
                             <constraint firstItem="bZD-vL-iM9" firstAttribute="centerY" secondItem="jCA-IG-nOV" secondAttribute="centerY" id="LGV-yF-UAY"/>
-                            <constraint firstItem="PhX-ww-erQ" firstAttribute="trailing" secondItem="r8a-kY-XtF" secondAttribute="trailing" id="OTj-I0-vYP"/>
                             <constraint firstAttribute="trailing" secondItem="bZD-vL-iM9" secondAttribute="trailing" constant="20" id="P8A-FU-zpg"/>
                             <constraint firstItem="r8a-kY-XtF" firstAttribute="bottom" secondItem="HJ5-fN-MIX" secondAttribute="bottom" constant="18" id="UjH-JJ-GZ2"/>
-                            <constraint firstItem="PhX-ww-erQ" firstAttribute="top" secondItem="2Ei-Fr-2i7" secondAttribute="bottom" constant="24" id="dZk-Zx-aIO"/>
+                            <constraint firstItem="Xnm-D0-wQo" firstAttribute="leading" secondItem="r8a-kY-XtF" secondAttribute="leading" id="dAR-92-ida"/>
+                            <constraint firstItem="Xnm-D0-wQo" firstAttribute="top" secondItem="2Ei-Fr-2i7" secondAttribute="bottom" constant="24" id="g1P-RN-4FY"/>
                             <constraint firstItem="2Ei-Fr-2i7" firstAttribute="leading" secondItem="r8a-kY-XtF" secondAttribute="leading" constant="20" id="leD-q4-tJs"/>
-                            <constraint firstItem="PhX-ww-erQ" firstAttribute="bottom" secondItem="r8a-kY-XtF" secondAttribute="bottom" id="mIG-eK-aEH"/>
-                            <constraint firstItem="PhX-ww-erQ" firstAttribute="leading" secondItem="r8a-kY-XtF" secondAttribute="leading" id="tPR-d0-urw"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="할 일" image="icon-todo" id="QjX-YT-ZTv"/>
