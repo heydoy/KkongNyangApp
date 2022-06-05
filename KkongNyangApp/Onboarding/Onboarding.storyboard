@@ -176,7 +176,7 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="기호를 기록하기" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EFD-uZ-rnD">
-                                <rect key="frame" x="110.33333333333333" y="552" width="154.66666666666669" height="22"/>
+                                <rect key="frame" x="110.33333333333333" y="552" width="154.33333333333337" height="22"/>
                                 <fontDescription key="fontDescription" name="GmarketSansMedium" family="Gmarket Sans" pointSize="22"/>
                                 <color key="textColor" name="greengray-900"/>
                                 <nil key="highlightedColor"/>
