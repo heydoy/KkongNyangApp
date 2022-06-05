@@ -33,6 +33,7 @@
 		A2A409C8284CCE3800FD47EC /* FinishedTodoCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2A409C7284CCE3800FD47EC /* FinishedTodoCollectionViewCell.swift */; };
 		A2A409CA284CD5E100FD47EC /* AlertViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2A409C9284CD5E100FD47EC /* AlertViewController.swift */; };
 		A2A409CE284CD65800FD47EC /* AlertCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2A409CD284CD65800FD47EC /* AlertCollectionViewCell.swift */; };
+		A2A409D0284CE08E00FD47EC /* BaseTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2A409CF284CE08E00FD47EC /* BaseTabBarController.swift */; };
 		A2B2BC082827560500659836 /* UserInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2B2BC072827560500659836 /* UserInfo.swift */; };
 		A2B2BC0A2827568D00659836 /* CatInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2B2BC092827568D00659836 /* CatInfo.swift */; };
 		A2B2BC0C28279F1E00659836 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2B2BC0B28279F1E00659836 /* RegisterViewController.swift */; };
@@ -89,6 +90,7 @@
 		A2A409C7284CCE3800FD47EC /* FinishedTodoCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinishedTodoCollectionViewCell.swift; sourceTree = "<group>"; };
 		A2A409C9284CD5E100FD47EC /* AlertViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertViewController.swift; sourceTree = "<group>"; };
 		A2A409CD284CD65800FD47EC /* AlertCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertCollectionViewCell.swift; sourceTree = "<group>"; };
+		A2A409CF284CE08E00FD47EC /* BaseTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseTabBarController.swift; sourceTree = "<group>"; };
 		A2B2BC072827560500659836 /* UserInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfo.swift; sourceTree = "<group>"; };
 		A2B2BC092827568D00659836 /* CatInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatInfo.swift; sourceTree = "<group>"; };
 		A2B2BC0B28279F1E00659836 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
@@ -181,6 +183,7 @@
 				A2A409BD284CA6B500FD47EC /* Home */,
 				A226D2C7283A381000C080CF /* MyPage */,
 				A2A409CB284CD5ED00FD47EC /* Alert */,
+				A2A409CF284CE08E00FD47EC /* BaseTabBarController.swift */,
 				A224D4B5280D1D720040E945 /* Main.storyboard */,
 				A224D4B8280D1D730040E945 /* Assets.xcassets */,
 				A2DFA3FD280EEBF100AFE1BF /* Fonts */,
@@ -479,6 +482,7 @@
 				A2A409B9284C6AF400FD47EC /* AddPalateViewController.swift in Sources */,
 				A2DFA38C280E7A2800AFE1BF /* OnboardingSecondPageViewController.swift in Sources */,
 				A224D4B0280D1D720040E945 /* AppDelegate.swift in Sources */,
+				A2A409D0284CE08E00FD47EC /* BaseTabBarController.swift in Sources */,
 				A2A409CA284CD5E100FD47EC /* AlertViewController.swift in Sources */,
 				A2DFA38E280E7A3500AFE1BF /* OnboardingThirdPageViewController.swift in Sources */,
 				A2DFA396280E8E6000AFE1BF /* UIStoryboard+Extension.swift in Sources */,
