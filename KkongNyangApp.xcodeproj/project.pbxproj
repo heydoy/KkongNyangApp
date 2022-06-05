@@ -25,6 +25,7 @@
 		A247D393280E721E00A3DF31 /* Onboarding.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A247D392280E721E00A3DF31 /* Onboarding.storyboard */; };
 		A2A409B6284C6AC900FD47EC /* AddTodoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2A409B5284C6AC900FD47EC /* AddTodoViewController.swift */; };
 		A2A409B9284C6AF400FD47EC /* AddPalateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2A409B8284C6AF400FD47EC /* AddPalateViewController.swift */; };
+		A2A409BC284C904700FD47EC /* PalateCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2A409BB284C904700FD47EC /* PalateCollectionViewCell.swift */; };
 		A2B2BC082827560500659836 /* UserInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2B2BC072827560500659836 /* UserInfo.swift */; };
 		A2B2BC0A2827568D00659836 /* CatInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2B2BC092827568D00659836 /* CatInfo.swift */; };
 		A2B2BC0C28279F1E00659836 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2B2BC0B28279F1E00659836 /* RegisterViewController.swift */; };
@@ -73,6 +74,7 @@
 		A247D392280E721E00A3DF31 /* Onboarding.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Onboarding.storyboard; sourceTree = "<group>"; };
 		A2A409B5284C6AC900FD47EC /* AddTodoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTodoViewController.swift; sourceTree = "<group>"; };
 		A2A409B8284C6AF400FD47EC /* AddPalateViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPalateViewController.swift; sourceTree = "<group>"; };
+		A2A409BB284C904700FD47EC /* PalateCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PalateCollectionViewCell.swift; sourceTree = "<group>"; };
 		A2B2BC072827560500659836 /* UserInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfo.swift; sourceTree = "<group>"; };
 		A2B2BC092827568D00659836 /* CatInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatInfo.swift; sourceTree = "<group>"; };
 		A2B2BC0B28279F1E00659836 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
@@ -211,10 +213,19 @@
 		A2A409B7284C6AE000FD47EC /* Palate */ = {
 			isa = PBXGroup;
 			children = (
+				A2A409BA284C902A00FD47EC /* Cell */,
 				A2BE71B7281B6D8100FB8548 /* PalateViewController.swift */,
 				A2A409B8284C6AF400FD47EC /* AddPalateViewController.swift */,
 			);
 			path = Palate;
+			sourceTree = "<group>";
+		};
+		A2A409BA284C902A00FD47EC /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				A2A409BB284C904700FD47EC /* PalateCollectionViewCell.swift */,
+			);
+			path = Cell;
 			sourceTree = "<group>";
 		};
 		A2B2BC112827BC1F00659836 /* Todo */ = {
@@ -434,6 +445,7 @@
 				A2DFA392280E7DC400AFE1BF /* LandscapeManager.swift in Sources */,
 				A2B2BC082827560500659836 /* UserInfo.swift in Sources */,
 				A2E818162830F61A00B64664 /* CatProfileSettingViewController.swift in Sources */,
+				A2A409BC284C904700FD47EC /* PalateCollectionViewCell.swift in Sources */,
 				A2DFA394280E8D9700AFE1BF /* ConciergeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -556,13 +556,13 @@
                                 <rect key="frame" x="0.0" y="172" width="375" height="557"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="FJV-J6-10o">
-                                    <size key="itemSize" width="128" height="128"/>
+                                    <size key="itemSize" width="335" height="88"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="FXC-EV-fnl">
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="PalateCollectionViewCell" id="FXC-EV-fnl" customClass="PalateCollectionViewCell" customModule="KkongNyangApp" customModuleProvider="target">
                                         <rect key="frame" x="20" y="0.0" width="335" height="88"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="kuk-o5-EQf">
@@ -576,14 +576,8 @@
                                                     </constraints>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="로얄캐닌 센서리필 젤리파우치" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WXc-bN-eJ1">
-                                                    <rect key="frame" x="96" y="31" width="239" height="18"/>
+                                                    <rect key="frame" x="96" y="35" width="239" height="18"/>
                                                     <fontDescription key="fontDescription" name="AppleSDGothicNeo-SemiBold" family="Apple SD Gothic Neo" pointSize="15"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="안 남기고 전부 먹으면서 냥냥댐" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GHC-sp-3IC">
-                                                    <rect key="frame" x="96" y="52" width="239" height="15"/>
-                                                    <fontDescription key="fontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="12"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
@@ -601,16 +595,13 @@
                                                 </label>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="GHC-sp-3IC" firstAttribute="trailing" secondItem="WXc-bN-eJ1" secondAttribute="trailing" id="5B3-Kn-jbt"/>
                                                 <constraint firstAttribute="trailing" secondItem="DcE-BB-OEj" secondAttribute="trailing" id="7E5-Rn-CZZ"/>
                                                 <constraint firstItem="DcE-BB-OEj" firstAttribute="top" secondItem="kuk-o5-EQf" secondAttribute="top" constant="4" id="Afo-1J-Fva"/>
-                                                <constraint firstItem="WXc-bN-eJ1" firstAttribute="top" secondItem="DcE-BB-OEj" secondAttribute="bottom" constant="6" id="Boq-JJ-Dzw"/>
                                                 <constraint firstItem="WXc-bN-eJ1" firstAttribute="leading" secondItem="DcE-BB-OEj" secondAttribute="leading" id="Fej-TG-IRH"/>
-                                                <constraint firstItem="GHC-sp-3IC" firstAttribute="top" secondItem="WXc-bN-eJ1" secondAttribute="bottom" constant="3" id="QPR-YJ-Scu"/>
                                                 <constraint firstAttribute="bottom" secondItem="TLL-s9-6dl" secondAttribute="bottom" constant="3" id="Tu0-fo-d6p"/>
                                                 <constraint firstItem="FL1-el-SIz" firstAttribute="leading" secondItem="kuk-o5-EQf" secondAttribute="leading" id="c9z-Ni-kEo"/>
                                                 <constraint firstItem="FL1-el-SIz" firstAttribute="top" secondItem="kuk-o5-EQf" secondAttribute="top" id="dHb-Rz-0QS"/>
-                                                <constraint firstItem="GHC-sp-3IC" firstAttribute="leading" secondItem="WXc-bN-eJ1" secondAttribute="leading" id="gHy-PU-RRE"/>
+                                                <constraint firstItem="WXc-bN-eJ1" firstAttribute="centerY" secondItem="kuk-o5-EQf" secondAttribute="centerY" id="eMf-dr-KXX"/>
                                                 <constraint firstItem="TLL-s9-6dl" firstAttribute="leading" secondItem="DcE-BB-OEj" secondAttribute="leading" id="l0p-Uc-t7y"/>
                                                 <constraint firstItem="WXc-bN-eJ1" firstAttribute="trailing" secondItem="DcE-BB-OEj" secondAttribute="trailing" id="lEv-Zp-LwN"/>
                                                 <constraint firstItem="DcE-BB-OEj" firstAttribute="leading" secondItem="FL1-el-SIz" secondAttribute="trailing" constant="8" symbolic="YES" id="obk-4s-gZ6"/>
@@ -619,6 +610,12 @@
                                             </constraints>
                                         </collectionViewCellContentView>
                                         <size key="customSize" width="335" height="88"/>
+                                        <connections>
+                                            <outlet property="preferenceFace" destination="DcE-BB-OEj" id="oMy-Eo-Igf"/>
+                                            <outlet property="productImage" destination="FL1-el-SIz" id="QFy-fg-rHx"/>
+                                            <outlet property="productName" destination="WXc-bN-eJ1" id="0fc-Jf-7qw"/>
+                                            <outlet property="versionHistory" destination="TLL-s9-6dl" id="yWZ-3s-7Qh"/>
+                                        </connections>
                                     </collectionViewCell>
                                 </cells>
                             </collectionView>
@@ -654,7 +651,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jBL-3n-VXy" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4729" y="913"/>
+            <point key="canvasLocation" x="4728.8000000000002" y="912.5615763546798"/>
         </scene>
         <!--Add Palate View Controller-->
         <scene sceneID="69b-7K-Hth">
