@@ -12,7 +12,6 @@ class TodoViewController: UIViewController {
     // MARK: - Properties
     let catTodoList: [CatTodo] = CatTodo.list
     
-    @IBOutlet weak var addTodoButton: UIButton!
     
     
     @IBOutlet weak var collectionView: UICollectionView!
@@ -36,6 +35,16 @@ class TodoViewController: UIViewController {
         } else {
           
         }
+    }
+    
+    
+    @IBAction func didAddTodoButtonTapped(_ sender: UIButton) {
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        
+        let addTodoViewController = storyboard.instantiateViewController(withIdentifier: "AddTodoVC") as! AddTodoViewController
+        
+        addTodoViewController.modalPresentationStyle = .fullScreen
+        self.present(addTodoViewController, animated: true, completion: nil)
     }
     
     // MARK: - Helpers

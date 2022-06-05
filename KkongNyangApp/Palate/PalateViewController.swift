@@ -21,6 +21,7 @@ class PalateViewController: UIViewController {
 
     }
     
+    // MARK: - Actions
     @IBAction func switchViews(_ sender: UISegmentedControl) {
         if sender.selectedSegmentIndex == 0 {
             firstCatView.alpha = 1
@@ -31,7 +32,14 @@ class PalateViewController: UIViewController {
         }
     }
     
-
+    @IBAction func didAddPalateButtonTapped(_ sender: UIButton) {
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let addPalateViewController = storyboard.instantiateViewController(withIdentifier: "AddPalateVC") as! AddPalateViewController
+        addPalateViewController.modalPresentationStyle = .fullScreen
+        
+        self.present(addPalateViewController, animated: true, completion: nil)
+    }
+    
 
 
 }
