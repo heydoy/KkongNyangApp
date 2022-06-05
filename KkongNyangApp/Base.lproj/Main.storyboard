@@ -1508,10 +1508,10 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" indicatorStyle="white" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="1hy-d9-Q1H">
-                                <rect key="frame" x="0.0" y="121" width="375" height="320"/>
-                                <color key="backgroundColor" systemColor="systemGray6Color"/>
+                                <rect key="frame" x="0.0" y="109" width="375" height="330"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="320" id="lzJ-h5-eZ5"/>
+                                    <constraint firstAttribute="height" constant="330" id="lzJ-h5-eZ5"/>
                                 </constraints>
                                 <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="16" minimumInteritemSpacing="16" id="q56-jd-3nd">
                                     <size key="itemSize" width="200" height="292"/>
@@ -1521,7 +1521,7 @@
                                 </collectionViewFlowLayout>
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="CardCollectionViewCell" id="CSs-SH-04G" customClass="CardCollectionViewCell" customModule="KkongNyangApp" customModuleProvider="target">
-                                        <rect key="frame" x="20" y="14" width="200" height="292"/>
+                                        <rect key="frame" x="20" y="19" width="200" height="292"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="bZO-c5-xAp">
                                             <rect key="frame" x="0.0" y="0.0" width="200" height="292"/>
@@ -1592,6 +1592,7 @@
                                             <outlet property="cardImage" destination="vMc-zO-O53" id="eA2-wN-7AP"/>
                                             <outlet property="cardImageBackground" destination="Cb8-oq-4S1" id="INx-Ox-Qky"/>
                                             <outlet property="cardTitle" destination="Lo3-nk-ZRq" id="8VT-qf-tT5"/>
+                                            <outlet property="textBackground" destination="1Ta-zy-E0h" id="v01-XM-Yp2"/>
                                         </connections>
                                     </collectionViewCell>
                                 </cells>
@@ -1602,7 +1603,7 @@
                         <constraints>
                             <constraint firstItem="1hy-d9-Q1H" firstAttribute="trailing" secondItem="ctT-kU-CSp" secondAttribute="trailing" id="Bs6-rQ-UEZ"/>
                             <constraint firstItem="PkH-jp-urJ" firstAttribute="top" secondItem="ctT-kU-CSp" secondAttribute="top" constant="24" id="KZl-la-Irc"/>
-                            <constraint firstItem="1hy-d9-Q1H" firstAttribute="top" secondItem="PkH-jp-urJ" secondAttribute="bottom" constant="12" id="dOM-Om-bga"/>
+                            <constraint firstItem="1hy-d9-Q1H" firstAttribute="top" secondItem="PkH-jp-urJ" secondAttribute="bottom" id="dOM-Om-bga"/>
                             <constraint firstItem="1hy-d9-Q1H" firstAttribute="leading" secondItem="ctT-kU-CSp" secondAttribute="leading" id="eOy-RH-oe0"/>
                             <constraint firstItem="PkH-jp-urJ" firstAttribute="leading" secondItem="ctT-kU-CSp" secondAttribute="leading" constant="20" id="g9A-Bl-w36"/>
                         </constraints>
@@ -1688,9 +1689,6 @@
         </namedColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
-        <systemColor name="systemGray6Color">
-            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemPinkColor">
             <color red="1" green="0.17647058823529413" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

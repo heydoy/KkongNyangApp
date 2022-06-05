@@ -17,6 +17,7 @@ class CardCollectionViewCell: UICollectionViewCell {
     
     @IBOutlet weak var cardDescription: UILabel!
     @IBOutlet weak var cardDate: UILabel!
+    @IBOutlet weak var textBackground: UIView!
     
     // MARK: - Actions
     
@@ -26,8 +27,18 @@ class CardCollectionViewCell: UICollectionViewCell {
         cardTitle.text = homecard.title
         cardDescription.text = homecard.description
         cardDate.text = homecard.date
+        
+        setAttribute()
     }
     
     
     // MARK: - Helpers
+    
+    func setAttribute() {
+        cardImageBackground.layer.cornerRadius = 16
+        
+        
+        // 텍스트는 아래만 라운드를 줄 것
+        textBackground.roundCorners(cornerRadius: 16, maskedCorners: [.layerMinXMaxYCorner, .layerMaxXMaxYCorner])
+    }
 }

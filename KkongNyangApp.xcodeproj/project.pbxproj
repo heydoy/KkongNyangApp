@@ -28,6 +28,7 @@
 		A2A409BC284C904700FD47EC /* PalateCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2A409BB284C904700FD47EC /* PalateCollectionViewCell.swift */; };
 		A2A409C0284CA6CA00FD47EC /* CardCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2A409BF284CA6CA00FD47EC /* CardCollectionViewCell.swift */; };
 		A2A409C2284CB7DA00FD47EC /* HomeCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2A409C1284CB7DA00FD47EC /* HomeCard.swift */; };
+		A2A409C4284CC17D00FD47EC /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2A409C3284CC17D00FD47EC /* UIView+Extension.swift */; };
 		A2B2BC082827560500659836 /* UserInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2B2BC072827560500659836 /* UserInfo.swift */; };
 		A2B2BC0A2827568D00659836 /* CatInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2B2BC092827568D00659836 /* CatInfo.swift */; };
 		A2B2BC0C28279F1E00659836 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2B2BC0B28279F1E00659836 /* RegisterViewController.swift */; };
@@ -79,6 +80,7 @@
 		A2A409BB284C904700FD47EC /* PalateCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PalateCollectionViewCell.swift; sourceTree = "<group>"; };
 		A2A409BF284CA6CA00FD47EC /* CardCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardCollectionViewCell.swift; sourceTree = "<group>"; };
 		A2A409C1284CB7DA00FD47EC /* HomeCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCard.swift; sourceTree = "<group>"; };
+		A2A409C3284CC17D00FD47EC /* UIView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
 		A2B2BC072827560500659836 /* UserInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfo.swift; sourceTree = "<group>"; };
 		A2B2BC092827568D00659836 /* CatInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatInfo.swift; sourceTree = "<group>"; };
 		A2B2BC0B28279F1E00659836 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
@@ -290,6 +292,7 @@
 				A224D4C3280D2D750040E945 /* UIColor+Extension.swift */,
 				A2DFA395280E8E6000AFE1BF /* UIStoryboard+Extension.swift */,
 				A2370C242840B8CE00D64871 /* UIDevice+Extension.swift */,
+				A2A409C3284CC17D00FD47EC /* UIView+Extension.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -458,6 +461,7 @@
 				A2BE71B8281B6D8100FB8548 /* PalateViewController.swift in Sources */,
 				A2B2BC0A2827568D00659836 /* CatInfo.swift in Sources */,
 				A2BE71B6281B63BE00FB8548 /* HomeViewController.swift in Sources */,
+				A2A409C4284CC17D00FD47EC /* UIView+Extension.swift in Sources */,
 				A2320426283A643A00706DB4 /* MyPageViewController.swift in Sources */,
 				A232042A283A662200706DB4 /* AlertSettingViewController.swift in Sources */,
 				A22448C928490395008C9E72 /* TodoListCollectionViewCell.swift in Sources */,
