@@ -10,6 +10,8 @@ import UIKit
 class TodoViewController: UIViewController {
 
     // MARK: - Properties
+    let catTodoList: [CatTodo] = CatTodo.list
+    
     @IBOutlet weak var addTodoButton: UIButton!
     
     
@@ -46,7 +48,7 @@ class TodoViewController: UIViewController {
 
 extension TodoViewController: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        <#code#>
+        return catTodoList.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -55,7 +57,12 @@ extension TodoViewController: UICollectionViewDataSource {
     
 }
 
-extension TodoViewController: UICollectionViewDelegate {
-    
+extension TodoViewController: UICollectionViewDelegateFlowLayout {
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        let inset: CGFloat = 20
+        let width: CGFloat = collectionView.bounds.width - (inset * 20)
+        
+        return CGSize(width: width, height: 72)
+    }
 }
 
