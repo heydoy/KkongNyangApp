@@ -11,13 +11,20 @@ class PalateViewController: UIViewController {
 
     // MARK: - Propertiess
     
-
+    @IBOutlet weak var collectionView: UICollectionView!
+    
+    let palateList: [CatPalate] = CatPalate.list
+    
     
     // MARK: - Lifecycle
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        // 콜렉션 뷰
+        collectionView.dataSource = self
+        collectionView.delegate = self
+        
     }
     
     // MARK: - Actions
@@ -37,7 +44,32 @@ class PalateViewController: UIViewController {
         self.present(addPalateViewController, animated: true, completion: nil)
     }
     
-
-
 }
 
+// MARK: - Extensions
+
+extension PalateViewController: UICollectionViewDataSource {
+    
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return palateList.count
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "PalateCollectionViewCell", for: indexPath) as? PalateCollectionViewCell else {
+            return UICollectionViewCell()
+        }
+        let palate = palateList[indexPath.item]
+        cell.configure(palate)
+        return cell
+    }
+    
+}
+
+extension PalateViewController: UICollectionViewDelegateFlowLayout {
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        let inset: CGFloat = 20
+        let width: CGFloat = collectionView.bounds.width - (inset * 2)
+        
+        return CGSize(width: width, height: 88)
+    }
+}

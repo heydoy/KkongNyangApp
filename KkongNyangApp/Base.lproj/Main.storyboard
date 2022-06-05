@@ -556,17 +556,18 @@
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="KmQ-T5-yut">
                                 <rect key="frame" x="0.0" y="172" width="375" height="557"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="FJV-J6-10o">
-                                    <size key="itemSize" width="335" height="88"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="FJV-J6-10o">
+                                    <size key="itemSize" width="335" height="80"/>
+                                    <size key="estimatedItemSize" width="335" height="80"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
-                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                    <inset key="sectionInset" minX="20" minY="10" maxX="20" maxY="10"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="PalateCollectionViewCell" id="FXC-EV-fnl" customClass="PalateCollectionViewCell" customModule="KkongNyangApp" customModuleProvider="target">
-                                        <rect key="frame" x="20" y="0.0" width="335" height="88"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="kuk-o5-EQf">
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" reuseIdentifier="PalateCollectionViewCell" id="FXC-EV-fnl" customClass="PalateCollectionViewCell" customModule="KkongNyangApp" customModuleProvider="target">
+                                        <rect key="frame" x="20" y="10" width="335" height="88"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" insetsLayoutMarginsFromSafeArea="NO" id="kuk-o5-EQf">
                                             <rect key="frame" x="0.0" y="0.0" width="335" height="88"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
@@ -576,47 +577,50 @@
                                                         <constraint firstAttribute="width" secondItem="FL1-el-SIz" secondAttribute="height" multiplier="1:1" id="0hB-l8-SMF"/>
                                                     </constraints>
                                                 </imageView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="로얄캐닌 센서리필 젤리파우치" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WXc-bN-eJ1">
-                                                    <rect key="frame" x="96" y="35" width="239" height="18"/>
-                                                    <fontDescription key="fontDescription" name="AppleSDGothicNeo-SemiBold" family="Apple SD Gothic Neo" pointSize="15"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="동생 님이 4월 7일 기록" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TLL-s9-6dl">
-                                                    <rect key="frame" x="96" y="75" width="239" height="10"/>
-                                                    <fontDescription key="fontDescription" name="GmarketSansMedium" family="Gmarket Sans" pointSize="10"/>
-                                                    <color key="textColor" name="gray-300"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="😍" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DcE-BB-OEj">
-                                                    <rect key="frame" x="96" y="4" width="239" height="21"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="안 남기고 냥냥냥대면서 좋아함" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="v18-yG-dW5">
-                                                    <rect key="frame" x="96" y="54" width="239" height="18"/>
-                                                    <fontDescription key="fontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="11"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
+                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" alignment="top" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="x3V-mX-1Rb">
+                                                    <rect key="frame" x="100" y="2" width="235" height="84"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="😍" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DcE-BB-OEj">
+                                                            <rect key="frame" x="0.0" y="0.0" width="21" height="21"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="height" constant="21" id="lRF-uq-4HZ"/>
+                                                            </constraints>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="로얄캐닌 센서리필 젤리파우치" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WXc-bN-eJ1">
+                                                            <rect key="frame" x="0.0" y="23" width="176.66666666666666" height="23.666666666666671"/>
+                                                            <fontDescription key="fontDescription" name="AppleSDGothicNeo-SemiBold" family="Apple SD Gothic Neo" pointSize="15"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="안 남기고 냥냥냥대면서 좋아함" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="v18-yG-dW5">
+                                                            <rect key="frame" x="0.0" y="48.666666666666664" width="132.66666666666666" height="15.999999999999993"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="height" constant="16" id="6aR-zE-3oX"/>
+                                                            </constraints>
+                                                            <fontDescription key="fontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="11"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="동생 님이 4월 7일 기록" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TLL-s9-6dl">
+                                                            <rect key="frame" x="0.0" y="66.666666666666671" width="91.333333333333329" height="17.333333333333329"/>
+                                                            <fontDescription key="fontDescription" name="GmarketSansMedium" family="Gmarket Sans" pointSize="9"/>
+                                                            <color key="textColor" name="gray-200"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                </stackView>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstAttribute="trailing" secondItem="DcE-BB-OEj" secondAttribute="trailing" id="7E5-Rn-CZZ"/>
-                                                <constraint firstItem="DcE-BB-OEj" firstAttribute="top" secondItem="kuk-o5-EQf" secondAttribute="top" constant="4" id="Afo-1J-Fva"/>
-                                                <constraint firstItem="WXc-bN-eJ1" firstAttribute="leading" secondItem="DcE-BB-OEj" secondAttribute="leading" id="Fej-TG-IRH"/>
-                                                <constraint firstItem="v18-yG-dW5" firstAttribute="trailing" secondItem="DcE-BB-OEj" secondAttribute="trailing" id="GJS-Wa-E1h"/>
-                                                <constraint firstAttribute="bottom" secondItem="TLL-s9-6dl" secondAttribute="bottom" constant="3" id="Tu0-fo-d6p"/>
-                                                <constraint firstItem="v18-yG-dW5" firstAttribute="top" secondItem="WXc-bN-eJ1" secondAttribute="bottom" constant="1" id="Xyu-3D-DDN"/>
+                                                <constraint firstItem="x3V-mX-1Rb" firstAttribute="top" secondItem="kuk-o5-EQf" secondAttribute="top" constant="2" id="Hdx-uc-6yj"/>
+                                                <constraint firstAttribute="trailing" secondItem="x3V-mX-1Rb" secondAttribute="trailing" id="Ong-cl-pQy"/>
                                                 <constraint firstItem="FL1-el-SIz" firstAttribute="leading" secondItem="kuk-o5-EQf" secondAttribute="leading" id="c9z-Ni-kEo"/>
                                                 <constraint firstItem="FL1-el-SIz" firstAttribute="top" secondItem="kuk-o5-EQf" secondAttribute="top" id="dHb-Rz-0QS"/>
-                                                <constraint firstItem="WXc-bN-eJ1" firstAttribute="centerY" secondItem="kuk-o5-EQf" secondAttribute="centerY" id="eMf-dr-KXX"/>
-                                                <constraint firstItem="TLL-s9-6dl" firstAttribute="leading" secondItem="DcE-BB-OEj" secondAttribute="leading" id="l0p-Uc-t7y"/>
-                                                <constraint firstItem="WXc-bN-eJ1" firstAttribute="trailing" secondItem="DcE-BB-OEj" secondAttribute="trailing" id="lEv-Zp-LwN"/>
-                                                <constraint firstItem="DcE-BB-OEj" firstAttribute="leading" secondItem="FL1-el-SIz" secondAttribute="trailing" constant="8" symbolic="YES" id="obk-4s-gZ6"/>
-                                                <constraint firstItem="TLL-s9-6dl" firstAttribute="trailing" secondItem="DcE-BB-OEj" secondAttribute="trailing" id="r4n-6h-cVf"/>
+                                                <constraint firstAttribute="bottom" secondItem="x3V-mX-1Rb" secondAttribute="bottom" constant="2" id="hhR-wP-ws0"/>
+                                                <constraint firstItem="x3V-mX-1Rb" firstAttribute="leading" secondItem="FL1-el-SIz" secondAttribute="trailing" constant="12" id="mOQ-yB-rDc"/>
                                                 <constraint firstAttribute="bottom" secondItem="FL1-el-SIz" secondAttribute="bottom" id="sNi-JC-8Sf"/>
-                                                <constraint firstItem="v18-yG-dW5" firstAttribute="leading" secondItem="DcE-BB-OEj" secondAttribute="leading" id="tOc-mg-QVt"/>
                                             </constraints>
                                         </collectionViewCellContentView>
                                         <size key="customSize" width="335" height="88"/>
@@ -659,6 +663,9 @@
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="기호" image="icon-palate" id="yvU-A0-Pf9"/>
+                    <connections>
+                        <outlet property="collectionView" destination="KmQ-T5-yut" id="t10-Df-JeS"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jBL-3n-VXy" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -1659,6 +1666,9 @@
         </namedColor>
         <namedColor name="gray-100">
             <color red="0.82400000095367432" green="0.82400000095367432" blue="0.82400000095367432" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="gray-200">
+            <color red="0.52549019607843139" green="0.52549019607843139" blue="0.52549019607843139" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="gray-300">
             <color red="0.42745098039215684" green="0.42745098039215684" blue="0.42745098039215684" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
