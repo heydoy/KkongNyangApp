@@ -542,8 +542,9 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" apportionsSegmentWidthsByContent="YES" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="t69-j9-JS3">
-                                <rect key="frame" x="20" y="117" width="157" height="32"/>
+                                <rect key="frame" x="20" y="117" width="199" height="32"/>
                                 <segments>
+                                    <segment title="전체"/>
                                     <segment title="첫째 고양이"/>
                                     <segment title="둘째 고양이"/>
                                 </segments>
@@ -593,12 +594,20 @@
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="안 남기고 냥냥냥대면서 좋아함" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="v18-yG-dW5">
+                                                    <rect key="frame" x="96" y="54" width="239" height="18"/>
+                                                    <fontDescription key="fontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="11"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
                                             </subviews>
                                             <constraints>
                                                 <constraint firstAttribute="trailing" secondItem="DcE-BB-OEj" secondAttribute="trailing" id="7E5-Rn-CZZ"/>
                                                 <constraint firstItem="DcE-BB-OEj" firstAttribute="top" secondItem="kuk-o5-EQf" secondAttribute="top" constant="4" id="Afo-1J-Fva"/>
                                                 <constraint firstItem="WXc-bN-eJ1" firstAttribute="leading" secondItem="DcE-BB-OEj" secondAttribute="leading" id="Fej-TG-IRH"/>
+                                                <constraint firstItem="v18-yG-dW5" firstAttribute="trailing" secondItem="DcE-BB-OEj" secondAttribute="trailing" id="GJS-Wa-E1h"/>
                                                 <constraint firstAttribute="bottom" secondItem="TLL-s9-6dl" secondAttribute="bottom" constant="3" id="Tu0-fo-d6p"/>
+                                                <constraint firstItem="v18-yG-dW5" firstAttribute="top" secondItem="WXc-bN-eJ1" secondAttribute="bottom" constant="1" id="Xyu-3D-DDN"/>
                                                 <constraint firstItem="FL1-el-SIz" firstAttribute="leading" secondItem="kuk-o5-EQf" secondAttribute="leading" id="c9z-Ni-kEo"/>
                                                 <constraint firstItem="FL1-el-SIz" firstAttribute="top" secondItem="kuk-o5-EQf" secondAttribute="top" id="dHb-Rz-0QS"/>
                                                 <constraint firstItem="WXc-bN-eJ1" firstAttribute="centerY" secondItem="kuk-o5-EQf" secondAttribute="centerY" id="eMf-dr-KXX"/>
@@ -607,10 +616,12 @@
                                                 <constraint firstItem="DcE-BB-OEj" firstAttribute="leading" secondItem="FL1-el-SIz" secondAttribute="trailing" constant="8" symbolic="YES" id="obk-4s-gZ6"/>
                                                 <constraint firstItem="TLL-s9-6dl" firstAttribute="trailing" secondItem="DcE-BB-OEj" secondAttribute="trailing" id="r4n-6h-cVf"/>
                                                 <constraint firstAttribute="bottom" secondItem="FL1-el-SIz" secondAttribute="bottom" id="sNi-JC-8Sf"/>
+                                                <constraint firstItem="v18-yG-dW5" firstAttribute="leading" secondItem="DcE-BB-OEj" secondAttribute="leading" id="tOc-mg-QVt"/>
                                             </constraints>
                                         </collectionViewCellContentView>
                                         <size key="customSize" width="335" height="88"/>
                                         <connections>
+                                            <outlet property="memo" destination="v18-yG-dW5" id="hla-v5-J6v"/>
                                             <outlet property="preferenceFace" destination="DcE-BB-OEj" id="oMy-Eo-Igf"/>
                                             <outlet property="productImage" destination="FL1-el-SIz" id="QFy-fg-rHx"/>
                                             <outlet property="productName" destination="WXc-bN-eJ1" id="0fc-Jf-7qw"/>

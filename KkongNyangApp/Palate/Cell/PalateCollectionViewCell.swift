@@ -14,6 +14,7 @@ class PalateCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var productImage: UIImageView!
     @IBOutlet weak var preferenceFace: UILabel!
     @IBOutlet weak var productName: UILabel!
+    @IBOutlet weak var memo: UILabel!
     @IBOutlet weak var versionHistory: UILabel!
     
     // MARK: - Actions
