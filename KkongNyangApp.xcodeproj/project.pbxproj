@@ -31,6 +31,8 @@
 		A2A409C4284CC17D00FD47EC /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2A409C3284CC17D00FD47EC /* UIView+Extension.swift */; };
 		A2A409C6284CCAC600FD47EC /* FinishedTodo.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2A409C5284CCAC600FD47EC /* FinishedTodo.swift */; };
 		A2A409C8284CCE3800FD47EC /* FinishedTodoCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2A409C7284CCE3800FD47EC /* FinishedTodoCollectionViewCell.swift */; };
+		A2A409CA284CD5E100FD47EC /* AlertViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2A409C9284CD5E100FD47EC /* AlertViewController.swift */; };
+		A2A409CE284CD65800FD47EC /* AlertCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2A409CD284CD65800FD47EC /* AlertCollectionViewCell.swift */; };
 		A2B2BC082827560500659836 /* UserInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2B2BC072827560500659836 /* UserInfo.swift */; };
 		A2B2BC0A2827568D00659836 /* CatInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2B2BC092827568D00659836 /* CatInfo.swift */; };
 		A2B2BC0C28279F1E00659836 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2B2BC0B28279F1E00659836 /* RegisterViewController.swift */; };
@@ -85,6 +87,8 @@
 		A2A409C3284CC17D00FD47EC /* UIView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
 		A2A409C5284CCAC600FD47EC /* FinishedTodo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinishedTodo.swift; sourceTree = "<group>"; };
 		A2A409C7284CCE3800FD47EC /* FinishedTodoCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinishedTodoCollectionViewCell.swift; sourceTree = "<group>"; };
+		A2A409C9284CD5E100FD47EC /* AlertViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertViewController.swift; sourceTree = "<group>"; };
+		A2A409CD284CD65800FD47EC /* AlertCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertCollectionViewCell.swift; sourceTree = "<group>"; };
 		A2B2BC072827560500659836 /* UserInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfo.swift; sourceTree = "<group>"; };
 		A2B2BC092827568D00659836 /* CatInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatInfo.swift; sourceTree = "<group>"; };
 		A2B2BC0B28279F1E00659836 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
@@ -176,6 +180,7 @@
 				A2A409B7284C6AE000FD47EC /* Palate */,
 				A2A409BD284CA6B500FD47EC /* Home */,
 				A226D2C7283A381000C080CF /* MyPage */,
+				A2A409CB284CD5ED00FD47EC /* Alert */,
 				A224D4B5280D1D720040E945 /* Main.storyboard */,
 				A224D4B8280D1D730040E945 /* Assets.xcassets */,
 				A2DFA3FD280EEBF100AFE1BF /* Fonts */,
@@ -254,6 +259,23 @@
 			children = (
 				A2A409BF284CA6CA00FD47EC /* CardCollectionViewCell.swift */,
 				A2A409C7284CCE3800FD47EC /* FinishedTodoCollectionViewCell.swift */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		A2A409CB284CD5ED00FD47EC /* Alert */ = {
+			isa = PBXGroup;
+			children = (
+				A2A409CC284CD64100FD47EC /* Cell */,
+				A2A409C9284CD5E100FD47EC /* AlertViewController.swift */,
+			);
+			path = Alert;
+			sourceTree = "<group>";
+		};
+		A2A409CC284CD64100FD47EC /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				A2A409CD284CD65800FD47EC /* AlertCollectionViewCell.swift */,
 			);
 			path = Cell;
 			sourceTree = "<group>";
@@ -457,6 +479,7 @@
 				A2A409B9284C6AF400FD47EC /* AddPalateViewController.swift in Sources */,
 				A2DFA38C280E7A2800AFE1BF /* OnboardingSecondPageViewController.swift in Sources */,
 				A224D4B0280D1D720040E945 /* AppDelegate.swift in Sources */,
+				A2A409CA284CD5E100FD47EC /* AlertViewController.swift in Sources */,
 				A2DFA38E280E7A3500AFE1BF /* OnboardingThirdPageViewController.swift in Sources */,
 				A2DFA396280E8E6000AFE1BF /* UIStoryboard+Extension.swift in Sources */,
 				A2A409C6284CCAC600FD47EC /* FinishedTodo.swift in Sources */,
@@ -483,6 +506,7 @@
 				A2A409BC284C904700FD47EC /* PalateCollectionViewCell.swift in Sources */,
 				A2A409C0284CA6CA00FD47EC /* CardCollectionViewCell.swift in Sources */,
 				A2DFA394280E8D9700AFE1BF /* ConciergeViewController.swift in Sources */,
+				A2A409CE284CD65800FD47EC /* AlertCollectionViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
