@@ -242,6 +242,7 @@
                     <tabBarItem key="tabBarItem" title="할 일" image="icon-todo" id="QjX-YT-ZTv"/>
                     <connections>
                         <outlet property="addTodoButton" destination="HJ5-fN-MIX" id="aaW-aY-MvQ"/>
+                        <outlet property="collectionView" destination="Xnm-D0-wQo" id="w5t-To-P9F"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6iw-ij-fnl" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
