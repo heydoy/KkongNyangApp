@@ -11,16 +11,32 @@ class HomeViewController: UIViewController {
 
     // MARK: - Properties
     let homecardlist: [HomeCard] = HomeCard.list
+    let finishedlist: [FinishedTodo] = FinishedTodo.list
     
-    @IBOutlet weak var collectionView: UICollectionView!
+    
+    @IBOutlet weak var goToEventHistoryButton: UIButton!
+    
+    @IBOutlet weak var collectionView: UICollectionView! // 카드 : 이벤트
+    
+    @IBOutlet weak var collectionViewB: UICollectionView! // 육묘기록
     
     // MARK: - Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
+        // 메서드 실행
+        setAttribute()
         
         // 컬렉션뷰 등록(위임)
         collectionView.dataSource = self
         collectionView.delegate = self
+        
+        collectionViewB.dataSource = self
+        collectionViewB.delegate = self
+    }
+    
+    // MARK: - Helpers
+    func setAttribute(){
+        goToEventHistoryButton.layer.cornerRadius = 8
     }
     
 }
@@ -31,36 +47,64 @@ extension HomeViewController: UICollectionViewDataSource {
 
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return homecardlist.count
+        if collectionView == self.collectionView {
+            // 첫번째일경우
+            return homecardlist.count
+        } else {
+            // 두번째일경우
+            return finishedlist.count
+        }
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "CardCollectionViewCell", for: indexPath) as? CardCollectionViewCell else {
-            return UICollectionViewCell()
+        if collectionView == self.collectionView {
+            // 첫번째일경우
+            guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "CardCollectionViewCell", for: indexPath) as? CardCollectionViewCell else {
+                return UICollectionViewCell()
+            }
+            // 셀에 데이터
+            let homecard = homecardlist[indexPath.item]
+            cell.configure(homecard)
+            // 셀 꾸미기
+            cell.layer.cornerRadius = 16
+            cell.layer.borderWidth = 0.0
+            cell.layer.shadowColor = UIColor.black.cgColor
+            cell.layer.shadowOffset = CGSize(width: 0, height: 0)
+            cell.layer.shadowRadius = 5.0
+            cell.layer.shadowOpacity = 0.1
+            cell.layer.masksToBounds = false
+            return cell
+        } else {
+            // 두번째일 경우
+            guard let cell = collectionViewB.dequeueReusableCell(withReuseIdentifier: "FinishedTodoCollectionViewCell", for: indexPath) as? FinishedTodoCollectionViewCell else {
+                return UICollectionViewCell()
+            }
+                    
+            // 셀에 데이터
+            let finished = finishedlist[indexPath.item]
+            cell.configure(finished)
+            // 셀꾸미기
+            cell.layer.cornerRadius = 16
+            
+            return cell
         }
-        // 셀에 데이터
-        let homecard = homecardlist[indexPath.item]
-        cell.configure(homecard)
-        // 셀 꾸미기
-        cell.layer.cornerRadius = 16
-        cell.layer.borderWidth = 0.0
-        cell.layer.shadowColor = UIColor.black.cgColor
-        cell.layer.shadowOffset = CGSize(width: 0, height: 0)
-        cell.layer.shadowRadius = 5.0
-        cell.layer.shadowOpacity = 0.1
-        cell.layer.masksToBounds = false
         
-        return cell
+        
     }
     
 }
 
 extension HomeViewController: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        if collectionView == self.collectionView {
+            // 첫번째일경우
+            return CGSize(width: 200, height: 292)
+        } else {
+            // 두번째일경우
+            return CGSize(width: 72, height: 72)
+        }
         
-        return CGSize(width: 200, height: 292)
     }
 }
-
 
 

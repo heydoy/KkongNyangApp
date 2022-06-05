@@ -1531,7 +1531,7 @@
                                                     <rect key="frame" x="0.0" y="16" width="200" height="276"/>
                                                     <color key="backgroundColor" red="0.89019607840000003" green="0.92941176469999998" blue="0.98431372549999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 </view>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="image-homecard" translatesAutoresizingMaskIntoConstraints="NO" id="vMc-zO-O53">
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="homecard1" translatesAutoresizingMaskIntoConstraints="NO" id="vMc-zO-O53">
                                                     <rect key="frame" x="0.0" y="0.0" width="200" height="180"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="180" id="5v3-3p-yfu"/>
@@ -1597,25 +1597,117 @@
                                     </collectionViewCell>
                                 </cells>
                             </collectionView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="277-bS-W3o">
+                                <rect key="frame" x="20" y="451" width="335" height="52"/>
+                                <color key="backgroundColor" name="greengray-100"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="52" id="DPm-Wm-ANv"/>
+                                </constraints>
+                                <color key="tintColor" name="greengray-700"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="지난 소식 더 보기">
+                                    <fontDescription key="titleFontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="16"/>
+                                </buttonConfiguration>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="최근 육묘기록" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="azB-e0-VEg">
+                                <rect key="frame" x="20" y="533" width="110" height="24"/>
+                                <fontDescription key="fontDescription" name="AppleSDGothicNeo-SemiBold" family="Apple SD Gothic Neo" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VDJ-of-9h3">
+                                <rect key="frame" x="331" y="533" width="24" height="24"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="24" id="eiD-uz-n3d"/>
+                                    <constraint firstAttribute="height" constant="24" id="wAb-nF-zzJ"/>
+                                </constraints>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" image="arrow-right">
+                                    <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="17"/>
+                                </state>
+                            </button>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Adh-Sp-if2">
+                                <rect key="frame" x="0.0" y="569" width="375" height="110"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="110" id="GRV-FN-mrd"/>
+                                </constraints>
+                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="TLm-ta-tvV">
+                                    <size key="itemSize" width="72" height="72"/>
+                                    <size key="estimatedItemSize" width="72" height="72"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="20" minY="0.0" maxX="20" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="FinishedTodoCollectionViewCell" id="3KV-To-3Ta" customClass="FinishedTodoCollectionViewCell" customModule="KkongNyangApp" customModuleProvider="target">
+                                        <rect key="frame" x="20" y="19" width="72" height="72"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="fpn-c9-PaB">
+                                            <rect key="frame" x="0.0" y="0.0" width="72" height="72"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="finished-bathtub" translatesAutoresizingMaskIntoConstraints="NO" id="f91-Ij-a95">
+                                                    <rect key="frame" x="20" y="12" width="32" height="32"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="32" id="7dx-XP-fCF"/>
+                                                        <constraint firstAttribute="width" constant="32" id="QeW-02-7Xv"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="자동급식기 청소" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PL7-kd-GkJ">
+                                                    <rect key="frame" x="7.6666666666666643" y="52" width="56.999999999999993" height="11"/>
+                                                    <fontDescription key="fontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="9"/>
+                                                    <color key="textColor" name="greengray-900"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="f91-Ij-a95" firstAttribute="centerX" secondItem="fpn-c9-PaB" secondAttribute="centerX" id="Fhr-Cg-QqE"/>
+                                                <constraint firstItem="f91-Ij-a95" firstAttribute="top" secondItem="fpn-c9-PaB" secondAttribute="top" constant="12" id="GhH-aU-pIe"/>
+                                                <constraint firstItem="PL7-kd-GkJ" firstAttribute="centerX" secondItem="fpn-c9-PaB" secondAttribute="centerX" id="igV-Gq-jFO"/>
+                                                <constraint firstItem="PL7-kd-GkJ" firstAttribute="top" secondItem="f91-Ij-a95" secondAttribute="bottom" constant="8" symbolic="YES" id="u0x-sG-Nol"/>
+                                            </constraints>
+                                        </collectionViewCellContentView>
+                                        <color key="backgroundColor" name="finishedList-1"/>
+                                        <size key="customSize" width="72" height="72"/>
+                                        <connections>
+                                            <outlet property="finishedImage" destination="f91-Ij-a95" id="Xb3-T7-pCG"/>
+                                            <outlet property="finishedTitle" destination="PL7-kd-GkJ" id="zhF-7F-RMQ"/>
+                                            <outlet property="finishedView" destination="fpn-c9-PaB" id="uxf-J7-d1U"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="ctT-kU-CSp"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="ctT-kU-CSp" firstAttribute="trailing" secondItem="Adh-Sp-if2" secondAttribute="trailing" id="0WR-sZ-T2O"/>
+                            <constraint firstItem="277-bS-W3o" firstAttribute="leading" secondItem="ctT-kU-CSp" secondAttribute="leading" constant="20" id="0f4-hn-pK6"/>
+                            <constraint firstItem="azB-e0-VEg" firstAttribute="top" secondItem="277-bS-W3o" secondAttribute="bottom" constant="30" id="53b-Ev-Ec0"/>
+                            <constraint firstItem="277-bS-W3o" firstAttribute="top" secondItem="1hy-d9-Q1H" secondAttribute="bottom" constant="12" id="5f4-22-gwd"/>
+                            <constraint firstItem="Adh-Sp-if2" firstAttribute="leading" secondItem="ctT-kU-CSp" secondAttribute="leading" id="Baw-Me-wIh"/>
                             <constraint firstItem="1hy-d9-Q1H" firstAttribute="trailing" secondItem="ctT-kU-CSp" secondAttribute="trailing" id="Bs6-rQ-UEZ"/>
+                            <constraint firstItem="azB-e0-VEg" firstAttribute="leading" secondItem="277-bS-W3o" secondAttribute="leading" id="FbM-yV-spt"/>
                             <constraint firstItem="PkH-jp-urJ" firstAttribute="top" secondItem="ctT-kU-CSp" secondAttribute="top" constant="24" id="KZl-la-Irc"/>
+                            <constraint firstItem="ctT-kU-CSp" firstAttribute="trailing" secondItem="277-bS-W3o" secondAttribute="trailing" constant="20" id="TLc-69-7Rc"/>
+                            <constraint firstItem="VDJ-of-9h3" firstAttribute="centerY" secondItem="azB-e0-VEg" secondAttribute="centerY" id="czX-JC-Hii"/>
                             <constraint firstItem="1hy-d9-Q1H" firstAttribute="top" secondItem="PkH-jp-urJ" secondAttribute="bottom" id="dOM-Om-bga"/>
+                            <constraint firstItem="ctT-kU-CSp" firstAttribute="trailing" secondItem="VDJ-of-9h3" secondAttribute="trailing" constant="20" id="dOs-JW-Ba6"/>
                             <constraint firstItem="1hy-d9-Q1H" firstAttribute="leading" secondItem="ctT-kU-CSp" secondAttribute="leading" id="eOy-RH-oe0"/>
+                            <constraint firstItem="Adh-Sp-if2" firstAttribute="top" secondItem="azB-e0-VEg" secondAttribute="bottom" constant="12" id="em9-FU-bfP"/>
                             <constraint firstItem="PkH-jp-urJ" firstAttribute="leading" secondItem="ctT-kU-CSp" secondAttribute="leading" constant="20" id="g9A-Bl-w36"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="홈" image="icon-home" id="Xne-f8-0Pe"/>
                     <connections>
                         <outlet property="collectionView" destination="1hy-d9-Q1H" id="JDu-WH-16Y"/>
+                        <outlet property="collectionViewB" destination="Adh-Sp-if2" id="vkz-K4-UOD"/>
+                        <outlet property="goToEventHistoryButton" destination="277-bS-W3o" id="rj9-ur-vpS"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JNU-d3-edj" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3743" y="913"/>
+            <point key="canvasLocation" x="3741.5999999999999" y="912.5615763546798"/>
         </scene>
         <!--마이페이지-->
         <scene sceneID="S5E-YF-0RH">
@@ -1647,18 +1739,22 @@
         <image name="check-done" width="18" height="18"/>
         <image name="emojiHate" width="32" height="32"/>
         <image name="emojiLove" width="32" height="32"/>
+        <image name="finished-bathtub" width="32" height="32"/>
         <image name="floatingAddButton" width="60" height="60"/>
+        <image name="homecard1" width="198" height="180"/>
         <image name="icon-alert" width="24" height="24"/>
         <image name="icon-home" width="24" height="24"/>
         <image name="icon-mypage" width="24" height="24"/>
         <image name="icon-palate" width="24" height="24"/>
         <image name="icon-todo" width="24" height="24"/>
-        <image name="image-homecard" width="198" height="180"/>
         <image name="photo.circle.fill" catalog="system" width="128" height="121"/>
         <image name="photoframe" width="119" height="119"/>
         <image name="tab-arrow-left" width="24" height="24"/>
         <namedColor name="black">
             <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="finishedList-1">
+            <color red="0.96078431372549022" green="0.97647058823529409" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="gray-100">
             <color red="0.82400000095367432" green="0.82400000095367432" blue="0.82400000095367432" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -1674,6 +1770,12 @@
         </namedColor>
         <namedColor name="gray-80">
             <color red="0.97299998998641968" green="0.97299998998641968" blue="0.9649999737739563" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="greengray-100">
+            <color red="0.9137254901960784" green="0.90980392156862744" blue="0.8666666666666667" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="greengray-700">
+            <color red="0.27843137254901962" green="0.27450980392156865" blue="0.22745098039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="greengray-900">
             <color red="0.12549019607843137" green="0.15686274509803921" blue="0.043137254901960784" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

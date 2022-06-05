@@ -29,6 +29,8 @@
 		A2A409C0284CA6CA00FD47EC /* CardCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2A409BF284CA6CA00FD47EC /* CardCollectionViewCell.swift */; };
 		A2A409C2284CB7DA00FD47EC /* HomeCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2A409C1284CB7DA00FD47EC /* HomeCard.swift */; };
 		A2A409C4284CC17D00FD47EC /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2A409C3284CC17D00FD47EC /* UIView+Extension.swift */; };
+		A2A409C6284CCAC600FD47EC /* FinishedTodo.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2A409C5284CCAC600FD47EC /* FinishedTodo.swift */; };
+		A2A409C8284CCE3800FD47EC /* FinishedTodoCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2A409C7284CCE3800FD47EC /* FinishedTodoCollectionViewCell.swift */; };
 		A2B2BC082827560500659836 /* UserInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2B2BC072827560500659836 /* UserInfo.swift */; };
 		A2B2BC0A2827568D00659836 /* CatInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2B2BC092827568D00659836 /* CatInfo.swift */; };
 		A2B2BC0C28279F1E00659836 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2B2BC0B28279F1E00659836 /* RegisterViewController.swift */; };
@@ -81,6 +83,8 @@
 		A2A409BF284CA6CA00FD47EC /* CardCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardCollectionViewCell.swift; sourceTree = "<group>"; };
 		A2A409C1284CB7DA00FD47EC /* HomeCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCard.swift; sourceTree = "<group>"; };
 		A2A409C3284CC17D00FD47EC /* UIView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
+		A2A409C5284CCAC600FD47EC /* FinishedTodo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinishedTodo.swift; sourceTree = "<group>"; };
+		A2A409C7284CCE3800FD47EC /* FinishedTodoCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinishedTodoCollectionViewCell.swift; sourceTree = "<group>"; };
 		A2B2BC072827560500659836 /* UserInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfo.swift; sourceTree = "<group>"; };
 		A2B2BC092827568D00659836 /* CatInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatInfo.swift; sourceTree = "<group>"; };
 		A2B2BC0B28279F1E00659836 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
@@ -182,6 +186,7 @@
 				A2FDE17228433384002163BB /* CatPalate.swift */,
 				A22448CA28490E35008C9E72 /* CatTodo.swift */,
 				A2A409C1284CB7DA00FD47EC /* HomeCard.swift */,
+				A2A409C5284CCAC600FD47EC /* FinishedTodo.swift */,
 			);
 			path = KkongNyangApp;
 			sourceTree = "<group>";
@@ -248,6 +253,7 @@
 			isa = PBXGroup;
 			children = (
 				A2A409BF284CA6CA00FD47EC /* CardCollectionViewCell.swift */,
+				A2A409C7284CCE3800FD47EC /* FinishedTodoCollectionViewCell.swift */,
 			);
 			path = Cell;
 			sourceTree = "<group>";
@@ -443,6 +449,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A2A409C8284CCE3800FD47EC /* FinishedTodoCollectionViewCell.swift in Sources */,
 				A2A409C2284CB7DA00FD47EC /* HomeCard.swift in Sources */,
 				A2DFA38A280E795100AFE1BF /* OnboardingFirstPageViewController.swift in Sources */,
 				A2FDE17328433384002163BB /* CatPalate.swift in Sources */,
@@ -452,6 +459,7 @@
 				A224D4B0280D1D720040E945 /* AppDelegate.swift in Sources */,
 				A2DFA38E280E7A3500AFE1BF /* OnboardingThirdPageViewController.swift in Sources */,
 				A2DFA396280E8E6000AFE1BF /* UIStoryboard+Extension.swift in Sources */,
+				A2A409C6284CCAC600FD47EC /* FinishedTodo.swift in Sources */,
 				A2DFA387280E779800AFE1BF /* OnboardingPageViewController.swift in Sources */,
 				A2370C252840B8CE00D64871 /* UIDevice+Extension.swift in Sources */,
 				A2BE71C0281B79AC00FB8548 /* TodoViewController.swift in Sources */,
