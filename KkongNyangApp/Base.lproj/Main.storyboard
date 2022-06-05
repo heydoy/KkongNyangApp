@@ -1520,7 +1520,7 @@
                                     <inset key="sectionInset" minX="20" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="CSs-SH-04G" customClass="CardListCell">
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="CardCollectionViewCell" id="CSs-SH-04G" customClass="CardCollectionViewCell" customModule="KkongNyangApp" customModuleProvider="target">
                                         <rect key="frame" x="20" y="14" width="200" height="292"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="bZO-c5-xAp">
@@ -1587,9 +1587,11 @@
                                         </collectionViewCellContentView>
                                         <size key="customSize" width="200" height="292"/>
                                         <connections>
-                                            <outlet property="dateLabel" destination="Bde-gU-let" id="T1y-RL-aTi"/>
-                                            <outlet property="descriptionLabel" destination="5Dr-PE-3P6" id="E5D-ts-1na"/>
-                                            <outlet property="titleLabel" destination="Lo3-nk-ZRq" id="zvw-cd-guT"/>
+                                            <outlet property="cardDate" destination="Bde-gU-let" id="Sbk-jd-L1I"/>
+                                            <outlet property="cardDescription" destination="5Dr-PE-3P6" id="6hw-69-tVE"/>
+                                            <outlet property="cardImage" destination="vMc-zO-O53" id="eA2-wN-7AP"/>
+                                            <outlet property="cardImageBackground" destination="Cb8-oq-4S1" id="INx-Ox-Qky"/>
+                                            <outlet property="cardTitle" destination="Lo3-nk-ZRq" id="8VT-qf-tT5"/>
                                         </connections>
                                     </collectionViewCell>
                                 </cells>
@@ -1607,7 +1609,7 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="홈" image="icon-home" id="Xne-f8-0Pe"/>
                     <connections>
-                        <outlet property="collectionView" destination="1hy-d9-Q1H" id="hpC-BO-Pup"/>
+                        <outlet property="collectionView" destination="1hy-d9-Q1H" id="JDu-WH-16Y"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JNU-d3-edj" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
