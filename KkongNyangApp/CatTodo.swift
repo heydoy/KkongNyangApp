@@ -15,7 +15,6 @@ struct CatTodo {
     var time: String
     var image: String //아이콘이름
     var isFinished: Bool = false
-    var date: [String] //date 중에 고르기
 }
 
 let TodoTitleList: [String] = [
@@ -35,8 +34,8 @@ let TodoIconList: [String] = [
 
 extension CatTodo {
     static let list: [CatTodo] = [
-        CatTodo(catID: 1, title: "산이 밥주기", time: "오전 11시", image: TodoIconList[0], isFinished: false, date: [date[0], date[2]]) ,
-        CatTodo(catID: 0, title: "산이 화장실 치우기", time: "오후 10시", image: TodoIconList[2], isFinished: false, date: [date[0], date[2], date[4]]),
-        CatTodo(catID: 2, title: "산이 놀아주기", time: "오후 6시", image: TodoIconList[3], isFinished: false, date: [date[0], date[2]]),
+        CatTodo(catID: 1, title: "산이 밥주기", time: "오전 11시", image: TodoIconList[0], isFinished: true) ,
+        CatTodo(catID: 0, title: "산이 화장실 치우기", time: "오후 10시", image: TodoIconList[2], isFinished: false),
+        CatTodo(catID: 2, title: "산이 놀아주기", time: "오후 6시", image: TodoIconList[3], isFinished: false),
     ]
 }

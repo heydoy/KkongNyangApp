@@ -9,7 +9,7 @@ import UIKit
 
 class TodoListCollectionViewCell: UICollectionViewCell {
     // MARK: - Properties
-    var catId
+    var catId: Int = 0
     
     @IBOutlet weak var iconImage: UIImageView!
     @IBOutlet weak var todoTitleLabel: UILabel!
@@ -25,14 +25,18 @@ class TodoListCollectionViewCell: UICollectionViewCell {
         catId = todo.catID
         iconImage.image = UIImage(named: todo.image)
         todoTitleLabel.text = todo.title
-        timeLabel.text = "\(todo.time)"
+        timeLabel.text = todo.time
+        
         
         if todo.isFinished == true {
             checkButton.isSelected = true
+            
         } else {
             checkButton.isSelected = false
         }
     }
+    
+    
     
     // MARK: - Helpers
 }

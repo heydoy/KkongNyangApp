@@ -24,8 +24,6 @@ class TodoViewController: UIViewController {
         collectionView.dataSource = self
         collectionView.delegate = self
         
-        
-        
     }
     
     // MARK: - Actions
@@ -52,7 +50,20 @@ extension TodoViewController: UICollectionViewDataSource {
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        return UICollectionViewCell()
+        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "TodoListCollectionViewCell", for: indexPath) as? TodoListCollectionViewCell else {
+            return UICollectionViewCell()
+            }
+        
+        // 셀데이터 가져오기
+        let todo = catTodoList[indexPath.item]
+        cell.configure(todo)
+        // 셀꾸미기
+        if todo.isFinished == true {
+            cell.contentView.backgroundColor = UIColor(named: "todoFinished")
+        }
+        cell.layer.cornerRadius = 12
+        
+        return cell
     }
     
 }
@@ -60,7 +71,7 @@ extension TodoViewController: UICollectionViewDataSource {
 extension TodoViewController: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         let inset: CGFloat = 20
-        let width: CGFloat = collectionView.bounds.width - (inset * 20)
+        let width: CGFloat = collectionView.bounds.width - (inset * 2)
         
         return CGSize(width: width, height: 72)
     }
