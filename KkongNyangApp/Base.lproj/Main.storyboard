@@ -124,14 +124,16 @@
                                                 </label>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="B3z-3Y-4V6">
                                                     <rect key="frame" x="20" y="49" width="72" height="28"/>
-                                                    <color key="backgroundColor" name="homebg-1"/>
+                                                    <color key="backgroundColor" name="yellow-150"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="72" id="6kD-Br-ncV"/>
                                                         <constraint firstAttribute="height" constant="28" id="Yos-Vi-mxQ"/>
                                                     </constraints>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                                    <fontDescription key="fontDescription" name="AppleSDGothicNeo-SemiBold" family="Apple SD Gothic Neo" pointSize="13"/>
                                                     <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                                    <state key="normal" title="완료하기"/>
+                                                    <state key="normal" title="완료하기">
+                                                        <color key="titleColor" systemColor="systemOrangeColor"/>
+                                                    </state>
                                                 </button>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Jbp-4U-Yv9">
                                                     <rect key="frame" x="0.0" y="94" width="375" height="1"/>
@@ -1675,11 +1677,10 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="52" id="DPm-Wm-ANv"/>
                                 </constraints>
+                                <fontDescription key="fontDescription" name="AppleSDGothicNeo-Medium" family="Apple SD Gothic Neo" pointSize="15"/>
                                 <color key="tintColor" name="greengray-700"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="지난 소식 더 보기">
-                                    <fontDescription key="titleFontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="16"/>
-                                </buttonConfiguration>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="지난 소식 더 보기"/>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="최근 육묘기록" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="azB-e0-VEg">
                                 <rect key="frame" x="20" y="533" width="110" height="24"/>
@@ -1852,20 +1853,23 @@
         <namedColor name="greengray-900">
             <color red="0.12549019607843137" green="0.15686274509803921" blue="0.043137254901960784" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
-        <namedColor name="homebg-1">
-            <color red="0.8901960784313725" green="0.92941176470588238" blue="0.98431372549019602" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </namedColor>
         <namedColor name="todoDefault">
             <color red="0.97254901960784312" green="0.97254901960784312" blue="0.96470588235294119" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="white">
             <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
+        <namedColor name="yellow-150">
+            <color red="1" green="0.94901960784313721" blue="0.85098039215686272" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
         <namedColor name="yellow-500">
             <color red="1" green="0.82352941176470584" blue="0.4823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemOrangeColor">
+            <color red="1" green="0.58431372549019611" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemPinkColor">
             <color red="1" green="0.17647058823529413" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
