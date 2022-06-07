@@ -1727,8 +1727,8 @@
                                                     </constraints>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="자동급식기 청소" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PL7-kd-GkJ">
-                                                    <rect key="frame" x="7.6666666666666643" y="52" width="56.999999999999993" height="11"/>
-                                                    <fontDescription key="fontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="9"/>
+                                                    <rect key="frame" x="4.3333333333333321" y="52" width="63.333333333333343" height="12"/>
+                                                    <fontDescription key="fontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="10"/>
                                                     <color key="textColor" name="greengray-900"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
