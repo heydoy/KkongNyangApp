@@ -106,16 +106,18 @@ class RegisterViewController: UIViewController {
 //    }
     
     @IBAction func registerButtonDidTapped(_ sender: UIButton) {
-        
-        // 화면전환
-        // 1. 스토리보드 생성
-        let storyboard = UIStoryboard(name: "SignupAndLogin", bundle: nil)
-        // 2. 뷰컨트롤러를 생성
-        let catProfileSettingViewController = storyboard.instantiateViewController(withIdentifier: "CatProfileSettingVC") as! CatProfileSettingViewController
-        // 3. 화면전환 메소드를 이용해서 화면을 전환
-        self.navigationController?.pushViewController(catProfileSettingViewController, animated: true)
-            
-        
+//
+//        // 고양이 프로필 입력화면
+//        // 화면전환
+//        // 1. 스토리보드 생성
+//        let storyboard = UIStoryboard(name: "SignupAndLogin", bundle: nil)
+//        // 2. 뷰컨트롤러를 생성
+//        let catProfileSettingViewController = storyboard.instantiateViewController(withIdentifier: "CatProfileSettingVC") as! CatProfileSettingViewController
+//        // 3. 화면전환 메소드를 이용해서 화면을 전환
+//        self.navigationController?.pushViewController(catProfileSettingViewController, animated: true)
+//
+        // 로그인화면으로 되돌아가기
+        self.navigationController?.popViewController(animated: true)
         // 사용자 정보
         
         let userInfo = UserInfo(

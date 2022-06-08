@@ -167,6 +167,9 @@
                                         <color key="textColor" name="gray-700"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                         <textInputTraits key="textInputTraits"/>
+                                        <connections>
+                                            <action selector="emailTextFieldEditingChanged:" destination="bV3-jh-V5q" eventType="editingChanged" id="qvq-Qb-uUd"/>
+                                        </connections>
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="비밀번호" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ffA-jY-qLU">
                                         <rect key="frame" x="0.0" y="57" width="335" height="45"/>
@@ -176,6 +179,9 @@
                                         <color key="textColor" name="gray-700"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                         <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                                        <connections>
+                                            <action selector="passwordTextFieldEditingChanged:" destination="bV3-jh-V5q" eventType="editingChanged" id="QrR-Ed-cDU"/>
+                                        </connections>
                                     </textField>
                                 </subviews>
                             </stackView>
@@ -196,7 +202,7 @@
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                 <state key="normal" title="계정이 없으신가요? 가입하기"/>
                                 <connections>
-                                    <action selector="didRegisterButtonTapped:" destination="bV3-jh-V5q" eventType="touchUpInside" id="22O-mq-WrQ"/>
+                                    <action selector="didRegisterButtonTapped:" destination="bV3-jh-V5q" eventType="touchUpInside" id="3RC-qY-GkK"/>
                                 </connections>
                             </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GRD-Ef-23e">
@@ -216,6 +222,9 @@
                                 <color key="tintColor" name="white"/>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                 <state key="normal" title="로그인"/>
+                                <connections>
+                                    <action selector="didLoginButtonTapped:" destination="bV3-jh-V5q" eventType="touchUpInside" id="Y70-al-bHW"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="꽁냥에서 우리 고양이들을 함께 돌보고 기록해요." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fV5-1g-Vvj">
                                 <rect key="frame" x="104.00000000000001" y="290" width="167.33333333333337" height="60"/>

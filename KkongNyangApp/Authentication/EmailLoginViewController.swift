@@ -28,7 +28,76 @@ class EmailLoginViewController: UIViewController {
     
     // MARK: - Actions
 
-    @IBAction func didRegisterButtonTapped(_ sender: Any) {
+    @IBAction func emailTextFieldEditingChanged(_ sender: UITextField) {
+        // 옵셔널: 값이 없을수도, 있을수도 있다.
+        let text = sender.text ?? ""
+        //print("email : \(text)")
+        
+        self.loginButton.backgroundColor = text.isValidEmail() ?
+            .greengray900 : .gray300
+        
+        self.email = text
+    }
+    
+    @IBAction func passwordTextFieldEditingChanged(_ sender: UITextField) {
+        let text = sender.text ?? ""
+
+        
+        self.loginButton.backgroundColor =
+            text.count > 2 ? .greengray900 : .gray300
+        
+        self.password = text
+    }
+    
+    
+    
+    
+    @IBAction func didLoginButtonTapped(_ sender: UIButton) {
+        // 회원가입 정보를 전달받아서 그것과 Text Field 데이터가 일치하면 로그인이 되어야 한다.
+        guard let userInfo = self.userInfo else {
+            print("userInfo에 가입된 정보가 없습니다.")
+            return
+        }  // userInfo에 정보가 없으면 로그인버튼이 실행 안됨.
+        
+        // 아이디, 비밀번호 확인
+        if userInfo.email == self.email
+            && userInfo.password == self.password {
+            // print("다음화면으로 이동")
+            let storyboard = UIStoryboard(name: "Main", bundle: nil)
+            let vc = storyboard.instantiateViewController(withIdentifier: "MainTabVC") as! UITabBarController
+            
+            /* style과 present를 대체하는 새로 바뀐 부분 : 메모리관리
+                기존은 로그인 화면에서 탭바컨트롤러 화면으로 이동하는데 더이상 사용하지 않는데, 로그인 화면이 하위에 쌓여있게 된다.
+                사용하지 않을 화면이 남아있으면 불필요한 화면이 남아있기 때문에,
+                아래코드를 넣으면 기존에 로그인 화면이 없어짐. */
+            
+            // self.view: 로그인 뷰 컨트롤러의 뷰
+            // ios 15버전이상에서만 지원하므로 ios 버전체크하고 keywindow로 바꿔주기
+            if #available(iOS 15.0, *) {
+                self.view.window?.windowScene?.keyWindow?.rootViewController = vc
+            } else {
+                // Fallback on earlier versions
+                // 이걸 적용할 경우 기존 로그인 화면이 스택에 쌓여있음
+                vc.modalPresentationStyle = .fullScreen
+                self.present(vc, animated: true, completion: nil)
+            }
+            
+            
+            
+        } else {
+            let loginErrorAlert = UIAlertController(title: "로그인실패", message: "아이디 또는 패스워드가 일치하지 않습니다.", preferredStyle: .alert)
+            let cancleAction = UIAlertAction(title: "확인", style: .destructive, handler: nil)
+            loginErrorAlert.addAction(cancleAction)
+            self.present(loginErrorAlert, animated: true, completion: nil)
+            
+            print("아이디 또는 패스워드가 일치하지 않습니다.")
+            
+        }
+    }
+    
+    
+    
+    @IBAction func didRegisterButtonTapped(_ sender: UIButton) {
        
         // 화면전환
         // 1. 스토리보드 생성

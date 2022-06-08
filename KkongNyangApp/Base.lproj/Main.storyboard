@@ -57,7 +57,7 @@
         <!--Base Tab Bar Controller-->
         <scene sceneID="2h7-qV-Op7">
             <objects>
-                <tabBarController storyboardIdentifier="MainTabVC" automaticallyAdjustsScrollViewInsets="NO" id="pUQ-gC-qAW" customClass="BaseTabBarController" customModule="KkongNyangApp" customModuleProvider="target" sceneMemberID="viewController">
+                <tabBarController storyboardIdentifier="MainTabVC" automaticallyAdjustsScrollViewInsets="NO" useStoryboardIdentifierAsRestorationIdentifier="YES" id="pUQ-gC-qAW" customClass="BaseTabBarController" customModule="KkongNyangApp" customModuleProvider="target" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="kAF-hq-WPX">
                         <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
