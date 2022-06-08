@@ -14,6 +14,9 @@ class AddPalateViewController: UIViewController {
 
     }
     
-
+    @IBAction func didDismissButtonTapped(_ sender: UIButton) {
+        self.dismiss(animated: true, completion: nil)
+    }
+    
 
 }
