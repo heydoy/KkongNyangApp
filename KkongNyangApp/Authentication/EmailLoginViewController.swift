@@ -38,6 +38,15 @@ class EmailLoginViewController: UIViewController {
         // 3. 화면전환 메소드를 이용해서 화면을 전환
 //        self.present(registerViewController, animated: true, completion: nil)
         self.navigationController?.pushViewController(registerViewController, animated: true)
+        
+        // 회원가입 화면에서 정보를 전달받을 것
+        // 클로저를 사용할  때는 참조에 대한 문제가 생길 수 있으므로 [weak self] 와 self? 옵셔널을 작성해준다.
+        // ARC 개념에 대해 알아두면 도움이 될 것. SWIFT에서 처리하는 메모리 관리 방식 중 한가지
+        // ARC - 강한 참조는 뷰 컨트롤러가 해제되도 메모리에 남아있어서 메모리 누수의 우려가 생김./약한 참조는 ARC 낮춰줌.
+        registerViewController.userInfo = { [weak self](userInfo) in
+            //print(userInfo)
+            self?.userInfo = userInfo
+        }
     }
     
     
