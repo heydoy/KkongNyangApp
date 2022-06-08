@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		38021759A8D98144BA77914F /* Pods_KkongNyangApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 69ED1361684068BDF78592AD /* Pods_KkongNyangApp.framework */; };
 		A206BB332812BABA00F2768A /* SignupAndLogin.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A206BB322812BABA00F2768A /* SignupAndLogin.storyboard */; };
+		A215F09528508EBD005D8648 /* UIViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A215F09428508EBD005D8648 /* UIViewController+Extension.swift */; };
 		A22448C928490395008C9E72 /* TodoListCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A22448C828490395008C9E72 /* TodoListCollectionViewCell.swift */; };
 		A22448CB28490E35008C9E72 /* CatTodo.swift in Sources */ = {isa = PBXBuildFile; fileRef = A22448CA28490E35008C9E72 /* CatTodo.swift */; };
 		A224D4B0280D1D720040E945 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A224D4AF280D1D720040E945 /* AppDelegate.swift */; };
@@ -64,6 +65,7 @@
 		6AAAD11D319B92D9083FBCBC /* Pods-KkongNyangApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KkongNyangApp.debug.xcconfig"; path = "Target Support Files/Pods-KkongNyangApp/Pods-KkongNyangApp.debug.xcconfig"; sourceTree = "<group>"; };
 		6E6C39B42C5BB79F280B92E7 /* Pods-KkongNyangApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KkongNyangApp.release.xcconfig"; path = "Target Support Files/Pods-KkongNyangApp/Pods-KkongNyangApp.release.xcconfig"; sourceTree = "<group>"; };
 		A206BB322812BABA00F2768A /* SignupAndLogin.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SignupAndLogin.storyboard; sourceTree = "<group>"; };
+		A215F09428508EBD005D8648 /* UIViewController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extension.swift"; sourceTree = "<group>"; };
 		A22448C828490395008C9E72 /* TodoListCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoListCollectionViewCell.swift; sourceTree = "<group>"; };
 		A22448CA28490E35008C9E72 /* CatTodo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatTodo.swift; sourceTree = "<group>"; };
 		A224D4AC280D1D720040E945 /* KkongNyangApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KkongNyangApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -324,6 +326,7 @@
 				A2DFA395280E8E6000AFE1BF /* UIStoryboard+Extension.swift */,
 				A2370C242840B8CE00D64871 /* UIDevice+Extension.swift */,
 				A2A409C3284CC17D00FD47EC /* UIView+Extension.swift */,
+				A215F09428508EBD005D8648 /* UIViewController+Extension.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -482,6 +485,7 @@
 				A2A409B9284C6AF400FD47EC /* AddPalateViewController.swift in Sources */,
 				A2DFA38C280E7A2800AFE1BF /* OnboardingSecondPageViewController.swift in Sources */,
 				A224D4B0280D1D720040E945 /* AppDelegate.swift in Sources */,
+				A215F09528508EBD005D8648 /* UIViewController+Extension.swift in Sources */,
 				A2A409D0284CE08E00FD47EC /* BaseTabBarController.swift in Sources */,
 				A2A409CA284CD5E100FD47EC /* AlertViewController.swift in Sources */,
 				A2DFA38E280E7A3500AFE1BF /* OnboardingThirdPageViewController.swift in Sources */,
