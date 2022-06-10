@@ -394,11 +394,11 @@
                                     <action selector="didTodoTextFieldEditingChanged:" destination="WMU-sx-1qO" eventType="editingDidEnd" id="vXD-wH-eao"/>
                                 </connections>
                             </textField>
-                            <stackView opaque="NO" contentMode="scaleToFill" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="Np4-Oa-JFG">
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="Np4-Oa-JFG">
                                 <rect key="frame" x="20" y="364.33333333333331" width="335" height="77.333333333333314"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="18" translatesAutoresizingMaskIntoConstraints="NO" id="Nyv-ah-8j7">
-                                        <rect key="frame" x="0.0" y="0.0" width="159.66666666666666" height="77.333333333333329"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="160" height="77.333333333333329"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="하루에" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="u0j-Ne-4mD">
                                                 <rect key="frame" x="0.0" y="0.0" width="41.666666666666664" height="19.333333333333332"/>
@@ -407,13 +407,15 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ErB-PY-JJR">
-                                                <rect key="frame" x="0.0" y="37.333333333333371" width="159.66666666666666" height="40"/>
+                                                <rect key="frame" x="0.0" y="37.333333333333371" width="160" height="40"/>
+                                                <color key="backgroundColor" name="todoDefault"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="40" id="ElR-yB-kqY"/>
                                                 </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <color key="tintColor" name="black"/>
-                                                <state key="normal" title="Button"/>
-                                                <buttonConfiguration key="configuration" style="gray" title="2회"/>
+                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                <state key="normal" title="2회"/>
                                             </button>
                                         </subviews>
                                         <constraints>
@@ -424,7 +426,7 @@
                                         </constraints>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="18" translatesAutoresizingMaskIntoConstraints="NO" id="rvc-Rg-Zfm">
-                                        <rect key="frame" x="175.66666666666663" y="0.0" width="159.33333333333337" height="77.333333333333329"/>
+                                        <rect key="frame" x="175" y="0.0" width="160" height="77.333333333333329"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="시간간격" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xBB-kM-oa7">
                                                 <rect key="frame" x="0.0" y="0.0" width="55.666666666666664" height="19.333333333333332"/>
@@ -433,13 +435,15 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EGo-G6-ziD">
-                                                <rect key="frame" x="0.0" y="37.333333333333371" width="159.33333333333334" height="40"/>
+                                                <rect key="frame" x="0.0" y="37.333333333333371" width="160" height="40"/>
+                                                <color key="backgroundColor" name="todoDefault"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="40" id="2xc-SY-gnN"/>
                                                 </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <color key="tintColor" name="black"/>
-                                                <state key="normal" title="Button"/>
-                                                <buttonConfiguration key="configuration" style="gray" title="8시간"/>
+                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                <state key="normal" title="8시간"/>
                                             </button>
                                         </subviews>
                                         <constraints>
@@ -469,18 +473,27 @@
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ojf-5d-JPF">
                                         <rect key="frame" x="0.0" y="0.0" width="40" height="48"/>
                                         <color key="backgroundColor" name="todoDefault"/>
+                                        <color key="tintColor" name="yellow-500"/>
                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                         <state key="normal" title="월">
                                             <color key="titleColor" name="greengray-900"/>
                                         </state>
+                                        <state key="selected" backgroundImage="genderbutton-selected"/>
+                                        <connections>
+                                            <action selector="setButtonState:" destination="WMU-sx-1qO" eventType="touchUpInside" id="VXs-l4-duu"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gaI-a8-9r2">
                                         <rect key="frame" x="49" y="0.0" width="40.333333333333343" height="48"/>
                                         <color key="backgroundColor" name="todoDefault"/>
+                                        <color key="tintColor" name="yellow-500"/>
                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                         <state key="normal" title="화">
                                             <color key="titleColor" name="greengray-900"/>
                                         </state>
+                                        <connections>
+                                            <action selector="setButtonState:" destination="WMU-sx-1qO" eventType="touchUpInside" id="T60-sx-BZe"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ozL-jo-adu">
                                         <rect key="frame" x="98.333333333333329" y="0.0" width="39.999999999999986" height="48"/>
@@ -488,10 +501,14 @@
                                         <constraints>
                                             <constraint firstAttribute="height" constant="48" id="8gw-2d-QF3"/>
                                         </constraints>
+                                        <color key="tintColor" name="yellow-500"/>
                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                         <state key="normal" title="수">
                                             <color key="titleColor" name="greengray-900"/>
                                         </state>
+                                        <connections>
+                                            <action selector="setButtonState:" destination="WMU-sx-1qO" eventType="touchUpInside" id="CH7-rg-uVv"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="L2n-li-wun">
                                         <rect key="frame" x="147.33333333333334" y="0.0" width="40.333333333333343" height="48"/>
@@ -499,10 +516,14 @@
                                         <constraints>
                                             <constraint firstAttribute="height" constant="48" id="LrR-6c-a0p"/>
                                         </constraints>
+                                        <color key="tintColor" name="yellow-500"/>
                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                         <state key="normal" title="목">
                                             <color key="titleColor" name="greengray-900"/>
                                         </state>
+                                        <connections>
+                                            <action selector="setButtonState:" destination="WMU-sx-1qO" eventType="touchUpInside" id="EE1-zj-s9c"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Arf-T1-n15">
                                         <rect key="frame" x="196.66666666666666" y="0.0" width="40" height="48"/>
@@ -510,10 +531,15 @@
                                         <constraints>
                                             <constraint firstAttribute="height" constant="48" id="c7z-9X-0do"/>
                                         </constraints>
+                                        <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="15"/>
+                                        <color key="tintColor" name="yellow-500"/>
                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                         <state key="normal" title="금">
                                             <color key="titleColor" name="greengray-900"/>
                                         </state>
+                                        <connections>
+                                            <action selector="setButtonState:" destination="WMU-sx-1qO" eventType="touchUpInside" id="Gvu-i8-1or"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ibl-qm-QL9">
                                         <rect key="frame" x="245.66666666666671" y="0.0" width="40.333333333333343" height="48"/>
@@ -521,10 +547,14 @@
                                         <constraints>
                                             <constraint firstAttribute="height" constant="48" id="Tj3-aG-3NA"/>
                                         </constraints>
+                                        <color key="tintColor" name="yellow-500"/>
                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                         <state key="normal" title="토">
                                             <color key="titleColor" name="greengray-900"/>
                                         </state>
+                                        <connections>
+                                            <action selector="setButtonState:" destination="WMU-sx-1qO" eventType="touchUpInside" id="q90-oQ-NjV"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="w19-lv-FlN">
                                         <rect key="frame" x="295" y="0.0" width="40" height="48"/>
@@ -532,10 +562,14 @@
                                         <constraints>
                                             <constraint firstAttribute="height" constant="48" id="i4m-Ui-4aC"/>
                                         </constraints>
+                                        <color key="tintColor" name="yellow-500"/>
                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                         <state key="normal" title="일">
                                             <color key="titleColor" name="greengray-900"/>
                                         </state>
+                                        <connections>
+                                            <action selector="setButtonState:" destination="WMU-sx-1qO" eventType="touchUpInside" id="hOE-1k-fPS"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <constraints>
@@ -548,7 +582,7 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="기타 특이사항이 있다면 작성해주세요" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="THm-ft-WRo">
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="fill" borderStyle="roundedRect" placeholder="기타 특이사항이 있다면 작성해주세요" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="THm-ft-WRo">
                                 <rect key="frame" x="20" y="602" width="335" height="80"/>
                                 <constraints>
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="80" id="zgz-le-yVW"/>
@@ -614,8 +648,17 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="fridayButton" destination="Arf-T1-n15" id="sXL-s7-2IC"/>
+                        <outlet property="mondayButton" destination="Ojf-5d-JPF" id="Qtk-nQ-1mb"/>
+                        <outlet property="saturdayButton" destination="Ibl-qm-QL9" id="Ikx-Hz-Boa"/>
+                        <outlet property="selectPerDayButton" destination="ErB-PY-JJR" id="INP-73-4is"/>
+                        <outlet property="selectPerHourButton" destination="EGo-G6-ziD" id="oAv-wP-JuC"/>
                         <outlet property="selectTodoButton" destination="C0k-yD-3CI" id="5ZH-oi-SyK"/>
+                        <outlet property="sundayButton" destination="w19-lv-FlN" id="ru4-nV-74Z"/>
+                        <outlet property="thursdayButton" destination="L2n-li-wun" id="Hfa-QF-gqU"/>
                         <outlet property="todoTextField" destination="0pX-9e-VDe" id="Jow-gi-0fE"/>
+                        <outlet property="tuesdayButton" destination="gaI-a8-9r2" id="BLX-at-swf"/>
+                        <outlet property="wednesdayButton" destination="ozL-jo-adu" id="z6j-zp-jZh"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pzG-GB-P86" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -1838,6 +1881,7 @@
         <image name="emojiLove" width="32" height="32"/>
         <image name="finished-bathtub" width="32" height="32"/>
         <image name="floatingAddButton" width="60" height="60"/>
+        <image name="genderbutton-selected" width="158" height="46"/>
         <image name="homecard1" width="198" height="180"/>
         <image name="icon-alert" width="24" height="24"/>
         <image name="icon-home" width="24" height="24"/>
