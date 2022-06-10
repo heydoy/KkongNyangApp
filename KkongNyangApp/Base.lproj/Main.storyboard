@@ -856,7 +856,7 @@
                                     <color key="titleColor" name="white"/>
                                 </state>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KKT-n2-387">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KKT-n2-387" customClass="PickerButton" customModule="PickerButton">
                                 <rect key="frame" x="20" y="244.66666666666663" width="335" height="40"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="fzc-BC-PKC"/>
@@ -871,7 +871,7 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="photoframe" translatesAutoresizingMaskIntoConstraints="NO" id="KTD-e0-2mk">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="photoframe" translatesAutoresizingMaskIntoConstraints="NO" id="KTD-e0-2mk">
                                 <rect key="frame" x="107.66666666666669" y="344" width="160" height="160"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="160" id="PJm-GW-nvK"/>
@@ -921,6 +921,9 @@
                                 <state key="normal" image="photo.circle.fill" catalog="system">
                                     <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="22"/>
                                 </state>
+                                <connections>
+                                    <action selector="buttonGoImagePicker:" destination="YO6-9D-cOR" eventType="touchUpInside" id="FVh-Zj-QS7"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="8r5-aL-Awm"/>
@@ -963,6 +966,10 @@
                             <constraint firstItem="NFU-lT-swm" firstAttribute="top" secondItem="KKT-n2-387" secondAttribute="bottom" constant="24" id="ysa-UA-tCh"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="productImage" destination="KTD-e0-2mk" id="khs-l0-jdT"/>
+                        <outlet property="selectKindButton" destination="KKT-n2-387" id="h5r-8f-oGW"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Jz5-JL-pVe" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
