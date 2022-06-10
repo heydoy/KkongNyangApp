@@ -35,7 +35,8 @@ class AddTodoViewController: UIViewController {
         selectTodoButton.dataSource = self
         selectTodoButton.delegate = self
         
-
+        //
+        selectTodoButton.setTitle("::할 일 선택::", for: .normal)
 
     }
     
@@ -95,7 +96,7 @@ class AddTodoViewController: UIViewController {
     
     
     // MARK: - Helpers
-    
+
     
 }
 
