@@ -11,6 +11,7 @@ import PickerButton
 class AddPalateViewController: UIViewController {
 
     // MARK: - Properties
+    var catID: Int = 0
     
     @IBOutlet weak var selectKindButton: PickerButton!
     let pickerValues: [String] = CatPalate.CatItemKind
@@ -38,6 +39,25 @@ class AddPalateViewController: UIViewController {
     @IBAction func didDismissButtonTapped(_ sender: UIButton) {
         self.dismiss(animated: true, completion: nil)
     }
+    
+    
+    @IBAction func didSelectCatTapped(_ sender: UISegmentedControl) {
+        switch sender.selectedSegmentIndex {
+        case 0:
+            catID = 0
+            break
+        case 1:
+            catID = 1
+            break
+        case 2:
+            catID = 2
+            break
+        default:
+            catID = 0
+            break
+        }
+    }
+    
     
     @IBAction func buttonGoImagePicker(_ sender: Any) {
         let alert = UIAlertController(title: "제품사진", message: "제품 사진을 찍거나 선택해주세요.", preferredStyle: .actionSheet)
@@ -80,6 +100,11 @@ class AddPalateViewController: UIViewController {
                print("Slider value = \(value)")
            }
 
+    }
+    
+    
+    @IBAction func didAddButtonTapped(_ sender: Any) {
+        self.dismiss(animated: true, completion: nil)
     }
     
     

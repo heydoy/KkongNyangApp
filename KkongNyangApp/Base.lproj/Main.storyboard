@@ -843,6 +843,9 @@
                                     <segment title="둘째 고양이"/>
                                 </segments>
                                 <color key="selectedSegmentTintColor" name="yellow-500"/>
+                                <connections>
+                                    <action selector="didSelectCatTapped:" destination="YO6-9D-cOR" eventType="valueChanged" id="Gee-6p-Ud9"/>
+                                </connections>
                             </segmentedControl>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hHi-CX-bAn">
                                 <rect key="frame" x="20" y="738" width="335" height="52"/>
@@ -855,6 +858,9 @@
                                 <state key="normal" title="추가하기">
                                     <color key="titleColor" name="white"/>
                                 </state>
+                                <connections>
+                                    <action selector="didAddButtonTapped:" destination="YO6-9D-cOR" eventType="touchUpInside" id="tDM-in-bcH"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KKT-n2-387" customClass="PickerButton" customModule="PickerButton">
                                 <rect key="frame" x="20" y="244.66666666666663" width="335" height="40"/>
