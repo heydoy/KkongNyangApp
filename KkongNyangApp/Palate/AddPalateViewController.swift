@@ -19,6 +19,8 @@ class AddPalateViewController: UIViewController {
     
     @IBOutlet weak var productImage: UIImageView!
     
+    @IBOutlet weak var preferenceLevelText: UILabel!
+    
     // MARK: - LifeCycle
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -55,6 +57,29 @@ class AddPalateViewController: UIViewController {
         alert.addAction(cancel)
         
         present(alert, animated: true, completion: nil)
+    }
+    
+    @IBAction func didPreferenceLevelValueChanged(_ sender: UISlider) {
+        let value = sender.value
+        var text: String = ""
+        
+        if value < 0.2 {
+            text = "싫어해요"
+        } else if value >= 0.2 && value < 0.4 {
+            text = "그냥 그래요"
+        } else if value >= 0.4 && value < 0.6 {
+            text = "괜찬아요"
+        } else if value >= 0.6 && value < 0.8 {
+            text = "좋아해요"
+        } else if value > 0.8 {
+            text = "너무 좋아해요"
+        }
+        
+        DispatchQueue.main.async {
+               self.preferenceLevelText.text = "\(text)"
+               print("Slider value = \(value)")
+           }
+
     }
     
     

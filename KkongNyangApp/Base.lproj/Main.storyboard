@@ -901,6 +901,9 @@
                                 </constraints>
                                 <color key="minimumTrackTintColor" red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <color key="maximumTrackTintColor" systemColor="systemPinkColor"/>
+                                <connections>
+                                    <action selector="didPreferenceLevelValueChanged:" destination="YO6-9D-cOR" eventType="valueChanged" id="IZf-ND-xv7"/>
+                                </connections>
                             </slider>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="종류" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZKC-tb-Pdl">
                                 <rect key="frame" x="20" y="209.33333333333334" width="28" height="19.333333333333343"/>
@@ -908,7 +911,7 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="그냥 그래요" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vn0-X7-8d2">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="보통이에요" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vn0-X7-8d2">
                                 <rect key="frame" x="270" y="584" width="85" height="20"/>
                                 <fontDescription key="fontDescription" name="AppleSDGothicNeo-Medium" family="Apple SD Gothic Neo" pointSize="16"/>
                                 <color key="textColor" name="gray-300"/>
@@ -925,6 +928,15 @@
                                     <action selector="buttonGoImagePicker:" destination="YO6-9D-cOR" eventType="touchUpInside" id="FVh-Zj-QS7"/>
                                 </connections>
                             </button>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="기호도를 자세히 적어주세요." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="WPz-TO-H71">
+                                <rect key="frame" x="20" y="670" width="335" height="40"/>
+                                <color key="backgroundColor" name="gray-80"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="hL6-pv-YKR"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="8r5-aL-Awm"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -937,8 +949,10 @@
                             <constraint firstItem="0n8-kW-PBF" firstAttribute="trailing" secondItem="uZk-cs-uwj" secondAttribute="trailing" id="CkU-r1-Qel"/>
                             <constraint firstItem="0n8-kW-PBF" firstAttribute="leading" secondItem="NFU-lT-swm" secondAttribute="leading" id="ERx-sB-mpX"/>
                             <constraint firstItem="8r5-aL-Awm" firstAttribute="trailing" secondItem="hHi-CX-bAn" secondAttribute="trailing" constant="20" id="ExY-z1-KXg"/>
+                            <constraint firstItem="WPz-TO-H71" firstAttribute="trailing" secondItem="hDv-2m-xWr" secondAttribute="trailing" id="FaW-9Z-QMa"/>
                             <constraint firstItem="JoV-K0-YBe" firstAttribute="top" secondItem="Cc2-9O-kZP" secondAttribute="bottom" constant="24" id="H5s-9l-eHm"/>
                             <constraint firstItem="KKT-n2-387" firstAttribute="top" secondItem="ZKC-tb-Pdl" secondAttribute="bottom" constant="16" id="L0F-fc-paV"/>
+                            <constraint firstItem="WPz-TO-H71" firstAttribute="leading" secondItem="hDv-2m-xWr" secondAttribute="leading" id="RBP-Rg-trE"/>
                             <constraint firstItem="Cc2-9O-kZP" firstAttribute="leading" secondItem="8r5-aL-Awm" secondAttribute="leading" constant="20" id="TRJ-to-a3X"/>
                             <constraint firstItem="uZk-cs-uwj" firstAttribute="centerY" secondItem="Cc2-9O-kZP" secondAttribute="centerY" id="XBU-Z1-T8W"/>
                             <constraint firstItem="eb9-tF-Wo1" firstAttribute="top" secondItem="JoV-K0-YBe" secondAttribute="bottom" constant="16" id="a8n-MP-psw"/>
@@ -963,10 +977,12 @@
                             <constraint firstItem="ZKC-tb-Pdl" firstAttribute="top" secondItem="eb9-tF-Wo1" secondAttribute="bottom" constant="24" id="tVb-qA-F1D"/>
                             <constraint firstItem="Cc2-9O-kZP" firstAttribute="top" secondItem="8r5-aL-Awm" secondAttribute="top" constant="24" id="toV-lO-3hY"/>
                             <constraint firstItem="hDv-2m-xWr" firstAttribute="leading" secondItem="52d-uv-Pxa" secondAttribute="leading" id="uq9-8q-8Lg"/>
+                            <constraint firstItem="WPz-TO-H71" firstAttribute="top" secondItem="hDv-2m-xWr" secondAttribute="bottom" constant="20.666666666666629" id="v1y-69-TJ2"/>
                             <constraint firstItem="NFU-lT-swm" firstAttribute="top" secondItem="KKT-n2-387" secondAttribute="bottom" constant="24" id="ysa-UA-tCh"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="preferenceLevelText" destination="Vn0-X7-8d2" id="ojP-7h-PfT"/>
                         <outlet property="productImage" destination="KTD-e0-2mk" id="khs-l0-jdT"/>
                         <outlet property="selectKindButton" destination="KKT-n2-387" id="h5r-8f-oGW"/>
                     </connections>
