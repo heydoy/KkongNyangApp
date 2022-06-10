@@ -23,6 +23,8 @@ class AddPalateViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        setAttribute()
+        
         selectKindButton.dataSource = self
         selectKindButton.delegate = self
         
@@ -66,6 +68,10 @@ class AddPalateViewController: UIViewController {
     func openCamera() {
         imagePickerViewController.sourceType = .camera
         present(imagePickerViewController, animated: false, completion: nil)
+    }
+    
+    func setAttribute() {
+        productImage.layer.cornerRadius = 20
     }
 }
 

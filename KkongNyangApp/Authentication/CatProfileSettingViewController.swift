@@ -34,6 +34,8 @@ class CatProfileSettingViewController: UIViewController {
     // MARK: - Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
+        setAttribute()
+        
         imagePickerViewController.delegate = self
     }
     
@@ -92,9 +94,14 @@ class CatProfileSettingViewController: UIViewController {
     imagePickerViewController.sourceType = .camera
       present(imagePickerViewController, animated: false, completion: nil)
     }
+    
+    func setAttribute() {
+        catPhotoImageView.layer.cornerRadius = 20
+    }
 
 }
 
+// MARK: - Extensions
 extension CatProfileSettingViewController : UIImagePickerControllerDelegate,  UINavigationControllerDelegate {
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
         // print(info)
