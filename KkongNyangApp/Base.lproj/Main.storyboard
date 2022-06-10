@@ -362,6 +362,9 @@
                                     <segment title="둘째 고양이"/>
                                 </segments>
                                 <color key="selectedSegmentTintColor" name="yellow-500"/>
+                                <connections>
+                                    <action selector="didSelectCatTapped:" destination="WMU-sx-1qO" eventType="valueChanged" id="SMt-v8-nZl"/>
+                                </connections>
                             </segmentedControl>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="C0k-yD-3CI">
                                 <rect key="frame" x="20" y="244.33333333333337" width="335" height="40"/>
@@ -385,6 +388,9 @@
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="didTodoTextFieldEditingChanged:" destination="WMU-sx-1qO" eventType="editingDidEnd" id="vXD-wH-eao"/>
+                                </connections>
                             </textField>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="Np4-Oa-JFG">
                                 <rect key="frame" x="20" y="364.33333333333331" width="335" height="77.333333333333314"/>
@@ -449,8 +455,8 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="할 일 선택" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vxk-7v-14r">
-                                <rect key="frame" x="20" y="465.66666666666669" width="64" height="19.333333333333314"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="요일 선택" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vxk-7v-14r">
+                                <rect key="frame" x="19.999999999999996" y="465.66666666666669" width="59.666666666666657" height="19.333333333333314"/>
                                 <fontDescription key="fontDescription" name="AppleSDGothicNeo-SemiBold" family="Apple SD Gothic Neo" pointSize="16"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -547,6 +553,9 @@
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="didMemoTextFieldEditingChanged:" destination="WMU-sx-1qO" eventType="editingChanged" id="uhD-iR-dl0"/>
+                                </connections>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mAh-QC-v2m">
                                 <rect key="frame" x="20" y="738" width="335" height="52"/>
@@ -559,6 +568,9 @@
                                 <state key="normal" title="추가하기">
                                     <color key="titleColor" name="white"/>
                                 </state>
+                                <connections>
+                                    <action selector="didAddButtonTapped:" destination="WMU-sx-1qO" eventType="touchUpInside" id="0Y1-Io-mgc"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="M9M-oX-AP0"/>
@@ -599,6 +611,9 @@
                             <constraint firstItem="3Oo-7M-Trh" firstAttribute="leading" secondItem="rHl-4Z-HVC" secondAttribute="leading" id="z64-xH-mrF"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="todoTextField" destination="0pX-9e-VDe" id="Jow-gi-0fE"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pzG-GB-P86" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
