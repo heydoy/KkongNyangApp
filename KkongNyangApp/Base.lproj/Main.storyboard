@@ -366,14 +366,16 @@
                                     <action selector="didSelectCatTapped:" destination="WMU-sx-1qO" eventType="valueChanged" id="SMt-v8-nZl"/>
                                 </connections>
                             </segmentedControl>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="C0k-yD-3CI">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="C0k-yD-3CI" customClass="PickerButton" customModule="PickerButton">
                                 <rect key="frame" x="20" y="244.33333333333337" width="335" height="40"/>
+                                <color key="backgroundColor" name="gray-80"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="gjQ-Eq-dVs"/>
                                 </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <color key="tintColor" name="black"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="gray" title="직접 작성하기"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="할 일 종류 선택하기"/>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="할 일 선택" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="83c-fR-1re">
                                 <rect key="frame" x="20" y="209" width="64" height="19.333333333333343"/>
@@ -612,6 +614,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="selectTodoButton" destination="C0k-yD-3CI" id="5ZH-oi-SyK"/>
                         <outlet property="todoTextField" destination="0pX-9e-VDe" id="Jow-gi-0fE"/>
                     </connections>
                 </viewController>

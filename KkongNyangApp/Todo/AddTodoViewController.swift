@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import PickerButton
 
 class AddTodoViewController: UIViewController {
     // MARK: - Properties
@@ -17,6 +18,9 @@ class AddTodoViewController: UIViewController {
     var image: String = ""
     var memo : String = ""
     
+    @IBOutlet weak var selectTodoButton: PickerButton!
+    let pickerValues: [String] = CatTodo.TodoTitleList
+    
     var catTodo: ((CatTodo) -> Void)?
     
     
@@ -26,6 +30,12 @@ class AddTodoViewController: UIViewController {
     // MARK: - Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        // 픽커버튼
+        selectTodoButton.dataSource = self
+        selectTodoButton.delegate = self
+        
+
 
     }
     
@@ -87,4 +97,19 @@ class AddTodoViewController: UIViewController {
     // MARK: - Helpers
     
     
+}
+
+// MARK: - Extensions
+
+extension AddTodoViewController: UIPickerViewDelegate, UIPickerViewDataSource {
+    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+        return pickerValues[row]
+    }
+    
+    func numberOfComponents(in pickerView: UIPickerView) -> Int {
+        return 1
+    }
+    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+        return pickerValues.count
+    }
 }
