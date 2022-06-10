@@ -14,8 +14,9 @@ struct CatTodo {
     var title: String
     var time: String
     var image: String //아이콘이름
-    var isFinished: Bool = false
     var memo: String
+    var isFinished: Bool = false
+    
 }
 
 
@@ -24,9 +25,9 @@ struct CatTodo {
 
 extension CatTodo {
     static var list: [CatTodo] = [
-        CatTodo(catID: 1, title: "산이 밥주기", time: "오전 11시", image: TodoIconList[0], isFinished: true, memo: "") ,
-        CatTodo(catID: 0, title: "산이 화장실 치우기", time: "오후 10시", image: TodoIconList[2], isFinished: false, memo: ""),
-        CatTodo(catID: 2, title: "산이 놀아주기", time: "오후 6시", image: TodoIconList[3], isFinished: false, memo: ""),
+        CatTodo(catID: 1, title: "산이 밥주기", time: "오전 11시", image: TodoIconList[0], memo: "", isFinished: true) ,
+        CatTodo(catID: 0, title: "산이 화장실 치우기", time: "오후 10시", image: TodoIconList[2], memo: "", isFinished: false),
+        CatTodo(catID: 2, title: "산이 놀아주기", time: "오후 6시", image: TodoIconList[3], memo: "", isFinished: false),
     ]
     
     static let TodoTitleList: [String] = [

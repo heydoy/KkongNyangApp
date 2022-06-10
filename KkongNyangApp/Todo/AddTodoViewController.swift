@@ -60,12 +60,7 @@ class AddTodoViewController: UIViewController {
         // 픽커버튼
         selectTodoButton.dataSource = self
         selectTodoButton.delegate = self
-        
-        selectPerDayButton.dataSource = self
-        selectPerDayButton.delegate = self
-        
-        selectPerHourButton.dataSource = self
-        selectPerHourButton.delegate = self
+
         
         // 버튼 처음에 보이는 글자를 픽커내용이 아니도록 설정
         selectTodoButton.setTitle("::할 일 선택::", for: .normal)
@@ -75,6 +70,11 @@ class AddTodoViewController: UIViewController {
         // 버튼 둥글리기
         setAttribute()
 
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        NotificationCenter.default.post(name: NSNotification.Name("DismissAddTodoView"), object: nil, userInfo: nil)
     }
     
     // MARK: - Actions
@@ -130,12 +130,12 @@ class AddTodoViewController: UIViewController {
             title: self.todo,
             time: self.perDay,
             image: self.image,
-            isFinished: false,
-            memo: self.memo
+            memo: self.memo,
+            isFinished: false
         )
         
         self.catTodo?(catTodo)
-        CatTodo.list.append(catTodo)
+
         
     }
     

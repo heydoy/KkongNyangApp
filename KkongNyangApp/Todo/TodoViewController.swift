@@ -23,9 +23,21 @@ class TodoViewController: UIViewController {
         collectionView.dataSource = self
         collectionView.delegate = self
         
+        // Notification Center
+        NotificationCenter.default.addObserver(
+            self,
+            selector: #selector(self.didDismissAddTodoNotification(_:)),
+            name: NSNotification.Name("DismissAddTodoView"),
+            object: nil)
+        
     }
     
     // MARK: - Actions
+    @objc func didDismissAddTodoNotification(_ notification: Notification) {
+        DispatchQueue.main.async {
+            self.collectionView.reloadData()
+        }
+    }
     
     @IBAction func switchViews(_ sender: UISegmentedControl) {
         if sender.selectedSegmentIndex == 0 {
