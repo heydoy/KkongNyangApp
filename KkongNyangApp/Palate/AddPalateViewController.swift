@@ -12,6 +12,11 @@ class AddPalateViewController: UIViewController {
 
     // MARK: - Properties
     var catID: Int = 0
+    var history: String = "" // 내가 4월 7일 기록
+    var preferenceLevel: Float = 0.0
+    var itemName: String = ""
+    var itemImage: String = "photoframe" // 빈 이미지
+    var memo: String = ""
     
     @IBOutlet weak var selectKindButton: PickerButton!
     let pickerValues: [String] = CatPalate.CatItemKind
@@ -19,8 +24,11 @@ class AddPalateViewController: UIViewController {
     let imagePickerViewController = UIImagePickerController()
     
     @IBOutlet weak var productImage: UIImageView!
-    
     @IBOutlet weak var preferenceLevelText: UILabel!
+    
+    
+    
+    var catPalate: ((CatPalate) -> Void )?
     
     // MARK: - LifeCycle
     override func viewDidLoad() {
@@ -34,6 +42,8 @@ class AddPalateViewController: UIViewController {
         imagePickerViewController.delegate = self
 
     }
+    
+  
     
     // MARK: - Actions
     @IBAction func didDismissButtonTapped(_ sender: UIButton) {
@@ -79,6 +89,14 @@ class AddPalateViewController: UIViewController {
         present(alert, animated: true, completion: nil)
     }
     
+    
+    @IBAction func DidNameTextFieldEditingChanged(_ sender: UITextField) {
+        let text = sender.text ?? ""
+        self.itemName = text
+    }
+    
+    
+    
     @IBAction func didPreferenceLevelValueChanged(_ sender: UISlider) {
         let value = sender.value
         var text: String = ""
@@ -99,12 +117,31 @@ class AddPalateViewController: UIViewController {
                self.preferenceLevelText.text = "\(text)"
                print("Slider value = \(value)")
            }
+        preferenceLevel = value
 
+    }
+    
+    @IBAction func didMemoTextFieldEditingChanged(_ sender: UITextField) {
+        let text = sender.text ?? ""
+        self.memo = text
     }
     
     
     @IBAction func didAddButtonTapped(_ sender: Any) {
         self.dismiss(animated: true, completion: nil)
+        
+        
+        
+        let catPalate = CatPalate(
+            catID: self.catID,
+            itemKind: self.getButtonText(),
+            itemImage: self.itemImage,
+            itemName: self.itemName,
+            preferenceLevel: self.preferenceLevel,
+            memo: self.memo,
+            history: self.setHistory())
+        
+        self.catPalate?(catPalate)
     }
     
     
@@ -123,6 +160,19 @@ class AddPalateViewController: UIViewController {
     func setAttribute() {
         productImage.layer.cornerRadius = 20
     }
+    
+    func setHistory() -> String {
+        let nowDate = Date() // 현재의 Date (ex: 2020-08-13 09:14:48 +0000)
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "내가 M월 d일 기록" // 2020-08-13 16:30
+        let str = dateFormatter.string(from: nowDate) // 현재 시간의 Date를 format에 맞춰 string으로 반환
+        return str
+    }
+    
+    func getButtonText() -> String {
+            let title = selectKindButton.currentTitle!
+            return title
+        }
 }
 
 

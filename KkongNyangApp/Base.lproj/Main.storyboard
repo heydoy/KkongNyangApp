@@ -892,6 +892,9 @@
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="DidNameTextFieldEditingChanged:" destination="YO6-9D-cOR" eventType="editingChanged" id="883-a8-PCi"/>
+                                </connections>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="기호정도" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="52d-uv-Pxa">
                                 <rect key="frame" x="19.999999999999996" y="584" width="55.666666666666657" height="19.333333333333371"/>
@@ -942,6 +945,9 @@
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="didMemoTextFieldEditingChanged:" destination="YO6-9D-cOR" eventType="editingChanged" id="7Ae-7h-Tgv"/>
+                                </connections>
                             </textField>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="8r5-aL-Awm"/>

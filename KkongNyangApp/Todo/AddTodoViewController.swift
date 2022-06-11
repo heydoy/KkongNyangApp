@@ -136,7 +136,6 @@ class AddTodoViewController: UIViewController {
         
         self.catTodo?(catTodo)
 
-        
     }
     
     
