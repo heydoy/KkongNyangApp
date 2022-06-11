@@ -1743,6 +1743,13 @@
                                                     <color key="textColor" name="gray-500"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon-new-full" translatesAutoresizingMaskIntoConstraints="NO" id="VDt-JW-ed1">
+                                                    <rect key="frame" x="138" y="6" width="50" height="27"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="27" id="nTP-7u-pz8"/>
+                                                        <constraint firstAttribute="width" constant="50" id="sZT-ju-ICg"/>
+                                                    </constraints>
+                                                </imageView>
                                             </subviews>
                                             <constraints>
                                                 <constraint firstItem="5Dr-PE-3P6" firstAttribute="top" secondItem="Lo3-nk-ZRq" secondAttribute="bottom" constant="10" id="2Y1-Bx-B4P"/>
@@ -1751,11 +1758,13 @@
                                                 <constraint firstItem="1Ta-zy-E0h" firstAttribute="top" secondItem="vMc-zO-O53" secondAttribute="bottom" id="CW0-rR-ctS"/>
                                                 <constraint firstItem="Lo3-nk-ZRq" firstAttribute="leading" secondItem="bZO-c5-xAp" secondAttribute="leading" constant="16" id="F5A-XS-ydD"/>
                                                 <constraint firstAttribute="bottom" secondItem="Cb8-oq-4S1" secondAttribute="bottom" id="KPh-17-fSH"/>
+                                                <constraint firstAttribute="trailing" secondItem="VDt-JW-ed1" secondAttribute="trailing" constant="12" id="RFC-zR-2wT"/>
                                                 <constraint firstItem="Cb8-oq-4S1" firstAttribute="leading" secondItem="bZO-c5-xAp" secondAttribute="leading" id="S1j-Kp-sZg"/>
                                                 <constraint firstAttribute="trailing" secondItem="vMc-zO-O53" secondAttribute="trailing" id="TMI-u4-unf"/>
                                                 <constraint firstAttribute="trailing" secondItem="1Ta-zy-E0h" secondAttribute="trailing" id="Thp-44-sHm"/>
                                                 <constraint firstItem="1Ta-zy-E0h" firstAttribute="leading" secondItem="bZO-c5-xAp" secondAttribute="leading" id="Wkb-Dp-yeu"/>
                                                 <constraint firstItem="vMc-zO-O53" firstAttribute="top" secondItem="bZO-c5-xAp" secondAttribute="top" id="Wwt-R5-bEu"/>
+                                                <constraint firstItem="VDt-JW-ed1" firstAttribute="top" secondItem="bZO-c5-xAp" secondAttribute="top" constant="6" id="cC6-r0-nNg"/>
                                                 <constraint firstItem="Cb8-oq-4S1" firstAttribute="top" secondItem="bZO-c5-xAp" secondAttribute="top" constant="16" id="m9s-FQ-7ls"/>
                                                 <constraint firstAttribute="trailing" secondItem="Cb8-oq-4S1" secondAttribute="trailing" id="mrr-2d-rZy"/>
                                                 <constraint firstAttribute="bottom" secondItem="1Ta-zy-E0h" secondAttribute="bottom" id="pGr-rR-0G3"/>
@@ -1771,6 +1780,7 @@
                                             <outlet property="cardImage" destination="vMc-zO-O53" id="eA2-wN-7AP"/>
                                             <outlet property="cardImageBackground" destination="Cb8-oq-4S1" id="INx-Ox-Qky"/>
                                             <outlet property="cardTitle" destination="Lo3-nk-ZRq" id="8VT-qf-tT5"/>
+                                            <outlet property="isNewlyIssuedImage" destination="VDt-JW-ed1" id="T7e-8G-339"/>
                                             <outlet property="textBackground" destination="1Ta-zy-E0h" id="v01-XM-Yp2"/>
                                         </connections>
                                     </collectionViewCell>
@@ -1924,6 +1934,7 @@
         <image name="icon-alert" width="24" height="24"/>
         <image name="icon-home" width="24" height="24"/>
         <image name="icon-mypage" width="24" height="24"/>
+        <image name="icon-new-full" width="50" height="27"/>
         <image name="icon-palate" width="24" height="24"/>
         <image name="icon-todo" width="24" height="24"/>
         <image name="photo.circle.fill" catalog="system" width="128" height="121"/>

@@ -19,6 +19,9 @@ class CardCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var cardDate: UILabel!
     @IBOutlet weak var textBackground: UIView!
     
+    
+    @IBOutlet weak var isNewlyIssuedImage: UIImageView!
+    
     // MARK: - Actions
     
     func configure(_ homecard: HomeCard){
@@ -27,6 +30,14 @@ class CardCollectionViewCell: UICollectionViewCell {
         cardTitle.text = homecard.title
         cardDescription.text = homecard.description
         cardDate.text = homecard.date
+        
+        if homecard.date.count > 12 {
+            // 나중에는 날짜 판별해서 넣기 
+            isNewlyIssuedImage.alpha = 1
+        } else {
+            isNewlyIssuedImage.alpha = 0
+        }
+        
         
         setAttribute()
     }

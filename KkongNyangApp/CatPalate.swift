@@ -22,8 +22,7 @@ struct CatPalate {
     var preferenceLevel: Float // 0.0 ~ 1.0 hate, don't like, average, like, like very much
     var memo: String
     var history: String
-    
-    
+
 }
 
 

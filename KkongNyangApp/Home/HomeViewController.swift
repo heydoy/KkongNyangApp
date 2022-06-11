@@ -13,6 +13,8 @@ class HomeViewController: UIViewController {
     let homecardlist: [HomeCard] = HomeCard.list
     let finishedlist: [FinishedTodo] = FinishedTodo.list
     
+    @IBOutlet weak var newImage: UIImageView!
+    
     
     @IBOutlet weak var goToEventHistoryButton: UIButton!
     
@@ -33,6 +35,9 @@ class HomeViewController: UIViewController {
         collectionViewB.dataSource = self
         collectionViewB.delegate = self
     }
+    
+    // MARK: - Actions
+    
     
     // MARK: - Helpers
     func setAttribute(){

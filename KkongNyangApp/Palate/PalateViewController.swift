@@ -43,6 +43,8 @@ class PalateViewController: UIViewController {
         }
     }
 
+    
+    
     @IBAction func switchViews(_ sender: UISegmentedControl) {
         if sender.selectedSegmentIndex == 0 {
 
