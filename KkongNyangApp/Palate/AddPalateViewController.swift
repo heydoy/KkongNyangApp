@@ -21,6 +21,8 @@ class AddPalateViewController: UIViewController {
     @IBOutlet weak var selectKindButton: PickerButton!
     let pickerValues: [String] = CatPalate.CatItemKind
     
+    @IBOutlet weak var addPalateButton: UIButton!
+    
     let imagePickerViewController = UIImagePickerController()
     
     @IBOutlet weak var productImage: UIImageView!
@@ -40,7 +42,6 @@ class AddPalateViewController: UIViewController {
         selectKindButton.delegate = self
         
         imagePickerViewController.delegate = self
-
     }
     
     override func viewWillDisappear(_ animated: Bool) {
@@ -120,7 +121,6 @@ class AddPalateViewController: UIViewController {
         
         DispatchQueue.main.async {
                self.preferenceLevelText.text = "\(text)"
-               print("Slider value = \(value)")
            }
         preferenceLevel = value
 
@@ -163,7 +163,12 @@ class AddPalateViewController: UIViewController {
     }
     
     func setAttribute() {
+        // 이미지뷰
         productImage.layer.cornerRadius = 20
+        // 버튼
+        selectKindButton.setTitle(":: 기호종류 선택 ::", for: .normal)
+        selectKindButton.layer.cornerRadius = 10
+        addPalateButton.layer.cornerRadius = 10
     }
     
     func setHistory() -> String {

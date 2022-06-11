@@ -864,12 +864,14 @@
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KKT-n2-387" customClass="PickerButton" customModule="PickerButton">
                                 <rect key="frame" x="20" y="244.66666666666663" width="335" height="40"/>
+                                <color key="backgroundColor" name="todoDefault"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="fzc-BC-PKC"/>
                                 </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <color key="tintColor" name="black"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="gray" title=":: 기호 종류 선택 ::"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title=":: 기호 종류 선택 ::"/>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="제품" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NFU-lT-swm">
                                 <rect key="frame" x="20" y="308.66666666666669" width="28" height="19.333333333333314"/>
@@ -920,9 +922,9 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="보통이에요" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vn0-X7-8d2">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="right" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="보통이에요" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vn0-X7-8d2">
                                 <rect key="frame" x="270" y="584" width="85" height="20"/>
-                                <fontDescription key="fontDescription" name="AppleSDGothicNeo-Medium" family="Apple SD Gothic Neo" pointSize="16"/>
+                                <fontDescription key="fontDescription" name="AppleSDGothicNeo-Medium" family="Apple SD Gothic Neo" pointSize="15"/>
                                 <color key="textColor" name="gray-300"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -994,6 +996,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="addPalateButton" destination="hHi-CX-bAn" id="mRJ-5D-juT"/>
                         <outlet property="preferenceLevelText" destination="Vn0-X7-8d2" id="ojP-7h-PfT"/>
                         <outlet property="productImage" destination="KTD-e0-2mk" id="khs-l0-jdT"/>
                         <outlet property="selectKindButton" destination="KKT-n2-387" id="h5r-8f-oGW"/>
