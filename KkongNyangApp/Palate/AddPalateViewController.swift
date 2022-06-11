@@ -43,7 +43,12 @@ class AddPalateViewController: UIViewController {
 
     }
     
-  
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        // 알림제어 (이걸 통해서 돌아가는 화면을 새로고침할 것)
+        NotificationCenter.default.post(name: NSNotification.Name("DismissAddPalateView"), object: nil, userInfo: nil)
+        
+    }
     
     // MARK: - Actions
     @IBAction func didDismissButtonTapped(_ sender: UIButton) {

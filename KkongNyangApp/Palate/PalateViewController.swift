@@ -25,9 +25,24 @@ class PalateViewController: UIViewController {
         collectionView.dataSource = self
         collectionView.delegate = self
         
+        // Notification Center
+        // 기호추가 화면이 사라질 때 콜렉션 뷰를 새로고침
+        // Notification Center
+        NotificationCenter.default.addObserver(
+            self,
+            selector: #selector(self.didDismissAddPalateNotification(_:)),
+            name: NSNotification.Name("DismissAddPalateView"),
+            object: nil)
+        
     }
     
     // MARK: - Actions
+    @objc func didDismissAddPalateNotification(_ notification: Notification) {
+            DispatchQueue.main.async {
+                self.collectionView.reloadData()
+        }
+    }
+
     @IBAction func switchViews(_ sender: UISegmentedControl) {
         if sender.selectedSegmentIndex == 0 {
 
