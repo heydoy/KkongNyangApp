@@ -29,6 +29,7 @@
 		A24BB1702855F3E10065BCBE /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = A24BB16F2855F3E10065BCBE /* FirebaseAuth */; };
 		A24BB1722855F3E10065BCBE /* FirebaseDatabase in Frameworks */ = {isa = PBXBuildFile; productRef = A24BB1712855F3E10065BCBE /* FirebaseDatabase */; };
 		A24BB1742855F3E10065BCBE /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = A24BB1732855F3E10065BCBE /* FirebaseFirestore */; };
+		A24BB17728560CB40065BCBE /* Notice.swift in Sources */ = {isa = PBXBuildFile; fileRef = A24BB17628560CB40065BCBE /* Notice.swift */; };
 		A2A409B6284C6AC900FD47EC /* AddTodoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2A409B5284C6AC900FD47EC /* AddTodoViewController.swift */; };
 		A2A409B9284C6AF400FD47EC /* AddPalateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2A409B8284C6AF400FD47EC /* AddPalateViewController.swift */; };
 		A2A409BC284C904700FD47EC /* PalateCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2A409BB284C904700FD47EC /* PalateCollectionViewCell.swift */; };
@@ -88,6 +89,7 @@
 		A2370C242840B8CE00D64871 /* UIDevice+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIDevice+Extension.swift"; sourceTree = "<group>"; };
 		A247D392280E721E00A3DF31 /* Onboarding.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Onboarding.storyboard; sourceTree = "<group>"; };
 		A24BB1672855DB8A0065BCBE /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		A24BB17628560CB40065BCBE /* Notice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Notice.swift; sourceTree = "<group>"; };
 		A2A409B5284C6AC900FD47EC /* AddTodoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTodoViewController.swift; sourceTree = "<group>"; };
 		A2A409B8284C6AF400FD47EC /* AddPalateViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPalateViewController.swift; sourceTree = "<group>"; };
 		A2A409BB284C904700FD47EC /* PalateCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PalateCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -202,12 +204,7 @@
 				A2DFA38F280E7D9500AFE1BF /* Helpers */,
 				A224D4BD280D1D730040E945 /* Info.plist */,
 				A24BB1672855DB8A0065BCBE /* GoogleService-Info.plist */,
-				A2B2BC072827560500659836 /* UserInfo.swift */,
-				A2B2BC092827568D00659836 /* CatInfo.swift */,
-				A2FDE17228433384002163BB /* CatPalate.swift */,
-				A22448CA28490E35008C9E72 /* CatTodo.swift */,
-				A2A409C1284CB7DA00FD47EC /* HomeCard.swift */,
-				A2A409C5284CCAC600FD47EC /* FinishedTodo.swift */,
+				A24BB17528560C800065BCBE /* Data */,
 			);
 			path = KkongNyangApp;
 			sourceTree = "<group>";
@@ -220,6 +217,20 @@
 				A2320429283A662200706DB4 /* AlertSettingViewController.swift */,
 			);
 			path = MyPage;
+			sourceTree = "<group>";
+		};
+		A24BB17528560C800065BCBE /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				A2B2BC072827560500659836 /* UserInfo.swift */,
+				A2B2BC092827568D00659836 /* CatInfo.swift */,
+				A2FDE17228433384002163BB /* CatPalate.swift */,
+				A22448CA28490E35008C9E72 /* CatTodo.swift */,
+				A2A409C1284CB7DA00FD47EC /* HomeCard.swift */,
+				A2A409C5284CCAC600FD47EC /* FinishedTodo.swift */,
+				A24BB17628560CB40065BCBE /* Notice.swift */,
+			);
+			path = Data;
 			sourceTree = "<group>";
 		};
 		A25C338028307C65006DF34C /* Authentication */ = {
@@ -513,6 +524,7 @@
 				A2DFA396280E8E6000AFE1BF /* UIStoryboard+Extension.swift in Sources */,
 				A2A409C6284CCAC600FD47EC /* FinishedTodo.swift in Sources */,
 				A2DFA387280E779800AFE1BF /* OnboardingPageViewController.swift in Sources */,
+				A24BB17728560CB40065BCBE /* Notice.swift in Sources */,
 				A2370C252840B8CE00D64871 /* UIDevice+Extension.swift in Sources */,
 				A2BE71C0281B79AC00FB8548 /* TodoViewController.swift in Sources */,
 				A2B2BC102827AADE00659836 /* EmailLoginViewController.swift in Sources */,

@@ -9,8 +9,7 @@ import UIKit
 import FirebaseDatabase
 
 class HomeViewController: UIViewController {
-    // Firebase DB 가져오기
-    let db: DatabaseReference! = Database.database(url: "https://kkongnyangapp-default-rtdb.asia-southeast1.firebasedatabase.app/").reference()
+
     
 
     // MARK: - Properties
@@ -29,13 +28,7 @@ class HomeViewController: UIViewController {
     // MARK: - Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
-        // 파이어베이스
-        db.child("firstData").observeSingleEvent(of: .value) { snapshot in
-            print("-->\(snapshot)")
-            let value = snapshot.value as? String ?? ""
-            print(value)
-        }
-        
+
         // 메서드 실행
         setAttribute()
         
