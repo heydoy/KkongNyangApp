@@ -24,18 +24,30 @@ class CardCollectionViewCell: UICollectionViewCell {
     
     // MARK: - Actions
     
-    func configure(_ homecard: HomeCard){
-        cardImage.image = UIImage(named: homecard.image)
-        cardImageBackground.backgroundColor = UIColor(named: homecard.imageBackground)
-        cardTitle.text = homecard.title
-        cardDescription.text = homecard.description
-        cardDate.text = homecard.date
+    func configure(_ notice: Notice){
         
-        if homecard.date.count > 12 {
+        //cardImage.image = image
+        print(notice.bgcolor)
+        cardImageBackground.backgroundColor = UIColor(hexString: notice.bgcolor)
+        cardTitle.text = notice.title
+        cardDescription.text = notice.description
+        cardDate.text = notice.date
+        
+        // 날짜 기준으로 판단하여 뉴 뱃지 보여주기
+        if dateCompare(notice.startDate, compare: "2022.08.01") > 0 {
             // 나중에는 날짜 판별해서 넣기
             isNewlyIssuedImage.alpha = 1
         } else {
             isNewlyIssuedImage.alpha = 0
+        }
+        
+        // 이미지 가져오기
+        let url = URL(string: notice.image)
+        DispatchQueue.global().async {
+            let data = try? Data(contentsOf: url!)
+            DispatchQueue.main.async {
+                self.cardImage.image = UIImage(data: data!)
+            }
         }
         
         setAttribute()
@@ -50,5 +62,19 @@ class CardCollectionViewCell: UICollectionViewCell {
         
         // 텍스트는 아래만 라운드를 줄 것
         textBackground.roundCorners(cornerRadius: 16, maskedCorners: [.layerMinXMaxYCorner, .layerMaxXMaxYCorner])
+    }
+    
+    // 날짜 비교
+    func dateCompare(_ string: String, compare: String) -> Int {
+        let format = DateFormatter()
+        format.dateFormat = "yyyy.MM.dd"
+        
+        guard let date = format.date(from: string) else { return -1 }
+        guard let standard = format.date(from: compare) else { return -1 }
+        
+        let interval = Int(date.timeIntervalSince(standard))
+        
+        return interval
+
     }
 }

@@ -1696,7 +1696,7 @@
                                     <size key="itemSize" width="200" height="292"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
-                                    <inset key="sectionInset" minX="20" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                    <inset key="sectionInset" minX="20" minY="0.0" maxX="20" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="CardCollectionViewCell" id="CSs-SH-04G" customClass="CardCollectionViewCell" customModule="KkongNyangApp" customModuleProvider="target">
@@ -1726,8 +1726,8 @@
                                                     <color key="textColor" name="greengray-900"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5Dr-PE-3P6">
-                                                    <rect key="frame" x="16" y="220" width="132.33333333333334" height="36"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5Dr-PE-3P6">
+                                                    <rect key="frame" x="16" y="220" width="168" height="36"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="36" id="tVi-2Q-Pxu"/>
                                                     </constraints>
@@ -1752,6 +1752,7 @@
                                                 </imageView>
                                             </subviews>
                                             <constraints>
+                                                <constraint firstAttribute="trailing" secondItem="5Dr-PE-3P6" secondAttribute="trailing" constant="16" id="1xU-TH-DJA"/>
                                                 <constraint firstItem="5Dr-PE-3P6" firstAttribute="top" secondItem="Lo3-nk-ZRq" secondAttribute="bottom" constant="10" id="2Y1-Bx-B4P"/>
                                                 <constraint firstAttribute="bottom" secondItem="Bde-gU-let" secondAttribute="bottom" constant="14" id="745-Ct-Mum"/>
                                                 <constraint firstItem="5Dr-PE-3P6" firstAttribute="leading" secondItem="Lo3-nk-ZRq" secondAttribute="leading" id="Amc-K3-U0A"/>

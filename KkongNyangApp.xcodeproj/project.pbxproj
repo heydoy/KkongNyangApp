@@ -34,7 +34,6 @@
 		A2A409B9284C6AF400FD47EC /* AddPalateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2A409B8284C6AF400FD47EC /* AddPalateViewController.swift */; };
 		A2A409BC284C904700FD47EC /* PalateCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2A409BB284C904700FD47EC /* PalateCollectionViewCell.swift */; };
 		A2A409C0284CA6CA00FD47EC /* CardCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2A409BF284CA6CA00FD47EC /* CardCollectionViewCell.swift */; };
-		A2A409C2284CB7DA00FD47EC /* HomeCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2A409C1284CB7DA00FD47EC /* HomeCard.swift */; };
 		A2A409C4284CC17D00FD47EC /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2A409C3284CC17D00FD47EC /* UIView+Extension.swift */; };
 		A2A409C6284CCAC600FD47EC /* FinishedTodo.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2A409C5284CCAC600FD47EC /* FinishedTodo.swift */; };
 		A2A409C8284CCE3800FD47EC /* FinishedTodoCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2A409C7284CCE3800FD47EC /* FinishedTodoCollectionViewCell.swift */; };
@@ -94,7 +93,6 @@
 		A2A409B8284C6AF400FD47EC /* AddPalateViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPalateViewController.swift; sourceTree = "<group>"; };
 		A2A409BB284C904700FD47EC /* PalateCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PalateCollectionViewCell.swift; sourceTree = "<group>"; };
 		A2A409BF284CA6CA00FD47EC /* CardCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardCollectionViewCell.swift; sourceTree = "<group>"; };
-		A2A409C1284CB7DA00FD47EC /* HomeCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCard.swift; sourceTree = "<group>"; };
 		A2A409C3284CC17D00FD47EC /* UIView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
 		A2A409C5284CCAC600FD47EC /* FinishedTodo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinishedTodo.swift; sourceTree = "<group>"; };
 		A2A409C7284CCE3800FD47EC /* FinishedTodoCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinishedTodoCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -226,7 +224,6 @@
 				A2B2BC092827568D00659836 /* CatInfo.swift */,
 				A2FDE17228433384002163BB /* CatPalate.swift */,
 				A22448CA28490E35008C9E72 /* CatTodo.swift */,
-				A2A409C1284CB7DA00FD47EC /* HomeCard.swift */,
 				A2A409C5284CCAC600FD47EC /* FinishedTodo.swift */,
 				A24BB17628560CB40065BCBE /* Notice.swift */,
 			);
@@ -510,7 +507,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				A2A409C8284CCE3800FD47EC /* FinishedTodoCollectionViewCell.swift in Sources */,
-				A2A409C2284CB7DA00FD47EC /* HomeCard.swift in Sources */,
 				A2DFA38A280E795100AFE1BF /* OnboardingFirstPageViewController.swift in Sources */,
 				A2FDE17328433384002163BB /* CatPalate.swift in Sources */,
 				A22448CB28490E35008C9E72 /* CatTodo.swift in Sources */,

@@ -9,11 +9,12 @@ import UIKit
 import FirebaseDatabase
 
 class HomeViewController: UIViewController {
-
-    
+    // Firebase DB 주소
+    let db: DatabaseReference! = Database.database(url: "https://kkongnyangapp-default-rtdb.asia-southeast1.firebasedatabase.app/").reference()
 
     // MARK: - Properties
-    let homecardlist: [HomeCard] = HomeCard.list
+    //let homecardlist: [HomeCard] = HomeCard.list
+    var noticeArrayDataSource = [Notice]()
     let finishedlist: [FinishedTodo] = FinishedTodo.list
     
     @IBOutlet weak var newImage: UIImageView!
@@ -38,6 +39,10 @@ class HomeViewController: UIViewController {
         
         collectionViewB.dataSource = self
         collectionViewB.delegate = self
+        
+        // 데이터 가져오기
+        fetchNotices()
+
     }
     
     // MARK: - Actions
@@ -46,6 +51,19 @@ class HomeViewController: UIViewController {
     // MARK: - Helpers
     func setAttribute(){
         goToEventHistoryButton.layer.cornerRadius = 8
+    }
+    
+    // MARK: - Database fetch
+    func fetchNotices() {
+        let noticesDB = self.db.child("notices")
+        noticesDB.observeSingleEvent(of: .value) { snapshot in
+            let allNotices = snapshot.children.allObjects as! [DataSnapshot]
+            for noticeSnap in allNotices {
+                let aNotice = Notice(withSnapshot: noticeSnap)
+                self.noticeArrayDataSource.append(aNotice)
+            }
+            self.collectionView.reloadData()
+        }
     }
     
 }
@@ -58,7 +76,7 @@ extension HomeViewController: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         if collectionView == self.collectionView {
             // 첫번째일경우
-            return homecardlist.count
+            return noticeArrayDataSource.count
         } else {
             // 두번째일경우
             return finishedlist.count
@@ -72,8 +90,8 @@ extension HomeViewController: UICollectionViewDataSource {
                 return UICollectionViewCell()
             }
             // 셀에 데이터
-            let homecard = homecardlist[indexPath.item]
-            cell.configure(homecard)
+            let notice = noticeArrayDataSource[indexPath.item]
+            cell.configure(notice)
             
             // 셀 꾸미기
             cell.layer.cornerRadius = 16
@@ -105,6 +123,7 @@ extension HomeViewController: UICollectionViewDataSource {
     }
     
 }
+
 
 extension HomeViewController: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
