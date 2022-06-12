@@ -9,7 +9,7 @@ import UIKit
 
 class TodoViewController: UIViewController {
 
-    
+  
     // MARK: - Properties
     let catTodoList: [CatTodo] = CatTodo.list
     
@@ -20,6 +20,9 @@ class TodoViewController: UIViewController {
     // MARK: - Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
+        // Firebase
+        
+        
         // Data, Presentation, Layout (뷰컨트롤러가 위임함)
         collectionView.dataSource = self
         collectionView.delegate = self
