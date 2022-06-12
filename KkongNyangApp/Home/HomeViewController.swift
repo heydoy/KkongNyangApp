@@ -70,6 +70,7 @@ extension HomeViewController: UICollectionViewDataSource {
             // 셀에 데이터
             let homecard = homecardlist[indexPath.item]
             cell.configure(homecard)
+            
             // 셀 꾸미기
             cell.layer.cornerRadius = 16
             cell.layer.borderWidth = 0.0
@@ -78,7 +79,9 @@ extension HomeViewController: UICollectionViewDataSource {
             cell.layer.shadowRadius = 5.0
             cell.layer.shadowOpacity = 0.1
             cell.layer.masksToBounds = false
+            
             return cell
+            
         } else {
             // 두번째일 경우
             guard let cell = collectionViewB.dequeueReusableCell(withReuseIdentifier: "FinishedTodoCollectionViewCell", for: indexPath) as? FinishedTodoCollectionViewCell else {

@@ -32,12 +32,11 @@ class CardCollectionViewCell: UICollectionViewCell {
         cardDate.text = homecard.date
         
         if homecard.date.count > 12 {
-            // 나중에는 날짜 판별해서 넣기 
+            // 나중에는 날짜 판별해서 넣기
             isNewlyIssuedImage.alpha = 1
         } else {
             isNewlyIssuedImage.alpha = 0
         }
-        
         
         setAttribute()
     }
