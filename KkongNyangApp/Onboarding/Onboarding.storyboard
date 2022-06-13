@@ -35,12 +35,13 @@
                                 </constraints>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cIE-2U-YfH">
-                                <rect key="frame" x="20" y="704" width="335" height="50"/>
+                                <rect key="frame" x="235" y="704" width="120" height="50"/>
                                 <color key="backgroundColor" name="yellow-500"/>
                                 <constraints>
+                                    <constraint firstAttribute="width" constant="120" id="8tG-ET-JNf"/>
                                     <constraint firstAttribute="height" constant="50" id="ZBc-f0-DBm"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="14"/>
+                                <fontDescription key="fontDescription" name="GmarketSansMedium" family="Gmarket Sans" pointSize="14"/>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                 <state key="normal" title="다음으로 &gt;">
                                     <color key="titleColor" name="greengray-900"/>
@@ -60,22 +61,34 @@
                                 <color key="textColor" name="gray-700"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lLR-dd-bL0">
+                                <rect key="frame" x="40" y="715.66666666666663" width="54" height="27"/>
+                                <fontDescription key="fontDescription" name="GmarketSansMedium" family="Gmarket Sans" pointSize="14"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="건너뛰기">
+                                    <color key="titleColor" name="gray-200"/>
+                                </state>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" name="white"/>
                         <constraints>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="cIE-2U-YfH" secondAttribute="trailing" constant="20" id="7kc-nR-4WZ"/>
-                            <constraint firstItem="cIE-2U-YfH" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="20" id="M1w-8K-tAe"/>
                             <constraint firstItem="DGs-Qz-UlN" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="40" id="N8j-TY-0Ti"/>
                             <constraint firstItem="h9t-Rk-EdC" firstAttribute="centerX" secondItem="vDu-zF-Fre" secondAttribute="centerX" id="NQq-tc-guX"/>
                             <constraint firstItem="hcQ-91-NlV" firstAttribute="top" secondItem="h9t-Rk-EdC" secondAttribute="bottom" constant="20" id="QcI-Cx-YaC"/>
                             <constraint firstItem="cIE-2U-YfH" firstAttribute="top" secondItem="hcQ-91-NlV" secondAttribute="bottom" constant="60" id="W4a-qK-fhF"/>
                             <constraint firstItem="hcQ-91-NlV" firstAttribute="centerX" secondItem="vDu-zF-Fre" secondAttribute="centerX" id="XdH-KE-NkD"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="DGs-Qz-UlN" secondAttribute="trailing" constant="40" id="Xrm-bV-9e1"/>
+                            <constraint firstItem="lLR-dd-bL0" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="40" id="YFQ-km-Dn3"/>
+                            <constraint firstItem="lLR-dd-bL0" firstAttribute="centerY" secondItem="cIE-2U-YfH" secondAttribute="centerY" id="dIk-fL-tIO"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="cIE-2U-YfH" secondAttribute="bottom" constant="24" id="oNm-rd-kEM"/>
                             <constraint firstItem="h9t-Rk-EdC" firstAttribute="top" secondItem="DGs-Qz-UlN" secondAttribute="bottom" constant="60" id="szw-Ne-hYI"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="actionButton" destination="cIE-2U-YfH" id="uvY-Gr-KXB"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -90,12 +103,13 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9F8-6p-6fZ">
-                                <rect key="frame" x="20" y="704" width="335" height="50"/>
+                                <rect key="frame" x="235" y="704" width="120" height="50"/>
                                 <color key="backgroundColor" name="yellow-500"/>
                                 <constraints>
+                                    <constraint firstAttribute="width" constant="120" id="YIg-rL-pV1"/>
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="50" id="taS-MO-pLH"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="14"/>
+                                <fontDescription key="fontDescription" name="GmarketSansMedium" family="Gmarket Sans" pointSize="14"/>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                 <state key="normal" title="다음으로 &gt;">
                                     <color key="titleColor" name="greengray-900"/>
@@ -128,6 +142,14 @@
                                     <constraint firstAttribute="width" secondItem="rNI-wj-6ir" secondAttribute="height" multiplier="4:5" constant="1" id="OuF-ve-Y9f"/>
                                 </constraints>
                             </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="flR-NT-jJ5">
+                                <rect key="frame" x="40" y="715.66666666666663" width="54" height="27"/>
+                                <fontDescription key="fontDescription" name="GmarketSansMedium" family="Gmarket Sans" pointSize="14"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="건너뛰기">
+                                    <color key="titleColor" name="gray-200"/>
+                                </state>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="cwl-Pj-ZxO"/>
                         <color key="backgroundColor" name="white"/>
@@ -137,13 +159,17 @@
                             <constraint firstItem="cwl-Pj-ZxO" firstAttribute="trailing" secondItem="9F8-6p-6fZ" secondAttribute="trailing" constant="20" id="CPU-om-2Pb"/>
                             <constraint firstItem="Pah-hZ-BTg" firstAttribute="top" secondItem="rNI-wj-6ir" secondAttribute="bottom" constant="60" id="CdX-Xs-59d"/>
                             <constraint firstItem="cwl-Pj-ZxO" firstAttribute="trailing" secondItem="rNI-wj-6ir" secondAttribute="trailing" constant="40" id="CxJ-1G-2LK"/>
+                            <constraint firstItem="flR-NT-jJ5" firstAttribute="leading" secondItem="cwl-Pj-ZxO" secondAttribute="leading" constant="40" id="DmW-08-eru"/>
                             <constraint firstItem="llA-qr-3FM" firstAttribute="top" secondItem="Pah-hZ-BTg" secondAttribute="bottom" constant="20" id="FKH-EP-niy"/>
                             <constraint firstItem="rNI-wj-6ir" firstAttribute="leading" secondItem="cwl-Pj-ZxO" secondAttribute="leading" constant="40" id="FQ2-Gd-jpH"/>
-                            <constraint firstItem="9F8-6p-6fZ" firstAttribute="leading" secondItem="cwl-Pj-ZxO" secondAttribute="leading" constant="20" id="Rha-oW-cuK"/>
                             <constraint firstItem="llA-qr-3FM" firstAttribute="centerX" secondItem="cwl-Pj-ZxO" secondAttribute="centerX" id="Zzm-jV-1hh"/>
+                            <constraint firstItem="flR-NT-jJ5" firstAttribute="centerY" secondItem="9F8-6p-6fZ" secondAttribute="centerY" id="sqV-0K-xYg"/>
                             <constraint firstItem="cwl-Pj-ZxO" firstAttribute="bottom" secondItem="9F8-6p-6fZ" secondAttribute="bottom" constant="24" id="vxF-ZX-b0U"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="actionButton" destination="9F8-6p-6fZ" id="XZ5-5E-ohn"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CM4-qb-W22" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -166,9 +192,9 @@
                                 <constraints>
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="50" id="GHJ-dt-Hht"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="14"/>
+                                <fontDescription key="fontDescription" name="GmarketSansMedium" family="Gmarket Sans" pointSize="14"/>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                <state key="normal" title="시작하기">
+                                <state key="normal" title="꽁냥 시작하기">
                                     <color key="titleColor" name="white"/>
                                 </state>
                                 <connections>
@@ -209,6 +235,9 @@
                             <constraint firstItem="EFD-uZ-rnD" firstAttribute="centerX" secondItem="n6Z-08-Vgy" secondAttribute="centerX" id="whq-z7-v0i"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="startButton" destination="1ja-XZ-1eo" id="UWf-Lf-ONe"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="a0v-4Q-AyT" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -235,6 +264,9 @@
         <image name="onboarding-1" width="335" height="406"/>
         <image name="onboarding-2" width="335" height="406"/>
         <image name="onboarding-3" width="335" height="406"/>
+        <namedColor name="gray-200">
+            <color red="0.52549019607843139" green="0.52549019607843139" blue="0.52549019607843139" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
         <namedColor name="gray-700">
             <color red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>

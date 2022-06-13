@@ -8,11 +8,19 @@
 import UIKit
 
 class OnboardingThirdPageViewController: UIViewController {
-
+    // MARK: - Properties
+    
+    @IBOutlet weak var startButton: UIButton!
+    
+    // MARK: - Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        setAttribute()
     }
     // 메인으로 연결할 것이므로 버튼에 액션을 달지 않음
-
+    
+    // MARK: - Helpers
+    func setAttribute() {
+        startButton.layer.cornerRadius = 20
+    }
 }
