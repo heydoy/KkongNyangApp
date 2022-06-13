@@ -140,6 +140,12 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="g4F-Fm-i23"/>
+                    <connections>
+                        <outlet property="appleSignupButton" destination="Lbq-ho-pUq" id="ewY-h1-26m"/>
+                        <outlet property="emailSignupButton" destination="kgD-60-awL" id="tej-7T-Wrs"/>
+                        <outlet property="kakaoSignupButton" destination="e6N-bd-f9l" id="9tE-Sa-VFB"/>
+                        <outlet property="naverSignupButton" destination="g6J-Rf-aRs" id="6cO-pg-Xrb"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="03J-pS-scg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

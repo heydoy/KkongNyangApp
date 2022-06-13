@@ -13,10 +13,17 @@ class LoginViewController: UIViewController {
     // MARK: - Properties
     var userInfo: UserInfo?
     
+    @IBOutlet weak var emailSignupButton: UIButton!
+    @IBOutlet weak var appleSignupButton: UIButton!
+    @IBOutlet weak var kakaoSignupButton: UIButton!
+    @IBOutlet weak var naverSignupButton: UIButton!
+    
+    
     // MARK: - LifeCycle
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        setAttribute()
     }
     
     // MARK: - Actions
@@ -41,6 +48,16 @@ class LoginViewController: UIViewController {
         self.navigationController?.pushViewController(emailLoginViewController, animated: true)
     }
     
+    // MARK: - Helper
+    func setAttribute() {
+        let buttonArray: [UIButton] = [
+            emailSignupButton, appleSignupButton,
+            kakaoSignupButton, naverSignupButton
+        ]
+        buttonArray.forEach {
+            $0.layer.cornerRadius = 12
+        }
+    }
     
 
 }
