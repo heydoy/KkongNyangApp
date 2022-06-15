@@ -13,6 +13,7 @@ class OnboardingSecondPageViewController: UIViewController {
     
     @IBOutlet weak var actionButton: UIButton!
     
+    
     // MARK: - Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,6 +27,8 @@ class OnboardingSecondPageViewController: UIViewController {
             pageController.pushNext()
         }
     }
+
+    
     
     // MARK: - Helpers
     func setAttribute() {

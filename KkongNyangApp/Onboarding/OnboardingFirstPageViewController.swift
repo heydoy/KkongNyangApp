@@ -28,6 +28,10 @@ class OnboardingFirstPageViewController: UIViewController {
         }
     }
     
+
+    
+    
+    
     // MARK: - Helpers
     func setAttribute() {
         actionButton.layer.cornerRadius = 20

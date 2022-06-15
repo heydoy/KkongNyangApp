@@ -18,22 +18,33 @@ class OnboardingPageViewController: UIPageViewController {
         
         return [firstVC, secondVC, thirdVC]
     }
+
     
     // MARK: - Properties
     private var currentIndex = 0
     
-    // MARK: - Life Cycle
+    
+    
+    // MARK: - Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
         
         self.setViewControllers([viewControllerList[0]], direction: .forward, animated: false, completion: nil)
     }
     
-    // MARK: - Functions
+    // MARK: - Actions
     func pushNext() {
         if currentIndex + 1 < viewControllerList.count {
             self.setViewControllers([self.viewControllerList[self.currentIndex + 1]], direction: .forward, animated: true, completion: nil)
             currentIndex += 1
         }
+    }
+    
+    func skipOnboarding() {
+        let storyboard = UIStoryboard.signupandlogin
+        
+        let signupViewController = storyboard.instantiateViewController(withIdentifier: "SignupFirstPageVC") as! LoginViewController
+        
+        self.navigationController?.pushViewController(signupViewController, animated: true)
     }
 }

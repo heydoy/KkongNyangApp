@@ -68,6 +68,9 @@
                                 <state key="normal" title="건너뛰기">
                                     <color key="titleColor" name="gray-200"/>
                                 </state>
+                                <connections>
+                                    <segue destination="gea-s2-tzn" kind="presentation" modalPresentationStyle="fullScreen" modalTransitionStyle="crossDissolve" id="05D-hb-Ano"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
@@ -149,6 +152,9 @@
                                 <state key="normal" title="건너뛰기">
                                     <color key="titleColor" name="gray-200"/>
                                 </state>
+                                <connections>
+                                    <segue destination="gea-s2-tzn" kind="presentation" modalPresentationStyle="fullScreen" modalTransitionStyle="crossDissolve" id="Zf7-G6-teS"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="cwl-Pj-ZxO"/>
@@ -249,7 +255,7 @@
                 <viewControllerPlaceholder storyboardName="SignupAndLogin" referencedIdentifier="SignupNavigationVC" id="gea-s2-tzn" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4Li-Ra-MFc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2146" y="78"/>
+            <point key="canvasLocation" x="1368" y="-659"/>
         </scene>
         <!--Onboarding Page View Controller-->
         <scene sceneID="bGQ-h8-8Qr">
@@ -260,6 +266,9 @@
             <point key="canvasLocation" x="-858" y="78"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="05D-hb-Ano"/>
+    </inferredMetricsTieBreakers>
     <resources>
         <image name="onboarding-1" width="335" height="406"/>
         <image name="onboarding-2" width="335" height="406"/>
