@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import FirebaseAuth
 
 class RegisterViewController: UIViewController {
 
@@ -118,16 +119,23 @@ class RegisterViewController: UIViewController {
 //
         // 로그인화면으로 되돌아가기
         self.navigationController?.popViewController(animated: true)
-        // 사용자 정보
         
-        let userInfo = UserInfo(
-            name: self.name,
-            email: self.email,
-            password: self.password,
-            catFamilyCode: self.catFamilyCode
-        )
-        
-        self.userInfo?(userInfo)
+        // 파이어베이스 로그인
+        Auth.auth().createUser(withEmail: email, password: password) { authResult, error in
+          // ...
+            print("에러 --> \(error.debugDescription)")
+            print("authResult --> \(authResult?.debugDescription ?? "")")
+        }
+//        // 사용자 정보
+//
+//        let userInfo = UserInfo(
+//            name: self.name,
+//            email: self.email,
+//            password: self.password,
+//            catFamilyCode: self.catFamilyCode
+//        )
+//
+//        self.userInfo?(userInfo)
     }
     
     // MARK: - Helpers
