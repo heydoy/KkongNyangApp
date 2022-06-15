@@ -18,6 +18,8 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var kakaoSignupButton: UIButton!
     @IBOutlet weak var naverSignupButton: UIButton!
     
+    @IBOutlet weak var loginButton: UIButton!
+    
     
     // MARK: - LifeCycle
     override func viewDidLoad() {
@@ -50,6 +52,7 @@ class LoginViewController: UIViewController {
     
     // MARK: - Helper
     func setAttribute() {
+        // 가입하기 버튼
         let buttonArray: [UIButton] = [
             emailSignupButton, appleSignupButton,
             kakaoSignupButton, naverSignupButton
@@ -57,6 +60,26 @@ class LoginViewController: UIViewController {
         buttonArray.forEach {
             $0.layer.cornerRadius = 12
         }
+        
+        // 로그인 버튼
+        
+        let text1 = "계정이 있으시다면"
+        let text2 = "로그인"
+        
+        let font1 = UIFont.systemFont(ofSize: 13)
+        let font2 = UIFont.boldSystemFont(ofSize: 13)
+        
+        let color1 = UIColor.gray300!
+        let color2 = UIColor.gray700!
+        
+        
+        let attributes = generateButtonAttribute(
+            self.loginButton,
+            texts: text1, text2,
+            fonts: font1, font2,
+            colors: color1, color2
+        )
+        self.loginButton.setAttributedTitle(attributes, for: .normal)
     }
     
 

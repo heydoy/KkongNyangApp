@@ -144,6 +144,7 @@
                         <outlet property="appleSignupButton" destination="Lbq-ho-pUq" id="ewY-h1-26m"/>
                         <outlet property="emailSignupButton" destination="kgD-60-awL" id="tej-7T-Wrs"/>
                         <outlet property="kakaoSignupButton" destination="e6N-bd-f9l" id="9tE-Sa-VFB"/>
+                        <outlet property="loginButton" destination="E9b-ez-gBt" id="ZwJ-xm-YfR"/>
                         <outlet property="naverSignupButton" destination="g6J-Rf-aRs" id="6cO-pg-Xrb"/>
                     </connections>
                 </viewController>

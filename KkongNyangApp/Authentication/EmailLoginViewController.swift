@@ -21,7 +21,8 @@ class EmailLoginViewController: UIViewController {
     // MARK: - Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
-        //setupAttribute()
+        
+        setAttribute()
       
     }
     
@@ -103,11 +104,13 @@ class EmailLoginViewController: UIViewController {
         // 1. 스토리보드 생성
         let storyboard = UIStoryboard(name: "SignupAndLogin", bundle: nil)
         // 2. 뷰컨트롤러를 생성
-        let registerViewController = storyboard.instantiateViewController(withIdentifier: "RegisterVC") as! RegisterViewController
+        let signupViewController = storyboard.instantiateViewController(withIdentifier: "SignupFirstPageVC") as! LoginViewController
         // 3. 화면전환 메소드를 이용해서 화면을 전환
 //        self.present(registerViewController, animated: true, completion: nil)
-        self.navigationController?.pushViewController(registerViewController, animated: true)
+        self.navigationController?.pushViewController(signupViewController, animated: true)
         
+        /*
+        // new - SNS 로그인으로 연결 
         // 회원가입 화면에서 정보를 전달받을 것
         // 클로저를 사용할  때는 참조에 대한 문제가 생길 수 있으므로 [weak self] 와 self? 옵셔널을 작성해준다.
         // ARC 개념에 대해 알아두면 도움이 될 것. SWIFT에서 처리하는 메모리 관리 방식 중 한가지
@@ -115,12 +118,11 @@ class EmailLoginViewController: UIViewController {
         registerViewController.userInfo = { [weak self](userInfo) in
             //print(userInfo)
             self?.userInfo = userInfo
-        }
-    }
-    
+         */
+     }
     
     // MARK: - Helpers
-    func setupAttribute(){
+    func setAttribute() {
         // 가입하기 버튼 색상 변경
         
         let text1 = "계정이 없으신가요?"
@@ -139,6 +141,13 @@ class EmailLoginViewController: UIViewController {
             fonts: font1, font2,
             colors: color1, color2
         )
+        
         self.registerButton.setAttributedTitle(attributes, for: .normal)
+        
+        // 로그인 버튼
+        self.loginButton.layer.cornerRadius = 12
+
     }
+    
 }
+    
