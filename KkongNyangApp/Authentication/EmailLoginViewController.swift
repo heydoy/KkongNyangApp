@@ -55,30 +55,23 @@ class EmailLoginViewController: UIViewController {
     
     
     @IBAction func didLoginButtonTapped(_ sender: UIButton) {
-//        // 회원가입 정보를 전달받아서 그것과 Text Field 데이터가 일치하면 로그인이 되어야 한다.
-//        guard let userInfo = self.userInfo else {
-//            print("userInfo에 가입된 정보가 없습니다.")
-//            return
-//        }  // userInfo에 정보가 없으면 로그인버튼이 실행 안됨.
-//
-        // 아이디, 비밀번호 확인
-//        if userInfo.email == self.email
-//            && userInfo.password == self.password {
-            // print("다음화면으로 이동")
+
         Auth.auth().signIn(withEmail: email, password: password) { [weak self] authResult, error in
+            if let error = error {
+                let loginErrorAlert = UIAlertController(title: "로그인실패", message: "아이디 또는 패스워드가 일치하지 않습니다.", preferredStyle: .alert)
+                let cancleAction = UIAlertAction(title: "확인", style: .destructive, handler: nil)
+                loginErrorAlert.addAction(cancleAction)
+                self!.present(loginErrorAlert, animated: true, completion: nil)
+                
+                print("에러 --> \(error.localizedDescription)")
+                print("authResult --> \(authResult?.debugDescription ?? "")")
+                print("아이디 또는 패스워드가 일치하지 않습니다.")
+                return
+            }
           guard let strongSelf = self else {
-              let loginErrorAlert = UIAlertController(title: "로그인실패", message: "아이디 또는 패스워드가 일치하지 않습니다.", preferredStyle: .alert)
-              let cancleAction = UIAlertAction(title: "확인", style: .destructive, handler: nil)
-              loginErrorAlert.addAction(cancleAction)
-              self!.present(loginErrorAlert, animated: true, completion: nil)
-              
-              print("에러 --> \(error.debugDescription)")
-              print("authResult --> \(authResult?.debugDescription ?? "")")
-              print("아이디 또는 패스워드가 일치하지 않습니다.")
-              
               return }
           // ...
-            let storyboard = UIStoryboard(name: "Main", bundle: nil)
+            let storyboard = UIStoryboard.main
             let vc = storyboard.instantiateViewController(withIdentifier: "MainTabVC") as! UITabBarController
             
 
@@ -89,10 +82,7 @@ class EmailLoginViewController: UIViewController {
                 vc.modalPresentationStyle = .fullScreen
                 self?.present(vc, animated: true, completion: nil)
             }
-            
         }
-
-            
     }
     
     
