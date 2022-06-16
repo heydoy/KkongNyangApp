@@ -113,12 +113,22 @@ class RegisterViewController: UIViewController {
                 return
             } else {
             // 성공적으로 유저가 가입되었을 경우
+                // 유저 이름과 코드
                 let userData = [
                     "name" : self.name,
                     "catFamilyCode": self.catFamilyCode ]
                 as [String : Any]
 
-                self.db.child((authResult?.user.uid)!).updateChildValues(userData)
+                let users = self.db.child("users")
+                let userId = (authResult?.user.uid)!
+                users.child(userId).updateChildValues(userData)
+                
+                // 고양이 가족 데이터에 유저아이디 추가
+                let familyData = [
+                    "uid" : userId
+                ] as [String : String]
+                
+                self.db.child("catFamilies/\(self.catFamilyCode)/butler").updateChildValues(familyData)
                 
             // 로그인 상태로 변경
                 Auth.auth().signIn(withEmail: self.email, password: self.password) { [weak self] authResult, error in
