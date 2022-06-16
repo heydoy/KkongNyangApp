@@ -11,7 +11,7 @@
 		A206BB332812BABA00F2768A /* SignupAndLogin.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A206BB322812BABA00F2768A /* SignupAndLogin.storyboard */; };
 		A215F09528508EBD005D8648 /* UIViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A215F09428508EBD005D8648 /* UIViewController+Extension.swift */; };
 		A22448C928490395008C9E72 /* TodoListCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A22448C828490395008C9E72 /* TodoListCollectionViewCell.swift */; };
-		A22448CB28490E35008C9E72 /* CatTodo.swift in Sources */ = {isa = PBXBuildFile; fileRef = A22448CA28490E35008C9E72 /* CatTodo.swift */; };
+		A22448CB28490E35008C9E72 /* Todo.swift in Sources */ = {isa = PBXBuildFile; fileRef = A22448CA28490E35008C9E72 /* Todo.swift */; };
 		A224D4B0280D1D720040E945 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A224D4AF280D1D720040E945 /* AppDelegate.swift */; };
 		A224D4B2280D1D720040E945 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A224D4B1280D1D720040E945 /* SceneDelegate.swift */; };
 		A224D4B7280D1D720040E945 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A224D4B5280D1D720040E945 /* Main.storyboard */; };
@@ -75,7 +75,7 @@
 		A206BB322812BABA00F2768A /* SignupAndLogin.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SignupAndLogin.storyboard; sourceTree = "<group>"; };
 		A215F09428508EBD005D8648 /* UIViewController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extension.swift"; sourceTree = "<group>"; };
 		A22448C828490395008C9E72 /* TodoListCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoListCollectionViewCell.swift; sourceTree = "<group>"; };
-		A22448CA28490E35008C9E72 /* CatTodo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatTodo.swift; sourceTree = "<group>"; };
+		A22448CA28490E35008C9E72 /* Todo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Todo.swift; sourceTree = "<group>"; };
 		A224D4AC280D1D720040E945 /* KkongNyangApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KkongNyangApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A224D4AF280D1D720040E945 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A224D4B1280D1D720040E945 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -229,7 +229,7 @@
 				A2B2BC072827560500659836 /* Users.swift */,
 				A2B2BC092827568D00659836 /* CatFamilies.swift */,
 				A2FDE17228433384002163BB /* CatPalate.swift */,
-				A22448CA28490E35008C9E72 /* CatTodo.swift */,
+				A22448CA28490E35008C9E72 /* Todo.swift */,
 				A2A409C5284CCAC600FD47EC /* FinishedTodo.swift */,
 				A24BB17628560CB40065BCBE /* Notice.swift */,
 			);
@@ -518,7 +518,7 @@
 				A2A409C8284CCE3800FD47EC /* FinishedTodoCollectionViewCell.swift in Sources */,
 				A2DFA38A280E795100AFE1BF /* OnboardingFirstPageViewController.swift in Sources */,
 				A2FDE17328433384002163BB /* CatPalate.swift in Sources */,
-				A22448CB28490E35008C9E72 /* CatTodo.swift in Sources */,
+				A22448CB28490E35008C9E72 /* Todo.swift in Sources */,
 				A2A409B9284C6AF400FD47EC /* AddPalateViewController.swift in Sources */,
 				A2DFA38C280E7A2800AFE1BF /* OnboardingSecondPageViewController.swift in Sources */,
 				A224D4B0280D1D720040E945 /* AppDelegate.swift in Sources */,

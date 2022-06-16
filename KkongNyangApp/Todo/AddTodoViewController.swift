@@ -7,19 +7,25 @@
 
 import UIKit
 import PickerButton
+import FirebaseAuth
+import FirebaseDatabase
 
 class AddTodoViewController: UIViewController {
     // MARK: - Properties
-    var catID: Int = 0
+    // Firebase DB 주소
+    let db: DatabaseReference! = Database.database(url: "https://kkongnyangapp-default-rtdb.asia-southeast1.firebasedatabase.app/").reference()
+    
+    var catID: String = ""
     var todo: String = ""
-    var perDay: String = "오전 10시"
+    var perDay: String = ""
     var perHour: String = ""
     var perWeek: [String] = []
     var image: String = ""
     var memo : String = ""
     
+    var familyCode: String = ""
 
-    
+    // 아울렛 변수
     @IBOutlet weak var selectTodoButton: PickerButton!
     @IBOutlet weak var selectPerDayButton: PickerButton!
     @IBOutlet weak var selectPerHourButton: PickerButton!
@@ -35,7 +41,8 @@ class AddTodoViewController: UIViewController {
     
  
     
-    let pickerValues: [String] = CatTodo.TodoTitleList
+    let pickerValues: [String] = Todo.TitleList
+    
     let pickerValuesOfDay: [String] = [
         "1회", "2회", "3회", "4회", "5회",
         "6회", "7회", "8회", "9회", "10회"
@@ -69,6 +76,9 @@ class AddTodoViewController: UIViewController {
     
         // 버튼 둥글리기
         setAttribute()
+        
+        // 파이어베이스
+        getFamilyCode()
 
     }
     
@@ -88,15 +98,11 @@ class AddTodoViewController: UIViewController {
         switch sender.selectedSegmentIndex {
         case 0:
             // 공통
-            catID = 0
+            catID = "0"
             break
         case 1:
             // 첫째고양이
-            catID = 1
-            break
-        case 2:
-            // 둘째고양이
-            catID = 2
+            catID = "1"
             break
         default:
             // nil
@@ -120,22 +126,27 @@ class AddTodoViewController: UIViewController {
     
     @IBAction func didAddButtonTapped(_ sender: UIButton) {
         
-        //self.navigationController?.popViewController(animated: true)
-        self.dismiss(animated: true, completion: nil)
+        
         // 버튼 텍스트로 이미지 추가
         getButtonText()
         
-        let catTodo = CatTodo(
-            catID: self.catID,
-            title: self.todo,
-            time: self.perDay,
-            image: self.image,
-            memo: self.memo,
-            isFinished: false
-        )
-        
-        self.catTodo?(catTodo)
 
+        
+        let parent = db.child("catFamilies/\(self.familyCode)/todo")
+        
+        
+        let post = ["catId": self.catID,
+                    "title": self.todo,
+                    "time" : self.perDay,
+                    "image": self.image,
+                    "memo": self.memo,
+                    "isFinished": false ] as [String : Any]
+        
+        parent.childByAutoId().updateChildValues(post)
+        
+        // 모달 없애기
+ 
+        self.dismiss(animated: true, completion: nil)
     }
     
     
@@ -154,6 +165,23 @@ class AddTodoViewController: UIViewController {
     }
 
     // MARK: - Helpers
+    func getFamilyCode() {
+        // firebasse
+        let user = Auth.auth().currentUser
+        var uid = ""
+        if let user = user {
+            uid = user.uid
+        }
+        
+
+        self.db.child("users/\(uid)/catFamilyCode").getData { error, snapshot in
+            guard error == nil else {
+                print(error!.localizedDescription)
+                return
+            }
+            self.familyCode = (snapshot?.value as? String)!
+        }
+    }
     func setAttribute(){
         let buttonArray: [UIButton] = [
         mondayButton, tuesdayButton, wednesdayButton,
@@ -169,10 +197,10 @@ class AddTodoViewController: UIViewController {
     
     func getButtonText(){
         let title = selectTodoButton.currentTitle!
-        let text : [String] = CatTodo.TodoTitleList
+        let text : [String] = Todo.TitleList
         for (index, t) in text.enumerated() {
             if title == t {
-                self.image = CatTodo.TodoIconList[index]
+                self.image = Todo.IconList[index]
             }
         }
     }

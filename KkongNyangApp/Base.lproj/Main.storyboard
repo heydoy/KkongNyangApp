@@ -205,11 +205,10 @@
                                 </state>
                             </button>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" apportionsSegmentWidthsByContent="YES" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="2Ei-Fr-2i7">
-                                <rect key="frame" x="20" y="117" width="199" height="32"/>
+                                <rect key="frame" x="20" y="117" width="120" height="32"/>
                                 <segments>
                                     <segment title="공통"/>
                                     <segment title="첫째 고양이"/>
-                                    <segment title="둘째 고양이"/>
                                 </segments>
                                 <color key="selectedSegmentTintColor" name="yellow-500"/>
                                 <connections>
@@ -359,7 +358,6 @@
                                 <segments>
                                     <segment title="공통"/>
                                     <segment title="첫째 고양이"/>
-                                    <segment title="둘째 고양이"/>
                                 </segments>
                                 <color key="selectedSegmentTintColor" name="yellow-500"/>
                                 <connections>
@@ -680,11 +678,10 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" apportionsSegmentWidthsByContent="YES" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="t69-j9-JS3">
-                                <rect key="frame" x="20" y="117" width="199" height="32"/>
+                                <rect key="frame" x="20" y="117" width="120" height="32"/>
                                 <segments>
                                     <segment title="전체"/>
                                     <segment title="첫째 고양이"/>
-                                    <segment title="둘째 고양이"/>
                                 </segments>
                                 <color key="selectedSegmentTintColor" name="yellow-500"/>
                                 <connections>
