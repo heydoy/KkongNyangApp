@@ -147,6 +147,35 @@ class RegisterViewController: UIViewController {
 
         }
     }
+    
+    @IBAction func didInfoButtonTapped(_ sender: UIButton) {
+        
+        let button = sender
+        let buttonFrame = CGRect(x:button.frame.minX, y: (button.frame.minY - 82), width: 300, height: 82)
+        
+
+        let popOverContentController = self.storyboard?.instantiateViewController(withIdentifier: "PopOverContentController")
+        popOverContentController?.modalPresentationStyle = .popover
+        popOverContentController?.preferredContentSize = CGSize(width: 300, height: 82)
+        
+        if let popOverPresentationController = popOverContentController?.popoverPresentationController {
+            
+            popOverPresentationController.permittedArrowDirections = UIPopoverArrowDirection(rawValue:0)
+            popOverPresentationController.sourceView = self.view
+            popOverPresentationController.sourceRect = buttonFrame
+            popOverPresentationController.delegate = self
+            
+            
+            
+            if let popOverController = popOverContentController {
+                present(popOverController, animated: true, completion: nil)
+            }
+        }
+        
+        
+    }
+    
+    
     // MARK: - Helpers
 
     // 액션과 연결해주기위한 메소드
@@ -177,5 +206,25 @@ class RegisterViewController: UIViewController {
         }
         
     }
+    
+}
+
+
+// MARK: - Extensions
+extension RegisterViewController: UIPopoverPresentationControllerDelegate {
+    
+    func adaptivePresentationStyle(for controller: UIPresentationController) -> UIModalPresentationStyle {
+        return .none
+    }
+    
+    func popoverPresentationControllerDidDismissPopover(_ popoverPresentationController: UIPopoverPresentationController) {
+    }
+    
+    func popoverPresentationControllerShouldDismissPopover(_ popoverPresentationController: UIPopoverPresentationController) -> Bool {
+        
+        return true
+    }
+    
+   
     
 }

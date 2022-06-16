@@ -11,7 +11,6 @@ import UIKit
 class LoginViewController: UIViewController {
 
     // MARK: - Properties
-    var userInfo: UserInfo?
     
     @IBOutlet weak var emailSignupButton: UIButton!
     @IBOutlet weak var appleSignupButton: UIButton!

@@ -9,7 +9,7 @@
 import Foundation
 
 // 집사정보
-struct UserInfo {
+struct User {
     let name: String
     let email: String
     let password: String

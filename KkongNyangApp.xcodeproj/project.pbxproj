@@ -40,8 +40,8 @@
 		A2A409CA284CD5E100FD47EC /* AlertViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2A409C9284CD5E100FD47EC /* AlertViewController.swift */; };
 		A2A409CE284CD65800FD47EC /* AlertCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2A409CD284CD65800FD47EC /* AlertCollectionViewCell.swift */; };
 		A2A409D0284CE08E00FD47EC /* BaseTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2A409CF284CE08E00FD47EC /* BaseTabBarController.swift */; };
-		A2B2BC082827560500659836 /* UserInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2B2BC072827560500659836 /* UserInfo.swift */; };
-		A2B2BC0A2827568D00659836 /* CatInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2B2BC092827568D00659836 /* CatInfo.swift */; };
+		A2B2BC082827560500659836 /* Users.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2B2BC072827560500659836 /* Users.swift */; };
+		A2B2BC0A2827568D00659836 /* CatFamilies.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2B2BC092827568D00659836 /* CatFamilies.swift */; };
 		A2B2BC0C28279F1E00659836 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2B2BC0B28279F1E00659836 /* RegisterViewController.swift */; };
 		A2B2BC0E2827A8DC00659836 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2B2BC0D2827A8DC00659836 /* LoginViewController.swift */; };
 		A2B2BC102827AADE00659836 /* EmailLoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2B2BC0F2827AADE00659836 /* EmailLoginViewController.swift */; };
@@ -62,6 +62,7 @@
 		A2DFA402280EEBF100AFE1BF /* GmarketSansBold.otf in Resources */ = {isa = PBXBuildFile; fileRef = A2DFA3FF280EEBF100AFE1BF /* GmarketSansBold.otf */; };
 		A2DFA403280EEBF100AFE1BF /* GmarketSansMedium.otf in Resources */ = {isa = PBXBuildFile; fileRef = A2DFA400280EEBF100AFE1BF /* GmarketSansMedium.otf */; };
 		A2E0044A285AB24D00B13AF4 /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2E00449285AB24D00B13AF4 /* String+Extension.swift */; };
+		A2E0044C285B346800B13AF4 /* PopOverContentController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2E0044B285B346800B13AF4 /* PopOverContentController.swift */; };
 		A2E818162830F61A00B64664 /* CatProfileSettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2E818152830F61A00B64664 /* CatProfileSettingViewController.swift */; };
 		A2FDE17328433384002163BB /* CatPalate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2FDE17228433384002163BB /* CatPalate.swift */; };
 /* End PBXBuildFile section */
@@ -100,8 +101,8 @@
 		A2A409C9284CD5E100FD47EC /* AlertViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertViewController.swift; sourceTree = "<group>"; };
 		A2A409CD284CD65800FD47EC /* AlertCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertCollectionViewCell.swift; sourceTree = "<group>"; };
 		A2A409CF284CE08E00FD47EC /* BaseTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseTabBarController.swift; sourceTree = "<group>"; };
-		A2B2BC072827560500659836 /* UserInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfo.swift; sourceTree = "<group>"; };
-		A2B2BC092827568D00659836 /* CatInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatInfo.swift; sourceTree = "<group>"; };
+		A2B2BC072827560500659836 /* Users.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Users.swift; sourceTree = "<group>"; };
+		A2B2BC092827568D00659836 /* CatFamilies.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatFamilies.swift; sourceTree = "<group>"; };
 		A2B2BC0B28279F1E00659836 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		A2B2BC0D2827A8DC00659836 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		A2B2BC0F2827AADE00659836 /* EmailLoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailLoginViewController.swift; sourceTree = "<group>"; };
@@ -122,6 +123,7 @@
 		A2DFA3FF280EEBF100AFE1BF /* GmarketSansBold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = GmarketSansBold.otf; sourceTree = "<group>"; };
 		A2DFA400280EEBF100AFE1BF /* GmarketSansMedium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = GmarketSansMedium.otf; sourceTree = "<group>"; };
 		A2E00449285AB24D00B13AF4 /* String+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extension.swift"; sourceTree = "<group>"; };
+		A2E0044B285B346800B13AF4 /* PopOverContentController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopOverContentController.swift; sourceTree = "<group>"; };
 		A2E818152830F61A00B64664 /* CatProfileSettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatProfileSettingViewController.swift; sourceTree = "<group>"; };
 		A2FDE17228433384002163BB /* CatPalate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatPalate.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -222,8 +224,8 @@
 		A24BB17528560C800065BCBE /* Data */ = {
 			isa = PBXGroup;
 			children = (
-				A2B2BC072827560500659836 /* UserInfo.swift */,
-				A2B2BC092827568D00659836 /* CatInfo.swift */,
+				A2B2BC072827560500659836 /* Users.swift */,
+				A2B2BC092827568D00659836 /* CatFamilies.swift */,
 				A2FDE17228433384002163BB /* CatPalate.swift */,
 				A22448CA28490E35008C9E72 /* CatTodo.swift */,
 				A2A409C5284CCAC600FD47EC /* FinishedTodo.swift */,
@@ -240,6 +242,7 @@
 				A2B2BC0F2827AADE00659836 /* EmailLoginViewController.swift */,
 				A2B2BC0B28279F1E00659836 /* RegisterViewController.swift */,
 				A2E818152830F61A00B64664 /* CatProfileSettingViewController.swift */,
+				A2E0044B285B346800B13AF4 /* PopOverContentController.swift */,
 			);
 			path = Authentication;
 			sourceTree = "<group>";
@@ -531,18 +534,19 @@
 				A2E0044A285AB24D00B13AF4 /* String+Extension.swift in Sources */,
 				A2320428283A65F700706DB4 /* AppInfoViewController.swift in Sources */,
 				A2BE71B8281B6D8100FB8548 /* PalateViewController.swift in Sources */,
-				A2B2BC0A2827568D00659836 /* CatInfo.swift in Sources */,
+				A2B2BC0A2827568D00659836 /* CatFamilies.swift in Sources */,
 				A2BE71B6281B63BE00FB8548 /* HomeViewController.swift in Sources */,
 				A2A409C4284CC17D00FD47EC /* UIView+Extension.swift in Sources */,
 				A2320426283A643A00706DB4 /* MyPageViewController.swift in Sources */,
 				A232042A283A662200706DB4 /* AlertSettingViewController.swift in Sources */,
+				A2E0044C285B346800B13AF4 /* PopOverContentController.swift in Sources */,
 				A22448C928490395008C9E72 /* TodoListCollectionViewCell.swift in Sources */,
 				A2B2BC0C28279F1E00659836 /* RegisterViewController.swift in Sources */,
 				A224D4C4280D2D750040E945 /* UIColor+Extension.swift in Sources */,
 				A2B2BC0E2827A8DC00659836 /* LoginViewController.swift in Sources */,
 				A2A409B6284C6AC900FD47EC /* AddTodoViewController.swift in Sources */,
 				A2DFA392280E7DC400AFE1BF /* LandscapeManager.swift in Sources */,
-				A2B2BC082827560500659836 /* UserInfo.swift in Sources */,
+				A2B2BC082827560500659836 /* Users.swift in Sources */,
 				A2E818162830F61A00B64664 /* CatProfileSettingViewController.swift in Sources */,
 				A2A409BC284C904700FD47EC /* PalateCollectionViewCell.swift in Sources */,
 				A2A409C0284CA6CA00FD47EC /* CardCollectionViewCell.swift in Sources */,
