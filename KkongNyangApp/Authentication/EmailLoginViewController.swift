@@ -86,7 +86,7 @@ class EmailLoginViewController: UIViewController {
     }
     
     
-    
+    // 회원가입 버튼
     @IBAction func didRegisterButtonTapped(_ sender: UIButton) {
        
         // 화면전환

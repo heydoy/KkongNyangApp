@@ -61,6 +61,7 @@
 		A2DFA401280EEBF100AFE1BF /* GmarketSansLight.otf in Resources */ = {isa = PBXBuildFile; fileRef = A2DFA3FE280EEBF100AFE1BF /* GmarketSansLight.otf */; };
 		A2DFA402280EEBF100AFE1BF /* GmarketSansBold.otf in Resources */ = {isa = PBXBuildFile; fileRef = A2DFA3FF280EEBF100AFE1BF /* GmarketSansBold.otf */; };
 		A2DFA403280EEBF100AFE1BF /* GmarketSansMedium.otf in Resources */ = {isa = PBXBuildFile; fileRef = A2DFA400280EEBF100AFE1BF /* GmarketSansMedium.otf */; };
+		A2E0044A285AB24D00B13AF4 /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2E00449285AB24D00B13AF4 /* String+Extension.swift */; };
 		A2E818162830F61A00B64664 /* CatProfileSettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2E818152830F61A00B64664 /* CatProfileSettingViewController.swift */; };
 		A2FDE17328433384002163BB /* CatPalate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2FDE17228433384002163BB /* CatPalate.swift */; };
 /* End PBXBuildFile section */
@@ -120,6 +121,7 @@
 		A2DFA3FE280EEBF100AFE1BF /* GmarketSansLight.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = GmarketSansLight.otf; sourceTree = "<group>"; };
 		A2DFA3FF280EEBF100AFE1BF /* GmarketSansBold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = GmarketSansBold.otf; sourceTree = "<group>"; };
 		A2DFA400280EEBF100AFE1BF /* GmarketSansMedium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = GmarketSansMedium.otf; sourceTree = "<group>"; };
+		A2E00449285AB24D00B13AF4 /* String+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extension.swift"; sourceTree = "<group>"; };
 		A2E818152830F61A00B64664 /* CatProfileSettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatProfileSettingViewController.swift; sourceTree = "<group>"; };
 		A2FDE17228433384002163BB /* CatPalate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatPalate.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -346,6 +348,7 @@
 				A2370C242840B8CE00D64871 /* UIDevice+Extension.swift */,
 				A2A409C3284CC17D00FD47EC /* UIView+Extension.swift */,
 				A215F09428508EBD005D8648 /* UIViewController+Extension.swift */,
+				A2E00449285AB24D00B13AF4 /* String+Extension.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -525,6 +528,7 @@
 				A2BE71C0281B79AC00FB8548 /* TodoViewController.swift in Sources */,
 				A2B2BC102827AADE00659836 /* EmailLoginViewController.swift in Sources */,
 				A224D4B2280D1D720040E945 /* SceneDelegate.swift in Sources */,
+				A2E0044A285AB24D00B13AF4 /* String+Extension.swift in Sources */,
 				A2320428283A65F700706DB4 /* AppInfoViewController.swift in Sources */,
 				A2BE71B8281B6D8100FB8548 /* PalateViewController.swift in Sources */,
 				A2B2BC0A2827568D00659836 /* CatInfo.swift in Sources */,

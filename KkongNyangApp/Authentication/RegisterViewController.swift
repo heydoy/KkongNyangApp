@@ -7,16 +7,20 @@
 
 import UIKit
 import FirebaseAuth
+import FirebaseDatabase
 
 class RegisterViewController: UIViewController {
 
     // MARK: - Properties
+    // 파이어베이스
+    let db: DatabaseReference! = Database.database(url: "https://kkongnyangapp-default-rtdb.asia-southeast1.firebasedatabase.app/").reference()
+    
+    // 사용자 정보
     var email: String = ""
     var name: String = ""
     var password: String = ""
     var catFamilyCode: String = ""
     
-    var userInfo: ((UserInfo) -> Void)?
     
     //  유효성 검사를 위한 프로퍼티
     var isValidEmail = false {
@@ -99,45 +103,40 @@ class RegisterViewController: UIViewController {
         }
     }
     
-    
-//    @IBAction func backButtonDidTapped(_ sender: UIBarButtonItem) {
-//
-//        // 뒤로가기는 popViewController
-//        self.navigationController?.popViewController(animated: true)
-//    }
-    
+
     @IBAction func registerButtonDidTapped(_ sender: UIButton) {
-//
-//        // 고양이 프로필 입력화면
-//        // 화면전환
-//        // 1. 스토리보드 생성
-//        let storyboard = UIStoryboard(name: "SignupAndLogin", bundle: nil)
-//        // 2. 뷰컨트롤러를 생성
-//        let catProfileSettingViewController = storyboard.instantiateViewController(withIdentifier: "CatProfileSettingVC") as! CatProfileSettingViewController
-//        // 3. 화면전환 메소드를 이용해서 화면을 전환
-//        self.navigationController?.pushViewController(catProfileSettingViewController, animated: true)
-//
-        // 로그인화면으로 되돌아가기
-        self.navigationController?.popViewController(animated: true)
-        
-        // 파이어베이스 로그인
-        Auth.auth().createUser(withEmail: email, password: password) { authResult, error in
-          // ...
-            print("에러 --> \(error.debugDescription)")
-            print("authResult --> \(authResult?.debugDescription ?? "")")
+        // 파이어베이스 가입
+        Auth.auth().createUser(withEmail: self.email, password: self.password) { authResult, error in
+            // 에러 발생시
+            if let eror = error {
+                print(eror.localizedDescription )
+                return
+            } else {
+            // 성공적으로 유저가 가입되었을 경우
+                let userData = [
+                    "name" : self.name,
+                    "catFamilyCode": self.catFamilyCode ]
+                as [String : Any]
+
+                self.db.child((authResult?.user.uid)!).updateChildValues(userData)
+                
+            // 로그인 상태로 변경
+                Auth.auth().signIn(withEmail: self.email, password: self.password) { [weak self] authResult, error in
+                  guard let strongSelf = self else { return }
+                  // ...
+                }
+                
+            // 고양이 프로필 입력화면으로 전환
+                // 1. 스토리보드 생성
+                let storyboard = UIStoryboard(name: "SignupAndLogin", bundle: nil)
+                // 2. 뷰컨트롤러를 생성
+                let catProfileSettingViewController = storyboard.instantiateViewController(withIdentifier: "CatProfileSettingVC") as! CatProfileSettingViewController
+                // 3. 화면전환 메소드를 이용해서 화면을 전환
+                self.navigationController?.pushViewController(catProfileSettingViewController, animated: true)
+            }
+
         }
-//        // 사용자 정보
-//
-//        let userInfo = UserInfo(
-//            name: self.name,
-//            email: self.email,
-//            password: self.password,
-//            catFamilyCode: self.catFamilyCode
-//        )
-//
-//        self.userInfo?(userInfo)
     }
-    
     // MARK: - Helpers
 
     // 액션과 연결해주기위한 메소드
@@ -167,39 +166,6 @@ class RegisterViewController: UIViewController {
             }
         }
         
-    }
-    
-}
-
-
-// 정규표현식
-extension String {
-    
-    func isValidPassword() -> Bool {
-        // 비밀번호: 대문자 , 소문자, 특수문자, 숫자 8자 이상일 때 True
-        let passwordRegEx  = "^(?=.*[A-Z])(?=.*[a-z])(?=.*[\\d])(?=.*[~!@#\\$%\\^&\\*])[\\w~!@#\\$%\\^&\\*]{8,}$"
-
-        let passwordValidation = NSPredicate.init(format: "SELF MATCHES %@", passwordRegEx)
-        
-        return passwordValidation.evaluate(with: self)
-    }
-    
-    
-    func isValidEmail() -> Bool {
-        // 이메일: @포함 2글자 이상
-        let emailRegEx = "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,64}"
-        let emailTest = NSPredicate(format:"SELF MATCHES %@", emailRegEx)
-        
-        return emailTest.evaluate(with: self)
-    }
-    
-    func isValidCatFamilyCode() -> Bool {
-        // 육묘초대코드: 영어대문자, 숫자 포함 5자
-        let catFamilyCodeRegEx =
-        "[A-Z-0-9]{5}"
-        let catFamilyCodeValidation = NSPredicate.init(format: "SELF MATCHES %@", catFamilyCodeRegEx)
-        
-        return catFamilyCodeValidation.evaluate(with: self)
     }
     
 }
