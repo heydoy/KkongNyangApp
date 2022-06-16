@@ -647,7 +647,7 @@
                                 <color key="textColor" name="black"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="생일을 선택하세요" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Bh3-Sd-qci">
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="YYYY-MM-dd 형태로 입력해주세요. (예: 2020-01-02)" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Bh3-Sd-qci">
                                 <rect key="frame" x="16" y="507.33333333333326" width="339" height="46"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="46" id="nBw-dE-GIc"/>
@@ -670,8 +670,8 @@
                                     <color key="titleColor" name="white"/>
                                 </state>
                                 <connections>
+                                    <action selector="didFinishButtonTapped:" destination="q0u-Zg-epK" eventType="touchUpInside" id="yq3-B0-dMs"/>
                                     <action selector="registerButtonDidTapped:" destination="yHw-kU-C1W" eventType="touchUpInside" id="lsw-Vc-kBs"/>
-                                    <segue destination="vNw-Vc-UE4" kind="presentation" id="sPo-sB-Gwd"/>
                                 </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="17" translatesAutoresizingMaskIntoConstraints="NO" id="4M5-5j-ci0">
@@ -712,14 +712,6 @@
                                     <constraint firstAttribute="height" constant="38" id="oYo-Z8-WIi"/>
                                 </constraints>
                             </stackView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="trailing" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="F2Q-LQ-jzB">
-                                <rect key="frame" x="25" y="507.33333333333326" width="322" height="46"/>
-                                <color key="tintColor" name="gray-300"/>
-                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                <state key="normal" image="calendar" catalog="system">
-                                    <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="20"/>
-                                </state>
-                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="sMK-VE-r6c"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -733,18 +725,14 @@
                             <constraint firstItem="LkV-zS-ewC" firstAttribute="top" secondItem="F2T-y4-vb8" secondAttribute="bottom" constant="10" id="By3-KD-8Iu"/>
                             <constraint firstItem="Dvq-35-6I2" firstAttribute="top" secondItem="DBd-dg-2Fl" secondAttribute="bottom" constant="12" id="E8k-di-fLN"/>
                             <constraint firstItem="F2T-y4-vb8" firstAttribute="leading" secondItem="sMK-VE-r6c" secondAttribute="leading" constant="16" id="HJ2-jB-pnc"/>
-                            <constraint firstItem="F2Q-LQ-jzB" firstAttribute="leading" secondItem="Bh3-Sd-qci" secondAttribute="trailing" constant="-330" id="Il3-z7-t6u"/>
                             <constraint firstItem="lcW-9a-4Ba" firstAttribute="centerX" secondItem="Dvq-35-6I2" secondAttribute="centerX" id="JbO-7o-5fG"/>
                             <constraint firstItem="vE4-ob-AI4" firstAttribute="top" secondItem="Bh3-Sd-qci" secondAttribute="bottom" constant="18" id="JtV-Xo-YKW"/>
                             <constraint firstItem="sMK-VE-r6c" firstAttribute="bottom" secondItem="LI7-qE-Apn" secondAttribute="bottom" constant="12" id="Ldo-0c-D8J"/>
                             <constraint firstItem="LkV-zS-ewC" firstAttribute="leading" secondItem="F2T-y4-vb8" secondAttribute="leading" id="NdF-NL-9RC"/>
                             <constraint firstItem="aRo-bA-mmH" firstAttribute="leading" secondItem="F2T-y4-vb8" secondAttribute="leading" id="NjB-WA-wCB"/>
-                            <constraint firstItem="F2Q-LQ-jzB" firstAttribute="height" secondItem="Bh3-Sd-qci" secondAttribute="height" id="QnE-qS-km5"/>
                             <constraint firstItem="05s-CK-4SC" firstAttribute="leading" secondItem="F2T-y4-vb8" secondAttribute="leading" id="RJI-h5-uA8"/>
                             <constraint firstItem="F2T-y4-vb8" firstAttribute="top" secondItem="sMK-VE-r6c" secondAttribute="top" constant="24" id="RUa-zN-PRS"/>
                             <constraint firstItem="sMK-VE-r6c" firstAttribute="trailing" secondItem="4M5-5j-ci0" secondAttribute="trailing" constant="20" id="ScN-ag-CsM"/>
-                            <constraint firstItem="F2Q-LQ-jzB" firstAttribute="centerY" secondItem="Bh3-Sd-qci" secondAttribute="centerY" id="Sli-sb-UVd"/>
-                            <constraint firstItem="F2Q-LQ-jzB" firstAttribute="width" secondItem="Bh3-Sd-qci" secondAttribute="width" multiplier="0.95" id="Thg-Cy-4Rc"/>
                             <constraint firstItem="LI7-qE-Apn" firstAttribute="leading" secondItem="sMK-VE-r6c" secondAttribute="leading" constant="20" id="TzP-gL-Wrv"/>
                             <constraint firstItem="Bh3-Sd-qci" firstAttribute="leading" secondItem="th0-qh-Igy" secondAttribute="leading" id="Z96-P0-QFb"/>
                             <constraint firstItem="aRo-bA-mmH" firstAttribute="top" secondItem="Dvq-35-6I2" secondAttribute="bottom" constant="18" id="c0S-W4-euk"/>
@@ -773,28 +761,28 @@
             </objects>
             <point key="canvasLocation" x="2968.8000000000002" y="-264.53201970443348"/>
         </scene>
-        <!--View Controller-->
+        <!--Butler Invitation View Controller-->
         <scene sceneID="Z6u-uw-QDo">
             <objects>
-                <viewController id="vNw-Vc-UE4" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ButlerInvitationViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="vNw-Vc-UE4" customClass="ButlerInvitationViewController" customModule="KkongNyangApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="3Gr-Lu-sxl">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="758"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="집사 초대하기" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1Hn-dK-Qfr">
-                                <rect key="frame" x="20" y="24" width="145.33333333333334" height="24"/>
+                                <rect key="frame" x="20" y="68" width="145.33333333333334" height="24"/>
                                 <fontDescription key="fontDescription" name="GmarketSansMedium" family="Gmarket Sans" pointSize="24"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="함께 고양이를 키우는 집사를 초대해보세요." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zwd-F8-WUz">
-                                <rect key="frame" x="20" y="58.000000000000007" width="270.33333333333331" height="19.333333333333336"/>
+                                <rect key="frame" x="20" y="102" width="270.33333333333331" height="19.333333333333329"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                 <color key="textColor" name="gray-500"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="zxn-dO-VAw">
-                                <rect key="frame" x="20" y="552" width="335" height="166"/>
+                                <rect key="frame" x="20" y="606" width="335" height="166"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="l5X-qJ-WEd">
                                         <rect key="frame" x="0.0" y="0.0" width="335" height="50"/>
@@ -818,13 +806,16 @@
                                         </constraints>
                                         <color key="tintColor" name="white"/>
                                         <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="plain" title="전화번호로 초대하기">
+                                        <buttonConfiguration key="configuration" style="plain" title="문자로 초대하기">
                                             <backgroundConfiguration key="background" cornerRadius="11">
                                                 <color key="backgroundColor" red="0.70588235294117641" green="0.69803921568627447" blue="0.58823529411764708" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             </backgroundConfiguration>
                                             <fontDescription key="titleFontDescription" type="system" weight="medium" pointSize="14"/>
                                             <color key="baseForegroundColor" name="greengray-900"/>
                                         </buttonConfiguration>
+                                        <connections>
+                                            <action selector="didSMSInvitationButtonTapped:" destination="vNw-Vc-UE4" eventType="touchUpInside" id="n6e-Bt-57V"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OLr-pU-RXD">
                                         <rect key="frame" x="0.0" y="116" width="335" height="50"/>
@@ -845,7 +836,7 @@
                                 </subviews>
                             </stackView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="familyInvitation" translatesAutoresizingMaskIntoConstraints="NO" id="G0k-OJ-7Z7">
-                                <rect key="frame" x="0.0" y="107.33333333333331" width="375" height="409.99999999999994"/>
+                                <rect key="frame" x="0.0" y="151.33333333333337" width="375" height="410"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="410" id="gD5-8B-upI"/>
                                 </constraints>
@@ -882,7 +873,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="calendar" catalog="system" width="128" height="106"/>
         <image name="familyInvitation" width="375" height="410"/>
         <image name="genderbutton-defaults" width="158" height="46"/>
         <image name="genderbutton-selected" width="158" height="46"/>

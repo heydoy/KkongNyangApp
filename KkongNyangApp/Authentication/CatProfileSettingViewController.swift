@@ -6,14 +6,25 @@
 //
 
 import UIKit
+import FirebaseAuth
+import FirebaseDatabase
 
 class CatProfileSettingViewController: UIViewController {
     // MARK: - Properties
+    // 파이어베이스
+    // 파이어베이스
+    let db: DatabaseReference! = Database.database(url: "https://kkongnyangapp-default-rtdb.asia-southeast1.firebasedatabase.app/").reference()
+    
+    var catPhoto: String = ""
     var catName: String = ""
+    var catGender: String = ""
     var catMemo: String = ""
+    var catBirthday: String = ""
+    
+    var familyCode: String = ""
+    
     var indexOfButtonArray: Int? = nil
     
-    var catInfo:  ((Cat) -> Void)?
     
     
     let imagePickerViewController = UIImagePickerController()
@@ -24,6 +35,11 @@ class CatProfileSettingViewController: UIViewController {
     @IBOutlet weak var catNameTextField: UITextField!
     @IBOutlet weak var catBirthdayTextField: UITextField!
     @IBOutlet weak var catMemoTextField: UITextField!
+    
+    // computed property로 처리하기
+    var textFields: [UITextField] {
+        [catNameTextField, catBirthdayTextField, catMemoTextField]
+    }
     
     // 버튼 아울렛
     
@@ -36,11 +52,33 @@ class CatProfileSettingViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setAttribute()
+        setupTextField()
         
         imagePickerViewController.delegate = self
     }
     
     // MARK: - Actions
+    @objc
+    func textFieldEditingChanged(_ sender: UITextField) {
+        let text = sender.text ?? ""
+        
+        switch sender {
+        case catNameTextField:
+            // 글자수 한글자 이상
+            self.catName = text
+            
+        case catBirthdayTextField:
+            self.catBirthday = text
+            
+        case catMemoTextField:
+            self.catMemo = text
+            
+        default:
+            fatalError("Missing Textfield")
+        }
+    }
+    
+    
     @IBAction func didButtonTapped(_ sender: UIButton) {
         if indexOfButtonArray != nil {
             if !sender.isSelected {
@@ -56,6 +94,12 @@ class CatProfileSettingViewController: UIViewController {
         } else {
             sender.isSelected = true
             indexOfButtonArray = genderRadioButtons.firstIndex(of: sender)
+        }
+        
+        if indexOfButtonArray == 0 {
+            catGender = "female"
+        } else {
+            catGender = "male"
         }
     }
     
@@ -82,6 +126,37 @@ class CatProfileSettingViewController: UIViewController {
 //        self.present(imagePickerViewController, animated: true, completion: nil)
     }
     
+    
+    @IBAction func didFinishButtonTapped(_ sender: UIButton) {
+        
+        
+        // 고양이 데이터 저장하기
+        let catData = [
+            "name" : self.catName,
+            "photo" : self.catPhoto,
+            "gender" : self.catGender,
+            "birthday": self.catBirthday,
+            "memo": self.catMemo
+        ] as [String : Any]
+        
+        self.db.child("catFamilies/\(self.familyCode)/cat/01").updateChildValues(catData)
+        
+        
+        // 가족초대화면으로 이동
+        
+        let storyboard = UIStoryboard(name: "SignupAndLogin", bundle: nil)
+        
+        let butlerInvitationVC = storyboard.instantiateViewController(withIdentifier: "ButlerInvitationViewController") as! ButlerInvitationViewController
+        
+        butlerInvitationVC.familyCode = self.familyCode
+        butlerInvitationVC.catName = self.catName
+        
+        self.navigationController?.pushViewController(butlerInvitationVC, animated: true)
+ 
+    }
+    
+    
+    
     // MARK: - Helpers
     func openLibrary(){
 
@@ -98,6 +173,16 @@ class CatProfileSettingViewController: UIViewController {
     
     func setAttribute() {
         catPhotoImageView.layer.cornerRadius = 20
+    }
+    
+    // 액션과 연결해주기위한 메소드
+    private func setupTextField() {
+        
+        // addtarget은 해당 영역에서 이벤트가 처리되면 누가 처리할 것인가 하는 메서드
+       
+        textFields.forEach { tf in
+            tf.addTarget(self, action: #selector(textFieldEditingChanged(_:)), for: .editingChanged)
+        }
     }
 
 }

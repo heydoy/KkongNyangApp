@@ -138,9 +138,11 @@ class RegisterViewController: UIViewController {
                 
             // 고양이 프로필 입력화면으로 전환
                 // 1. 스토리보드 생성
-                let storyboard = UIStoryboard(name: "SignupAndLogin", bundle: nil)
+                let storyboard = UIStoryboard.signupandlogin
                 // 2. 뷰컨트롤러를 생성
                 let catProfileSettingViewController = storyboard.instantiateViewController(withIdentifier: "CatProfileSettingVC") as! CatProfileSettingViewController
+                
+                catProfileSettingViewController.familyCode = self.catFamilyCode
                 // 3. 화면전환 메소드를 이용해서 화면을 전환
                 self.navigationController?.pushViewController(catProfileSettingViewController, animated: true)
             }
@@ -153,7 +155,6 @@ class RegisterViewController: UIViewController {
         let button = sender
         let buttonFrame = CGRect(x:button.frame.minX, y: (button.frame.minY - 82), width: 300, height: 82)
         
-
         let popOverContentController = self.storyboard?.instantiateViewController(withIdentifier: "PopOverContentController")
         popOverContentController?.modalPresentationStyle = .popover
         popOverContentController?.preferredContentSize = CGSize(width: 300, height: 82)
