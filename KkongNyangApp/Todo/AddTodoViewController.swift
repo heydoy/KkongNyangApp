@@ -17,7 +17,7 @@ class AddTodoViewController: UIViewController {
     
     var catID: String = ""
     var todo: String = ""
-    var perDay: String = ""
+    var perDay: String = "매일 오전 10시"
     var perHour: String = ""
     var perWeek: [String] = []
     var image: String = ""
@@ -53,8 +53,6 @@ class AddTodoViewController: UIViewController {
         "11시간", "12시간"
     ]
     
-    
-    var catTodo: ((CatTodo) -> Void)?
     
     
     @IBOutlet weak var todoTextField: UITextField!

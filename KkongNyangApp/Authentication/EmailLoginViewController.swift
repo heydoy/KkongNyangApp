@@ -57,6 +57,7 @@ class EmailLoginViewController: UIViewController {
     @IBAction func didLoginButtonTapped(_ sender: UIButton) {
 
         Auth.auth().signIn(withEmail: email, password: password) { [weak self] authResult, error in
+            
             if let error = error {
                 let loginErrorAlert = UIAlertController(title: "로그인실패", message: "아이디 또는 패스워드가 일치하지 않습니다.", preferredStyle: .alert)
                 let cancleAction = UIAlertAction(title: "확인", style: .destructive, handler: nil)
@@ -71,17 +72,18 @@ class EmailLoginViewController: UIViewController {
           guard let strongSelf = self else {
               return }
           // ...
-            let storyboard = UIStoryboard.main
-            let vc = storyboard.instantiateViewController(withIdentifier: "MainTabVC") as! UITabBarController
-            
-
-            if #available(iOS 15.0, *) {
-                self?.view.window?.windowScene?.keyWindow?.rootViewController = vc
-            } else {
-
-                vc.modalPresentationStyle = .fullScreen
-                self?.present(vc, animated: true, completion: nil)
+           
             }
+        let storyboard = UIStoryboard.main
+        let vc = storyboard.instantiateViewController(withIdentifier: "MainTabVC") as! UITabBarController
+        
+
+        if #available(iOS 15.0, *) {
+            self.view.window?.windowScene?.keyWindow?.rootViewController = vc
+        } else {
+
+            vc.modalPresentationStyle = .fullScreen
+            self.present(vc, animated: true, completion: nil)
         }
     }
     
