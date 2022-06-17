@@ -19,7 +19,7 @@ struct CatPalate {
     var itemKind: String
     var itemImage: String //image url
     var itemName: String
-    var preferenceLevel: Float // 0.0 ~ 1.0 hate, don't like, average, like, like very much
+    var preferenceLevel: Double // 0.0 ~ 1.0 hate, don't like, average, like, like very much
     var memo: String
     var history: String
 

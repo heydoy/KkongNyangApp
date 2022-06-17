@@ -13,7 +13,7 @@ class AddPalateViewController: UIViewController {
     // MARK: - Properties
     var catID: Int = 0
     var history: String = "" // 내가 4월 7일 기록
-    var preferenceLevel: Float = 0.0
+    var preferenceLevel: Double = 0.0
     var itemName: String = ""
     var itemImage: String = "photoframe" // 빈 이미지
     var memo: String = ""
@@ -122,7 +122,7 @@ class AddPalateViewController: UIViewController {
         DispatchQueue.main.async {
                self.preferenceLevelText.text = "\(text)"
            }
-        preferenceLevel = value
+        preferenceLevel = Double(value)
 
     }
     
