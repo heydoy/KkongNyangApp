@@ -28,6 +28,14 @@ class Todo {
         
     }
     
+    init(catId: String, title: String, time: String, image: String, memo: String, isFinished: Bool = false) {
+        self.catId = catId
+        self.title = title
+        self.time = time
+        self.image = image
+        self.memo = memo
+        self.isFinished = isFinished
+    }
     
     
     

@@ -29,6 +29,8 @@ class HomeViewController: UIViewController {
     // MARK: - Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
+        // 데이터 가져오기
+        fetchNotices()
 
         // 메서드 실행
         setAttribute()
@@ -39,9 +41,6 @@ class HomeViewController: UIViewController {
         
         collectionViewB.dataSource = self
         collectionViewB.delegate = self
-        
-        // 데이터 가져오기
-        fetchNotices()
 
     }
     

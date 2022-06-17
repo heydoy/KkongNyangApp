@@ -39,6 +39,12 @@ class TodoViewController: UIViewController {
         collectionView.delegate = self
         
         
+        // Refresh Control
+        let refreshControl = UIRefreshControl()
+        refreshControl.addTarget(self, action: #selector(doSomething), for: .valueChanged)
+        //refreshControl.attributedTitle = NSAttributedString(string: "새로고침")
+        collectionView.refreshControl = refreshControl
+        
         // Notification Center
         NotificationCenter.default.addObserver(
             self,
@@ -62,11 +68,21 @@ class TodoViewController: UIViewController {
     // MARK: - Actions
     @objc func didDismissAddTodoNotification(_ notification: Notification) {
         DispatchQueue.main.async {
-
-            self.collectionView.reloadData()
+            self.catTodoList = [Todo]()
+            self.fetchTodos()
         }
+        collectionView.reloadData()
     }
     
+    @objc func doSomething(refreshControl: UIRefreshControl) {
+        DispatchQueue.main.async {
+            self.catTodoList = [Todo]()
+            self.fetchTodos()
+        }
+        refreshControl.endRefreshing()
+        collectionView.reloadData()
+    }
+
     @IBAction func switchViews(_ sender: UISegmentedControl) {
         if sender.selectedSegmentIndex == 0 {
             
@@ -86,6 +102,7 @@ class TodoViewController: UIViewController {
         addTodoViewController.modalPresentationStyle = .fullScreen
         self.present(addTodoViewController, animated: true, completion: nil)
     }
+    
     
     // MARK: - Helpers
     
@@ -126,6 +143,7 @@ class TodoViewController: UIViewController {
 
 extension TodoViewController: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        print(catTodoList.count)
         return catTodoList.count
     }
     

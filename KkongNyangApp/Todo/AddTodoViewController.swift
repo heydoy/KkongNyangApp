@@ -143,7 +143,7 @@ class AddTodoViewController: UIViewController {
         parent.childByAutoId().updateChildValues(post)
         
         // 모달 없애기
- 
+    
         self.dismiss(animated: true, completion: nil)
     }
     
