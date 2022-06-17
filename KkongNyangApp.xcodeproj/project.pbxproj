@@ -66,7 +66,7 @@
 		A2E0044E285B829700B13AF4 /* ButlerInvitationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2E0044D285B829700B13AF4 /* ButlerInvitationViewController.swift */; };
 		A2E818162830F61A00B64664 /* CatProfileSettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2E818152830F61A00B64664 /* CatProfileSettingViewController.swift */; };
 		A2EF9456285CEDE10025BBA8 /* PopupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2EF9455285CEDE10025BBA8 /* PopupViewController.swift */; };
-		A2FDE17328433384002163BB /* CatPalate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2FDE17228433384002163BB /* CatPalate.swift */; };
+		A2FDE17328433384002163BB /* Palate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2FDE17228433384002163BB /* Palate.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -129,7 +129,7 @@
 		A2E0044D285B829700B13AF4 /* ButlerInvitationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButlerInvitationViewController.swift; sourceTree = "<group>"; };
 		A2E818152830F61A00B64664 /* CatProfileSettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatProfileSettingViewController.swift; sourceTree = "<group>"; };
 		A2EF9455285CEDE10025BBA8 /* PopupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopupViewController.swift; sourceTree = "<group>"; };
-		A2FDE17228433384002163BB /* CatPalate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatPalate.swift; sourceTree = "<group>"; };
+		A2FDE17228433384002163BB /* Palate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Palate.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -230,7 +230,7 @@
 			children = (
 				A2B2BC072827560500659836 /* Users.swift */,
 				A2B2BC092827568D00659836 /* CatFamilies.swift */,
-				A2FDE17228433384002163BB /* CatPalate.swift */,
+				A2FDE17228433384002163BB /* Palate.swift */,
 				A22448CA28490E35008C9E72 /* Todo.swift */,
 				A2A409C5284CCAC600FD47EC /* FinishedTodo.swift */,
 				A24BB17628560CB40065BCBE /* Notice.swift */,
@@ -520,7 +520,7 @@
 			files = (
 				A2A409C8284CCE3800FD47EC /* FinishedTodoCollectionViewCell.swift in Sources */,
 				A2DFA38A280E795100AFE1BF /* OnboardingFirstPageViewController.swift in Sources */,
-				A2FDE17328433384002163BB /* CatPalate.swift in Sources */,
+				A2FDE17328433384002163BB /* Palate.swift in Sources */,
 				A22448CB28490E35008C9E72 /* Todo.swift in Sources */,
 				A2A409B9284C6AF400FD47EC /* AddPalateViewController.swift in Sources */,
 				A2DFA38C280E7A2800AFE1BF /* OnboardingSecondPageViewController.swift in Sources */,

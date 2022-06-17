@@ -7,12 +7,36 @@
 
 import Foundation
 import UIKit
+import FirebaseDatabase
 
-//struct CatPalate {
-//    var catItem: CatItem
-//    var preferenceLevel: Float // 0.0 ~ 1.0 hate, don't like, average, like, like very much
-//}
-//
+class Palate {
+    var catID = ""
+    var kind = ""
+    var image = ""
+    var name = ""
+    var like = 0.0
+    var memo = ""
+    var history = ""
+    
+    init(withSnapshot: DataSnapshot) {
+        self.catID = withSnapshot.childSnapshot(forPath: "catID").value as? String ?? ""
+        self.kind = withSnapshot.childSnapshot(forPath: "kind").value as? String ?? ""
+        self.image = withSnapshot.childSnapshot(forPath: "image").value as? String ?? ""
+        self.name = withSnapshot.childSnapshot(forPath: "name").value as? String ?? ""
+        self.like = withSnapshot.childSnapshot(forPath: "like").value as? Double ?? 0.0
+        self.memo = withSnapshot.childSnapshot(forPath: "memo").value as? String ?? ""
+    }
+    
+}
+
+extension Palate {
+    static let CatItemKind: [String] = [
+        "🍖 음식", "🍰 간식",
+        "🧸 장난감", "🏝 모래",
+        "🎸 기타"
+    ]
+}
+
 
 struct CatPalate {
     var catID: Int = 0
