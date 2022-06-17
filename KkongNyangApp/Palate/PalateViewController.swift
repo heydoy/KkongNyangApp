@@ -25,6 +25,11 @@ class PalateViewController: UIViewController {
         collectionView.dataSource = self
         collectionView.delegate = self
         
+        // Refresh Control
+        let refreshControl = UIRefreshControl()
+        refreshControl.addTarget(self, action: #selector(doSomething), for: .valueChanged)
+        collectionView.refreshControl = refreshControl
+        
         // Notification Center
         // 기호추가 화면이 사라질 때 콜렉션 뷰를 새로고침
         // Notification Center
@@ -41,8 +46,8 @@ class PalateViewController: UIViewController {
             DispatchQueue.main.async {
                 self.palateList = [CatPalate]()
                 //self.fetchPalates()
-                self.collectionView.reloadData()
         }
+        self.collectionView.reloadData()
     }
     
     @objc func doSomething(refreshControl: UIRefreshControl) {
