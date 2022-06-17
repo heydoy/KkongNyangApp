@@ -857,7 +857,6 @@
                                 <segments>
                                     <segment title="공통"/>
                                     <segment title="첫째 고양이"/>
-                                    <segment title="둘째 고양이"/>
                                 </segments>
                                 <color key="selectedSegmentTintColor" name="yellow-500"/>
                                 <connections>
