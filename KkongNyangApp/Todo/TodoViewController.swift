@@ -70,7 +70,7 @@ class TodoViewController: UIViewController {
         DispatchQueue.main.async {
             self.catTodoList = [Todo]()
             self.fetchTodos()
-        }
+        }        
         collectionView.reloadData()
     }
     

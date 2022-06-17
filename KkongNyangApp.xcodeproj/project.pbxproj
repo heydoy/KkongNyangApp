@@ -65,6 +65,7 @@
 		A2E0044C285B346800B13AF4 /* PopOverContentController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2E0044B285B346800B13AF4 /* PopOverContentController.swift */; };
 		A2E0044E285B829700B13AF4 /* ButlerInvitationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2E0044D285B829700B13AF4 /* ButlerInvitationViewController.swift */; };
 		A2E818162830F61A00B64664 /* CatProfileSettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2E818152830F61A00B64664 /* CatProfileSettingViewController.swift */; };
+		A2EF9456285CEDE10025BBA8 /* PopupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2EF9455285CEDE10025BBA8 /* PopupViewController.swift */; };
 		A2FDE17328433384002163BB /* CatPalate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2FDE17228433384002163BB /* CatPalate.swift */; };
 /* End PBXBuildFile section */
 
@@ -127,6 +128,7 @@
 		A2E0044B285B346800B13AF4 /* PopOverContentController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopOverContentController.swift; sourceTree = "<group>"; };
 		A2E0044D285B829700B13AF4 /* ButlerInvitationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButlerInvitationViewController.swift; sourceTree = "<group>"; };
 		A2E818152830F61A00B64664 /* CatProfileSettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatProfileSettingViewController.swift; sourceTree = "<group>"; };
+		A2EF9455285CEDE10025BBA8 /* PopupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopupViewController.swift; sourceTree = "<group>"; };
 		A2FDE17228433384002163BB /* CatPalate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatPalate.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -342,6 +344,7 @@
 				A2DFA3F6280EEBBE00AFE1BF /* Fonts */,
 				A2DFA390280E7DA400AFE1BF /* Extension */,
 				A2DFA391280E7DC400AFE1BF /* LandscapeManager.swift */,
+				A2EF9455285CEDE10025BBA8 /* PopupViewController.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -529,6 +532,7 @@
 				A2DFA396280E8E6000AFE1BF /* UIStoryboard+Extension.swift in Sources */,
 				A2A409C6284CCAC600FD47EC /* FinishedTodo.swift in Sources */,
 				A2DFA387280E779800AFE1BF /* OnboardingPageViewController.swift in Sources */,
+				A2EF9456285CEDE10025BBA8 /* PopupViewController.swift in Sources */,
 				A24BB17728560CB40065BCBE /* Notice.swift in Sources */,
 				A2370C252840B8CE00D64871 /* UIDevice+Extension.swift in Sources */,
 				A2BE71C0281B79AC00FB8548 /* TodoViewController.swift in Sources */,
