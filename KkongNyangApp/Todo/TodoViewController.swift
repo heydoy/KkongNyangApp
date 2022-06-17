@@ -122,7 +122,7 @@ class TodoViewController: UIViewController {
     // Database fetch
     func fetchTodos() {
         
-        let todosDB = self.db.child("catFamilies/GER33/todo")
+        let todosDB = self.db.child("catFamilies/\(familyCode)/todo")
         
         todosDB.observeSingleEvent(of: .value) { snapshot in
             

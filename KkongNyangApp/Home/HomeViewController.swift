@@ -7,10 +7,15 @@
 
 import UIKit
 import FirebaseDatabase
+import FirebaseAuth
 
 class HomeViewController: UIViewController {
     // Firebase DB 주소
     let db: DatabaseReference! = Database.database(url: "https://kkongnyangapp-default-rtdb.asia-southeast1.firebasedatabase.app/").reference()
+    
+    var handle: AuthStateDidChangeListenerHandle?
+    var uid = ""
+    var familyCode = ""
 
     // MARK: - Properties
     //let homecardlist: [HomeCard] = HomeCard.list
@@ -41,15 +46,49 @@ class HomeViewController: UIViewController {
         
         collectionViewB.dataSource = self
         collectionViewB.delegate = self
-
+        
+        // Refresh Control
+        let refreshControl = UIRefreshControl()
+        refreshControl.addTarget(self, action: #selector(doSomething), for: .valueChanged)
+        collectionView.refreshControl = refreshControl
     }
     
-    // MARK: - Actions
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        handle = Auth.auth().addStateDidChangeListener({ auth, user in
+            //
+            self.getFamilyCode(user!.uid)
+            self.collectionView.reloadData()
+            //
+        })
+    }
     
+    
+    
+    // MARK: - Actions
+    @objc func doSomething(refreshControl: UIRefreshControl) {
+        DispatchQueue.main.async {
+            self.noticeArrayDataSource = [Notice]()
+            self.fetchNotices()
+        }
+        collectionView.reloadData()
+    }
     
     // MARK: - Helpers
     func setAttribute(){
         goToEventHistoryButton.layer.cornerRadius = 8
+    }
+    
+    func getFamilyCode(_ uid: String) {
+        self.db.child("users/\(uid)/catFamilyCode").getData { error, snapshot in
+            guard error == nil else {
+                print(error!.localizedDescription)
+                return
+            }
+            
+            self.familyCode = (snapshot?.value as? String)!
+        }
     }
     
     // MARK: - Database fetch
