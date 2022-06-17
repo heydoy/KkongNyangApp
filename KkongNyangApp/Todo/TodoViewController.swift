@@ -180,9 +180,7 @@ extension TodoViewController: UICollectionViewDataSource {
         // firebase에 업로드
         
         collectionView.reloadData()
-        
-        
-        
+
     }
     
 }

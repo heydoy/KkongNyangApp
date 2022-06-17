@@ -25,6 +25,7 @@ class Palate {
         self.name = withSnapshot.childSnapshot(forPath: "name").value as? String ?? ""
         self.like = withSnapshot.childSnapshot(forPath: "like").value as? Double ?? 0.0
         self.memo = withSnapshot.childSnapshot(forPath: "memo").value as? String ?? ""
+        self.history = withSnapshot.childSnapshot(forPath: "history").value as? String ?? ""
     }
     
 }

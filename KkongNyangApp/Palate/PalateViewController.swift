@@ -6,6 +6,8 @@
 //
 
 import UIKit
+import FirebaseAuth
+import FirebaseDatabase
 
 class PalateViewController: UIViewController {
 
@@ -13,13 +15,20 @@ class PalateViewController: UIViewController {
     
     @IBOutlet weak var collectionView: UICollectionView!
     
-    var palateList: [CatPalate] = CatPalate.list
+    var handle: AuthStateDidChangeListenerHandle?
+    var uid = ""
+    var familyCode = ""
+    // Firebase DB 주소
+    let db: DatabaseReference! = Database.database(url: "https://kkongnyangapp-default-rtdb.asia-southeast1.firebasedatabase.app/").reference()
     
+    // var palateList: [CatPalate] = CatPalate.list
+    var palateList = [Palate]()
     
     // MARK: - Lifecycle
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        fetchPalates()
         
         // 콜렉션 뷰
         collectionView.dataSource = self
@@ -41,22 +50,34 @@ class PalateViewController: UIViewController {
         
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        handle = Auth.auth().addStateDidChangeListener({ auth, user in
+            self.getFamilyCode(user!.uid)
+            self.collectionView.reloadData()
+            
+        })
+    }
+    
     // MARK: - Actions
     @objc func didDismissAddPalateNotification(_ notification: Notification) {
             DispatchQueue.main.async {
-                self.palateList = [CatPalate]()
-                //self.fetchPalates()
+                self.palateList = [Palate]()
+                self.fetchPalates()
+                self.collectionView.reloadData()
         }
-        self.collectionView.reloadData()
+        
     }
     
     @objc func doSomething(refreshControl: UIRefreshControl) {
         DispatchQueue.main.async {
-            self.palateList = [CatPalate]()
-            //self.fetchPalates()
+            self.palateList = [Palate]()
+            self.fetchPalates()
+            self.collectionView.reloadData()
         }
         refreshControl.endRefreshing()
-        collectionView.reloadData()
+        
     }
     
     
@@ -76,6 +97,31 @@ class PalateViewController: UIViewController {
         self.present(addPalateViewController, animated: true, completion: nil)
     }
     
+    // MARK: - Helpers
+    
+    func getFamilyCode(_ uid: String) {
+        self.db.child("users/\(uid)/catFamilyCode").getData { error, snapshot in
+            guard error == nil else {
+                print(error!.localizedDescription)
+                return
+            }
+            self.familyCode = (snapshot?.value as? String)!
+        }
+    }
+    
+    func fetchPalates() {
+        let DB = self.db.child("palates/GER33")
+        DB.observeSingleEvent(of: .value) { snapshot in
+            let all = snapshot.children.allObjects as! [DataSnapshot]
+            
+            for palate in all {
+                let a = Palate(withSnapshot: palate)
+                self.palateList.append(a)
+                print("기호기록 \(self.palateList) 안에 \(a.history) 데이터")
+            }
+        }
+    }
+    
 }
 
 // MARK: - Extensions
@@ -83,6 +129,7 @@ class PalateViewController: UIViewController {
 extension PalateViewController: UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        print(palateList.count)
         return palateList.count
     }
     
@@ -92,6 +139,7 @@ extension PalateViewController: UICollectionViewDataSource {
         }
         let palate = palateList[indexPath.item]
         cell.configure(palate)
+        
         return cell
     }
     
@@ -102,6 +150,6 @@ extension PalateViewController: UICollectionViewDelegateFlowLayout {
         let inset: CGFloat = 20
         let width: CGFloat = collectionView.bounds.width - (inset * 2)
         
-        return CGSize(width: width, height: 88)
+        return CGSize(width: width, height: 92)
     }
 }

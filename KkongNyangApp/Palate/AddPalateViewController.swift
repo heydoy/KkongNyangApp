@@ -7,15 +7,22 @@
 
 import UIKit
 import PickerButton
+import FirebaseAuth
+import FirebaseDatabase
 
 class AddPalateViewController: UIViewController {
 
     // MARK: - Properties
-    var catID: Int = 0
+    let db: DatabaseReference! = Database.database(url: "https://kkongnyangapp-default-rtdb.asia-southeast1.firebasedatabase.app/").reference()
+    var familyCode: String = ""
+    var userName: String = ""
+    
+    
+    var catID: String = "0"
     var history: String = "" // 내가 4월 7일 기록
     var preferenceLevel: Double = 0.0
     var itemName: String = ""
-    var itemImage: String = "photoframe" // 빈 이미지
+    var itemImage: String = "sample-palate-3" // 빈 이미지
     var memo: String = ""
     
     @IBOutlet weak var selectKindButton: PickerButton!
@@ -42,6 +49,8 @@ class AddPalateViewController: UIViewController {
         selectKindButton.delegate = self
         
         imagePickerViewController.delegate = self
+        
+        getFamilyCode()
     }
     
     override func viewWillDisappear(_ animated: Bool) {
@@ -60,16 +69,13 @@ class AddPalateViewController: UIViewController {
     @IBAction func didSelectCatTapped(_ sender: UISegmentedControl) {
         switch sender.selectedSegmentIndex {
         case 0:
-            catID = 0
+            catID = "0"
             break
         case 1:
-            catID = 1
-            break
-        case 2:
-            catID = 2
+            catID = "1"
             break
         default:
-            catID = 0
+            catID = "0"
             break
         }
     }
@@ -133,20 +139,45 @@ class AddPalateViewController: UIViewController {
     
     
     @IBAction func didAddButtonTapped(_ sender: Any) {
-        self.dismiss(animated: true, completion: nil)
+        
+        
+        showPopUp(title: "기호 추가", message: "", attributedMessage: NSAttributedString(string: "\(itemName) 을 추가하시겠습니까?"), leftActionTitle: "취소", rightActionTitle: "추가") {
+            // 취소일 경우 아무것도 하지 않음
+        } rightActionCompletion: {
+            let parent = self.db.child("palates/\(self.familyCode)")
+            
+            let post = [
+                "catID" : self.catID,
+                "kind" : self.getButtonText(),
+                "image" : self.itemImage,
+                "name" : self.itemName,
+                "like" : self.preferenceLevel,
+                "memo" : self.memo,
+                "history" : self.setHistory()
+            ] as [String : Any]
+            
+            parent.childByAutoId().updateChildValues(post)
+            
+            self.dismiss(animated: true, completion: nil)
+        }
+
         
         
         
-        let catPalate = CatPalate(
-            catID: self.catID,
-            itemKind: self.getButtonText(),
-            itemImage: self.itemImage,
-            itemName: self.itemName,
-            preferenceLevel: self.preferenceLevel,
-            memo: self.memo,
-            history: self.setHistory())
         
-        self.catPalate?(catPalate)
+        
+//        let catPalate = CatPalate(
+//            catID: self.catID,
+//            itemKind: self.getButtonText(),
+//            itemImage: self.itemImage,
+//            itemName: self.itemName,
+//            preferenceLevel: self.preferenceLevel,
+//            memo: self.memo,
+//            history: self.setHistory())
+//
+//        self.catPalate?(catPalate)
+        
+        
     }
     
     
@@ -174,15 +205,43 @@ class AddPalateViewController: UIViewController {
     func setHistory() -> String {
         let nowDate = Date() // 현재의 Date (ex: 2020-08-13 09:14:48 +0000)
         let dateFormatter = DateFormatter()
-        dateFormatter.dateFormat = "내가 M월 d일 기록" // 2020-08-13 16:30
+        dateFormatter.dateFormat = "M월 d일 h시" // 2020-08-13 16:30
         let str = dateFormatter.string(from: nowDate) // 현재 시간의 Date를 format에 맞춰 string으로 반환
-        return str
+        return "\(self.userName) 님이 \(str) 기록"
     }
     
     func getButtonText() -> String {
             let title = selectKindButton.currentTitle!
             return title
+    }
+    
+    func getFamilyCode() {
+        // firebasse
+        let user = Auth.auth().currentUser
+        var uid = ""
+        if let user = user {
+            uid = user.uid
         }
+        
+
+        self.db.child("users/\(uid)/catFamilyCode").getData { error, snapshot in
+            guard error == nil else {
+                print(error!.localizedDescription)
+                return
+            }
+            self.familyCode = (snapshot?.value as? String)!
+        }
+        
+        self.db.child("users/\(uid)/name").getData { error, snapshot in
+            guard error == nil else {
+                print(error!.localizedDescription)
+                return
+            }
+            self.userName = (snapshot?.value as? String)!
+        }
+        
+        
+    }
 }
 
 

@@ -21,8 +21,7 @@ class PalateCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var preferenceFace: UILabel!
     @IBOutlet weak var productName: UILabel!
     @IBOutlet weak var memo: UILabel!
-    @IBOutlet weak var versionHistory: UILabel!
-    
+    @IBOutlet weak var history: UILabel!
     // MARK: - Actions
     
     func configure(_ palate: Palate) {
@@ -31,7 +30,7 @@ class PalateCollectionViewCell: UICollectionViewCell {
         preferenceFace.text = makeFace(palate.like)
         productName.text = palate.name
         memo.text = palate.memo
-        versionHistory.text = palate.history
+        history.text = palate.history
 
     }
     

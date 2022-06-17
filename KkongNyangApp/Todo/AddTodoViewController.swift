@@ -14,6 +14,7 @@ class AddTodoViewController: UIViewController {
     // MARK: - Properties
     // Firebase DB 주소
     let db: DatabaseReference! = Database.database(url: "https://kkongnyangapp-default-rtdb.asia-southeast1.firebasedatabase.app/").reference()
+    var familyCode: String = ""
     
     var catID: String = ""
     var todo: String = ""
@@ -23,7 +24,7 @@ class AddTodoViewController: UIViewController {
     var image: String = ""
     var memo : String = ""
     
-    var familyCode: String = ""
+    
 
     // 아울렛 변수
     @IBOutlet weak var selectTodoButton: PickerButton!
@@ -127,23 +128,9 @@ class AddTodoViewController: UIViewController {
         
         // 버튼 텍스트로 이미지 추가
         getButtonText()
-        
 
-//        let parent = db.child("catFamilies/\(self.familyCode)/todo")
-//
-//
-//        let post = ["catId": self.catID,
-//                    "title": self.todo,
-//                    "time" : self.perDay,
-//                    "image": self.image,
-//                    "memo": self.memo,
-//                    "isFinished": false ] as [String : Any]
-//
-//        parent.childByAutoId().updateChildValues(post)
         
-        // 모달 없애기
-        
-        showPopUp(title: "할 일 추가", message: "할일 \(self.todo)을(를) 추가하시겠습니까?", attributedMessage: NSAttributedString(string: "할일 \(self.todo)을(를) 추가하시겠습니까?"), leftActionTitle: "취소", rightActionTitle: "확인") {
+        showPopUp(title: "할 일 추가", message: "할일 \(self.todo)을(를) 추가하시겠습니까?", attributedMessage: NSAttributedString(string: "할일 \(self.todo)을(를) 추가하시겠습니까?"), leftActionTitle: "취소", rightActionTitle: "추가") {
             // 취소일 경우 아무것도 하지 않음
         } rightActionCompletion: {
             let parent = self.db.child("catFamilies/\(self.familyCode)/todo")
