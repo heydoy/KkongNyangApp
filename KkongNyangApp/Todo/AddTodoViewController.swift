@@ -144,7 +144,7 @@ class AddTodoViewController: UIViewController {
         // 모달 없애기
         
         showPopUp(title: "할 일 추가", message: "할일 \(self.todo)을(를) 추가하시겠습니까?", attributedMessage: NSAttributedString(string: "할일 \(self.todo)을(를) 추가하시겠습니까?"), leftActionTitle: "취소", rightActionTitle: "확인") {
-            // 취소일 경우 아무것도 하지 않음 
+            // 취소일 경우 아무것도 하지 않음
         } rightActionCompletion: {
             let parent = self.db.child("catFamilies/\(self.familyCode)/todo")
             

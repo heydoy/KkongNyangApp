@@ -35,15 +35,19 @@ class TodoViewController: UIViewController {
         
         
         // Data, Presentation, Layout (뷰컨트롤러가 위임함)
+        
         collectionView.dataSource = self
         collectionView.delegate = self
+        
+        
         
         
         // Refresh Control
         let refreshControl = UIRefreshControl()
         refreshControl.addTarget(self, action: #selector(doSomething), for: .valueChanged)
         //refreshControl.attributedTitle = NSAttributedString(string: "새로고침")
-        collectionView.refreshControl = refreshControl
+        
+        doSomething(refreshControl: refreshControl)
         
         // Notification Center
         NotificationCenter.default.addObserver(
@@ -121,8 +125,7 @@ class TodoViewController: UIViewController {
     
     // Database fetch
     func fetchTodos() {
-        
-        let todosDB = self.db.child("catFamilies/\(familyCode)/todo")
+        let todosDB = self.db.child("catFamilies/GER33/todo")
         
         todosDB.observeSingleEvent(of: .value) { snapshot in
             

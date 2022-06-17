@@ -72,7 +72,9 @@ class HomeViewController: UIViewController {
             self.noticeArrayDataSource = [Notice]()
             self.fetchNotices()
         }
+        refreshControl.endRefreshing()
         collectionView.reloadData()
+        
     }
     
     // MARK: - Helpers

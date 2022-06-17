@@ -13,7 +13,7 @@ class PalateViewController: UIViewController {
     
     @IBOutlet weak var collectionView: UICollectionView!
     
-    let palateList: [CatPalate] = CatPalate.list
+    var palateList: [CatPalate] = CatPalate.list
     
     
     // MARK: - Lifecycle
@@ -39,10 +39,20 @@ class PalateViewController: UIViewController {
     // MARK: - Actions
     @objc func didDismissAddPalateNotification(_ notification: Notification) {
             DispatchQueue.main.async {
+                self.palateList = [CatPalate]()
+                //self.fetchPalates()
                 self.collectionView.reloadData()
         }
     }
-
+    
+    @objc func doSomething(refreshControl: UIRefreshControl) {
+        DispatchQueue.main.async {
+            self.palateList = [CatPalate]()
+            //self.fetchPalates()
+        }
+        refreshControl.endRefreshing()
+        collectionView.reloadData()
+    }
     
     
     @IBAction func switchViews(_ sender: UISegmentedControl) {
