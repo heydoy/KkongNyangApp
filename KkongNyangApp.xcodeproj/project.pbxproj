@@ -66,6 +66,8 @@
 		A2E0044E285B829700B13AF4 /* ButlerInvitationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2E0044D285B829700B13AF4 /* ButlerInvitationViewController.swift */; };
 		A2E818162830F61A00B64664 /* CatProfileSettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2E818152830F61A00B64664 /* CatProfileSettingViewController.swift */; };
 		A2EF9456285CEDE10025BBA8 /* PopupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2EF9455285CEDE10025BBA8 /* PopupViewController.swift */; };
+		A2EF9458285D6B0E0025BBA8 /* Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2EF9457285D6B0E0025BBA8 /* Alert.swift */; };
+		A2EF945A285D6D960025BBA8 /* Date+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2EF9459285D6D960025BBA8 /* Date+Extension.swift */; };
 		A2FDE17328433384002163BB /* Palate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2FDE17228433384002163BB /* Palate.swift */; };
 /* End PBXBuildFile section */
 
@@ -129,6 +131,8 @@
 		A2E0044D285B829700B13AF4 /* ButlerInvitationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButlerInvitationViewController.swift; sourceTree = "<group>"; };
 		A2E818152830F61A00B64664 /* CatProfileSettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatProfileSettingViewController.swift; sourceTree = "<group>"; };
 		A2EF9455285CEDE10025BBA8 /* PopupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopupViewController.swift; sourceTree = "<group>"; };
+		A2EF9457285D6B0E0025BBA8 /* Alert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alert.swift; sourceTree = "<group>"; };
+		A2EF9459285D6D960025BBA8 /* Date+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Extension.swift"; sourceTree = "<group>"; };
 		A2FDE17228433384002163BB /* Palate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Palate.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -234,6 +238,7 @@
 				A22448CA28490E35008C9E72 /* Todo.swift */,
 				A2A409C5284CCAC600FD47EC /* FinishedTodo.swift */,
 				A24BB17628560CB40065BCBE /* Notice.swift */,
+				A2EF9457285D6B0E0025BBA8 /* Alert.swift */,
 			);
 			path = Data;
 			sourceTree = "<group>";
@@ -358,6 +363,7 @@
 				A2A409C3284CC17D00FD47EC /* UIView+Extension.swift */,
 				A215F09428508EBD005D8648 /* UIViewController+Extension.swift */,
 				A2E00449285AB24D00B13AF4 /* String+Extension.swift */,
+				A2EF9459285D6D960025BBA8 /* Date+Extension.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -519,6 +525,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A2A409C8284CCE3800FD47EC /* FinishedTodoCollectionViewCell.swift in Sources */,
+				A2EF945A285D6D960025BBA8 /* Date+Extension.swift in Sources */,
 				A2DFA38A280E795100AFE1BF /* OnboardingFirstPageViewController.swift in Sources */,
 				A2FDE17328433384002163BB /* Palate.swift in Sources */,
 				A22448CB28490E35008C9E72 /* Todo.swift in Sources */,
@@ -556,6 +563,7 @@
 				A2B2BC082827560500659836 /* Users.swift in Sources */,
 				A2E818162830F61A00B64664 /* CatProfileSettingViewController.swift in Sources */,
 				A2E0044E285B829700B13AF4 /* ButlerInvitationViewController.swift in Sources */,
+				A2EF9458285D6B0E0025BBA8 /* Alert.swift in Sources */,
 				A2A409BC284C904700FD47EC /* PalateCollectionViewCell.swift in Sources */,
 				A2A409C0284CA6CA00FD47EC /* CardCollectionViewCell.swift in Sources */,
 				A2DFA394280E8D9700AFE1BF /* ConciergeViewController.swift in Sources */,

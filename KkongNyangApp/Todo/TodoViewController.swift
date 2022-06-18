@@ -14,6 +14,7 @@ class TodoViewController: UIViewController {
   
     // MARK: - Properties
     var handle: AuthStateDidChangeListenerHandle?
+    var familyCode = ""
     var uid = ""
     var userName = ""
     // Firebase DB 주소
@@ -21,7 +22,7 @@ class TodoViewController: UIViewController {
     
     var catTodoList = [Todo]()
     
-    var familyCode = ""
+    
     
     
     
@@ -222,6 +223,21 @@ extension TodoViewController: UICollectionViewDataSource {
         let askFamily = UIAlertAction(title: "가족에게 요청하기", style: .default) { _ in
             // 가족에게 메시지 보내기
             print("familyMessage")
+                
+            
+            let parent = self.db.child("alert/\(self.familyCode)")
+            
+            let post = [
+                "time" : Date().toString(),
+                "from" : self.userName,
+                "todo" : cell.title,
+                "todoKey" : "",
+                "isFinished" : false,
+            ] as [String:Any]
+            
+            parent.childByAutoId().updateChildValues(post)
+            
+            
         }
         
         let editTodo = UIAlertAction(title: "수정하기", style: .default) { _ in
@@ -239,10 +255,7 @@ extension TodoViewController: UICollectionViewDataSource {
             addTodoViewController.image = cell.image
             addTodoViewController.memo = cell.memo
             
-            
-            
-            
-            
+
             addTodoViewController.modalPresentationStyle = .fullScreen
             self.present(addTodoViewController, animated: true, completion: nil)
             

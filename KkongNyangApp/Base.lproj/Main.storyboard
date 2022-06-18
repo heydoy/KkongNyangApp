@@ -156,6 +156,11 @@
                                             </constraints>
                                         </collectionViewCellContentView>
                                         <size key="customSize" width="375" height="95"/>
+                                        <connections>
+                                            <outlet property="descriptionLabel" destination="fr3-me-vzu" id="RVN-FW-xJM"/>
+                                            <outlet property="finishButton" destination="B3z-3Y-4V6" id="tJ3-og-JF0"/>
+                                            <outlet property="timeLabel" destination="cjc-eO-CZT" id="VR2-od-8lr"/>
+                                        </connections>
                                     </collectionViewCell>
                                 </cells>
                             </collectionView>
@@ -372,6 +377,10 @@
                                 <color key="tintColor" name="black"/>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                 <state key="normal" title="할 일 종류 선택하기"/>
+                                <connections>
+                                    <action selector="didPickerButtonEditingChanged:" destination="WMU-sx-1qO" eventType="editingChanged" id="h8p-PZ-pt8"/>
+                                    <action selector="didSelectButtonEditingChanged:" destination="WMU-sx-1qO" eventType="editingChanged" id="o7i-Kb-qpI"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="할 일 선택" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="83c-fR-1re">
                                 <rect key="frame" x="20" y="209" width="64" height="19.333333333333343"/>

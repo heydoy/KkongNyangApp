@@ -98,6 +98,15 @@ class AddTodoViewController: UIViewController {
     
     // MARK: - Actions
     
+    
+    @IBAction func didSelectButtonEditingChanged(_ sender: UIButton) {
+        DispatchQueue.main.async {
+            self.getButtonText()
+            self.titleTextField.text = self.title
+        }
+    }
+    
+    
     @IBAction func didDismissButtonTapped(_ sender: UIButton) {
         self.dismiss(animated: true, completion: nil)
     }
@@ -210,10 +219,10 @@ class AddTodoViewController: UIViewController {
     func setView() {
         titleTextField.text = self.todo
         memoTextField.text = self.memo
-       // selectTodoButton.setTitle 
+       // selectTodoButton.setTitle
     }
     
-    func getButtonText(){
+    func getButtonText() {
         let title = selectTodoButton.currentTitle!
         let text : [String] = Todo.TitleList
         for (index, t) in text.enumerated() {
@@ -228,6 +237,7 @@ class AddTodoViewController: UIViewController {
 
 extension AddTodoViewController: UIPickerViewDelegate, UIPickerViewDataSource {
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+        
         return pickerValues[row]
     }
     
