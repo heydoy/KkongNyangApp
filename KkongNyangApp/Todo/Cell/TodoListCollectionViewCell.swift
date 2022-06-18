@@ -28,12 +28,12 @@ class TodoListCollectionViewCell: UICollectionViewCell {
         timeLabel.text = todo.time
         
         
-        if todo.isFinished == true {
-            checkButton.isSelected = true
-            
-        } else {
-            checkButton.isSelected = false
-        }
+//        if todo.isFinished == true {
+//            checkButton.isSelected = true
+//            
+//        } else {
+//            checkButton.isSelected = false
+//        }
     }
     
     

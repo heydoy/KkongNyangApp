@@ -188,8 +188,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="할 일" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jCA-IG-nOV">
-                                <rect key="frame" x="20" y="68" width="183" height="41"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="오늘의 할 일" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jCA-IG-nOV">
+                                <rect key="frame" x="20" y="68" width="165" height="41"/>
                                 <fontDescription key="fontDescription" name="AppleSDGothicNeo-Bold" family="Apple SD Gothic Neo" pointSize="34"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -257,7 +257,7 @@
                                                         <constraint firstAttribute="width" constant="18" id="fMj-zf-HnN"/>
                                                     </constraints>
                                                     <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                                    <state key="normal" image="check-do"/>
+                                                    <state key="normal" image="more"/>
                                                     <state key="selected" image="check-done"/>
                                                 </button>
                                             </subviews>
@@ -387,7 +387,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                                 <connections>
-                                    <action selector="didTodoTextFieldEditingChanged:" destination="WMU-sx-1qO" eventType="editingDidEnd" id="vXD-wH-eao"/>
+                                    <action selector="didTodoTextFieldEditingChanged:" destination="WMU-sx-1qO" eventType="editingChanged" id="Vx6-T9-FRs"/>
                                 </connections>
                             </textField>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="Np4-Oa-JFG">
@@ -645,6 +645,7 @@
                     </view>
                     <connections>
                         <outlet property="fridayButton" destination="Arf-T1-n15" id="sXL-s7-2IC"/>
+                        <outlet property="memoTextField" destination="THm-ft-WRo" id="Gzs-O6-jsQ"/>
                         <outlet property="mondayButton" destination="Ojf-5d-JPF" id="Qtk-nQ-1mb"/>
                         <outlet property="saturdayButton" destination="Ibl-qm-QL9" id="Ikx-Hz-Boa"/>
                         <outlet property="selectPerDayButton" destination="ErB-PY-JJR" id="INP-73-4is"/>
@@ -652,7 +653,7 @@
                         <outlet property="selectTodoButton" destination="C0k-yD-3CI" id="5ZH-oi-SyK"/>
                         <outlet property="sundayButton" destination="w19-lv-FlN" id="ru4-nV-74Z"/>
                         <outlet property="thursdayButton" destination="L2n-li-wun" id="Hfa-QF-gqU"/>
-                        <outlet property="todoTextField" destination="0pX-9e-VDe" id="Jow-gi-0fE"/>
+                        <outlet property="titleTextField" destination="0pX-9e-VDe" id="3mJ-yv-BK7"/>
                         <outlet property="tuesdayButton" destination="gaI-a8-9r2" id="BLX-at-swf"/>
                         <outlet property="wednesdayButton" destination="ozL-jo-adu" id="z6j-zp-jZh"/>
                     </connections>
@@ -1940,7 +1941,6 @@
         <image name="button-toggle-off" width="55" height="35"/>
         <image name="button-toggle-on" width="55" height="35"/>
         <image name="catfood" width="24" height="24"/>
-        <image name="check-do" width="18" height="18"/>
         <image name="check-done" width="18" height="18"/>
         <image name="emojiHate" width="32" height="32"/>
         <image name="emojiLove" width="32" height="32"/>
@@ -1955,6 +1955,7 @@
         <image name="icon-palate" width="24" height="24"/>
         <image name="icon-todo" width="24" height="24"/>
         <image name="line.horizontal.3" catalog="system" width="128" height="64"/>
+        <image name="more" width="24" height="24"/>
         <image name="photo.circle.fill" catalog="system" width="128" height="121"/>
         <image name="photoframe" width="119" height="119"/>
         <image name="tab-arrow-left" width="24" height="24"/>

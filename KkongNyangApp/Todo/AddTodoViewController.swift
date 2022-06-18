@@ -16,6 +16,7 @@ class AddTodoViewController: UIViewController {
     let db: DatabaseReference! = Database.database(url: "https://kkongnyangapp-default-rtdb.asia-southeast1.firebasedatabase.app/").reference()
     var familyCode: String = ""
     
+    
     var catID: String = ""
     var todo: String = ""
     var perDay: String = "매일 오전 10시"
@@ -23,10 +24,16 @@ class AddTodoViewController: UIViewController {
     var perWeek: [String] = []
     var image: String = ""
     var memo : String = ""
-    
+
     
 
     // 아울렛 변수
+    // 아울렛 텍스트필드
+    
+    @IBOutlet weak var titleTextField: UITextField!
+    @IBOutlet weak var memoTextField: UITextField!
+    
+    // 선택버튼
     @IBOutlet weak var selectTodoButton: PickerButton!
     @IBOutlet weak var selectPerDayButton: PickerButton!
     @IBOutlet weak var selectPerHourButton: PickerButton!
@@ -40,7 +47,7 @@ class AddTodoViewController: UIViewController {
     @IBOutlet weak var saturdayButton: UIButton!
     @IBOutlet weak var sundayButton: UIButton!
     
- 
+    
     
     let pickerValues: [String] = Todo.TitleList
     
@@ -54,9 +61,6 @@ class AddTodoViewController: UIViewController {
         "11시간", "12시간"
     ]
     
-    
-    
-    @IBOutlet weak var todoTextField: UITextField!
     
     
     // MARK: - Lifecycle
@@ -78,6 +82,12 @@ class AddTodoViewController: UIViewController {
         
         // 파이어베이스
         getFamilyCode()
+        
+        // 전달될 경우
+        if isEditing == true {
+           
+           setView()
+        }
 
     }
     
@@ -110,8 +120,6 @@ class AddTodoViewController: UIViewController {
     }
     
     @IBAction func didTodoTextFieldEditingChanged(_ sender: UITextField) {
-        // 직접 작성 선택전에는 disabled
-        
         let text = sender.text ?? ""
         todo = text
     }
@@ -141,7 +149,9 @@ class AddTodoViewController: UIViewController {
                         "time" : self.perDay,
                         "image": self.image,
                         "memo": self.memo,
-                        "isFinished": false ] as [String : Any]
+                        "isFinished": false,
+                        "finishTime": ""
+            ] as [String : Any]
             
             parent.childByAutoId().updateChildValues(post)
             
@@ -195,6 +205,12 @@ class AddTodoViewController: UIViewController {
             button.layer.cornerRadius = 8
             button.setTitleColor(.greengray900!, for: .selected)
         }
+    }
+    
+    func setView() {
+        titleTextField.text = self.todo
+        memoTextField.text = self.memo
+       // selectTodoButton.setTitle 
     }
     
     func getButtonText(){

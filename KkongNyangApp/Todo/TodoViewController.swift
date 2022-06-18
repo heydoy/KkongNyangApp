@@ -15,6 +15,7 @@ class TodoViewController: UIViewController {
     // MARK: - Properties
     var handle: AuthStateDidChangeListenerHandle?
     var uid = ""
+    var userName = ""
     // Firebase DB 주소
     let db: DatabaseReference! = Database.database(url: "https://kkongnyangapp-default-rtdb.asia-southeast1.firebasedatabase.app/").reference()
     
@@ -119,6 +120,14 @@ class TodoViewController: UIViewController {
             self.familyCode = (snapshot?.value as? String)!
         }
         
+        self.db.child("users/\(uid)/name").getData { error, snapshot in
+            guard error == nil else {
+                print(error!.localizedDescription)
+                return
+            }
+            self.userName = (snapshot?.value as? String)!
+        }
+        
     }
     
     // Database fetch
@@ -166,18 +175,92 @@ extension TodoViewController: UICollectionViewDataSource {
         
         // 셀 버튼
         cell.checkButton.tag = indexPath.row
-        cell.checkButton.addTarget(self, action: #selector(didCheckButtonTapped(sender:)), for: .touchUpInside)
+        cell.checkButton.addTarget(self, action: #selector(didActionButtonTapped(sender:)), for: .touchUpInside)
         
         return cell
     }
     
     @objc
-    func didCheckButtonTapped(sender: UIButton) {
+    func didActionButtonTapped(sender: UIButton) {
         
         let cell = catTodoList[sender.tag]
-        cell.isFinished = !cell.isFinished
+        // cell.isFinished = !cell.isFinished
         
-        // firebase에 업로드
+        
+        let actionSheet = UIAlertController(title: "할 일", message: "\(cell.title)의 액션을 고르세요", preferredStyle: .actionSheet)
+        
+        var finishText = ""
+        if cell.isFinished == true {
+            finishText = "완료 취소하기"
+        } else {
+            finishText = "완료하기"
+        }
+        
+        let finish = UIAlertAction(title: finishText, style: .default) { _ in
+            //
+            print("finish")
+            
+            cell.isFinished = !cell.isFinished
+            
+            if cell.isFinished == true {
+                let now = Date()
+                let dateFormatter = DateFormatter()
+                dateFormatter.dateFormat = "\(self.userName)님이 a h시 m분 완료"
+                dateFormatter.locale = Locale(identifier: "ko_KR")
+                let convertedString = dateFormatter.string(from: now)
+                
+                cell.finishTime = convertedString
+            } else {
+                // 완료취소인경우 완수타임 비우기
+                cell.finishTime = ""
+            }
+        
+            
+            self.collectionView.reloadData()
+        }
+        
+        let askFamily = UIAlertAction(title: "가족에게 요청하기", style: .default) { _ in
+            // 가족에게 메시지 보내기
+            print("familyMessage")
+        }
+        
+        let editTodo = UIAlertAction(title: "수정하기", style: .default) { _ in
+            // edit 창 보여주기
+            let storyboard = UIStoryboard(name: "Main", bundle: nil)
+            
+            let addTodoViewController = storyboard.instantiateViewController(withIdentifier: "AddTodoVC") as! AddTodoViewController
+            
+            addTodoViewController.familyCode = self.familyCode
+            addTodoViewController.isEditing = true
+            addTodoViewController.catID = cell.catId
+            addTodoViewController.todo = cell.title
+            print("수정할 타이틀 --> \(cell.title)")
+            addTodoViewController.perDay = cell.time
+            addTodoViewController.image = cell.image
+            addTodoViewController.memo = cell.memo
+            
+            
+            
+            
+            
+            addTodoViewController.modalPresentationStyle = .fullScreen
+            self.present(addTodoViewController, animated: true, completion: nil)
+            
+        }
+        
+        let cancel = UIAlertAction(title: "취소", style: .cancel, handler: nil)
+        
+        actionSheet.addAction(finish)
+        actionSheet.addAction(askFamily)
+        actionSheet.addAction(editTodo)
+        actionSheet.addAction(cancel)
+        
+        self.present(actionSheet, animated: true, completion: nil)
+        
+        
+        
+        
+        // 리로드
         
         collectionView.reloadData()
 

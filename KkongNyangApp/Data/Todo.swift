@@ -16,6 +16,7 @@ class Todo {
     var image = ""
     var memo = ""
     var isFinished: Bool = false
+    var finishTime = ""
     
     
     init(withSnapshot: DataSnapshot) {
@@ -25,17 +26,20 @@ class Todo {
         self.image = withSnapshot.childSnapshot(forPath: "image").value as? String ?? ""
         self.memo = withSnapshot.childSnapshot(forPath: "memo").value as? String ?? ""
         self.isFinished = withSnapshot.childSnapshot(forPath: "isFinished").value as? Bool ?? false
+        self.finishTime = withSnapshot.childSnapshot(forPath: "finishTime").value as? String ?? ""
         
     }
     
-    init(catId: String, title: String, time: String, image: String, memo: String, isFinished: Bool = false) {
-        self.catId = catId
-        self.title = title
-        self.time = time
-        self.image = image
-        self.memo = memo
-        self.isFinished = isFinished
-    }
+//    init(_ todo: Todo) {
+//        self.catId = todo.catId
+//        self.title = todo.title
+//        self.time = todo.time
+//        self.image = todo.image
+//        self.memo = todo.memo
+//        self.isFinished = todo.isFinished
+//        self.finishTime = todo.finishTime
+//    }
+
     
     
     
