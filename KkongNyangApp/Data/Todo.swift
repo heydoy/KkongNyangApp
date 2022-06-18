@@ -29,20 +29,6 @@ class Todo {
         self.finishTime = withSnapshot.childSnapshot(forPath: "finishTime").value as? String ?? ""
         
     }
-    
-//    init(_ todo: Todo) {
-//        self.catId = todo.catId
-//        self.title = todo.title
-//        self.time = todo.time
-//        self.image = todo.image
-//        self.memo = todo.memo
-//        self.isFinished = todo.isFinished
-//        self.finishTime = todo.finishTime
-//    }
-
-    
-    
-    
 }
 
 

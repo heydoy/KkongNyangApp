@@ -119,7 +119,30 @@ extension AlertViewController: UICollectionViewDataSource {
         
         let alert = alertList[indexPath.row]
         cell.configure(alert)
+        
+        // 셀 버튼
+        cell.finishButton.tag = indexPath.row
+        cell.finishButton.addTarget(self, action: #selector(didFinishButtonTapped(sender:)), for: .touchUpInside)
         return cell
+    }
+    @objc func didFinishButtonTapped(sender: UIButton){
+        let cell = alertList[sender.tag]
+        
+        let alarm = UIAlertController(title: "할 일 완료하기", message: "\(cell.todo)를 완료하셨나요?", preferredStyle: .alert)
+        
+        let finish = UIAlertAction(title: "완료하기", style: .default) { _ in
+            cell.isFinished = true
+            self.collectionView.reloadData()
+        }
+        let cancel = UIAlertAction(title: "취소", style: .cancel, handler: nil)
+        
+        alarm.addAction(finish)
+        alarm.addAction(cancel)
+        
+        self.present(alarm, animated: true, completion: nil)
+        
+        collectionView.reloadData()
+        
     }
     
     

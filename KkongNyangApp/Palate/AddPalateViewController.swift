@@ -26,7 +26,7 @@ class AddPalateViewController: UIViewController {
     var memo: String = ""
     
     @IBOutlet weak var selectKindButton: PickerButton!
-    let pickerValues: [String] = CatPalate.CatItemKind
+    let pickerValues: [String] = Palate.CatItemKind
     
     @IBOutlet weak var addPalateButton: UIButton!
     
@@ -37,7 +37,6 @@ class AddPalateViewController: UIViewController {
     
     
     
-    var catPalate: ((CatPalate) -> Void )?
     
     // MARK: - LifeCycle
     override func viewDidLoad() {
@@ -160,25 +159,16 @@ class AddPalateViewController: UIViewController {
             
             self.dismiss(animated: true, completion: nil)
         }
-
-        
-        
-        
-        
-        
-//        let catPalate = CatPalate(
-//            catID: self.catID,
-//            itemKind: self.getButtonText(),
-//            itemImage: self.itemImage,
-//            itemName: self.itemName,
-//            preferenceLevel: self.preferenceLevel,
-//            memo: self.memo,
-//            history: self.setHistory())
-//
-//        self.catPalate?(catPalate)
         
         
     }
+    
+    
+    
+    
+    
+    
+    
     
     
     // MARK: - Helpers

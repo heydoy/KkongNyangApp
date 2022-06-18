@@ -215,8 +215,6 @@ extension TodoViewController: UICollectionViewDataSource {
                 // 완료취소인경우 완수타임 비우기
                 cell.finishTime = ""
             }
-        
-            
             self.collectionView.reloadData()
         }
         
@@ -236,8 +234,6 @@ extension TodoViewController: UICollectionViewDataSource {
             ] as [String:Any]
             
             parent.childByAutoId().updateChildValues(post)
-            
-            
         }
         
         let editTodo = UIAlertAction(title: "수정하기", style: .default) { _ in
@@ -255,7 +251,6 @@ extension TodoViewController: UICollectionViewDataSource {
             addTodoViewController.image = cell.image
             addTodoViewController.memo = cell.memo
             
-
             addTodoViewController.modalPresentationStyle = .fullScreen
             self.present(addTodoViewController, animated: true, completion: nil)
             
@@ -269,10 +264,7 @@ extension TodoViewController: UICollectionViewDataSource {
         actionSheet.addAction(cancel)
         
         self.present(actionSheet, animated: true, completion: nil)
-        
-        
-        
-        
+
         // 리로드
         
         collectionView.reloadData()

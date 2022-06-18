@@ -21,8 +21,6 @@ class AlertCollectionViewCell: UICollectionViewCell {
             finishButton.isEnabled = true
         } else {
             finishButton.isEnabled = false
-//            finishButton.layer.backgroundColor = UIColor.gray80 as! CGColor
-//            finishButton.titleLabel?.textColor = UIColor.gray500
         }
     }
     
