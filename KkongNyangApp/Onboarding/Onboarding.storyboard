@@ -1,9 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina5_9" orientation="portrait" appearance="light"/>
     <dependencies>
-        <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -72,6 +71,30 @@
                                     <segue destination="gea-s2-tzn" kind="presentation" modalPresentationStyle="fullScreen" modalTransitionStyle="crossDissolve" id="05D-hb-Ano"/>
                                 </connections>
                             </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Dqq-Dq-MC8" customClass="CHIPageControlJalapeno" customModule="CHIPageControl">
+                                <rect key="frame" x="0.0" y="482" width="375" height="20"/>
+                                <color key="tintColor" name="gray-200"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="numberOfPages">
+                                        <integer key="value" value="3"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="progress">
+                                        <real key="value" value="0.0"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="padding">
+                                        <real key="value" value="6"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="radius">
+                                        <real key="value" value="4"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="currentPageTintColor">
+                                        <color key="value" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" name="white"/>
@@ -79,13 +102,17 @@
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="cIE-2U-YfH" secondAttribute="trailing" constant="20" id="7kc-nR-4WZ"/>
                             <constraint firstItem="DGs-Qz-UlN" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="40" id="N8j-TY-0Ti"/>
                             <constraint firstItem="h9t-Rk-EdC" firstAttribute="centerX" secondItem="vDu-zF-Fre" secondAttribute="centerX" id="NQq-tc-guX"/>
+                            <constraint firstItem="Dqq-Dq-MC8" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="Ol7-Z0-HiS"/>
                             <constraint firstItem="hcQ-91-NlV" firstAttribute="top" secondItem="h9t-Rk-EdC" secondAttribute="bottom" constant="20" id="QcI-Cx-YaC"/>
                             <constraint firstItem="cIE-2U-YfH" firstAttribute="top" secondItem="hcQ-91-NlV" secondAttribute="bottom" constant="60" id="W4a-qK-fhF"/>
                             <constraint firstItem="hcQ-91-NlV" firstAttribute="centerX" secondItem="vDu-zF-Fre" secondAttribute="centerX" id="XdH-KE-NkD"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="DGs-Qz-UlN" secondAttribute="trailing" constant="40" id="Xrm-bV-9e1"/>
                             <constraint firstItem="lLR-dd-bL0" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="40" id="YFQ-km-Dn3"/>
                             <constraint firstItem="lLR-dd-bL0" firstAttribute="centerY" secondItem="cIE-2U-YfH" secondAttribute="centerY" id="dIk-fL-tIO"/>
+                            <constraint firstItem="Dqq-Dq-MC8" firstAttribute="top" secondItem="DGs-Qz-UlN" secondAttribute="bottom" id="g5d-h5-XoY"/>
+                            <constraint firstItem="h9t-Rk-EdC" firstAttribute="top" secondItem="Dqq-Dq-MC8" secondAttribute="bottom" constant="40" id="iPz-xu-O2H"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="cIE-2U-YfH" secondAttribute="bottom" constant="24" id="oNm-rd-kEM"/>
+                            <constraint firstItem="Dqq-Dq-MC8" firstAttribute="trailing" secondItem="vDu-zF-Fre" secondAttribute="trailing" id="q4a-Oj-UQx"/>
                             <constraint firstItem="h9t-Rk-EdC" firstAttribute="top" secondItem="DGs-Qz-UlN" secondAttribute="bottom" constant="60" id="szw-Ne-hYI"/>
                         </constraints>
                     </view>
@@ -95,7 +122,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-13.043478260869566" y="77.678571428571431"/>
+            <point key="canvasLocation" x="-13.6" y="77.58620689655173"/>
         </scene>
         <!--Onboarding Second Page View Controller-->
         <scene sceneID="Ti9-J9-vaA">
@@ -156,10 +183,35 @@
                                     <segue destination="gea-s2-tzn" kind="presentation" modalPresentationStyle="fullScreen" modalTransitionStyle="crossDissolve" id="Zf7-G6-teS"/>
                                 </connections>
                             </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="R1W-kZ-aAm" customClass="CHIPageControlJalapeno" customModule="CHIPageControl">
+                                <rect key="frame" x="0.0" y="492" width="375" height="20"/>
+                                <color key="tintColor" name="gray-200"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="numberOfPages">
+                                        <integer key="value" value="3"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="progress">
+                                        <real key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="padding">
+                                        <real key="value" value="6"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="radius">
+                                        <real key="value" value="4"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="currentPageTintColor">
+                                        <color key="value" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="cwl-Pj-ZxO"/>
                         <color key="backgroundColor" name="white"/>
                         <constraints>
+                            <constraint firstItem="R1W-kZ-aAm" firstAttribute="leading" secondItem="cwl-Pj-ZxO" secondAttribute="leading" id="24z-Sw-oE8"/>
                             <constraint firstItem="Pah-hZ-BTg" firstAttribute="centerX" secondItem="cwl-Pj-ZxO" secondAttribute="centerX" id="4Ca-IX-hib"/>
                             <constraint firstItem="9F8-6p-6fZ" firstAttribute="top" secondItem="llA-qr-3FM" secondAttribute="bottom" constant="50" id="5xV-hl-jcq"/>
                             <constraint firstItem="cwl-Pj-ZxO" firstAttribute="trailing" secondItem="9F8-6p-6fZ" secondAttribute="trailing" constant="20" id="CPU-om-2Pb"/>
@@ -169,6 +221,9 @@
                             <constraint firstItem="llA-qr-3FM" firstAttribute="top" secondItem="Pah-hZ-BTg" secondAttribute="bottom" constant="20" id="FKH-EP-niy"/>
                             <constraint firstItem="rNI-wj-6ir" firstAttribute="leading" secondItem="cwl-Pj-ZxO" secondAttribute="leading" constant="40" id="FQ2-Gd-jpH"/>
                             <constraint firstItem="llA-qr-3FM" firstAttribute="centerX" secondItem="cwl-Pj-ZxO" secondAttribute="centerX" id="Zzm-jV-1hh"/>
+                            <constraint firstItem="R1W-kZ-aAm" firstAttribute="trailing" secondItem="cwl-Pj-ZxO" secondAttribute="trailing" id="aid-oi-yv0"/>
+                            <constraint firstItem="Pah-hZ-BTg" firstAttribute="top" secondItem="R1W-kZ-aAm" secondAttribute="bottom" constant="40" id="azM-xE-DnG"/>
+                            <constraint firstItem="R1W-kZ-aAm" firstAttribute="top" secondItem="rNI-wj-6ir" secondAttribute="bottom" id="fzN-6c-Rrb"/>
                             <constraint firstItem="flR-NT-jJ5" firstAttribute="centerY" secondItem="9F8-6p-6fZ" secondAttribute="centerY" id="sqV-0K-xYg"/>
                             <constraint firstItem="cwl-Pj-ZxO" firstAttribute="bottom" secondItem="9F8-6p-6fZ" secondAttribute="bottom" constant="24" id="vxF-ZX-b0U"/>
                         </constraints>
@@ -224,11 +279,36 @@
                                 <color key="textColor" name="gray-700"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NSO-8V-8Qg" customClass="CHIPageControlJalapeno" customModule="CHIPageControl">
+                                <rect key="frame" x="0.0" y="492" width="375" height="20"/>
+                                <color key="tintColor" name="gray-200"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="numberOfPages">
+                                        <integer key="value" value="3"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="progress">
+                                        <real key="value" value="2"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="padding">
+                                        <real key="value" value="6"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="radius">
+                                        <real key="value" value="4"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="currentPageTintColor">
+                                        <color key="value" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="n6Z-08-Vgy"/>
                         <color key="backgroundColor" name="white"/>
                         <constraints>
                             <constraint firstItem="n6Z-08-Vgy" firstAttribute="trailing" secondItem="1ja-XZ-1eo" secondAttribute="trailing" constant="20" id="2ni-ZG-gr6"/>
+                            <constraint firstItem="NSO-8V-8Qg" firstAttribute="top" secondItem="iKr-VX-tOZ" secondAttribute="bottom" id="373-A1-PZh"/>
                             <constraint firstItem="iKr-VX-tOZ" firstAttribute="leading" secondItem="n6Z-08-Vgy" secondAttribute="leading" constant="40" id="AT7-fz-VDb"/>
                             <constraint firstItem="1ja-XZ-1eo" firstAttribute="leading" secondItem="n6Z-08-Vgy" secondAttribute="leading" constant="20" id="HUx-Rd-G4Z"/>
                             <constraint firstItem="EFD-uZ-rnD" firstAttribute="top" secondItem="iKr-VX-tOZ" secondAttribute="bottom" constant="60" id="Meh-Pg-6mw"/>
@@ -238,6 +318,9 @@
                             <constraint firstItem="n6Z-08-Vgy" firstAttribute="bottom" secondItem="1ja-XZ-1eo" secondAttribute="bottom" constant="24" id="ZBb-wS-gBg"/>
                             <constraint firstItem="iKr-VX-tOZ" firstAttribute="width" secondItem="iKr-VX-tOZ" secondAttribute="height" multiplier="4:5" constant="1" id="elM-56-vXc"/>
                             <constraint firstItem="1ja-XZ-1eo" firstAttribute="top" secondItem="N3r-i8-Tox" secondAttribute="bottom" constant="50" id="gvk-9L-b6g"/>
+                            <constraint firstItem="EFD-uZ-rnD" firstAttribute="top" secondItem="NSO-8V-8Qg" secondAttribute="bottom" constant="40" id="mDK-Cp-JcH"/>
+                            <constraint firstItem="NSO-8V-8Qg" firstAttribute="trailing" secondItem="n6Z-08-Vgy" secondAttribute="trailing" id="uUV-u3-fbP"/>
+                            <constraint firstItem="NSO-8V-8Qg" firstAttribute="leading" secondItem="n6Z-08-Vgy" secondAttribute="leading" id="w2x-9J-Xvq"/>
                             <constraint firstItem="EFD-uZ-rnD" firstAttribute="centerX" secondItem="n6Z-08-Vgy" secondAttribute="centerX" id="whq-z7-v0i"/>
                         </constraints>
                     </view>
@@ -247,7 +330,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="a0v-4Q-AyT" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1546" y="78"/>
+            <point key="canvasLocation" x="1544.8" y="77.58620689655173"/>
         </scene>
         <!--SignupNavigationVC-->
         <scene sceneID="UaB-Yc-gE4">
@@ -266,8 +349,19 @@
             <point key="canvasLocation" x="-858" y="78"/>
         </scene>
     </scenes>
+    <designables>
+        <designable name="Dqq-Dq-MC8">
+            <size key="intrinsicContentSize" width="36" height="8"/>
+        </designable>
+        <designable name="NSO-8V-8Qg">
+            <size key="intrinsicContentSize" width="36" height="8"/>
+        </designable>
+        <designable name="R1W-kZ-aAm">
+            <size key="intrinsicContentSize" width="36" height="8"/>
+        </designable>
+    </designables>
     <inferredMetricsTieBreakers>
-        <segue reference="05D-hb-Ano"/>
+        <segue reference="WEH-3r-lEr"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="onboarding-1" width="335" height="406"/>

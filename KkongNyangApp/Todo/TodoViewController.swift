@@ -254,7 +254,7 @@ extension TodoViewController: UICollectionViewDataSource {
             addTodoViewController.modalPresentationStyle = .fullScreen
             self.present(addTodoViewController, animated: true, completion: nil)
             
-        }
+        } 
         
         let cancel = UIAlertAction(title: "취소", style: .cancel, handler: nil)
         
