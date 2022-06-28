@@ -30,7 +30,6 @@
 		A24BB1722855F3E10065BCBE /* FirebaseDatabase in Frameworks */ = {isa = PBXBuildFile; productRef = A24BB1712855F3E10065BCBE /* FirebaseDatabase */; };
 		A24BB1742855F3E10065BCBE /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = A24BB1732855F3E10065BCBE /* FirebaseFirestore */; };
 		A24BB17728560CB40065BCBE /* Notice.swift in Sources */ = {isa = PBXBuildFile; fileRef = A24BB17628560CB40065BCBE /* Notice.swift */; };
-		A255B03B2864139600E7864A /* onboarding-3-gif.gif in Resources */ = {isa = PBXBuildFile; fileRef = A255B03A2864139600E7864A /* onboarding-3-gif.gif */; };
 		A255B0432864788B00E7864A /* splash-gif.gif in Resources */ = {isa = PBXBuildFile; fileRef = A255B0422864788B00E7864A /* splash-gif.gif */; };
 		A2684086286B02B500F29F58 /* onboarding-1-gif.gif in Resources */ = {isa = PBXBuildFile; fileRef = A2684084286B02B500F29F58 /* onboarding-1-gif.gif */; };
 		A2684087286B02B500F29F58 /* onboarding-2-gif.gif in Resources */ = {isa = PBXBuildFile; fileRef = A2684085286B02B500F29F58 /* onboarding-2-gif.gif */; };
@@ -53,6 +52,7 @@
 		A2BE71B6281B63BE00FB8548 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2BE71B5281B63BE00FB8548 /* HomeViewController.swift */; };
 		A2BE71B8281B6D8100FB8548 /* PalateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2BE71B7281B6D8100FB8548 /* PalateViewController.swift */; };
 		A2BE71C0281B79AC00FB8548 /* TodoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2BE71BF281B79AC00FB8548 /* TodoViewController.swift */; };
+		A2DD30B6286B073F00D4524C /* onboarding-3-gif.gif in Resources */ = {isa = PBXBuildFile; fileRef = A2DD30B5286B073F00D4524C /* onboarding-3-gif.gif */; };
 		A2DFA387280E779800AFE1BF /* OnboardingPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2DFA386280E779800AFE1BF /* OnboardingPageViewController.swift */; };
 		A2DFA38A280E795100AFE1BF /* OnboardingFirstPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2DFA389280E795100AFE1BF /* OnboardingFirstPageViewController.swift */; };
 		A2DFA38C280E7A2800AFE1BF /* OnboardingSecondPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2DFA38B280E7A2800AFE1BF /* OnboardingSecondPageViewController.swift */; };
@@ -100,7 +100,6 @@
 		A247D392280E721E00A3DF31 /* Onboarding.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Onboarding.storyboard; sourceTree = "<group>"; };
 		A24BB1672855DB8A0065BCBE /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		A24BB17628560CB40065BCBE /* Notice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Notice.swift; sourceTree = "<group>"; };
-		A255B03A2864139600E7864A /* onboarding-3-gif.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; name = "onboarding-3-gif.gif"; path = "Resources/Images/gif/onboarding-3-gif.gif"; sourceTree = SOURCE_ROOT; };
 		A255B0422864788B00E7864A /* splash-gif.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; name = "splash-gif.gif"; path = "Resources/Images/gif/splash-gif.gif"; sourceTree = SOURCE_ROOT; };
 		A2684084286B02B500F29F58 /* onboarding-1-gif.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; name = "onboarding-1-gif.gif"; path = "Resources/Images/gif/onboarding-1-gif.gif"; sourceTree = SOURCE_ROOT; };
 		A2684085286B02B500F29F58 /* onboarding-2-gif.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; name = "onboarding-2-gif.gif"; path = "Resources/Images/gif/onboarding-2-gif.gif"; sourceTree = SOURCE_ROOT; };
@@ -123,6 +122,7 @@
 		A2BE71B5281B63BE00FB8548 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		A2BE71B7281B6D8100FB8548 /* PalateViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PalateViewController.swift; sourceTree = "<group>"; };
 		A2BE71BF281B79AC00FB8548 /* TodoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoViewController.swift; sourceTree = "<group>"; };
+		A2DD30B5286B073F00D4524C /* onboarding-3-gif.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; name = "onboarding-3-gif.gif"; path = "Resources/Images/gif/onboarding-3-gif.gif"; sourceTree = SOURCE_ROOT; };
 		A2DFA386280E779800AFE1BF /* OnboardingPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingPageViewController.swift; sourceTree = "<group>"; };
 		A2DFA389280E795100AFE1BF /* OnboardingFirstPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingFirstPageViewController.swift; sourceTree = "<group>"; };
 		A2DFA38B280E7A2800AFE1BF /* OnboardingSecondPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingSecondPageViewController.swift; sourceTree = "<group>"; };
@@ -353,7 +353,7 @@
 				A255B0422864788B00E7864A /* splash-gif.gif */,
 				A2684084286B02B500F29F58 /* onboarding-1-gif.gif */,
 				A2684085286B02B500F29F58 /* onboarding-2-gif.gif */,
-				A255B03A2864139600E7864A /* onboarding-3-gif.gif */,
+				A2DD30B5286B073F00D4524C /* onboarding-3-gif.gif */,
 				A2ADBEDB286360E5007D989E /* Cell */,
 				A2DFA393280E8D9700AFE1BF /* ConciergeViewController.swift */,
 				A224D4BA280D1D730040E945 /* LaunchScreen.storyboard */,
@@ -485,8 +485,8 @@
 				A24BB1682855DB8A0065BCBE /* GoogleService-Info.plist in Resources */,
 				A2DFA401280EEBF100AFE1BF /* GmarketSansLight.otf in Resources */,
 				A2DFA3FC280EEBBE00AFE1BF /* GmarketSansMedium.otf in Resources */,
+				A2DD30B6286B073F00D4524C /* onboarding-3-gif.gif in Resources */,
 				A224D4BC280D1D730040E945 /* LaunchScreen.storyboard in Resources */,
-				A255B03B2864139600E7864A /* onboarding-3-gif.gif in Resources */,
 				A2DFA402280EEBF100AFE1BF /* GmarketSansBold.otf in Resources */,
 				A224D4B9280D1D730040E945 /* Assets.xcassets in Resources */,
 				A2684087286B02B500F29F58 /* onboarding-2-gif.gif in Resources */,
