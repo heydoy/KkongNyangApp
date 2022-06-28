@@ -20,7 +20,7 @@ class OnboardingSecondPageViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setAttribute()
-        image.loadGif(name: "onboarding-2-gif")
+        
     }
     
     // MARK: - Actions
@@ -36,6 +36,8 @@ class OnboardingSecondPageViewController: UIViewController {
     // MARK: - Helpers
     func setAttribute() {
         actionButton.layer.cornerRadius = 20
+        // gif
+        image.loadGif(name: "onboarding-2-gif")
     }
 
 }

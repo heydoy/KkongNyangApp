@@ -18,12 +18,14 @@ class OnboardingThirdPageViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setAttribute()
-        image.loadGif(name: "onboarding-3-gif")
+        
     }
     // 메인으로 연결할 것이므로 버튼에 액션을 달지 않음
     
     // MARK: - Helpers
     func setAttribute() {
         startButton.layer.cornerRadius = 20
+        // gif
+        image.loadGif(name: "onboarding-3-gif")
     }
 }
