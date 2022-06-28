@@ -1,18 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
     <device id="retina5_9" orientation="portrait" appearance="light"/>
     <dependencies>
-        <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
-    <customFonts key="customFonts">
-        <array key="GmarketSansMedium.otf">
-            <string>GmarketSansMedium</string>
-        </array>
-    </customFonts>
     <scenes>
         <!--View Controller-->
         <scene sceneID="EHf-IW-A2E">
@@ -22,28 +16,20 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo-splash" translatesAutoresizingMaskIntoConstraints="NO" id="tsU-YE-Vu7">
-                                <rect key="frame" x="123" y="289" width="129" height="129"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="splash" translatesAutoresizingMaskIntoConstraints="NO" id="l37-yY-EOu">
+                                <rect key="frame" x="95" y="215.66666666666663" width="185" height="185"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" secondItem="tsU-YE-Vu7" secondAttribute="height" multiplier="1:1" id="wDf-cm-I3i"/>
+                                    <constraint firstAttribute="height" constant="185" id="8pL-0N-IX5"/>
+                                    <constraint firstAttribute="width" constant="185" id="Dai-CQ-GjG"/>
                                 </constraints>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="고양이 공동육묘 앱" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vM8-MC-JCM">
-                                <rect key="frame" x="40" y="425.33333333333331" width="295" height="17"/>
-                                <fontDescription key="fontDescription" name="GmarketSansMedium" family="Gmarket Sans" pointSize="17"/>
-                                <color key="textColor" name="greengray-900"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" name="yellow-150"/>
                         <constraints>
-                            <constraint firstItem="vM8-MC-JCM" firstAttribute="top" secondItem="tsU-YE-Vu7" secondAttribute="bottom" constant="7.5" id="6oe-io-5Gj"/>
-                            <constraint firstItem="vM8-MC-JCM" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="40" id="8Sk-Gh-4Qw"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="tsU-YE-Vu7" secondAttribute="trailing" constant="123" id="FB1-oi-eIl"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="vM8-MC-JCM" secondAttribute="trailing" constant="40" id="JDK-Vz-E3Y"/>
-                            <constraint firstItem="tsU-YE-Vu7" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="123" id="Nzh-uR-Wwu"/>
-                            <constraint firstItem="tsU-YE-Vu7" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" multiplier="0.86" id="y3C-kk-6fd"/>
+                            <constraint firstItem="l37-yY-EOu" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="95" id="54h-8E-IHe"/>
+                            <constraint firstItem="l37-yY-EOu" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" multiplier="0.75" id="DvD-Mh-PSO"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="l37-yY-EOu" secondAttribute="trailing" constant="95" id="HS1-hH-4t6"/>
                         </constraints>
                     </view>
                 </viewController>
@@ -53,10 +39,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="logo-splash" width="158.33332824707031" height="158"/>
-        <namedColor name="greengray-900">
-            <color red="0.12549019607843137" green="0.15686274509803921" blue="0.043137254901960784" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </namedColor>
+        <image name="splash" width="591" height="581"/>
         <namedColor name="yellow-150">
             <color red="1" green="0.94901960784313721" blue="0.85098039215686272" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>

@@ -6,11 +6,13 @@
 //
 
 import UIKit
+import SwiftGifOrigin
 
 class OnboardingSecondPageViewController: UIViewController {
 
     // MARK: - Properties
     
+    @IBOutlet weak var image: UIImageView!
     @IBOutlet weak var actionButton: UIButton!
     
     
@@ -18,6 +20,7 @@ class OnboardingSecondPageViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setAttribute()
+        image.loadGif(name: "onboarding-2-gif")
     }
     
     // MARK: - Actions

@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina5_9" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -68,7 +68,7 @@
                                     <color key="titleColor" name="gray-200"/>
                                 </state>
                                 <connections>
-                                    <segue destination="gea-s2-tzn" kind="presentation" modalPresentationStyle="fullScreen" modalTransitionStyle="crossDissolve" id="05D-hb-Ano"/>
+                                    <segue destination="gea-s2-tzn" kind="presentation" modalPresentationStyle="fullScreen" modalTransitionStyle="crossDissolve" id="7Bt-Or-5XG"/>
                                 </connections>
                             </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Dqq-Dq-MC8" customClass="CHIPageControlJalapeno" customModule="CHIPageControl">
@@ -118,6 +118,7 @@
                     </view>
                     <connections>
                         <outlet property="actionButton" destination="cIE-2U-YfH" id="uvY-Gr-KXB"/>
+                        <outlet property="image" destination="DGs-Qz-UlN" id="7cl-J7-1ub"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -230,6 +231,7 @@
                     </view>
                     <connections>
                         <outlet property="actionButton" destination="9F8-6p-6fZ" id="XZ5-5E-ohn"/>
+                        <outlet property="image" destination="rNI-wj-6ir" id="sZf-Z2-BQn"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CM4-qb-W22" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -325,6 +327,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="image" destination="iKr-VX-tOZ" id="Sxh-XA-foX"/>
                         <outlet property="startButton" destination="1ja-XZ-1eo" id="UWf-Lf-ONe"/>
                     </connections>
                 </viewController>
@@ -361,7 +364,7 @@
         </designable>
     </designables>
     <inferredMetricsTieBreakers>
-        <segue reference="WEH-3r-lEr"/>
+        <segue reference="Zf7-G6-teS"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="onboarding-1" width="335" height="406"/>
