@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="q5d-9j-qhg">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="q5d-9j-qhg">
     <device id="retina5_9" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -1941,6 +1941,122 @@
             </objects>
             <point key="canvasLocation" x="3741.5999999999999" y="912.5615763546798"/>
         </scene>
+        <!--Notice Detail View Controller-->
+        <scene sceneID="TwP-N4-uuI">
+            <objects>
+                <viewController storyboardIdentifier="NoticeDetailViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="4DZ-wP-AMZ" customClass="NoticeDetailViewController" customModule="KkongNyangApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="O4b-L9-9Yb">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fc2-ay-vL5">
+                                <rect key="frame" x="0.0" y="44" width="375" height="734"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="homecard1" translatesAutoresizingMaskIntoConstraints="NO" id="hgQ-Kj-z4X">
+                                        <rect key="frame" x="28.666666666666657" y="12" width="318" height="200"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="200" id="lFQ-fr-H7U"/>
+                                        </constraints>
+                                    </imageView>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CJh-85-JBJ">
+                                        <rect key="frame" x="0.0" y="190" width="375" height="544"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="친구초대 이벤트" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6zy-HV-avb">
+                                                <rect key="frame" x="20" y="22" width="154.33333333333334" height="22"/>
+                                                <fontDescription key="fontDescription" name="GmarketSansBold" family="Gmarket Sans" pointSize="22"/>
+                                                <color key="textColor" name="black"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2022.08.12 ~ 2022.09.01" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9eS-7P-0dA">
+                                                <rect key="frame" x="20" y="55" width="158.33333333333334" height="13"/>
+                                                <fontDescription key="fontDescription" name="GmarketSansMedium" family="Gmarket Sans" pointSize="13"/>
+                                                <color key="textColor" name="gray-300"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="K2D-dV-VQa">
+                                                <rect key="frame" x="20" y="86" width="335" height="1"/>
+                                                <color key="backgroundColor" name="gray-80"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="1" id="wtq-dC-9I9"/>
+                                                </constraints>
+                                            </view>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="20" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sVd-JV-LYt">
+                                                <rect key="frame" x="20" y="112.00000000000001" width="335" height="168.33333333333337"/>
+                                                <string key="text">드디어 꽁냥도 친구초대 이벤트를 시작했습니다!
+
+친구 추천을 통해서 새로운 분이 가입하시면 추천하신 분께 꽁냥의 프리미엄 60일 혜택을 드려요! 
+
+또한, 세 분 이상 추천하신 분께는 추첨을 통해서 해당 집사님의 고양이 이름으로 길고양이 보호재단에 기부를 할 예정입니다. 
+
+여러분들의 많은 참여 부탁드립니다!</string>
+                                                <fontDescription key="fontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="14"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="trailing" secondItem="K2D-dV-VQa" secondAttribute="trailing" constant="20" id="2zx-DZ-Ygh"/>
+                                            <constraint firstItem="sVd-JV-LYt" firstAttribute="top" secondItem="K2D-dV-VQa" secondAttribute="bottom" constant="25" id="4k0-NQ-k4v"/>
+                                            <constraint firstItem="K2D-dV-VQa" firstAttribute="top" secondItem="9eS-7P-0dA" secondAttribute="bottom" constant="18" id="Gjh-2e-LPS"/>
+                                            <constraint firstItem="9eS-7P-0dA" firstAttribute="leading" secondItem="6zy-HV-avb" secondAttribute="leading" id="XqO-eO-5Sl"/>
+                                            <constraint firstAttribute="trailing" secondItem="sVd-JV-LYt" secondAttribute="trailing" constant="20" id="cbh-Dg-efV"/>
+                                            <constraint firstItem="6zy-HV-avb" firstAttribute="top" secondItem="CJh-85-JBJ" secondAttribute="top" constant="22" id="ibf-kE-gdh"/>
+                                            <constraint firstItem="sVd-JV-LYt" firstAttribute="leading" secondItem="9eS-7P-0dA" secondAttribute="leading" id="lVA-kz-FlP"/>
+                                            <constraint firstItem="9eS-7P-0dA" firstAttribute="top" secondItem="6zy-HV-avb" secondAttribute="bottom" constant="11" id="uiI-zS-pYd"/>
+                                            <constraint firstItem="6zy-HV-avb" firstAttribute="leading" secondItem="CJh-85-JBJ" secondAttribute="leading" constant="20" id="upG-lI-4ro"/>
+                                            <constraint firstItem="K2D-dV-VQa" firstAttribute="leading" secondItem="CJh-85-JBJ" secondAttribute="leading" constant="20" id="vCc-qn-oZJ"/>
+                                        </constraints>
+                                    </view>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1fm-AG-TI4">
+                                        <rect key="frame" x="325" y="4" width="30" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="30" id="6zQ-x4-8bY"/>
+                                            <constraint firstAttribute="width" constant="30" id="Ivn-mP-EIN"/>
+                                        </constraints>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" image="CloseButton-white"/>
+                                        <connections>
+                                            <action selector="didDismissButtonTapped:" destination="4DZ-wP-AMZ" eventType="touchUpInside" id="qAu-aj-srX"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" name="homebg-1"/>
+                                <constraints>
+                                    <constraint firstItem="hgQ-Kj-z4X" firstAttribute="top" secondItem="fc2-ay-vL5" secondAttribute="top" constant="12" id="1XM-dX-tHX"/>
+                                    <constraint firstItem="CJh-85-JBJ" firstAttribute="top" secondItem="fc2-ay-vL5" secondAttribute="top" constant="190" id="Fzg-zC-NVm"/>
+                                    <constraint firstItem="hgQ-Kj-z4X" firstAttribute="centerX" secondItem="fc2-ay-vL5" secondAttribute="centerX" id="HHx-qN-rvj"/>
+                                    <constraint firstItem="CJh-85-JBJ" firstAttribute="leading" secondItem="fc2-ay-vL5" secondAttribute="leading" id="N0K-xn-k7Z"/>
+                                    <constraint firstItem="1fm-AG-TI4" firstAttribute="top" secondItem="fc2-ay-vL5" secondAttribute="top" constant="4" id="Xd2-EE-qx1"/>
+                                    <constraint firstItem="hgQ-Kj-z4X" firstAttribute="width" secondItem="fc2-ay-vL5" secondAttribute="width" multiplier="0.848" id="gKd-DK-nde"/>
+                                    <constraint firstAttribute="bottom" secondItem="CJh-85-JBJ" secondAttribute="bottom" id="jNE-Ec-nqr"/>
+                                    <constraint firstAttribute="trailing" secondItem="CJh-85-JBJ" secondAttribute="trailing" id="lYk-DO-lBv"/>
+                                    <constraint firstAttribute="trailing" secondItem="1fm-AG-TI4" secondAttribute="trailing" constant="20" id="t0a-y7-ZsH"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="n06-Ps-J3i"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="n06-Ps-J3i" firstAttribute="bottom" secondItem="fc2-ay-vL5" secondAttribute="bottom" id="6Cp-9z-mFa"/>
+                            <constraint firstItem="fc2-ay-vL5" firstAttribute="top" secondItem="n06-Ps-J3i" secondAttribute="top" id="Apb-0w-f4s"/>
+                            <constraint firstItem="n06-Ps-J3i" firstAttribute="trailing" secondItem="fc2-ay-vL5" secondAttribute="trailing" id="pQE-v3-E8S"/>
+                            <constraint firstItem="fc2-ay-vL5" firstAttribute="leading" secondItem="n06-Ps-J3i" secondAttribute="leading" id="ukP-df-Zvd"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="cardBackground" destination="fc2-ay-vL5" id="FuX-K0-oz2"/>
+                        <outlet property="cardDate" destination="9eS-7P-0dA" id="W9v-qP-k39"/>
+                        <outlet property="cardImage" destination="hgQ-Kj-z4X" id="oqa-Fo-EB6"/>
+                        <outlet property="cardTitle" destination="6zy-HV-avb" id="abM-eT-Myb"/>
+                        <outlet property="fullText" destination="sVd-JV-LYt" id="eNj-wB-oDF"/>
+                        <outlet property="textBackground" destination="CJh-85-JBJ" id="SDC-di-G0g"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="e7t-eB-KBq" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4485.6000000000004" y="912.5615763546798"/>
+        </scene>
         <!--마이페이지-->
         <scene sceneID="S5E-YF-0RH">
             <objects>
@@ -1963,6 +2079,7 @@
     </scenes>
     <resources>
         <image name="CloseButton" width="32" height="32"/>
+        <image name="CloseButton-white" width="30" height="30"/>
         <image name="alert-disabled" width="72" height="28"/>
         <image name="alert-enabled" width="72" height="28"/>
         <image name="arrow-right" width="30" height="30"/>
@@ -2019,6 +2136,9 @@
         </namedColor>
         <namedColor name="greengray-900">
             <color red="0.12549019607843137" green="0.15686274509803921" blue="0.043137254901960784" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="homebg-1">
+            <color red="0.8901960784313725" green="0.92941176470588238" blue="0.98431372549019602" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="todoDefault">
             <color red="0.97254901960784312" green="0.97254901960784312" blue="0.96470588235294119" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

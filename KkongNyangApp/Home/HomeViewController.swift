@@ -161,6 +161,29 @@ extension HomeViewController: UICollectionViewDataSource {
 
     }
     
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        
+        // 셀 클릭시
+        let notice = noticeArrayDataSource[indexPath.item]
+        
+        let storyboard = UIStoryboard.main
+        
+        let detailViewController = storyboard.instantiateViewController(withIdentifier: "NoticeDetailViewController") as! NoticeDetailViewController
+        
+        detailViewController.modalPresentationStyle = .fullScreen
+        
+        detailViewController.imageURL = notice.image
+        detailViewController.bgColorString = notice.bgcolor
+        detailViewController.titleString = notice.title
+        detailViewController.dateString = notice.date
+        detailViewController.fullTextString = notice.body
+        
+        
+        self.present(detailViewController, animated: true, completion: nil)
+        
+        
+    }
+    
 }
 
 

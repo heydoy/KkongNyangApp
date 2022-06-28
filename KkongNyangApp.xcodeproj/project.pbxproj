@@ -53,6 +53,7 @@
 		A2BE71B8281B6D8100FB8548 /* PalateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2BE71B7281B6D8100FB8548 /* PalateViewController.swift */; };
 		A2BE71C0281B79AC00FB8548 /* TodoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2BE71BF281B79AC00FB8548 /* TodoViewController.swift */; };
 		A2DD30B6286B073F00D4524C /* onboarding-3-gif.gif in Resources */ = {isa = PBXBuildFile; fileRef = A2DD30B5286B073F00D4524C /* onboarding-3-gif.gif */; };
+		A2DD30B8286B40D800D4524C /* NoticeDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2DD30B7286B40D800D4524C /* NoticeDetailViewController.swift */; };
 		A2DFA387280E779800AFE1BF /* OnboardingPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2DFA386280E779800AFE1BF /* OnboardingPageViewController.swift */; };
 		A2DFA38A280E795100AFE1BF /* OnboardingFirstPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2DFA389280E795100AFE1BF /* OnboardingFirstPageViewController.swift */; };
 		A2DFA38C280E7A2800AFE1BF /* OnboardingSecondPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2DFA38B280E7A2800AFE1BF /* OnboardingSecondPageViewController.swift */; };
@@ -123,6 +124,7 @@
 		A2BE71B7281B6D8100FB8548 /* PalateViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PalateViewController.swift; sourceTree = "<group>"; };
 		A2BE71BF281B79AC00FB8548 /* TodoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoViewController.swift; sourceTree = "<group>"; };
 		A2DD30B5286B073F00D4524C /* onboarding-3-gif.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; name = "onboarding-3-gif.gif"; path = "Resources/Images/gif/onboarding-3-gif.gif"; sourceTree = SOURCE_ROOT; };
+		A2DD30B7286B40D800D4524C /* NoticeDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoticeDetailViewController.swift; sourceTree = "<group>"; };
 		A2DFA386280E779800AFE1BF /* OnboardingPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingPageViewController.swift; sourceTree = "<group>"; };
 		A2DFA389280E795100AFE1BF /* OnboardingFirstPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingFirstPageViewController.swift; sourceTree = "<group>"; };
 		A2DFA38B280E7A2800AFE1BF /* OnboardingSecondPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingSecondPageViewController.swift; sourceTree = "<group>"; };
@@ -299,6 +301,7 @@
 			children = (
 				A2A409BE284CA6BF00FD47EC /* Cell */,
 				A2BE71B5281B63BE00FB8548 /* HomeViewController.swift */,
+				A2DD30B7286B40D800D4524C /* NoticeDetailViewController.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -573,6 +576,7 @@
 				A2B2BC102827AADE00659836 /* EmailLoginViewController.swift in Sources */,
 				A224D4B2280D1D720040E945 /* SceneDelegate.swift in Sources */,
 				A2E0044A285AB24D00B13AF4 /* String+Extension.swift in Sources */,
+				A2DD30B8286B40D800D4524C /* NoticeDetailViewController.swift in Sources */,
 				A2320428283A65F700706DB4 /* AppInfoViewController.swift in Sources */,
 				A2BE71B8281B6D8100FB8548 /* PalateViewController.swift in Sources */,
 				A2B2BC0A2827568D00659836 /* CatFamilies.swift in Sources */,
