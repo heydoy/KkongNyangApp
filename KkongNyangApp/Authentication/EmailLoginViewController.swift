@@ -16,6 +16,10 @@ class EmailLoginViewController: UIViewController {
     var password = String()
     var userInfo: UserInfo?
     
+    @IBOutlet weak var emailTextField: UITextField!
+    @IBOutlet weak var passwordTextField: UITextField!
+    
+    
     @IBOutlet weak var registerButton: UIButton!
     @IBOutlet weak var loginButton: UIButton!
     
@@ -23,9 +27,14 @@ class EmailLoginViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        emailTextField.delegate = self
+        passwordTextField.delegate = self
+        
         setAttribute()
+        
       
     }
+    
     
     
     // MARK: - Actions
@@ -131,3 +140,18 @@ class EmailLoginViewController: UIViewController {
     
 }
     
+
+// MARK: - Extenssions
+
+extension EmailLoginViewController: UITextFieldDelegate {
+    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        self.view.endEditing(true)
+        
+    }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder() // 텍스트필드 비활성화
+        return true
+    }
+}
