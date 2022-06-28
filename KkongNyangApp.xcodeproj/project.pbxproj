@@ -11,7 +11,7 @@
 		A206BB332812BABA00F2768A /* SignupAndLogin.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A206BB322812BABA00F2768A /* SignupAndLogin.storyboard */; };
 		A215F09528508EBD005D8648 /* UIViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A215F09428508EBD005D8648 /* UIViewController+Extension.swift */; };
 		A22448C928490395008C9E72 /* TodoListCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A22448C828490395008C9E72 /* TodoListCollectionViewCell.swift */; };
-		A22448CB28490E35008C9E72 /* CatTodo.swift in Sources */ = {isa = PBXBuildFile; fileRef = A22448CA28490E35008C9E72 /* CatTodo.swift */; };
+		A22448CB28490E35008C9E72 /* Todo.swift in Sources */ = {isa = PBXBuildFile; fileRef = A22448CA28490E35008C9E72 /* Todo.swift */; };
 		A224D4B0280D1D720040E945 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A224D4AF280D1D720040E945 /* AppDelegate.swift */; };
 		A224D4B2280D1D720040E945 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A224D4B1280D1D720040E945 /* SceneDelegate.swift */; };
 		A224D4B7280D1D720040E945 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A224D4B5280D1D720040E945 /* Main.storyboard */; };
@@ -30,6 +30,10 @@
 		A24BB1722855F3E10065BCBE /* FirebaseDatabase in Frameworks */ = {isa = PBXBuildFile; productRef = A24BB1712855F3E10065BCBE /* FirebaseDatabase */; };
 		A24BB1742855F3E10065BCBE /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = A24BB1732855F3E10065BCBE /* FirebaseFirestore */; };
 		A24BB17728560CB40065BCBE /* Notice.swift in Sources */ = {isa = PBXBuildFile; fileRef = A24BB17628560CB40065BCBE /* Notice.swift */; };
+		A255B03B2864139600E7864A /* onboarding-3-gif.gif in Resources */ = {isa = PBXBuildFile; fileRef = A255B03A2864139600E7864A /* onboarding-3-gif.gif */; };
+		A255B0432864788B00E7864A /* splash-gif.gif in Resources */ = {isa = PBXBuildFile; fileRef = A255B0422864788B00E7864A /* splash-gif.gif */; };
+		A2684086286B02B500F29F58 /* onboarding-1-gif.gif in Resources */ = {isa = PBXBuildFile; fileRef = A2684084286B02B500F29F58 /* onboarding-1-gif.gif */; };
+		A2684087286B02B500F29F58 /* onboarding-2-gif.gif in Resources */ = {isa = PBXBuildFile; fileRef = A2684085286B02B500F29F58 /* onboarding-2-gif.gif */; };
 		A2A409B6284C6AC900FD47EC /* AddTodoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2A409B5284C6AC900FD47EC /* AddTodoViewController.swift */; };
 		A2A409B9284C6AF400FD47EC /* AddPalateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2A409B8284C6AF400FD47EC /* AddPalateViewController.swift */; };
 		A2A409BC284C904700FD47EC /* PalateCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2A409BB284C904700FD47EC /* PalateCollectionViewCell.swift */; };
@@ -40,6 +44,7 @@
 		A2A409CA284CD5E100FD47EC /* AlertViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2A409C9284CD5E100FD47EC /* AlertViewController.swift */; };
 		A2A409CE284CD65800FD47EC /* AlertCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2A409CD284CD65800FD47EC /* AlertCollectionViewCell.swift */; };
 		A2A409D0284CE08E00FD47EC /* BaseTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2A409CF284CE08E00FD47EC /* BaseTabBarController.swift */; };
+		A2ADBEDD2863610E007D989E /* OnboardingCarouselCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2ADBEDC2863610E007D989E /* OnboardingCarouselCollectionViewCell.swift */; };
 		A2B2BC082827560500659836 /* Users.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2B2BC072827560500659836 /* Users.swift */; };
 		A2B2BC0A2827568D00659836 /* CatFamilies.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2B2BC092827568D00659836 /* CatFamilies.swift */; };
 		A2B2BC0C28279F1E00659836 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2B2BC0B28279F1E00659836 /* RegisterViewController.swift */; };
@@ -65,7 +70,10 @@
 		A2E0044C285B346800B13AF4 /* PopOverContentController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2E0044B285B346800B13AF4 /* PopOverContentController.swift */; };
 		A2E0044E285B829700B13AF4 /* ButlerInvitationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2E0044D285B829700B13AF4 /* ButlerInvitationViewController.swift */; };
 		A2E818162830F61A00B64664 /* CatProfileSettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2E818152830F61A00B64664 /* CatProfileSettingViewController.swift */; };
-		A2FDE17328433384002163BB /* CatPalate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2FDE17228433384002163BB /* CatPalate.swift */; };
+		A2EF9456285CEDE10025BBA8 /* PopupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2EF9455285CEDE10025BBA8 /* PopupViewController.swift */; };
+		A2EF9458285D6B0E0025BBA8 /* Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2EF9457285D6B0E0025BBA8 /* Alert.swift */; };
+		A2EF945A285D6D960025BBA8 /* Date+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2EF9459285D6D960025BBA8 /* Date+Extension.swift */; };
+		A2FDE17328433384002163BB /* Palate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2FDE17228433384002163BB /* Palate.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -75,7 +83,7 @@
 		A206BB322812BABA00F2768A /* SignupAndLogin.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SignupAndLogin.storyboard; sourceTree = "<group>"; };
 		A215F09428508EBD005D8648 /* UIViewController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extension.swift"; sourceTree = "<group>"; };
 		A22448C828490395008C9E72 /* TodoListCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoListCollectionViewCell.swift; sourceTree = "<group>"; };
-		A22448CA28490E35008C9E72 /* CatTodo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatTodo.swift; sourceTree = "<group>"; };
+		A22448CA28490E35008C9E72 /* Todo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Todo.swift; sourceTree = "<group>"; };
 		A224D4AC280D1D720040E945 /* KkongNyangApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KkongNyangApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A224D4AF280D1D720040E945 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A224D4B1280D1D720040E945 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -92,6 +100,10 @@
 		A247D392280E721E00A3DF31 /* Onboarding.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Onboarding.storyboard; sourceTree = "<group>"; };
 		A24BB1672855DB8A0065BCBE /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		A24BB17628560CB40065BCBE /* Notice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Notice.swift; sourceTree = "<group>"; };
+		A255B03A2864139600E7864A /* onboarding-3-gif.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; name = "onboarding-3-gif.gif"; path = "Resources/Images/gif/onboarding-3-gif.gif"; sourceTree = SOURCE_ROOT; };
+		A255B0422864788B00E7864A /* splash-gif.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; name = "splash-gif.gif"; path = "Resources/Images/gif/splash-gif.gif"; sourceTree = SOURCE_ROOT; };
+		A2684084286B02B500F29F58 /* onboarding-1-gif.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; name = "onboarding-1-gif.gif"; path = "Resources/Images/gif/onboarding-1-gif.gif"; sourceTree = SOURCE_ROOT; };
+		A2684085286B02B500F29F58 /* onboarding-2-gif.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; name = "onboarding-2-gif.gif"; path = "Resources/Images/gif/onboarding-2-gif.gif"; sourceTree = SOURCE_ROOT; };
 		A2A409B5284C6AC900FD47EC /* AddTodoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTodoViewController.swift; sourceTree = "<group>"; };
 		A2A409B8284C6AF400FD47EC /* AddPalateViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPalateViewController.swift; sourceTree = "<group>"; };
 		A2A409BB284C904700FD47EC /* PalateCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PalateCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -102,6 +114,7 @@
 		A2A409C9284CD5E100FD47EC /* AlertViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertViewController.swift; sourceTree = "<group>"; };
 		A2A409CD284CD65800FD47EC /* AlertCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertCollectionViewCell.swift; sourceTree = "<group>"; };
 		A2A409CF284CE08E00FD47EC /* BaseTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseTabBarController.swift; sourceTree = "<group>"; };
+		A2ADBEDC2863610E007D989E /* OnboardingCarouselCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingCarouselCollectionViewCell.swift; sourceTree = "<group>"; };
 		A2B2BC072827560500659836 /* Users.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Users.swift; sourceTree = "<group>"; };
 		A2B2BC092827568D00659836 /* CatFamilies.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatFamilies.swift; sourceTree = "<group>"; };
 		A2B2BC0B28279F1E00659836 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
@@ -127,7 +140,10 @@
 		A2E0044B285B346800B13AF4 /* PopOverContentController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopOverContentController.swift; sourceTree = "<group>"; };
 		A2E0044D285B829700B13AF4 /* ButlerInvitationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButlerInvitationViewController.swift; sourceTree = "<group>"; };
 		A2E818152830F61A00B64664 /* CatProfileSettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatProfileSettingViewController.swift; sourceTree = "<group>"; };
-		A2FDE17228433384002163BB /* CatPalate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatPalate.swift; sourceTree = "<group>"; };
+		A2EF9455285CEDE10025BBA8 /* PopupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopupViewController.swift; sourceTree = "<group>"; };
+		A2EF9457285D6B0E0025BBA8 /* Alert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alert.swift; sourceTree = "<group>"; };
+		A2EF9459285D6D960025BBA8 /* Date+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Extension.swift"; sourceTree = "<group>"; };
+		A2FDE17228433384002163BB /* Palate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Palate.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -228,10 +244,11 @@
 			children = (
 				A2B2BC072827560500659836 /* Users.swift */,
 				A2B2BC092827568D00659836 /* CatFamilies.swift */,
-				A2FDE17228433384002163BB /* CatPalate.swift */,
-				A22448CA28490E35008C9E72 /* CatTodo.swift */,
+				A2FDE17228433384002163BB /* Palate.swift */,
+				A22448CA28490E35008C9E72 /* Todo.swift */,
 				A2A409C5284CCAC600FD47EC /* FinishedTodo.swift */,
 				A24BB17628560CB40065BCBE /* Notice.swift */,
+				A2EF9457285D6B0E0025BBA8 /* Alert.swift */,
 			);
 			path = Data;
 			sourceTree = "<group>";
@@ -312,6 +329,14 @@
 			path = Cell;
 			sourceTree = "<group>";
 		};
+		A2ADBEDB286360E5007D989E /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				A2ADBEDC2863610E007D989E /* OnboardingCarouselCollectionViewCell.swift */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
 		A2B2BC112827BC1F00659836 /* Todo */ = {
 			isa = PBXGroup;
 			children = (
@@ -325,6 +350,11 @@
 		A2DFA388280E77A000AFE1BF /* Onboarding */ = {
 			isa = PBXGroup;
 			children = (
+				A255B0422864788B00E7864A /* splash-gif.gif */,
+				A2684084286B02B500F29F58 /* onboarding-1-gif.gif */,
+				A2684085286B02B500F29F58 /* onboarding-2-gif.gif */,
+				A255B03A2864139600E7864A /* onboarding-3-gif.gif */,
+				A2ADBEDB286360E5007D989E /* Cell */,
 				A2DFA393280E8D9700AFE1BF /* ConciergeViewController.swift */,
 				A224D4BA280D1D730040E945 /* LaunchScreen.storyboard */,
 				A247D392280E721E00A3DF31 /* Onboarding.storyboard */,
@@ -342,6 +372,7 @@
 				A2DFA3F6280EEBBE00AFE1BF /* Fonts */,
 				A2DFA390280E7DA400AFE1BF /* Extension */,
 				A2DFA391280E7DC400AFE1BF /* LandscapeManager.swift */,
+				A2EF9455285CEDE10025BBA8 /* PopupViewController.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -355,6 +386,7 @@
 				A2A409C3284CC17D00FD47EC /* UIView+Extension.swift */,
 				A215F09428508EBD005D8648 /* UIViewController+Extension.swift */,
 				A2E00449285AB24D00B13AF4 /* String+Extension.swift */,
+				A2EF9459285D6D960025BBA8 /* Date+Extension.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -454,13 +486,17 @@
 				A2DFA401280EEBF100AFE1BF /* GmarketSansLight.otf in Resources */,
 				A2DFA3FC280EEBBE00AFE1BF /* GmarketSansMedium.otf in Resources */,
 				A224D4BC280D1D730040E945 /* LaunchScreen.storyboard in Resources */,
+				A255B03B2864139600E7864A /* onboarding-3-gif.gif in Resources */,
 				A2DFA402280EEBF100AFE1BF /* GmarketSansBold.otf in Resources */,
 				A224D4B9280D1D730040E945 /* Assets.xcassets in Resources */,
+				A2684087286B02B500F29F58 /* onboarding-2-gif.gif in Resources */,
 				A224D4B7280D1D720040E945 /* Main.storyboard in Resources */,
 				A2DFA3FA280EEBBE00AFE1BF /* GmarketSansLight.otf in Resources */,
 				A206BB332812BABA00F2768A /* SignupAndLogin.storyboard in Resources */,
 				A2320424283A619700706DB4 /* Pods-KkongNyangApp-acknowledgements.plist in Resources */,
 				A2DFA3FB280EEBBE00AFE1BF /* GmarketSansBold.otf in Resources */,
+				A2684086286B02B500F29F58 /* onboarding-1-gif.gif in Resources */,
+				A255B0432864788B00E7864A /* splash-gif.gif in Resources */,
 				A2DFA403280EEBF100AFE1BF /* GmarketSansMedium.otf in Resources */,
 				A247D393280E721E00A3DF31 /* Onboarding.storyboard in Resources */,
 			);
@@ -516,9 +552,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				A2A409C8284CCE3800FD47EC /* FinishedTodoCollectionViewCell.swift in Sources */,
+				A2EF945A285D6D960025BBA8 /* Date+Extension.swift in Sources */,
 				A2DFA38A280E795100AFE1BF /* OnboardingFirstPageViewController.swift in Sources */,
-				A2FDE17328433384002163BB /* CatPalate.swift in Sources */,
-				A22448CB28490E35008C9E72 /* CatTodo.swift in Sources */,
+				A2FDE17328433384002163BB /* Palate.swift in Sources */,
+				A22448CB28490E35008C9E72 /* Todo.swift in Sources */,
 				A2A409B9284C6AF400FD47EC /* AddPalateViewController.swift in Sources */,
 				A2DFA38C280E7A2800AFE1BF /* OnboardingSecondPageViewController.swift in Sources */,
 				A224D4B0280D1D720040E945 /* AppDelegate.swift in Sources */,
@@ -529,6 +566,7 @@
 				A2DFA396280E8E6000AFE1BF /* UIStoryboard+Extension.swift in Sources */,
 				A2A409C6284CCAC600FD47EC /* FinishedTodo.swift in Sources */,
 				A2DFA387280E779800AFE1BF /* OnboardingPageViewController.swift in Sources */,
+				A2EF9456285CEDE10025BBA8 /* PopupViewController.swift in Sources */,
 				A24BB17728560CB40065BCBE /* Notice.swift in Sources */,
 				A2370C252840B8CE00D64871 /* UIDevice+Extension.swift in Sources */,
 				A2BE71C0281B79AC00FB8548 /* TodoViewController.swift in Sources */,
@@ -541,6 +579,7 @@
 				A2BE71B6281B63BE00FB8548 /* HomeViewController.swift in Sources */,
 				A2A409C4284CC17D00FD47EC /* UIView+Extension.swift in Sources */,
 				A2320426283A643A00706DB4 /* MyPageViewController.swift in Sources */,
+				A2ADBEDD2863610E007D989E /* OnboardingCarouselCollectionViewCell.swift in Sources */,
 				A232042A283A662200706DB4 /* AlertSettingViewController.swift in Sources */,
 				A2E0044C285B346800B13AF4 /* PopOverContentController.swift in Sources */,
 				A22448C928490395008C9E72 /* TodoListCollectionViewCell.swift in Sources */,
@@ -552,6 +591,7 @@
 				A2B2BC082827560500659836 /* Users.swift in Sources */,
 				A2E818162830F61A00B64664 /* CatProfileSettingViewController.swift in Sources */,
 				A2E0044E285B829700B13AF4 /* ButlerInvitationViewController.swift in Sources */,
+				A2EF9458285D6B0E0025BBA8 /* Alert.swift in Sources */,
 				A2A409BC284C904700FD47EC /* PalateCollectionViewCell.swift in Sources */,
 				A2A409C0284CA6CA00FD47EC /* CardCollectionViewCell.swift in Sources */,
 				A2DFA394280E8D9700AFE1BF /* ConciergeViewController.swift in Sources */,
@@ -632,7 +672,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -687,7 +727,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;

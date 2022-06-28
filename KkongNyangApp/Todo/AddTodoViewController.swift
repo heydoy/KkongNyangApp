@@ -7,19 +7,33 @@
 
 import UIKit
 import PickerButton
+import FirebaseAuth
+import FirebaseDatabase
 
 class AddTodoViewController: UIViewController {
     // MARK: - Properties
-    var catID: Int = 0
+    // Firebase DB 주소
+    let db: DatabaseReference! = Database.database(url: "https://kkongnyangapp-default-rtdb.asia-southeast1.firebasedatabase.app/").reference()
+    var familyCode: String = ""
+    
+    
+    var catID: String = ""
     var todo: String = ""
-    var perDay: String = "오전 10시"
+    var perDay: String = "매일 오전 10시"
     var perHour: String = ""
     var perWeek: [String] = []
     var image: String = ""
     var memo : String = ""
-    
 
     
+
+    // 아울렛 변수
+    // 아울렛 텍스트필드
+    
+    @IBOutlet weak var titleTextField: UITextField!
+    @IBOutlet weak var memoTextField: UITextField!
+    
+    // 선택버튼
     @IBOutlet weak var selectTodoButton: PickerButton!
     @IBOutlet weak var selectPerDayButton: PickerButton!
     @IBOutlet weak var selectPerHourButton: PickerButton!
@@ -33,9 +47,10 @@ class AddTodoViewController: UIViewController {
     @IBOutlet weak var saturdayButton: UIButton!
     @IBOutlet weak var sundayButton: UIButton!
     
- 
     
-    let pickerValues: [String] = CatTodo.TodoTitleList
+    
+    let pickerValues: [String] = Todo.TitleList
+    
     let pickerValuesOfDay: [String] = [
         "1회", "2회", "3회", "4회", "5회",
         "6회", "7회", "8회", "9회", "10회"
@@ -46,11 +61,6 @@ class AddTodoViewController: UIViewController {
         "11시간", "12시간"
     ]
     
-    
-    var catTodo: ((CatTodo) -> Void)?
-    
-    
-    @IBOutlet weak var todoTextField: UITextField!
     
     
     // MARK: - Lifecycle
@@ -69,6 +79,15 @@ class AddTodoViewController: UIViewController {
     
         // 버튼 둥글리기
         setAttribute()
+        
+        // 파이어베이스
+        getFamilyCode()
+        
+        // 전달될 경우
+        if isEditing == true {
+           
+           setView()
+        }
 
     }
     
@@ -79,6 +98,15 @@ class AddTodoViewController: UIViewController {
     
     // MARK: - Actions
     
+    
+    @IBAction func didSelectButtonEditingChanged(_ sender: UIButton) {
+        DispatchQueue.main.async {
+            self.getButtonText()
+            self.titleTextField.text = self.title
+        }
+    }
+    
+    
     @IBAction func didDismissButtonTapped(_ sender: UIButton) {
         self.dismiss(animated: true, completion: nil)
     }
@@ -88,15 +116,11 @@ class AddTodoViewController: UIViewController {
         switch sender.selectedSegmentIndex {
         case 0:
             // 공통
-            catID = 0
+            catID = "0"
             break
         case 1:
             // 첫째고양이
-            catID = 1
-            break
-        case 2:
-            // 둘째고양이
-            catID = 2
+            catID = "1"
             break
         default:
             // nil
@@ -105,8 +129,6 @@ class AddTodoViewController: UIViewController {
     }
     
     @IBAction func didTodoTextFieldEditingChanged(_ sender: UITextField) {
-        // 직접 작성 선택전에는 disabled
-        
         let text = sender.text ?? ""
         todo = text
     }
@@ -120,21 +142,31 @@ class AddTodoViewController: UIViewController {
     
     @IBAction func didAddButtonTapped(_ sender: UIButton) {
         
-        //self.navigationController?.popViewController(animated: true)
-        self.dismiss(animated: true, completion: nil)
+        
         // 버튼 텍스트로 이미지 추가
         getButtonText()
+
         
-        let catTodo = CatTodo(
-            catID: self.catID,
-            title: self.todo,
-            time: self.perDay,
-            image: self.image,
-            memo: self.memo,
-            isFinished: false
-        )
-        
-        self.catTodo?(catTodo)
+        showPopUp(title: "할 일 추가", message: "할일 \(self.todo)을(를) 추가하시겠습니까?", attributedMessage: NSAttributedString(string: "할일 \(self.todo)을(를) 추가하시겠습니까?"), leftActionTitle: "취소", rightActionTitle: "추가") {
+            // 취소일 경우 아무것도 하지 않음
+        } rightActionCompletion: {
+            let parent = self.db.child("catFamilies/\(self.familyCode)/todo")
+            
+            
+            let post = ["catId": self.catID,
+                        "title": self.todo,
+                        "time" : self.perDay,
+                        "image": self.image,
+                        "memo": self.memo,
+                        "isFinished": false,
+                        "finishTime": ""
+            ] as [String : Any]
+            
+            parent.childByAutoId().updateChildValues(post)
+            
+            self.dismiss(animated: true, completion: nil)
+
+        }
 
     }
     
@@ -154,6 +186,23 @@ class AddTodoViewController: UIViewController {
     }
 
     // MARK: - Helpers
+    func getFamilyCode() {
+        // firebasse
+        let user = Auth.auth().currentUser
+        var uid = ""
+        if let user = user {
+            uid = user.uid
+        }
+        
+
+        self.db.child("users/\(uid)/catFamilyCode").getData { error, snapshot in
+            guard error == nil else {
+                print(error!.localizedDescription)
+                return
+            }
+            self.familyCode = (snapshot?.value as? String)!
+        }
+    }
     func setAttribute(){
         let buttonArray: [UIButton] = [
         mondayButton, tuesdayButton, wednesdayButton,
@@ -167,12 +216,18 @@ class AddTodoViewController: UIViewController {
         }
     }
     
-    func getButtonText(){
+    func setView() {
+        titleTextField.text = self.todo
+        memoTextField.text = self.memo
+       // selectTodoButton.setTitle
+    }
+    
+    func getButtonText() {
         let title = selectTodoButton.currentTitle!
-        let text : [String] = CatTodo.TodoTitleList
+        let text : [String] = Todo.TitleList
         for (index, t) in text.enumerated() {
             if title == t {
-                self.image = CatTodo.TodoIconList[index]
+                self.image = Todo.IconList[index]
             }
         }
     }
@@ -182,6 +237,7 @@ class AddTodoViewController: UIViewController {
 
 extension AddTodoViewController: UIPickerViewDelegate, UIPickerViewDataSource {
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+        
         return pickerValues[row]
     }
     

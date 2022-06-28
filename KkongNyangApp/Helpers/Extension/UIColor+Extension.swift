@@ -35,6 +35,11 @@ extension UIColor {
     
     // --> Primary Color
     static let yellow500 = UIColor(named: "yellow-500")
+    
+    // --> Todo
+    
+    static let todoDefault = UIColor(named: "todoDefault")
+    static let todoFinished = UIColor(named: "todoFinished")
 }
 
 // 16진수를 UIColor

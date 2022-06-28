@@ -6,16 +6,19 @@
 //
 
 import UIKit
+import SwiftGifOrigin
 
 class OnboardingThirdPageViewController: UIViewController {
     // MARK: - Properties
     
+    @IBOutlet weak var image: UIImageView!
     @IBOutlet weak var startButton: UIButton!
     
     // MARK: - Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
         setAttribute()
+        image.loadGif(name: "onboarding-3-gif")
     }
     // 메인으로 연결할 것이므로 버튼에 액션을 달지 않음
     

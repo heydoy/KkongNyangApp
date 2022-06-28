@@ -9,7 +9,7 @@ import UIKit
 
 class TodoListCollectionViewCell: UICollectionViewCell {
     // MARK: - Properties
-    var catId: Int = 0
+    var catId: String = ""
     
     @IBOutlet weak var iconImage: UIImageView!
     @IBOutlet weak var todoTitleLabel: UILabel!
@@ -20,20 +20,20 @@ class TodoListCollectionViewCell: UICollectionViewCell {
     
     // MARK: - Actions
     
-    func configure(_ todo: CatTodo) {
+    func configure(_ todo: Todo) {
         // 데이터를 불러와서 셀을 구성 (FC 프로젝트채팅리스트 2 영상 참조)
-        catId = todo.catID
+        catId = todo.catId
         iconImage.image = UIImage(named: todo.image)
         todoTitleLabel.text = todo.title
         timeLabel.text = todo.time
         
         
-        if todo.isFinished == true {
-            checkButton.isSelected = true
-            
-        } else {
-            checkButton.isSelected = false
-        }
+//        if todo.isFinished == true {
+//            checkButton.isSelected = true
+//            
+//        } else {
+//            checkButton.isSelected = false
+//        }
     }
     
     

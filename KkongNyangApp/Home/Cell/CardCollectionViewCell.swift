@@ -27,7 +27,6 @@ class CardCollectionViewCell: UICollectionViewCell {
     func configure(_ notice: Notice){
         
         //cardImage.image = image
-        print(notice.bgcolor)
         cardImageBackground.backgroundColor = UIColor(hexString: notice.bgcolor)
         cardTitle.text = notice.title
         cardDescription.text = notice.description

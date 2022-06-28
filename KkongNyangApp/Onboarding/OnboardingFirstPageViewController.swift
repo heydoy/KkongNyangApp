@@ -6,17 +6,20 @@
 //
 
 import UIKit
+import SwiftGifOrigin
 
 class OnboardingFirstPageViewController: UIViewController {
 
     // MARK: - Properties
     
+    @IBOutlet weak var image: UIImageView!
     @IBOutlet weak var actionButton: UIButton!
     
     // MARK: - Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
         setAttribute()
+        image.loadGif(name: "onboarding-1-gif")
 
     }
     

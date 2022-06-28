@@ -25,7 +25,7 @@ struct Cat {
     var catNeutered: Bool = false// 중성화여부
     var catBirthday: Date // 생년월일
     var catMemo: String
-    var catPalate: [CatPalate]
+    var catPalate: [Palate]
 }
 
 enum Gender {

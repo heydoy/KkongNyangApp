@@ -9,12 +9,21 @@ import UIKit
 
 class ConciergeViewController: UIViewController {
 
+    
+    @IBOutlet weak var image: UIImageView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        image.loadGif(name: "splash-gif")
+        
+        
+        
     }
     
     // isFirstLaunch 값에 따라 분기하여 온보딩, 또는 메인을 띄워줌
     override func viewDidAppear(_ animated: Bool) {
+        sleep(3)
         if LandscapeManager.shared.isFirstLaunch {
             performSegue(withIdentifier: "toOnboarding", sender: nil)
             LandscapeManager.shared.isFirstLaunch = true
