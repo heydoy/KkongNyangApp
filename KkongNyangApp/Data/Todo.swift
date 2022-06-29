@@ -10,6 +10,7 @@ import UIKit
 import FirebaseDatabase
 
 class Todo {
+    var key = ""
     var catId = ""
     var title = ""
     var time = ""
@@ -20,6 +21,7 @@ class Todo {
     
     
     init(withSnapshot: DataSnapshot) {
+        self.key = withSnapshot.key
         self.catId = withSnapshot.childSnapshot(forPath: "catId").value as? String ?? ""
         self.title = withSnapshot.childSnapshot(forPath: "title").value as? String ?? ""
         self.time = withSnapshot.childSnapshot(forPath: "time").value as? String ?? ""

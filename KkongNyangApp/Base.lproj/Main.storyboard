@@ -134,16 +134,16 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="엄마 님이 정수기 설거지하기를 요청하셨습니다." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fr3-me-vzu">
-                                                    <rect key="frame" x="20" y="23" width="335" height="18"/>
+                                                    <rect key="frame" x="20" y="19" width="335" height="18"/>
                                                     <fontDescription key="fontDescription" name="AppleSDGothicNeo-Medium" family="Apple SD Gothic Neo" pointSize="15"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <button opaque="NO" contentMode="scaleAspectFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="B3z-3Y-4V6">
-                                                    <rect key="frame" x="20" y="49" width="72" height="28"/>
+                                                    <rect key="frame" x="20" y="43" width="64" height="24"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="width" constant="72" id="6kD-Br-ncV"/>
-                                                        <constraint firstAttribute="height" constant="28" id="Yos-Vi-mxQ"/>
+                                                        <constraint firstAttribute="width" constant="64" id="6kD-Br-ncV"/>
+                                                        <constraint firstAttribute="height" constant="24" id="Yos-Vi-mxQ"/>
                                                     </constraints>
                                                     <fontDescription key="fontDescription" name="AppleSDGothicNeo-SemiBold" family="Apple SD Gothic Neo" pointSize="13"/>
                                                     <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
@@ -163,9 +163,9 @@
                                                 </view>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="B3z-3Y-4V6" firstAttribute="top" secondItem="fr3-me-vzu" secondAttribute="bottom" constant="8" id="405-GV-WWl"/>
+                                                <constraint firstItem="B3z-3Y-4V6" firstAttribute="top" secondItem="fr3-me-vzu" secondAttribute="bottom" constant="6" id="405-GV-WWl"/>
                                                 <constraint firstItem="Jbp-4U-Yv9" firstAttribute="leading" secondItem="pBR-yM-KlI" secondAttribute="leading" id="6sf-ip-KPz"/>
-                                                <constraint firstItem="fr3-me-vzu" firstAttribute="top" secondItem="cjc-eO-CZT" secondAttribute="bottom" constant="12" id="Cci-mR-46C"/>
+                                                <constraint firstItem="fr3-me-vzu" firstAttribute="top" secondItem="cjc-eO-CZT" secondAttribute="bottom" constant="8" id="Cci-mR-46C"/>
                                                 <constraint firstItem="B3z-3Y-4V6" firstAttribute="leading" secondItem="pBR-yM-KlI" secondAttribute="leading" constant="20" id="FS5-4G-mLR"/>
                                                 <constraint firstItem="cjc-eO-CZT" firstAttribute="leading" secondItem="pBR-yM-KlI" secondAttribute="leading" constant="20" id="cCb-3z-g7b"/>
                                                 <constraint firstAttribute="bottom" secondItem="Jbp-4U-Yv9" secondAttribute="bottom" id="hey-M8-Zrr"/>

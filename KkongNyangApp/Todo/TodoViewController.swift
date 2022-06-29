@@ -137,6 +137,8 @@ class TodoViewController: UIViewController {
             let allTodos = snapshot.children.allObjects as! [DataSnapshot]
             
             for todoSnap in allTodos {
+                // todoSnap.key
+                // print("MARK: Todo 키값----> \(todoSnap.key)")
                 let aTodo = Todo(withSnapshot: todoSnap)
                 self.catTodoList.append(aTodo)
                 print(self.catTodoList)
@@ -199,32 +201,44 @@ extension TodoViewController: UICollectionViewDataSource {
         }
         
         let finish = UIAlertAction(title: finishText, style: .default) { _ in
-            //
-            print("finish")
+
             
             cell.isFinished = !cell.isFinished
             
             
             if cell.isFinished == true {
-                let now = Date()
-                let dateFormatter = DateFormatter()
-                dateFormatter.dateFormat = "\(self.userName)님이 a h시 m분 완료"
-                dateFormatter.locale = Locale(identifier: "ko_KR")
-                let convertedString = dateFormatter.string(from: now)
+//                let now = Date()
+//                let dateFormatter = DateFormatter()
+//                dateFormatter.dateFormat = "\(self.userName)님이 a h시 m분 완료"
+//                dateFormatter.locale = Locale(identifier: "ko_KR")
+//                let convertedString = dateFormatter.string(from: now)
+//
+//                cell.finishTime = convertedString
                 
-                cell.finishTime = convertedString
+                let alertParent = self.db.child("alert/\(self.familyCode)")
                 
-                let parent = self.db.child("alert/\(self.familyCode)")
-                
-                let post = [
+                let alertPost = [
                     "time" : Date().toString(),
-                    "from" : self.userName,
+                    "finishedFrom" : self.userName,
                     "todo" : cell.title,
-                    "todoKey" : "",
+                    "todoKey" : cell.key,
                     "isFinished" : true,
+ 
                 ] as [String:Any]
                 
-                parent.childByAutoId().updateChildValues(post)
+                alertParent.childByAutoId().updateChildValues(alertPost)
+                
+                // 파이어베이스에 투두 isFinished 업데이트
+                print(cell.key)
+                let todoParent = self.db.child("catFamilies/\(self.familyCode)/todo/\(cell.key)")
+                
+                
+                let todoPost = [
+                            "isFinished": true,
+                            "finishTime": Date().toString()
+                ] as [String : Any]
+                
+                todoParent.updateChildValues(todoPost)
                 
                 
                 self.showToast(message: "\(cell.title) \n완료하였습니다.")
@@ -232,6 +246,17 @@ extension TodoViewController: UICollectionViewDataSource {
             } else {
                 // 완료취소인경우 완수타임 비우기
                 cell.finishTime = ""
+                
+                // 파이어베이스에 투두 isFinished 업데이트
+                let todoParent = self.db.child("catFamilies/\(self.familyCode)/todo/\(cell.key)")
+                
+                
+                let todoPost = [
+                            "isFinished": false,
+                            "finishTime": ""
+                ] as [String : Any]
+                
+                todoParent.updateChildValues(todoPost)
                 
                 self.showToast(message: "\(cell.title) \n완료 취소하였습니다.")
             }
@@ -246,10 +271,11 @@ extension TodoViewController: UICollectionViewDataSource {
             
             let post = [
                 "time" : Date().toString(),
-                "from" : self.userName,
+                "askedFrom" : self.userName,
                 "todo" : cell.title,
-                "todoKey" : "",
+                "todoKey" : cell.key,
                 "isFinished" : false,
+                "isAsked": true
             ] as [String:Any]
             
             parent.childByAutoId().updateChildValues(post)

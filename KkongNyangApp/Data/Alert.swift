@@ -18,19 +18,24 @@ class Alert: Comparable {
     }
     
 
-    
+    var key: String = ""
     var time: String = ""
-    var from: String = ""
+    var askedFrom: String = ""
+    var finishedFrom: String = ""
     var todo: String = ""
     var todoKey: String = ""
     var isFinished: Bool = false
+    var isAsked: Bool = false
     
     init(withSnapshot: DataSnapshot) {
+        self.key = withSnapshot.key
         self.time = withSnapshot.childSnapshot(forPath: "time").value as? String ?? ""
-        self.from = withSnapshot.childSnapshot(forPath: "from").value as? String ?? ""
+        self.askedFrom = withSnapshot.childSnapshot(forPath: "askedFrom").value as? String ?? ""
+        self.finishedFrom = withSnapshot.childSnapshot(forPath: "finishedFrom").value as? String ?? ""
         self.todo = withSnapshot.childSnapshot(forPath: "todo").value as? String ?? ""
         self.todoKey = withSnapshot.childSnapshot(forPath: "todoKey").value as? String ?? ""
         self.isFinished = withSnapshot.childSnapshot(forPath: "isFinished").value as? Bool ?? false
+        self.isAsked = withSnapshot.childSnapshot(forPath: "isAsked").value as? Bool ?? false
     }
     
 }

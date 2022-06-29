@@ -16,15 +16,22 @@ class AlertCollectionViewCell: UICollectionViewCell {
     func configure(_ alert: Alert) {
         timeLabel.text = timeCalcalculation(alert.time)
         
-        
-        if alert.isFinished == false {
+        // 요청한 내역은 있고 완료내역은 없을 시
+        if alert.isFinished == false && alert.isAsked == true {
             finishButton.isEnabled = true
-            descriptionLabel.text = "\(alert.from) 님이 \(alert.todo)를 요청하셨습니다."
-        } else {
+            descriptionLabel.text = "\(alert.askedFrom) 님이 \(alert.todo)를 요청하셨습니다."
+        }
+        // 요청한 내역도 있고 완료내역도 있을 시
+        else if alert.isFinished == true && alert.isAsked == true {
             finishButton.isEnabled = false
             finishButton.setTitle("완료", for: .disabled)
-            descriptionLabel.text = "\(alert.from) 님이 \(alert.todo)를 완료하셨습니다."
-            
+            descriptionLabel.text = "\(alert.askedFrom) 님이 요청한 \(alert.todo)를 \(alert.finishedFrom) 님이 완료하셨습니다."
+        }
+        // 완료내역은 있지만 요청 내역은 없을 시
+        else if alert.isFinished == true && alert.isAsked == false {
+            finishButton.isEnabled = false
+            finishButton.setTitle("완료", for: .disabled)
+            descriptionLabel.text = "\(alert.todo)를 \(alert.finishedFrom) 님이 완료하셨습니다."
         }
     }
     

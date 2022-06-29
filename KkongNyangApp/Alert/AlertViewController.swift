@@ -133,6 +133,29 @@ extension AlertViewController: UICollectionViewDataSource {
         
         let finish = UIAlertAction(title: "완료하기", style: .default) { _ in
             cell.isFinished = true
+            
+            // 내 알림 업데이트
+            let selfParent = self.db.child("alert/\(self.familyCode)/\(cell.key)")
+            let selfPost = [
+                "isFinished" : true,
+                "finishedFrom" : self.userName
+            ] as [String:Any]
+            
+            selfParent.updateChildValues(selfPost)
+
+            
+            // 파이어베이스에 투두 isFinished 업데이트
+            let todoParent = self.db.child("catFamilies/\(self.familyCode)/todo/\(cell.todoKey)")
+            
+            
+            let todoPost = [
+                        "isFinished": true,
+                        "finishTime": Date().toString()
+            ] as [String : Any]
+            
+            todoParent.updateChildValues(todoPost)
+            
+            
             self.collectionView.reloadData()
         }
         let cancel = UIAlertAction(title: "취소", style: .cancel, handler: nil)
