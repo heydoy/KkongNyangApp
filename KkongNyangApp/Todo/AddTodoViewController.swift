@@ -12,6 +12,10 @@ import FirebaseDatabase
 
 class AddTodoViewController: UIViewController {
     // MARK: - Properties
+    @IBOutlet weak var viewTitle: UILabel!
+    @IBOutlet weak var viewButton: UIButton!
+    
+    
     // Firebase DB 주소
     let db: DatabaseReference! = Database.database(url: "https://kkongnyangapp-default-rtdb.asia-southeast1.firebasedatabase.app/").reference()
     var familyCode: String = ""
@@ -19,9 +23,8 @@ class AddTodoViewController: UIViewController {
     
     var catID: String = ""
     var todo: String = ""
-    var perDay: String = "매일 오전 10시"
-    var perHour: String = ""
-    var perWeek: [String] = []
+    var time: String = "매일 오전 10시"
+
     var image: String = ""
     var memo : String = ""
 
@@ -32,34 +35,16 @@ class AddTodoViewController: UIViewController {
     
     @IBOutlet weak var titleTextField: UITextField!
     @IBOutlet weak var memoTextField: UITextField!
+    @IBOutlet weak var timeTextFielld: UITextField!
     
     // 선택버튼
     @IBOutlet weak var selectTodoButton: PickerButton!
-    @IBOutlet weak var selectPerDayButton: PickerButton!
-    @IBOutlet weak var selectPerHourButton: PickerButton!
-    
-    
-    @IBOutlet weak var mondayButton: UIButton!
-    @IBOutlet weak var tuesdayButton: UIButton!
-    @IBOutlet weak var wednesdayButton: UIButton!
-    @IBOutlet weak var thursdayButton: UIButton!
-    @IBOutlet weak var fridayButton: UIButton!
-    @IBOutlet weak var saturdayButton: UIButton!
-    @IBOutlet weak var sundayButton: UIButton!
+
     
     
     
     let pickerValues: [String] = Todo.TitleList
     
-    let pickerValuesOfDay: [String] = [
-        "1회", "2회", "3회", "4회", "5회",
-        "6회", "7회", "8회", "9회", "10회"
-    ]
-    let pickerValeusOfHour: [String] = [
-        "1시간", "2시간", "3시간", "4시간", "5시간",
-        "6시간", "7시간", "8시간", "9시간", "10시간",
-        "11시간", "12시간"
-    ]
     
     
     
@@ -74,11 +59,8 @@ class AddTodoViewController: UIViewController {
         
         // 버튼 처음에 보이는 글자를 픽커내용이 아니도록 설정
         selectTodoButton.setTitle("::할 일 선택::", for: .normal)
-        selectPerDayButton.setTitle("하루에 몇회", for: .normal)
-        selectPerHourButton.setTitle("시간 간격", for: .normal)
-    
-        // 버튼 둥글리기
-        setAttribute()
+
+
         
         // 파이어베이스
         getFamilyCode()
@@ -130,14 +112,21 @@ class AddTodoViewController: UIViewController {
     
     @IBAction func didTodoTextFieldEditingChanged(_ sender: UITextField) {
         let text = sender.text ?? ""
-        todo = text
+        self.todo = text
     }
+    
+    @IBAction func didTimeTextFieldEditingChanged(_ sender: UITextField) {
+        
+        let text = sender.text ?? ""
+        self.time = text
+    }
+    
     
     
     @IBAction func didMemoTextFieldEditingChanged(_ sender: UITextField) {
         
         let text = sender.text ?? ""
-        memo = text
+        self.memo = text
     }
     
     @IBAction func didAddButtonTapped(_ sender: UIButton) {
@@ -155,7 +144,7 @@ class AddTodoViewController: UIViewController {
             
             let post = ["catId": self.catID,
                         "title": self.todo,
-                        "time" : self.perDay,
+                        "time" : self.time,
                         "image": self.image,
                         "memo": self.memo,
                         "isFinished": false,
@@ -203,23 +192,16 @@ class AddTodoViewController: UIViewController {
             self.familyCode = (snapshot?.value as? String)!
         }
     }
-    func setAttribute(){
-        let buttonArray: [UIButton] = [
-        mondayButton, tuesdayButton, wednesdayButton,
-        thursdayButton, fridayButton, saturdayButton,
-        sundayButton
-        ]
-        
-        buttonArray.forEach { button in
-            button.layer.cornerRadius = 8
-            button.setTitleColor(.greengray900!, for: .selected)
-        }
-    }
+
     
     func setView() {
         titleTextField.text = self.todo
         memoTextField.text = self.memo
-       // selectTodoButton.setTitle
+        timeTextFielld.text = self.time
+        selectTodoButton.setTitle(imageToButtonText(), for: .normal)
+        
+        viewTitle.text = "할 일 수정하기"
+        viewButton.setTitle("수정하기", for: .normal)
     }
     
     func getButtonText() {
@@ -230,6 +212,17 @@ class AddTodoViewController: UIViewController {
                 self.image = Todo.IconList[index]
             }
         }
+    }
+    
+    func imageToButtonText() -> String {
+        var text = ""
+        let icon: [String] = Todo.IconList
+        for (index, i) in icon.enumerated() {
+            if i == self.image {
+                text = Todo.TitleList[index]
+            }
+        }
+        return text
     }
 }
 

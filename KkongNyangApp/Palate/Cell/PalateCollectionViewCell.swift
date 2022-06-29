@@ -17,6 +17,9 @@ class PalateCollectionViewCell: UICollectionViewCell {
     
     var catID = "0"
     
+
+    
+    
     @IBOutlet weak var productImage: UIImageView!
     @IBOutlet weak var preferenceFace: UILabel!
     @IBOutlet weak var productName: UILabel!

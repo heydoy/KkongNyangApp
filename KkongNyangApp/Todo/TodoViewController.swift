@@ -256,7 +256,7 @@ extension TodoViewController: UICollectionViewDataSource {
             addTodoViewController.catID = cell.catId
             addTodoViewController.todo = cell.title
             print("수정할 타이틀 --> \(cell.title)")
-            addTodoViewController.perDay = cell.time
+            addTodoViewController.time = cell.time
             addTodoViewController.image = cell.image
             addTodoViewController.memo = cell.memo
             

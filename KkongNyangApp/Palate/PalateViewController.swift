@@ -143,6 +143,28 @@ extension PalateViewController: UICollectionViewDataSource {
         return cell
     }
     
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+    
+        let cell = palateList[indexPath.item]
+        let storyboard = UIStoryboard.main
+        
+        let addPalateViewController = storyboard.instantiateViewController(withIdentifier: "AddPalateVC") as! AddPalateViewController
+        
+        addPalateViewController.familyCode = self.familyCode
+        addPalateViewController.isEditing = true
+        //addPalateViewController.catID = cell.catID
+        addPalateViewController.itemImage = cell.image
+        addPalateViewController.history = cell.history
+        addPalateViewController.preferenceLevel = cell.like
+        addPalateViewController.itemName = cell.name
+        addPalateViewController.memo = cell.memo
+        addPalateViewController.itemKind = cell.kind
+        
+        
+        addPalateViewController.modalPresentationStyle = .fullScreen
+        self.present(addPalateViewController, animated: true, completion: nil)
+    }
+    
 }
 
 extension PalateViewController: UICollectionViewDelegateFlowLayout {

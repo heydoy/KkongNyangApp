@@ -156,7 +156,7 @@
                                                 </button>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Jbp-4U-Yv9">
                                                     <rect key="frame" x="0.0" y="94" width="375" height="1"/>
-                                                    <color key="backgroundColor" name="gray-100"/>
+                                                    <color key="backgroundColor" name="gray-80"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="1" id="gj4-me-dJX"/>
                                                     </constraints>
@@ -246,7 +246,7 @@
                                     <size key="itemSize" width="335" height="72"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
-                                    <inset key="sectionInset" minX="20" minY="12" maxX="20" maxY="12"/>
+                                    <inset key="sectionInset" minX="20" minY="12" maxX="20" maxY="90"/>
                                 </collectionViewFlowLayout>
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="TodoListCollectionViewCell" id="UdU-db-pps" customClass="TodoListCollectionViewCell" customModule="KkongNyangApp" customModuleProvider="target">
@@ -399,7 +399,7 @@
                             </segmentedControl>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="C0k-yD-3CI" customClass="PickerButton" customModule="PickerButton">
                                 <rect key="frame" x="20" y="244.33333333333337" width="335" height="40"/>
-                                <color key="backgroundColor" name="gray-80"/>
+                                <color key="backgroundColor" name="greengray-100"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="gjQ-Eq-dVs"/>
                                 </constraints>
@@ -429,196 +429,20 @@
                                     <action selector="didTodoTextFieldEditingChanged:" destination="WMU-sx-1qO" eventType="editingChanged" id="Vx6-T9-FRs"/>
                                 </connections>
                             </textField>
-                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="Np4-Oa-JFG">
-                                <rect key="frame" x="20" y="364.33333333333331" width="335" height="77.333333333333314"/>
-                                <subviews>
-                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="18" translatesAutoresizingMaskIntoConstraints="NO" id="Nyv-ah-8j7">
-                                        <rect key="frame" x="0.0" y="0.0" width="160" height="77.333333333333329"/>
-                                        <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="하루에" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="u0j-Ne-4mD">
-                                                <rect key="frame" x="0.0" y="0.0" width="41.666666666666664" height="19.333333333333332"/>
-                                                <fontDescription key="fontDescription" name="AppleSDGothicNeo-SemiBold" family="Apple SD Gothic Neo" pointSize="16"/>
-                                                <nil key="textColor"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ErB-PY-JJR">
-                                                <rect key="frame" x="0.0" y="37.333333333333371" width="160" height="40"/>
-                                                <color key="backgroundColor" name="todoDefault"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="height" constant="40" id="ElR-yB-kqY"/>
-                                                </constraints>
-                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                <color key="tintColor" name="black"/>
-                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                                <state key="normal" title="2회"/>
-                                            </button>
-                                        </subviews>
-                                        <constraints>
-                                            <constraint firstAttribute="trailing" secondItem="ErB-PY-JJR" secondAttribute="trailing" id="9N5-8n-rRb"/>
-                                            <constraint firstItem="ErB-PY-JJR" firstAttribute="leading" secondItem="Nyv-ah-8j7" secondAttribute="leading" id="Ic0-wj-mN2"/>
-                                            <constraint firstItem="u0j-Ne-4mD" firstAttribute="top" secondItem="Nyv-ah-8j7" secondAttribute="top" id="gW3-ab-aBo"/>
-                                            <constraint firstItem="u0j-Ne-4mD" firstAttribute="leading" secondItem="Nyv-ah-8j7" secondAttribute="leading" id="ghf-Q2-3Aa"/>
-                                        </constraints>
-                                    </stackView>
-                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="18" translatesAutoresizingMaskIntoConstraints="NO" id="rvc-Rg-Zfm">
-                                        <rect key="frame" x="175" y="0.0" width="160" height="77.333333333333329"/>
-                                        <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="시간간격" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xBB-kM-oa7">
-                                                <rect key="frame" x="0.0" y="0.0" width="55.666666666666664" height="19.333333333333332"/>
-                                                <fontDescription key="fontDescription" name="AppleSDGothicNeo-SemiBold" family="Apple SD Gothic Neo" pointSize="16"/>
-                                                <nil key="textColor"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EGo-G6-ziD">
-                                                <rect key="frame" x="0.0" y="37.333333333333371" width="160" height="40"/>
-                                                <color key="backgroundColor" name="todoDefault"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="height" constant="40" id="2xc-SY-gnN"/>
-                                                </constraints>
-                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                <color key="tintColor" name="black"/>
-                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                                <state key="normal" title="8시간"/>
-                                            </button>
-                                        </subviews>
-                                        <constraints>
-                                            <constraint firstAttribute="trailing" secondItem="EGo-G6-ziD" secondAttribute="trailing" id="0Wv-bJ-zLA"/>
-                                            <constraint firstItem="EGo-G6-ziD" firstAttribute="leading" secondItem="rvc-Rg-Zfm" secondAttribute="leading" id="a0d-0r-clH"/>
-                                            <constraint firstItem="xBB-kM-oa7" firstAttribute="top" secondItem="rvc-Rg-Zfm" secondAttribute="top" id="mBv-rl-o2C"/>
-                                            <constraint firstItem="xBB-kM-oa7" firstAttribute="leading" secondItem="rvc-Rg-Zfm" secondAttribute="leading" id="vPA-41-xnc"/>
-                                        </constraints>
-                                    </stackView>
-                                </subviews>
-                            </stackView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="고양이 선택" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rHl-4Z-HVC">
                                 <rect key="frame" x="20" y="118.66666666666667" width="73.666666666666671" height="19.333333333333329"/>
                                 <fontDescription key="fontDescription" name="AppleSDGothicNeo-SemiBold" family="Apple SD Gothic Neo" pointSize="16"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="요일 선택" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vxk-7v-14r">
-                                <rect key="frame" x="19.999999999999996" y="465.66666666666669" width="59.666666666666657" height="19.333333333333314"/>
-                                <fontDescription key="fontDescription" name="AppleSDGothicNeo-SemiBold" family="Apple SD Gothic Neo" pointSize="16"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="9" translatesAutoresizingMaskIntoConstraints="NO" id="dKT-Sk-h0O">
-                                <rect key="frame" x="20" y="503" width="335" height="48"/>
-                                <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ojf-5d-JPF">
-                                        <rect key="frame" x="0.0" y="0.0" width="40" height="48"/>
-                                        <color key="backgroundColor" name="todoDefault"/>
-                                        <color key="tintColor" name="yellow-500"/>
-                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                        <state key="normal" title="월">
-                                            <color key="titleColor" name="greengray-900"/>
-                                        </state>
-                                        <state key="selected" backgroundImage="genderbutton-selected"/>
-                                        <connections>
-                                            <action selector="setButtonState:" destination="WMU-sx-1qO" eventType="touchUpInside" id="VXs-l4-duu"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gaI-a8-9r2">
-                                        <rect key="frame" x="49" y="0.0" width="40.333333333333343" height="48"/>
-                                        <color key="backgroundColor" name="todoDefault"/>
-                                        <color key="tintColor" name="yellow-500"/>
-                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                        <state key="normal" title="화">
-                                            <color key="titleColor" name="greengray-900"/>
-                                        </state>
-                                        <connections>
-                                            <action selector="setButtonState:" destination="WMU-sx-1qO" eventType="touchUpInside" id="T60-sx-BZe"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ozL-jo-adu">
-                                        <rect key="frame" x="98.333333333333329" y="0.0" width="39.999999999999986" height="48"/>
-                                        <color key="backgroundColor" name="todoDefault"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="48" id="8gw-2d-QF3"/>
-                                        </constraints>
-                                        <color key="tintColor" name="yellow-500"/>
-                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                        <state key="normal" title="수">
-                                            <color key="titleColor" name="greengray-900"/>
-                                        </state>
-                                        <connections>
-                                            <action selector="setButtonState:" destination="WMU-sx-1qO" eventType="touchUpInside" id="CH7-rg-uVv"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="L2n-li-wun">
-                                        <rect key="frame" x="147.33333333333334" y="0.0" width="40.333333333333343" height="48"/>
-                                        <color key="backgroundColor" name="todoDefault"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="48" id="LrR-6c-a0p"/>
-                                        </constraints>
-                                        <color key="tintColor" name="yellow-500"/>
-                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                        <state key="normal" title="목">
-                                            <color key="titleColor" name="greengray-900"/>
-                                        </state>
-                                        <connections>
-                                            <action selector="setButtonState:" destination="WMU-sx-1qO" eventType="touchUpInside" id="EE1-zj-s9c"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Arf-T1-n15">
-                                        <rect key="frame" x="196.66666666666666" y="0.0" width="40" height="48"/>
-                                        <color key="backgroundColor" name="todoDefault"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="48" id="c7z-9X-0do"/>
-                                        </constraints>
-                                        <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="15"/>
-                                        <color key="tintColor" name="yellow-500"/>
-                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                        <state key="normal" title="금">
-                                            <color key="titleColor" name="greengray-900"/>
-                                        </state>
-                                        <connections>
-                                            <action selector="setButtonState:" destination="WMU-sx-1qO" eventType="touchUpInside" id="Gvu-i8-1or"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ibl-qm-QL9">
-                                        <rect key="frame" x="245.66666666666671" y="0.0" width="40.333333333333343" height="48"/>
-                                        <color key="backgroundColor" name="todoDefault"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="48" id="Tj3-aG-3NA"/>
-                                        </constraints>
-                                        <color key="tintColor" name="yellow-500"/>
-                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                        <state key="normal" title="토">
-                                            <color key="titleColor" name="greengray-900"/>
-                                        </state>
-                                        <connections>
-                                            <action selector="setButtonState:" destination="WMU-sx-1qO" eventType="touchUpInside" id="q90-oQ-NjV"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="w19-lv-FlN">
-                                        <rect key="frame" x="295" y="0.0" width="40" height="48"/>
-                                        <color key="backgroundColor" name="todoDefault"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="48" id="i4m-Ui-4aC"/>
-                                        </constraints>
-                                        <color key="tintColor" name="yellow-500"/>
-                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                        <state key="normal" title="일">
-                                            <color key="titleColor" name="greengray-900"/>
-                                        </state>
-                                        <connections>
-                                            <action selector="setButtonState:" destination="WMU-sx-1qO" eventType="touchUpInside" id="hOE-1k-fPS"/>
-                                        </connections>
-                                    </button>
-                                </subviews>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="48" id="bLg-uz-YTk"/>
-                                </constraints>
-                            </stackView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="메모" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DU2-dl-4Yq">
-                                <rect key="frame" x="20" y="575" width="28" height="19.333333333333371"/>
+                                <rect key="frame" x="20" y="453" width="28" height="19.333333333333314"/>
                                 <fontDescription key="fontDescription" name="AppleSDGothicNeo-SemiBold" family="Apple SD Gothic Neo" pointSize="16"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="fill" borderStyle="roundedRect" placeholder="기타 특이사항이 있다면 작성해주세요" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="THm-ft-WRo">
-                                <rect key="frame" x="20" y="602" width="335" height="80"/>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" borderStyle="roundedRect" placeholder="기타 특이사항이 있다면 작성해주세요" minimumFontSize="16" translatesAutoresizingMaskIntoConstraints="NO" id="THm-ft-WRo">
+                                <rect key="frame" x="20" y="480" width="335" height="80"/>
                                 <constraints>
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="80" id="zgz-le-yVW"/>
                                 </constraints>
@@ -643,14 +467,35 @@
                                     <action selector="didAddButtonTapped:" destination="WMU-sx-1qO" eventType="touchUpInside" id="0Y1-Io-mgc"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="시간" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pt6-V1-ssV">
+                                <rect key="frame" x="20" y="363.33333333333331" width="28" height="20"/>
+                                <fontDescription key="fontDescription" name="AppleSDGothicNeo-SemiBold" family="Apple SD Gothic Neo" pointSize="16"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="시간을 지정해주세요 (예: 매일 오전 10시)" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="SIw-z7-5Mm">
+                                <rect key="frame" x="20" y="389" width="335" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="Rmi-BH-Gil"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="didTimeTextFieldEditingChanged:" destination="WMU-sx-1qO" eventType="editingChanged" id="wv9-2P-TyA"/>
+                                    <action selector="didTodoTextFieldEditingChanged:" destination="WMU-sx-1qO" eventType="editingChanged" id="VXZ-in-QkU"/>
+                                </connections>
+                            </textField>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="M9M-oX-AP0"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" name="gray-80"/>
                         <constraints>
                             <constraint firstItem="THm-ft-WRo" firstAttribute="trailing" secondItem="llA-cE-Q3j" secondAttribute="trailing" id="07H-HI-W9V"/>
                             <constraint firstItem="ykS-C6-luA" firstAttribute="top" secondItem="M9M-oX-AP0" secondAttribute="top" constant="24" id="2VZ-gS-m49"/>
                             <constraint firstItem="mAh-QC-v2m" firstAttribute="bottom" secondItem="M9M-oX-AP0" secondAttribute="bottom" constant="12" id="4Uh-FP-rNP"/>
                             <constraint firstItem="0pX-9e-VDe" firstAttribute="leading" secondItem="M9M-oX-AP0" secondAttribute="leading" constant="20" id="523-f2-rGh"/>
+                            <constraint firstItem="Pt6-V1-ssV" firstAttribute="leading" secondItem="83c-fR-1re" secondAttribute="leading" id="921-yO-FUP"/>
+                            <constraint firstItem="SIw-z7-5Mm" firstAttribute="top" secondItem="Pt6-V1-ssV" secondAttribute="bottom" constant="5.6666666666666856" id="BdN-Y3-U5M"/>
+                            <constraint firstItem="SIw-z7-5Mm" firstAttribute="trailing" secondItem="0pX-9e-VDe" secondAttribute="trailing" id="Dn8-Jq-V26"/>
                             <constraint firstItem="C0k-yD-3CI" firstAttribute="trailing" secondItem="llA-cE-Q3j" secondAttribute="trailing" id="Duq-Ir-7bA"/>
                             <constraint firstItem="M9M-oX-AP0" firstAttribute="trailing" secondItem="llA-cE-Q3j" secondAttribute="trailing" constant="20" id="EoZ-2P-fIU"/>
                             <constraint firstItem="mAh-QC-v2m" firstAttribute="trailing" secondItem="llA-cE-Q3j" secondAttribute="trailing" id="Inf-Pr-fy2"/>
@@ -659,23 +504,17 @@
                             <constraint firstItem="3Oo-7M-Trh" firstAttribute="trailing" secondItem="llA-cE-Q3j" secondAttribute="trailing" id="KHL-Oh-mlV"/>
                             <constraint firstItem="rHl-4Z-HVC" firstAttribute="leading" secondItem="ykS-C6-luA" secondAttribute="leading" id="NVf-h4-c6e"/>
                             <constraint firstItem="0pX-9e-VDe" firstAttribute="trailing" secondItem="llA-cE-Q3j" secondAttribute="trailing" id="NxU-XX-dId"/>
-                            <constraint firstItem="Np4-Oa-JFG" firstAttribute="top" secondItem="0pX-9e-VDe" secondAttribute="bottom" constant="24.999999999999943" id="RaH-oX-DtV"/>
                             <constraint firstItem="THm-ft-WRo" firstAttribute="top" secondItem="DU2-dl-4Yq" secondAttribute="bottom" constant="7.6666666666666288" id="SN3-7S-djO"/>
                             <constraint firstItem="C0k-yD-3CI" firstAttribute="leading" secondItem="83c-fR-1re" secondAttribute="leading" id="U9O-hz-MZf"/>
-                            <constraint firstItem="dKT-Sk-h0O" firstAttribute="leading" secondItem="ykS-C6-luA" secondAttribute="leading" id="ZP1-P0-GYH"/>
                             <constraint firstItem="83c-fR-1re" firstAttribute="leading" secondItem="ykS-C6-luA" secondAttribute="leading" id="b58-Vf-vPR"/>
                             <constraint firstItem="C0k-yD-3CI" firstAttribute="top" secondItem="83c-fR-1re" secondAttribute="bottom" constant="16" id="bSV-Kf-aYQ"/>
-                            <constraint firstItem="DU2-dl-4Yq" firstAttribute="top" secondItem="dKT-Sk-h0O" secondAttribute="bottom" constant="24" id="d8B-1s-OJT"/>
+                            <constraint firstItem="DU2-dl-4Yq" firstAttribute="top" secondItem="SIw-z7-5Mm" secondAttribute="bottom" constant="24" id="cDP-mM-jdt"/>
                             <constraint firstItem="llA-cE-Q3j" firstAttribute="centerY" secondItem="ykS-C6-luA" secondAttribute="centerY" id="e9l-hr-p80"/>
-                            <constraint firstItem="Np4-Oa-JFG" firstAttribute="leading" secondItem="ykS-C6-luA" secondAttribute="leading" id="iUn-Kb-4HK"/>
-                            <constraint firstItem="vxk-7v-14r" firstAttribute="top" secondItem="Np4-Oa-JFG" secondAttribute="bottom" constant="24" id="iiD-s3-Xej"/>
-                            <constraint firstItem="vxk-7v-14r" firstAttribute="leading" secondItem="M9M-oX-AP0" secondAttribute="leading" constant="20" id="jH7-7q-yxL"/>
-                            <constraint firstItem="dKT-Sk-h0O" firstAttribute="top" secondItem="vxk-7v-14r" secondAttribute="bottom" constant="18" id="kXd-VT-uxb"/>
+                            <constraint firstItem="SIw-z7-5Mm" firstAttribute="leading" secondItem="Pt6-V1-ssV" secondAttribute="leading" id="g1m-cW-XLu"/>
                             <constraint firstItem="83c-fR-1re" firstAttribute="top" secondItem="3Oo-7M-Trh" secondAttribute="bottom" constant="24" id="ndS-FO-aMJ"/>
                             <constraint firstItem="0pX-9e-VDe" firstAttribute="top" secondItem="C0k-yD-3CI" secondAttribute="bottom" constant="15" id="p9v-lh-6Np"/>
                             <constraint firstItem="3Oo-7M-Trh" firstAttribute="top" secondItem="rHl-4Z-HVC" secondAttribute="bottom" constant="16" id="pbp-rw-UXQ"/>
-                            <constraint firstItem="Np4-Oa-JFG" firstAttribute="trailing" secondItem="llA-cE-Q3j" secondAttribute="trailing" id="plV-kg-9nW"/>
-                            <constraint firstItem="dKT-Sk-h0O" firstAttribute="trailing" secondItem="llA-cE-Q3j" secondAttribute="trailing" id="qwQ-3p-XOQ"/>
+                            <constraint firstItem="Pt6-V1-ssV" firstAttribute="top" secondItem="0pX-9e-VDe" secondAttribute="bottom" constant="24" id="tBl-Lg-Pxs"/>
                             <constraint firstItem="mAh-QC-v2m" firstAttribute="leading" secondItem="ykS-C6-luA" secondAttribute="leading" id="wdK-cy-PEI"/>
                             <constraint firstItem="ykS-C6-luA" firstAttribute="leading" secondItem="M9M-oX-AP0" secondAttribute="leading" constant="20" id="xCB-0q-JrA"/>
                             <constraint firstItem="rHl-4Z-HVC" firstAttribute="top" secondItem="ykS-C6-luA" secondAttribute="bottom" constant="24" id="xwQ-Vg-HOG"/>
@@ -683,18 +522,12 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="fridayButton" destination="Arf-T1-n15" id="sXL-s7-2IC"/>
                         <outlet property="memoTextField" destination="THm-ft-WRo" id="Gzs-O6-jsQ"/>
-                        <outlet property="mondayButton" destination="Ojf-5d-JPF" id="Qtk-nQ-1mb"/>
-                        <outlet property="saturdayButton" destination="Ibl-qm-QL9" id="Ikx-Hz-Boa"/>
-                        <outlet property="selectPerDayButton" destination="ErB-PY-JJR" id="INP-73-4is"/>
-                        <outlet property="selectPerHourButton" destination="EGo-G6-ziD" id="oAv-wP-JuC"/>
                         <outlet property="selectTodoButton" destination="C0k-yD-3CI" id="5ZH-oi-SyK"/>
-                        <outlet property="sundayButton" destination="w19-lv-FlN" id="ru4-nV-74Z"/>
-                        <outlet property="thursdayButton" destination="L2n-li-wun" id="Hfa-QF-gqU"/>
+                        <outlet property="timeTextFielld" destination="SIw-z7-5Mm" id="aNJ-ri-wPc"/>
                         <outlet property="titleTextField" destination="0pX-9e-VDe" id="3mJ-yv-BK7"/>
-                        <outlet property="tuesdayButton" destination="gaI-a8-9r2" id="BLX-at-swf"/>
-                        <outlet property="wednesdayButton" destination="ozL-jo-adu" id="z6j-zp-jZh"/>
+                        <outlet property="viewButton" destination="mAh-QC-v2m" id="jRw-Na-xCS"/>
+                        <outlet property="viewTitle" destination="ykS-C6-luA" id="GHb-KE-H0U"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pzG-GB-P86" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -733,7 +566,7 @@
                                     <size key="itemSize" width="335" height="90"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
-                                    <inset key="sectionInset" minX="20" minY="0.0" maxX="20" maxY="10"/>
+                                    <inset key="sectionInset" minX="20" minY="0.0" maxX="20" maxY="100"/>
                                 </collectionViewFlowLayout>
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="PalateCollectionViewCell" id="FXC-EV-fnl" customClass="PalateCollectionViewCell" customModule="KkongNyangApp" customModuleProvider="target">
@@ -920,7 +753,7 @@
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KKT-n2-387" customClass="PickerButton" customModule="PickerButton">
                                 <rect key="frame" x="20" y="244.66666666666663" width="335" height="40"/>
-                                <color key="backgroundColor" name="todoDefault"/>
+                                <color key="backgroundColor" name="greengray-100"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="fzc-BC-PKC"/>
                                 </constraints>
@@ -944,7 +777,7 @@
                             </imageView>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="제품명을 입력해주세요" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="0n8-kW-PBF">
                                 <rect key="frame" x="20" y="520" width="335" height="40"/>
-                                <color key="backgroundColor" name="gray-80"/>
+                                <color key="backgroundColor" name="white"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="pQ8-ip-Fqe"/>
                                 </constraints>
@@ -997,7 +830,7 @@
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="기호도를 자세히 적어주세요." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="WPz-TO-H71">
                                 <rect key="frame" x="20" y="670" width="335" height="40"/>
-                                <color key="backgroundColor" name="gray-80"/>
+                                <color key="backgroundColor" name="white"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="hL6-pv-YKR"/>
                                 </constraints>
@@ -1009,7 +842,7 @@
                             </textField>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="8r5-aL-Awm"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" name="gray-80"/>
                         <constraints>
                             <constraint firstItem="hHi-CX-bAn" firstAttribute="leading" secondItem="8r5-aL-Awm" secondAttribute="leading" constant="20" id="1xJ-lC-opf"/>
                             <constraint firstItem="0n8-kW-PBF" firstAttribute="top" secondItem="KTD-e0-2mk" secondAttribute="bottom" constant="16" id="2gY-3v-d8k"/>
@@ -1053,9 +886,14 @@
                     </view>
                     <connections>
                         <outlet property="addPalateButton" destination="hHi-CX-bAn" id="mRJ-5D-juT"/>
+                        <outlet property="likeSlider" destination="hDv-2m-xWr" id="z1q-xO-WbX"/>
+                        <outlet property="memoTextField" destination="WPz-TO-H71" id="Cwh-ed-DRq"/>
+                        <outlet property="nameTextField" destination="0n8-kW-PBF" id="8mJ-Lo-h6J"/>
                         <outlet property="preferenceLevelText" destination="Vn0-X7-8d2" id="ojP-7h-PfT"/>
                         <outlet property="productImage" destination="KTD-e0-2mk" id="khs-l0-jdT"/>
                         <outlet property="selectKindButton" destination="KKT-n2-387" id="h5r-8f-oGW"/>
+                        <outlet property="viewButton" destination="hHi-CX-bAn" id="fIP-al-IPv"/>
+                        <outlet property="viewTitle" destination="Cc2-9O-kZP" id="pvX-Fg-AVL"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Jz5-JL-pVe" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -2165,7 +2003,6 @@
         <image name="emojiLove" width="32" height="32"/>
         <image name="finished-bathtub" width="32" height="32"/>
         <image name="floatingAddButton" width="60" height="60"/>
-        <image name="genderbutton-selected" width="158" height="46"/>
         <image name="icon-alert" width="24" height="24"/>
         <image name="icon-home" width="24" height="24"/>
         <image name="icon-mypage" width="24" height="24"/>
@@ -2213,9 +2050,6 @@
         </namedColor>
         <namedColor name="homebg-1">
             <color red="0.8901960784313725" green="0.92941176470588238" blue="0.98431372549019602" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </namedColor>
-        <namedColor name="todoDefault">
-            <color red="0.97254901960784312" green="0.97254901960784312" blue="0.96470588235294119" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="white">
             <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

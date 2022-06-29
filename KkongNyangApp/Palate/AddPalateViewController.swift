@@ -13,6 +13,10 @@ import FirebaseDatabase
 class AddPalateViewController: UIViewController {
 
     // MARK: - Properties
+    @IBOutlet weak var viewTitle: UILabel!
+    @IBOutlet weak var viewButton: UIButton!
+    
+    
     let db: DatabaseReference! = Database.database(url: "https://kkongnyangapp-default-rtdb.asia-southeast1.firebasedatabase.app/").reference()
     var familyCode: String = ""
     var userName: String = ""
@@ -21,6 +25,7 @@ class AddPalateViewController: UIViewController {
     var catID: String = "0"
     var history: String = "" // 내가 4월 7일 기록
     var preferenceLevel: Double = 0.0
+    var itemKind: String = ""
     var itemName: String = ""
     var itemImage: String = "sample-palate-3" // 빈 이미지
     var memo: String = ""
@@ -35,7 +40,9 @@ class AddPalateViewController: UIViewController {
     @IBOutlet weak var productImage: UIImageView!
     @IBOutlet weak var preferenceLevelText: UILabel!
     
-    
+    @IBOutlet weak var nameTextField: UITextField!
+    @IBOutlet weak var likeSlider: UISlider!
+    @IBOutlet weak var memoTextField: UITextField!
     
     
     // MARK: - LifeCycle
@@ -50,6 +57,11 @@ class AddPalateViewController: UIViewController {
         imagePickerViewController.delegate = self
         
         getFamilyCode()
+        
+        if isEditing == true {
+           
+           setView()
+        }
     }
     
     override func viewWillDisappear(_ animated: Bool) {
@@ -163,14 +175,7 @@ class AddPalateViewController: UIViewController {
         
     }
     
-    
-    
-    
-    
-    
-    
-    
-    
+
     // MARK: - Helpers
     
     func openLibrary() {
@@ -230,6 +235,17 @@ class AddPalateViewController: UIViewController {
             self.userName = (snapshot?.value as? String)!
         }
         
+        
+    }
+    
+    func setView() {
+        selectKindButton.setTitle(self.itemKind, for: .normal)
+        productImage.image = UIImage(named: self.itemImage)
+        nameTextField.text = self.itemName
+        likeSlider.setValue(Float(self.preferenceLevel), animated: false)
+        memoTextField.text = self.memo
+        viewTitle.text = "기호 수정하기"
+        viewButton.setTitle("수정하기", for: .normal)
         
     }
 }
