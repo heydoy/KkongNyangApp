@@ -25,7 +25,7 @@ class Notice {
         self.description = withSnapshot.childSnapshot(forPath: "description").value as? String ?? ""
         self.body        = withSnapshot.childSnapshot(forPath: "body").value as? String ?? ""
         self.startDate   = withSnapshot.childSnapshot(forPath: "startDate").value as? String ?? ""
-        self.endDate     = withSnapshot.childSnapshot(forPath: "startDate").value as? String ?? ""
+        self.endDate     = withSnapshot.childSnapshot(forPath: "endDate").value as? String ?? ""
         self.date        = endDate != "" ? "\(startDate) ~ \(endDate)" : "\(startDate)"
         self.image       = withSnapshot.childSnapshot(forPath: "image").value as? String ?? ""
         self.bgcolor     = withSnapshot.childSnapshot(forPath: "bgcolor").value as? String ?? ""

@@ -175,7 +175,8 @@ extension HomeViewController: UICollectionViewDataSource {
         detailViewController.imageURL = notice.image
         detailViewController.bgColorString = notice.bgcolor
         detailViewController.titleString = notice.title
-        detailViewController.dateString = notice.date
+        detailViewController.dateString = (notice.endDate == "" ) ? notice.startDate : "\(notice.startDate) ~ \(notice.endDate)"
+        detailViewController.descriptionString = notice.description
         detailViewController.fullTextString = notice.body
         
         

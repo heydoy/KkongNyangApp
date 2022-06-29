@@ -14,7 +14,9 @@ class NoticeDetailViewController: UIViewController {
     var titleString: String = ""
     var dateString: String = ""
     var fullTextString: String = ""
+    var descriptionString: String = ""
     var bgColorString: String = ""
+    
     
     
     
@@ -22,6 +24,7 @@ class NoticeDetailViewController: UIViewController {
     @IBOutlet weak var cardBackground: UIView!
     @IBOutlet weak var cardTitle: UILabel!
     @IBOutlet weak var cardDate: UILabel!
+    @IBOutlet weak var cardDescription: UILabel!
     @IBOutlet weak var fullText: UILabel!
     @IBOutlet weak var textBackground: UIView!
     
@@ -62,9 +65,10 @@ class NoticeDetailViewController: UIViewController {
         
         cardBackground.backgroundColor = UIColor(hexString: bgColorString)
         
-        view.backgroundColor = UIColor(hexString: bgColorString)
+         view.backgroundColor = UIColor(hexString: bgColorString)
         cardTitle.text = titleString
         cardDate.text = dateString
+        cardDescription.text = descriptionString
         fullText.text = fullTextString
     }
     

@@ -13,6 +13,9 @@
         <array key="GmarketSansBold.otf">
             <string>GmarketSansBold</string>
         </array>
+        <array key="GmarketSansLight.otf">
+            <string>GmarketSansLight</string>
+        </array>
         <array key="GmarketSansMedium.otf">
             <string>GmarketSansMedium</string>
         </array>
@@ -1753,7 +1756,7 @@
                                                     <rect key="frame" x="0.0" y="16" width="200" height="276"/>
                                                     <color key="backgroundColor" red="0.89019607840000003" green="0.92941176469999998" blue="0.98431372549999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 </view>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="homecard1" translatesAutoresizingMaskIntoConstraints="NO" id="vMc-zO-O53">
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="vMc-zO-O53">
                                                     <rect key="frame" x="0.0" y="0.0" width="200" height="180"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="180" id="5v3-3p-yfu"/>
@@ -1952,14 +1955,14 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fc2-ay-vL5">
                                 <rect key="frame" x="0.0" y="44" width="375" height="734"/>
                                 <subviews>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="homecard1" translatesAutoresizingMaskIntoConstraints="NO" id="hgQ-Kj-z4X">
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="hgQ-Kj-z4X">
                                         <rect key="frame" x="28.666666666666657" y="12" width="318" height="200"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="200" id="lFQ-fr-H7U"/>
                                         </constraints>
                                     </imageView>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CJh-85-JBJ">
-                                        <rect key="frame" x="0.0" y="190" width="375" height="544"/>
+                                        <rect key="frame" x="0.0" y="190" width="375" height="584"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="친구초대 이벤트" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6zy-HV-avb">
                                                 <rect key="frame" x="20" y="22" width="154.33333333333334" height="22"/>
@@ -1980,8 +1983,8 @@
                                                     <constraint firstAttribute="height" constant="1" id="wtq-dC-9I9"/>
                                                 </constraints>
                                             </view>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="20" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sVd-JV-LYt">
-                                                <rect key="frame" x="20" y="112.00000000000001" width="335" height="168.33333333333337"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="40" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sVd-JV-LYt">
+                                                <rect key="frame" x="20" y="159" width="335" height="168.33333333333337"/>
                                                 <string key="text">드디어 꽁냥도 친구초대 이벤트를 시작했습니다!
 
 친구 추천을 통해서 새로운 분이 가입하시면 추천하신 분께 꽁냥의 프리미엄 60일 혜택을 드려요! 
@@ -1993,15 +1996,26 @@
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bBB-5Z-vOg">
+                                                <rect key="frame" x="20" y="103" width="335" height="30"/>
+                                                <string key="text">꽁냥에 친구를 초대하시면
+프리미엄 혜택이 60일 더!</string>
+                                                <fontDescription key="fontDescription" name="GmarketSansLight" family="Gmarket Sans" pointSize="15"/>
+                                                <color key="textColor" name="gray-500"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
                                         </subviews>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         <constraints>
                                             <constraint firstAttribute="trailing" secondItem="K2D-dV-VQa" secondAttribute="trailing" constant="20" id="2zx-DZ-Ygh"/>
-                                            <constraint firstItem="sVd-JV-LYt" firstAttribute="top" secondItem="K2D-dV-VQa" secondAttribute="bottom" constant="25" id="4k0-NQ-k4v"/>
+                                            <constraint firstItem="bBB-5Z-vOg" firstAttribute="leading" secondItem="9eS-7P-0dA" secondAttribute="leading" id="3BQ-0s-7b0"/>
+                                            <constraint firstItem="sVd-JV-LYt" firstAttribute="top" secondItem="bBB-5Z-vOg" secondAttribute="bottom" constant="26" id="3nH-NJ-JmQ"/>
                                             <constraint firstItem="K2D-dV-VQa" firstAttribute="top" secondItem="9eS-7P-0dA" secondAttribute="bottom" constant="18" id="Gjh-2e-LPS"/>
+                                            <constraint firstAttribute="trailing" secondItem="bBB-5Z-vOg" secondAttribute="trailing" constant="20" id="PNk-Hx-xOt"/>
                                             <constraint firstItem="9eS-7P-0dA" firstAttribute="leading" secondItem="6zy-HV-avb" secondAttribute="leading" id="XqO-eO-5Sl"/>
                                             <constraint firstAttribute="trailing" secondItem="sVd-JV-LYt" secondAttribute="trailing" constant="20" id="cbh-Dg-efV"/>
                                             <constraint firstItem="6zy-HV-avb" firstAttribute="top" secondItem="CJh-85-JBJ" secondAttribute="top" constant="22" id="ibf-kE-gdh"/>
+                                            <constraint firstItem="bBB-5Z-vOg" firstAttribute="top" secondItem="K2D-dV-VQa" secondAttribute="bottom" constant="16" id="j89-Z9-KB6"/>
                                             <constraint firstItem="sVd-JV-LYt" firstAttribute="leading" secondItem="9eS-7P-0dA" secondAttribute="leading" id="lVA-kz-FlP"/>
                                             <constraint firstItem="9eS-7P-0dA" firstAttribute="top" secondItem="6zy-HV-avb" secondAttribute="bottom" constant="11" id="uiI-zS-pYd"/>
                                             <constraint firstItem="6zy-HV-avb" firstAttribute="leading" secondItem="CJh-85-JBJ" secondAttribute="leading" constant="20" id="upG-lI-4ro"/>
@@ -2029,7 +2043,7 @@
                                     <constraint firstItem="CJh-85-JBJ" firstAttribute="leading" secondItem="fc2-ay-vL5" secondAttribute="leading" id="N0K-xn-k7Z"/>
                                     <constraint firstItem="1fm-AG-TI4" firstAttribute="top" secondItem="fc2-ay-vL5" secondAttribute="top" constant="4" id="Xd2-EE-qx1"/>
                                     <constraint firstItem="hgQ-Kj-z4X" firstAttribute="width" secondItem="fc2-ay-vL5" secondAttribute="width" multiplier="0.848" id="gKd-DK-nde"/>
-                                    <constraint firstAttribute="bottom" secondItem="CJh-85-JBJ" secondAttribute="bottom" id="jNE-Ec-nqr"/>
+                                    <constraint firstAttribute="bottom" secondItem="CJh-85-JBJ" secondAttribute="bottom" constant="-40" id="jNE-Ec-nqr"/>
                                     <constraint firstAttribute="trailing" secondItem="CJh-85-JBJ" secondAttribute="trailing" id="lYk-DO-lBv"/>
                                     <constraint firstAttribute="trailing" secondItem="1fm-AG-TI4" secondAttribute="trailing" constant="20" id="t0a-y7-ZsH"/>
                                 </constraints>
@@ -2047,6 +2061,7 @@
                     <connections>
                         <outlet property="cardBackground" destination="fc2-ay-vL5" id="FuX-K0-oz2"/>
                         <outlet property="cardDate" destination="9eS-7P-0dA" id="W9v-qP-k39"/>
+                        <outlet property="cardDescription" destination="bBB-5Z-vOg" id="8gJ-uH-cxW"/>
                         <outlet property="cardImage" destination="hgQ-Kj-z4X" id="oqa-Fo-EB6"/>
                         <outlet property="cardTitle" destination="6zy-HV-avb" id="abM-eT-Myb"/>
                         <outlet property="fullText" destination="sVd-JV-LYt" id="eNj-wB-oDF"/>
@@ -2092,7 +2107,6 @@
         <image name="finished-bathtub" width="32" height="32"/>
         <image name="floatingAddButton" width="60" height="60"/>
         <image name="genderbutton-selected" width="158" height="46"/>
-        <image name="homecard1" width="198" height="180"/>
         <image name="icon-alert" width="24" height="24"/>
         <image name="icon-home" width="24" height="24"/>
         <image name="icon-mypage" width="24" height="24"/>
