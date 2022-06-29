@@ -41,6 +41,9 @@ class AlertCollectionViewCell: UICollectionViewCell {
             returnText = "\(useTime/3600)시간 전"
         } else if useTime/3600 >= 24 && useTime/3600 < 48 {
             returnText = "하루 전"
+        } else if useTime/3600 > 48 {
+            let dayCount = useTime/(3600*24)
+            returnText = "\(dayCount)일 전"
         }
         
         

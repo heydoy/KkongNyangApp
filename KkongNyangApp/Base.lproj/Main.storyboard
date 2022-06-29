@@ -285,9 +285,18 @@
                                                     <state key="normal" image="more"/>
                                                     <state key="selected" image="check-done"/>
                                                 </button>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="stampFinishedTodo" translatesAutoresizingMaskIntoConstraints="NO" id="e0t-5d-4dy">
+                                                    <rect key="frame" x="157" y="14.666666666666664" width="68" height="43"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="43" id="JM7-eI-cvc"/>
+                                                        <constraint firstAttribute="width" constant="68" id="aw3-Ci-Thj"/>
+                                                    </constraints>
+                                                </imageView>
                                             </subviews>
                                             <constraints>
                                                 <constraint firstItem="Xz4-tJ-xEV" firstAttribute="leading" secondItem="cz7-T4-vIB" secondAttribute="trailing" constant="21" id="0kE-op-zzV"/>
+                                                <constraint firstAttribute="trailing" secondItem="e0t-5d-4dy" secondAttribute="trailing" constant="110" id="BSc-4N-Rh3"/>
+                                                <constraint firstItem="e0t-5d-4dy" firstAttribute="centerY" secondItem="7S4-hr-BSG" secondAttribute="centerY" id="Dyo-iV-6wQ"/>
                                                 <constraint firstItem="cz7-T4-vIB" firstAttribute="centerY" secondItem="7S4-hr-BSG" secondAttribute="centerY" id="Enj-ZH-ehH"/>
                                                 <constraint firstItem="r7Q-Ij-9pN" firstAttribute="centerY" secondItem="7S4-hr-BSG" secondAttribute="centerY" id="NcX-5c-rdl"/>
                                                 <constraint firstItem="Xz4-tJ-xEV" firstAttribute="top" secondItem="7S4-hr-BSG" secondAttribute="top" constant="18" id="SRv-dr-hv2"/>
@@ -301,6 +310,7 @@
                                         <size key="customSize" width="335" height="72"/>
                                         <connections>
                                             <outlet property="checkButton" destination="r7Q-Ij-9pN" id="GBi-UM-E1W"/>
+                                            <outlet property="finishedStamp" destination="e0t-5d-4dy" id="fco-LA-Ce3"/>
                                             <outlet property="iconImage" destination="cz7-T4-vIB" id="EOH-Zt-sXY"/>
                                             <outlet property="timeLabel" destination="oAD-LF-QKC" id="gsD-xM-n6X"/>
                                             <outlet property="todoTitleLabel" destination="Xz4-tJ-xEV" id="tnr-S9-KQJ"/>
@@ -2166,6 +2176,7 @@
         <image name="more" width="24" height="24"/>
         <image name="photo.circle.fill" catalog="system" width="128" height="121"/>
         <image name="photoframe" width="119" height="119"/>
+        <image name="stampFinishedTodo" width="72.333335876464844" height="47"/>
         <image name="tab-arrow-left" width="24" height="24"/>
         <namedColor name="black">
             <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

@@ -15,7 +15,7 @@ class TodoListCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var todoTitleLabel: UILabel!
     @IBOutlet weak var timeLabel: UILabel!
     @IBOutlet weak var checkButton: UIButton!
-    
+    @IBOutlet weak var finishedStamp: UIImageView!
     
     
     // MARK: - Actions
@@ -28,12 +28,13 @@ class TodoListCollectionViewCell: UICollectionViewCell {
         timeLabel.text = todo.time
         
         
-//        if todo.isFinished == true {
-//            checkButton.isSelected = true
-//            
-//        } else {
-//            checkButton.isSelected = false
-//        }
+        if todo.isFinished == true {
+            finishedStamp.alpha = 1
+            
+            
+        } else {
+            finishedStamp.alpha = 0
+        }
     }
     
     

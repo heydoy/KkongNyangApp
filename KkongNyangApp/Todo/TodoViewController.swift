@@ -168,8 +168,10 @@ extension TodoViewController: UICollectionViewDataSource {
         // 셀꾸미기
         if todo.isFinished == true {
             cell.contentView.backgroundColor = UIColor.todoFinished
+//            cell.finishedStamp.alpha = 1
         } else {
             cell.contentView.backgroundColor = UIColor.todoDefault
+//            cell.finishedStamp.alpha = 0
         }
         cell.layer.cornerRadius = 12
         
@@ -201,6 +203,7 @@ extension TodoViewController: UICollectionViewDataSource {
             print("finish")
             
             cell.isFinished = !cell.isFinished
+            
             
             if cell.isFinished == true {
                 let now = Date()
@@ -279,7 +282,7 @@ extension TodoViewController: UICollectionViewDataSource {
     
     // toast message
     func showToast(message : String, font: UIFont = UIFont.systemFont(ofSize: 12.0)) {
-        let toastLabel = UILabel(frame: CGRect(x: self.view.frame.size.width/2 - 100, y: self.view.frame.size.height-400, width: 200, height: 35))
+        let toastLabel = UILabel(frame: CGRect(x: self.view.frame.size.width/2 - 100, y: self.view.frame.size.height-200, width: 200, height: 35))
         toastLabel.backgroundColor = UIColor.black.withAlphaComponent(0.6)
         toastLabel.textColor = UIColor.white
         toastLabel.font = font
