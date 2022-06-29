@@ -42,11 +42,31 @@ class ButlerInvitationViewController: UIViewController {
         우리 꽁냥에서 함께 🐈 \(self.catName) 키워요!
         🔗 앱 링크 : https://kkongnyang.app/
         📌 초대코드 : \(self.familyCode)
+        
+        회원가입 화면에서 위 초대코드를 입력하세요
 
         """
         
         present(composeViewController, animated: true, completion: nil)
         
+    }
+    
+    
+    @IBAction func didShareButtonTapped(_ sender: UIButton) {
+        
+        let objectsToShare: [String] = [
+            "\(self.catName) 육아를 함께 해주세요.",
+            "🔗 앱 링크 : https://kkongnyang.app/",
+            "📌 초대코드 : \(self.familyCode)",
+            "회원가입 화면에서 위 초대코드를 입력하세요"
+        ]
+       
+        let activityVC = UIActivityViewController(activityItems: objectsToShare, applicationActivities: nil)
+        activityVC.popoverPresentationController?.sourceView = self.view
+        
+        // 공유하기 기능 중 제외할 기능이 있을 때 사용
+//        activityVC.excludedActivityTypes = [UIActivityType.airDrop, UIActivityType.addToReadingList]
+        self.present(activityVC, animated: true, completion: nil)
     }
     
     

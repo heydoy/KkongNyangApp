@@ -792,13 +792,16 @@
                                         </constraints>
                                         <color key="tintColor" name="white"/>
                                         <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="plain" title="카카오톡으로 초대하기">
+                                        <buttonConfiguration key="configuration" style="plain" title="공유하기">
                                             <backgroundConfiguration key="background" cornerRadius="11">
-                                                <color key="backgroundColor" red="0.9882352941176471" green="0.78823529411764703" blue="0.086274509803921567" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <color key="backgroundColor" name="greengray-900"/>
                                             </backgroundConfiguration>
                                             <fontDescription key="titleFontDescription" type="system" weight="medium" pointSize="14"/>
-                                            <color key="baseForegroundColor" name="gray-700"/>
+                                            <color key="baseForegroundColor" name="white"/>
                                         </buttonConfiguration>
+                                        <connections>
+                                            <action selector="didShareButtonTapped:" destination="vNw-Vc-UE4" eventType="touchUpInside" id="kLx-nl-kBt"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WLQ-zf-9Rh">
                                         <rect key="frame" x="0.0" y="58" width="335" height="50"/>
