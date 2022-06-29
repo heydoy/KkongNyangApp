@@ -214,7 +214,21 @@ extension TodoViewController: UICollectionViewDataSource {
                 
                 cell.finishTime = convertedString
                 
+                let parent = self.db.child("alert/\(self.familyCode)")
+                
+                let post = [
+                    "time" : Date().toString(),
+                    "from" : self.userName,
+                    "todo" : cell.title,
+                    "todoKey" : "",
+                    "isFinished" : true,
+                ] as [String:Any]
+                
+                parent.childByAutoId().updateChildValues(post)
+                
+                
                 self.showToast(message: "\(cell.title) \n완료하였습니다.")
+                
             } else {
                 // 완료취소인경우 완수타임 비우기
                 cell.finishTime = ""
@@ -227,8 +241,6 @@ extension TodoViewController: UICollectionViewDataSource {
         
         let askFamily = UIAlertAction(title: "가족에게 요청하기", style: .default) { _ in
             // 가족에게 메시지 보내기
-            print("familyMessage")
-                
             
             let parent = self.db.child("alert/\(self.familyCode)")
             
