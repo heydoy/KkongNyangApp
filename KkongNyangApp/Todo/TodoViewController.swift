@@ -21,10 +21,7 @@ class TodoViewController: UIViewController {
     let db: DatabaseReference! = Database.database(url: "https://kkongnyangapp-default-rtdb.asia-southeast1.firebasedatabase.app/").reference()
     
     var catTodoList = [Todo]()
-    
-    
-    
-    
+
     
     @IBOutlet weak var collectionView: UICollectionView!
     
@@ -64,7 +61,7 @@ class TodoViewController: UIViewController {
         handle = Auth.auth().addStateDidChangeListener { auth, user in
              // [START_EXCLUDE]
             self.getFamilyCode(user!.uid)
-             self.collectionView.reloadData()
+            self.collectionView.reloadData()
              // [END_EXCLUDE]
            }
     }

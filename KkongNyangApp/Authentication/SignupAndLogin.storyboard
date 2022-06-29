@@ -831,7 +831,7 @@
                                             <color key="baseForegroundColor" name="gray-200"/>
                                         </buttonConfiguration>
                                         <connections>
-                                            <segue destination="9Hk-fw-XzW" kind="presentation" modalPresentationStyle="fullScreen" id="yCt-np-Mar"/>
+                                            <segue destination="9Hk-fw-XzW" kind="presentation" modalPresentationStyle="fullScreen" modalTransitionStyle="crossDissolve" id="yCt-np-Mar"/>
                                         </connections>
                                     </button>
                                 </subviews>

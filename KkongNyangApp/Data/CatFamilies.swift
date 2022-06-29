@@ -7,6 +7,7 @@
 
 import Foundation
 import UIKit
+import FirebaseDatabase
 
 // 고양이가족
 struct CatsFamily {
@@ -16,19 +17,23 @@ struct CatsFamily {
 }
 
 // 고양이 각자
-struct Cat {
-    let catFamilyCode: String
-    let catID: Int // 고유번호
-    var catPhoto: UIImage //프로필 이미지를 바꿀 수 있으니까
-    var catName: String
-    var catGender: Gender // 성별. 열거형으로
-    var catNeutered: Bool = false// 중성화여부
-    var catBirthday: Date // 생년월일
-    var catMemo: String
-    var catPalate: [Palate]
+class Cat {
+    var birthday: String // 생년월일
+    var gender: String
+    var photo: String //프로필 이미지를 바꿀 수 있으니까
+    var name: String
+    var memo: String
+    //var catNeutered: Bool = false// 중성화여부
+    
+    
+    init(withSnapshot: DataSnapshot){
+        self.birthday   = withSnapshot.childSnapshot(forPath: "birthday").value as? String ?? ""
+        self.gender     = withSnapshot.childSnapshot(forPath: "gender").value as? String ?? ""
+        self.photo      = withSnapshot.childSnapshot(forPath: "photo").value as? String ?? ""
+        self.name       = withSnapshot.childSnapshot(forPath: "name").value as? String ?? ""
+        self.memo       = withSnapshot.childSnapshot(forPath: "memo").value as? String ?? ""
+    }
 }
 
-enum Gender {
-    case female
-    case male
-}
+
+
