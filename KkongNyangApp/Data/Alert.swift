@@ -8,7 +8,17 @@
 import Foundation
 import FirebaseDatabase
 
-class Alert {
+class Alert: Comparable {
+    static func < (lhs: Alert, rhs: Alert) -> Bool {
+        return lhs.time < rhs.time
+    }
+    
+    static func == (lhs: Alert, rhs: Alert) -> Bool {
+        return lhs.todo == rhs.todo
+    }
+    
+
+    
     var time: String = ""
     var from: String = ""
     var todo: String = ""

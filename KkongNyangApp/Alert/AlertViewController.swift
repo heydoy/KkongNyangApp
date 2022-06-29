@@ -85,7 +85,7 @@ class AlertViewController: UIViewController {
     }
     // Database Fetch
     func fetchAlerts() {
-        let alertDB = self.db.child("alert/GER33")
+        let alertDB = self.db.child("alert/GER33").queryOrderedByKey()
         
         alertDB.observeSingleEvent(of: .value) { snapshot in
             
@@ -96,6 +96,7 @@ class AlertViewController: UIViewController {
                 self.alertList.append(aAlert)
                 print(self.alertList)
             }
+            self.alertList.sort(by: {$0 > $1})
             self.collectionView.reloadData()
         }
     }

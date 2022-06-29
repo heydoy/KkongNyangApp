@@ -35,9 +35,11 @@ class AlertCollectionViewCell: UICollectionViewCell {
         let useTime = Int(now.timeIntervalSince(compare!))
         
         var returnText = ""
-        if useTime/60 <= 50 {
+        if useTime/60 < 1{
+            returnText = "방금 전"
+        } else if useTime/60 > 1 && useTime/60 < 60 {
             returnText = "\(useTime/60)분 전"
-        } else if useTime/60 > 50 && useTime/3600 < 23 {
+        } else if useTime/3600 >= 1 && useTime/3600 < 23 {
             returnText = "\(useTime/3600)시간 전"
         } else if useTime/3600 >= 24 && useTime/3600 < 48 {
             returnText = "하루 전"
