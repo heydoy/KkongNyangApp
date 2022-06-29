@@ -144,6 +144,8 @@ class TodoViewController: UIViewController {
             self.collectionView.reloadData()
         }
     }
+    
+   
 }
 
 
@@ -208,11 +210,16 @@ extension TodoViewController: UICollectionViewDataSource {
                 let convertedString = dateFormatter.string(from: now)
                 
                 cell.finishTime = convertedString
+                
+                self.showToast(message: "\(cell.title) \n완료하였습니다.")
             } else {
                 // 완료취소인경우 완수타임 비우기
                 cell.finishTime = ""
+                
+                self.showToast(message: "\(cell.title) \n완료 취소하였습니다.")
             }
             self.collectionView.reloadData()
+            
         }
         
         let askFamily = UIAlertAction(title: "가족에게 요청하기", style: .default) { _ in
@@ -231,6 +238,8 @@ extension TodoViewController: UICollectionViewDataSource {
             ] as [String:Any]
             
             parent.childByAutoId().updateChildValues(post)
+            
+            self.showToast(message: "가족에게 \(cell.title) \n요청하셨습니다.")
         }
         
         let editTodo = UIAlertAction(title: "수정하기", style: .default) { _ in
@@ -266,6 +275,26 @@ extension TodoViewController: UICollectionViewDataSource {
         
         collectionView.reloadData()
 
+    }
+    
+    // toast message
+    func showToast(message : String, font: UIFont = UIFont.systemFont(ofSize: 12.0)) {
+        let toastLabel = UILabel(frame: CGRect(x: self.view.frame.size.width/2 - 100, y: self.view.frame.size.height-400, width: 200, height: 35))
+        toastLabel.backgroundColor = UIColor.black.withAlphaComponent(0.6)
+        toastLabel.textColor = UIColor.white
+        toastLabel.font = font
+        toastLabel.numberOfLines = 2
+        toastLabel.textAlignment = .center;
+        toastLabel.text = message
+        toastLabel.alpha = 1.0
+        toastLabel.layer.cornerRadius = 10;
+        toastLabel.clipsToBounds  =  true
+        self.view.addSubview(toastLabel)
+        UIView.animate(withDuration: 3.0, delay: 0.3, options: .curveEaseOut, animations: {
+             toastLabel.alpha = 0.0
+        }, completion: {(isCompleted) in
+            toastLabel.removeFromSuperview()
+        })
     }
     
 }
