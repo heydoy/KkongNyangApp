@@ -796,7 +796,7 @@
                                             <backgroundConfiguration key="background" cornerRadius="11">
                                                 <color key="backgroundColor" name="greengray-900"/>
                                             </backgroundConfiguration>
-                                            <fontDescription key="titleFontDescription" type="system" weight="medium" pointSize="14"/>
+                                            <fontDescription key="titleFontDescription" name="GmarketSansMedium" family="Gmarket Sans" pointSize="16"/>
                                             <color key="baseForegroundColor" name="white"/>
                                         </buttonConfiguration>
                                         <connections>
@@ -814,7 +814,7 @@
                                             <backgroundConfiguration key="background" cornerRadius="11">
                                                 <color key="backgroundColor" red="0.70588235294117641" green="0.69803921568627447" blue="0.58823529411764708" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             </backgroundConfiguration>
-                                            <fontDescription key="titleFontDescription" type="system" weight="medium" pointSize="14"/>
+                                            <fontDescription key="titleFontDescription" name="GmarketSansMedium" family="Gmarket Sans" pointSize="16"/>
                                             <color key="baseForegroundColor" name="greengray-900"/>
                                         </buttonConfiguration>
                                         <connections>
@@ -830,7 +830,7 @@
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" title="나중에 할게요">
                                             <backgroundConfiguration key="background" cornerRadius="11"/>
-                                            <fontDescription key="titleFontDescription" type="system" weight="medium" pointSize="14"/>
+                                            <fontDescription key="titleFontDescription" name="GmarketSansMedium" family="Gmarket Sans" pointSize="16"/>
                                             <color key="baseForegroundColor" name="gray-200"/>
                                         </buttonConfiguration>
                                         <connections>
