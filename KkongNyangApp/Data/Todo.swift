@@ -9,7 +9,15 @@ import Foundation
 import UIKit
 import FirebaseDatabase
 
-class Todo {
+class Todo: Comparable {
+    static func == (lhs: Todo, rhs: Todo) -> Bool {
+        return lhs.title == rhs.title
+    }
+    
+    static func < (lhs: Todo, rhs: Todo) -> Bool {
+        return lhs.time < rhs.time
+    }
+    
     var key = ""
     var catId = ""
     var title = ""

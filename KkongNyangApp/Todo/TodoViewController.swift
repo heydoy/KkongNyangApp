@@ -141,8 +141,9 @@ class TodoViewController: UIViewController {
                 // print("MARK: Todo 키값----> \(todoSnap.key)")
                 let aTodo = Todo(withSnapshot: todoSnap)
                 self.catTodoList.append(aTodo)
-                print(self.catTodoList)
+                
             }
+            self.catTodoList.sort(by: {$0 > $1})
             self.collectionView.reloadData()
         }
     }

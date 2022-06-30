@@ -482,7 +482,6 @@
                                 <textInputTraits key="textInputTraits"/>
                                 <connections>
                                     <action selector="didTimeTextFieldEditingChanged:" destination="WMU-sx-1qO" eventType="editingChanged" id="wv9-2P-TyA"/>
-                                    <action selector="didTodoTextFieldEditingChanged:" destination="WMU-sx-1qO" eventType="editingChanged" id="VXZ-in-QkU"/>
                                 </connections>
                             </textField>
                         </subviews>

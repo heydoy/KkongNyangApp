@@ -67,6 +67,11 @@ class RegisterViewController: UIViewController {
         super.viewDidLoad()
         setupTextField()
         
+        // 텍스트필드 Delegate
+        textFields.forEach { tf in
+            tf.delegate = self
+        }
+        
         // bug fix
         self.navigationController?.interactivePopGestureRecognizer?.delegate = nil
 
@@ -228,4 +233,17 @@ extension RegisterViewController: UIPopoverPresentationControllerDelegate {
     
    
     
+}
+
+extension RegisterViewController: UITextFieldDelegate {
+    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        self.view.endEditing(true)
+        
+    }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder() // 텍스트필드 비활성화
+        return true
+    }
 }

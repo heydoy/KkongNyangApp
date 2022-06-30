@@ -39,18 +39,18 @@ class AddTodoViewController: UIViewController {
     
     // 선택버튼
     @IBOutlet weak var selectTodoButton: PickerButton!
-
-    
-    
     
     let pickerValues: [String] = Todo.TitleList
-    
-    
     
     
     // MARK: - Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        // 텍스트필드 delegate
+        titleTextField.delegate = self
+        memoTextField.delegate = self
+        timeTextFielld.delegate = self
         
         // 픽커버튼
         selectTodoButton.dataSource = self
@@ -240,5 +240,18 @@ extension AddTodoViewController: UIPickerViewDelegate, UIPickerViewDataSource {
     func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
         
         return pickerValues.count
+    }
+}
+
+extension AddTodoViewController: UITextFieldDelegate {
+    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        self.view.endEditing(true)
+        
+    }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder() // 텍스트필드 비활성화
+        return true
     }
 }

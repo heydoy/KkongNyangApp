@@ -18,6 +18,7 @@ struct CatsFamily {
 
 // 고양이 각자
 class Cat {
+
     var birthday: String // 생년월일
     var gender: String
     var photo: String //프로필 이미지를 바꿀 수 있으니까

@@ -54,6 +54,11 @@ class CatProfileSettingViewController: UIViewController {
         setAttribute()
         setupTextField()
         
+        // textfield delegate
+        textFields.forEach { tf in
+            tf.delegate = self
+        }
+        
         imagePickerViewController.delegate = self
     }
     
@@ -195,5 +200,18 @@ extension CatProfileSettingViewController : UIImagePickerControllerDelegate,  UI
             catPhotoImageView.image = image
         }
         dismiss(animated: true, completion: nil)
+    }
+}
+
+extension CatProfileSettingViewController: UITextFieldDelegate {
+    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        self.view.endEditing(true)
+        
+    }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder() // 텍스트필드 비활성화
+        return true
     }
 }

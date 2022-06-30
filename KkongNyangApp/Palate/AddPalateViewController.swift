@@ -27,7 +27,7 @@ class AddPalateViewController: UIViewController {
     var preferenceLevel: Double = 0.0
     var itemKind: String = ""
     var itemName: String = ""
-    var itemImage: String = "sample-palate-3" // 빈 이미지
+    var itemImage: String = "default-palate-image" // 기본 이미지
     var memo: String = ""
     
     @IBOutlet weak var selectKindButton: PickerButton!
@@ -48,6 +48,9 @@ class AddPalateViewController: UIViewController {
     // MARK: - LifeCycle
     override func viewDidLoad() {
         super.viewDidLoad()
+        // 텍스트필드 delegate
+        nameTextField.delegate = self
+        memoTextField.delegate = self
         
         setAttribute()
         
@@ -279,3 +282,20 @@ extension AddPalateViewController : UIImagePickerControllerDelegate, UINavigatio
         dismiss(animated: true, completion: nil)
     }
 }
+
+
+// 키보드
+
+extension AddPalateViewController: UITextFieldDelegate {
+    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        self.view.endEditing(true)
+        
+    }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder() // 텍스트필드 비활성화
+        return true
+    }
+}
+
