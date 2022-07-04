@@ -165,7 +165,7 @@
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="r7s-xa-bTc">
                                 <rect key="frame" x="20" y="383.33333333333331" width="335" height="102"/>
                                 <subviews>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="이메일주소" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="plL-0V-3L3">
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="이메일주소" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="plL-0V-3L3">
                                         <rect key="frame" x="0.0" y="0.0" width="335" height="45"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="45" id="jjp-bh-sHK"/>
@@ -177,7 +177,7 @@
                                             <action selector="emailTextFieldEditingChanged:" destination="bV3-jh-V5q" eventType="editingChanged" id="qvq-Qb-uUd"/>
                                         </connections>
                                     </textField>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="비밀번호" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ffA-jY-qLU">
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="비밀번호" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="ffA-jY-qLU">
                                         <rect key="frame" x="0.0" y="57" width="335" height="45"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="45" id="yZU-sh-USn"/>
@@ -301,14 +301,14 @@
                                         <color key="textColor" name="black"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="이름을 입력하세요." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="cay-fc-Tdj">
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="이름을 입력하세요." textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="cay-fc-Tdj">
                                         <rect key="frame" x="0.0" y="28" width="335" height="46"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="46" id="1zm-4Y-63j"/>
                                         </constraints>
                                         <color key="textColor" name="gray-700"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
+                                        <textInputTraits key="textInputTraits" autocorrectionType="no" smartDashesType="no"/>
                                     </textField>
                                 </subviews>
                                 <constraints>
@@ -325,7 +325,7 @@
                                         <color key="textColor" name="black"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="email@email.com" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6bJ-0W-Hky">
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="email@email.com" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="6bJ-0W-Hky">
                                         <rect key="frame" x="0.0" y="27.999999999999972" width="335" height="46"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="46" id="dnT-nM-NZ5"/>
@@ -349,7 +349,7 @@
                                         <color key="textColor" name="black"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="영어대문자,소문자, 특수문자,숫자포함 8자 이상" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="xjS-aT-EtX">
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="영어대문자,소문자, 특수문자,숫자포함 8자 이상" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="xjS-aT-EtX">
                                         <rect key="frame" x="0.0" y="28" width="335" height="46"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="46" id="0N5-zW-HdX"/>
@@ -373,7 +373,7 @@
                                         <color key="textColor" name="black"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="비밀번호와 동일하게 적어주세요" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="INp-Z5-etx">
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="비밀번호와 동일하게 적어주세요" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="INp-Z5-etx">
                                         <rect key="frame" x="0.0" y="28" width="335" height="46"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="46" id="wzk-4Z-bMp"/>
@@ -394,7 +394,7 @@
                                 <color key="textColor" name="black"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="영대문자+숫자를 포함한 5자 (예: AB123)" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="KAh-Yd-nt4">
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="영대문자+숫자를 포함한 5자 (예: AB123)" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="KAh-Yd-nt4">
                                 <rect key="frame" x="20" y="565.33333333333337" width="335" height="46"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="46" id="iYC-2Z-0ap"/>
@@ -568,7 +568,7 @@
                                         <color key="textColor" name="black"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="이름을 입력하세요." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="J3z-T0-W6P">
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="이름을 입력하세요." textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="J3z-T0-W6P">
                                         <rect key="frame" x="0.0" y="28" width="339" height="46"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="46" id="I89-6U-LaT"/>
@@ -627,7 +627,7 @@
                                         <color key="textColor" name="black"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="고양이 성격, 특이사항, 중성화 여부 등을 입력하세요." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Gdb-F3-H1V">
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="고양이 성격, 특이사항, 중성화 여부 등을 입력하세요." textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="Gdb-F3-H1V">
                                         <rect key="frame" x="0.0" y="28" width="339" height="60"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="60" id="pFN-xB-Vgu"/>
@@ -648,7 +648,7 @@
                                 <color key="textColor" name="black"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="YYYY-MM-dd 형태로 입력해주세요. (예: 2020-01-02)" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Bh3-Sd-qci">
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="YYYY-MM-dd 형태로 입력해주세요. (예: 2020-01-02)" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="Bh3-Sd-qci">
                                 <rect key="frame" x="16" y="507.33333333333326" width="339" height="46"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="46" id="nBw-dE-GIc"/>

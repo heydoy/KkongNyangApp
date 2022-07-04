@@ -418,7 +418,7 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="할 일을 작성해주세요" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="0pX-9e-VDe">
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="할 일을 작성해주세요" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="0pX-9e-VDe">
                                 <rect key="frame" x="20" y="299.33333333333331" width="335" height="40"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="zDh-Uo-05f"/>
@@ -441,7 +441,7 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" borderStyle="roundedRect" placeholder="기타 특이사항이 있다면 작성해주세요" minimumFontSize="16" translatesAutoresizingMaskIntoConstraints="NO" id="THm-ft-WRo">
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" borderStyle="roundedRect" placeholder="기타 특이사항이 있다면 작성해주세요" minimumFontSize="16" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="THm-ft-WRo">
                                 <rect key="frame" x="20" y="480" width="335" height="80"/>
                                 <constraints>
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="80" id="zgz-le-yVW"/>
@@ -473,7 +473,7 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="시간을 지정해주세요 (예: 매일 오전 10시)" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="SIw-z7-5Mm">
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="시간을 지정해주세요 (예: 매일 오전 10시)" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="SIw-z7-5Mm">
                                 <rect key="frame" x="20" y="389" width="335" height="40"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="Rmi-BH-Gil"/>
@@ -774,7 +774,7 @@
                                     <constraint firstAttribute="height" constant="160" id="QcE-sp-dWY"/>
                                 </constraints>
                             </imageView>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="제품명을 입력해주세요" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="0n8-kW-PBF">
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="제품명을 입력해주세요" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="0n8-kW-PBF">
                                 <rect key="frame" x="20" y="520" width="335" height="40"/>
                                 <color key="backgroundColor" name="white"/>
                                 <constraints>
@@ -827,7 +827,7 @@
                                     <action selector="buttonGoImagePicker:" destination="YO6-9D-cOR" eventType="touchUpInside" id="FVh-Zj-QS7"/>
                                 </connections>
                             </button>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="기호도를 자세히 적어주세요." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="WPz-TO-H71">
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="기호도를 자세히 적어주세요." textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="WPz-TO-H71">
                                 <rect key="frame" x="20" y="670" width="335" height="40"/>
                                 <color key="backgroundColor" name="white"/>
                                 <constraints>
